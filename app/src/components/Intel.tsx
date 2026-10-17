@@ -2,7 +2,7 @@
 // Executive Intelligence answers and the Opportunity Discovery board (PRD 8.6, 8.7).
 import { useState } from "react";
 import { Icon } from "./Icon";
-import { money } from "../lib/format";
+import { aiLabel, money } from "../lib/format";
 import { EXEC_QUESTIONS } from "../lib/questions";
 import type { DiscoveryCard, DiscoveryResult, DiscoveryType, ExecAnswer } from "../lib/types";
 
@@ -22,7 +22,7 @@ export function ExecPanel({ r, onFocus, onAsk }: { r: ExecAnswer; onFocus: (id: 
         <span className="eyebrow">Decision</span>
         <p>{r.headline}</p>
       </div>
-      <p className="narrative"><span className="chip" title="Which AI service wrote this brief">AI brief: {r.provider}</span> {r.narrative}</p>
+      <p className="narrative"><span className="chip" title="Which AI service wrote this brief">AI brief: {aiLabel(r.provider)}</span> {r.narrative}</p>
 
       <section aria-label="Key figures" className="value-tiles">
         {r.metrics.map((m) => (

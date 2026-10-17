@@ -1,6 +1,7 @@
 "use client";
 // Concierge agent answer: the reply, the tools it chose and what each returned, links into the graph and lenses.
 import { Icon } from "./Icon";
+import { aiLabel } from "../lib/format";
 import type { ConciergeAnswer, ConciergeRef } from "../lib/types";
 
 const TOOL_LABEL: Record<string, string> = {
@@ -38,7 +39,7 @@ export default function ConciergePanel({ r, onFocus, onAsk, onLens, onAgents }: 
       <h2 className="panel-title">{r.query}</h2>
       <div className="chips">
         <span className="chip" title="How the answer was produced">
-          <Icon name="spark" />{r.mode === "tool-calling" ? `Tool calling · ${r.provider}` : `Planned · ${r.provider === "template" ? "rules" : r.provider}`}
+          <Icon name="spark" />{r.mode === "tool-calling" ? `Tool calling · ${aiLabel(r.provider)}` : `Planned · ${r.provider === "template" ? "rules" : aiLabel(r.provider)}`}
         </span>
         <span className="chip">{toolSteps.length} tool call{toolSteps.length === 1 ? "" : "s"}</span>
         <span className={`chip${r.grounded ? " chip-ready" : " chip-gap"}`}><Icon name={r.grounded ? "check" : "alert"} />{r.grounded ? "Every figure from the tools" : "Rebuilt from tool results"}</span>

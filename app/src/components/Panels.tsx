@@ -2,7 +2,7 @@
 // Side-panel views: Ask results, person profile ("dive in"), Hidden Talent, Risk / what-if.
 import { useEffect, useState } from "react";
 import { Icon } from "./Icon";
-import { pct, money } from "../lib/format";
+import { aiLabel, pct, money } from "../lib/format";
 import type { AskResponse, Candidate, GrowthPaths, HiddenTalentPerson, ReskillOption, WhatIfResult } from "../lib/types";
 
 // ---------------------------------------------------------------- shared
@@ -123,7 +123,7 @@ export function ResultPanel({ r, onFocus, onChallenge, adjusted, activated }: {
       <div className="chips">
         <span className="chip">Internal coverage {pct(r.coverage)}</span>
         <span className="chip">{r.team.length} people · {r.gaps.length} gap{r.gaps.length === 1 ? "" : "s"}</span>
-        <span className="chip" title="Which AI service answered">AI: {r.provider}</span>
+        <span className="chip" title="Which AI service answered">AI: {aiLabel(r.provider)}</span>
         {r.adjusted && <span className="chip chip-adjusted"><Icon name="users" />Team adjusted by you</span>}
       </div>
       <p className="narrative">{r.adjusted && <span className="muted small">Summary of the AI proposal: </span>}{r.narrative}</p>

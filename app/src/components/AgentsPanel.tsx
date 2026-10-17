@@ -3,7 +3,7 @@
 // data feed. Agents propose; people decide.
 import { useState } from "react";
 import { Icon } from "./Icon";
-import { money } from "../lib/format";
+import { aiLabel, money } from "../lib/format";
 import type { AgentId, AgentsView, InboxItem } from "../lib/types";
 
 export type AgentsData = AgentsView & { scenarios: { id: string; label: string; detail: string; agents: string }[] };
@@ -26,7 +26,7 @@ function Proposal({ p, onDecide, onShow, busy }: { p: InboxItem; onDecide: (id: 
       </div>
       <strong>{p.title}</strong>
       <p className="small">{p.detail}</p>
-      <p className="muted small">For: {p.approver} · <span title="Which AI service drafted this">drafted by {p.provider === "rules" ? "rules" : `AI (${p.provider})`}</span> · {ago(p.createdAt)}</p>
+      <p className="muted small">For: {p.approver} · <span title="Which AI service drafted this">drafted by {p.provider === "rules" ? "rules" : aiLabel(p.provider)}</span> · {ago(p.createdAt)}</p>
       <button className="btn btn-ghost why-toggle" aria-expanded={open} onClick={() => setOpen(!open)}>Evidence ({p.evidence.length}) <Icon name="arrow" /></button>
       {open && <ul className="evidence rise">{p.evidence.map((e) => <li key={e}>{e}</li>)}</ul>}
       {p.status === "pending" ? (
@@ -110,7 +110,7 @@ export default function AgentsPanel({ data, error, onSimulate, onDecide, onReset
                       <li key={i}><span className={`step-tool${s.ai ? " ai" : ""}`}>{s.ai && <Icon name="spark" />}{s.tool}</span> <span className="muted">{s.detail}</span>{s.ms > 0 && <span className="muted num"> · {s.ms} ms</span>}</li>
                     ))}
                   </ol>
-                  <p className="small"><b>{r.summary}</b>{r.provider && r.provider !== "rules" && r.provider !== "template" ? <span className="muted"> · AI: {r.provider}</span> : null}</p>
+                  <p className="small"><b>{r.summary}</b>{r.provider && r.provider !== "rules" && r.provider !== "template" ? <span className="muted"> · AI: {aiLabel(r.provider)}</span> : null}</p>
                   {r.nodeIds.length > 0 && <button className="btn btn-ghost small" onClick={() => onShow(r.nodeIds)}><Icon name="network" />Show on graph</button>}
                 </li>
               ))}
