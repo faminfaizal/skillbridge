@@ -1,6 +1,8 @@
 // Document upload for My Profile: store the file, read its text (PDF via unpdf, DOCX via the built-in zip reader
 // below, TXT as is), then suggest skills. Rules against the taxonomy always run; Gemini adds levels and skills
 // the rules miss, and every AI skill must quote a sentence that is really in the document.
+// PDFs and images (scans, photos of certificates) go to Gemini as the file itself (multimodal): it returns what it
+// read as a transcript, and quotes are checked against the text layer or, for scans, against that transcript.
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
@@ -16,7 +18,12 @@ import { BadInput } from "./write.ts";
 
 export const MAX_BYTES = 5 * 1024 * 1024;
 export const DOC_KINDS = ["CV", "Certificate", "Portfolio", "Report"] as const;
-const TYPES: Record<string, string> = { ".pdf": "application/pdf", ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document", ".txt": "text/plain" };
+const TYPES: Record<string, string> = {
+  ".pdf": "application/pdf", ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document", ".txt": "text/plain",
+  ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp",
+};
+/** Types Gemini reads directly (no text extraction needed). */
+const VISUAL = new Set([".pdf", ".png", ".jpg", ".jpeg", ".webp"]);
 
 /** Minimal zip reader: returns one entry's bytes (stored or deflated). Enough for word/document.xml in a DOCX. */
 export function zipEntry(buf: Buffer, name: string): Buffer | null {
@@ -60,6 +67,7 @@ async function pdfText(buf: Buffer): Promise<string> {
 
 export async function readText(ext: string, buf: Buffer): Promise<string> {
   if (ext === ".pdf") return pdfText(buf);
+  if (VISUAL.has(ext)) return "";
   if (ext === ".docx") return docxText(buf);
   return buf.toString("utf8");
 }
@@ -89,12 +97,23 @@ const DOC_SYSTEM = `You read a staff member's document (CV, certificate, portfol
 Use ONLY skill names from the provided list. For each, give level 1 to 5 (1 learning, 3 can do it alone, 5 others come to them)
 and a short exact quote from the document that shows it. Return JSON: {"skills":[{"name":"...","level":3,"quote":"..."}]}.`;
 
-async function aiSuggestions(text: string): Promise<Suggestion[]> {
+const FILE_SYSTEM = `You read a staff member's document (CV, certificate, portfolio or report), which may be a scan or a photo.
+First transcribe its readable text (at most 4000 characters, keep the original wording). Then list the skills it shows,
+using ONLY skill names from the provided list. For each, give level 1 to 5 (1 learning, 3 can do it alone, 5 others come to them)
+and a short exact quote from your transcript that shows it.
+Return JSON: {"transcript":"...","skills":[{"name":"...","level":3,"quote":"..."}]}.`;
+
+type AiDoc = { transcript?: string; skills?: { name?: string; level?: number; quote?: string }[] };
+
+/** Gemini skill suggestions. With `file`, Gemini reads the file itself; quotes are checked against `text` or its transcript. */
+async function aiSuggestions(text: string, file?: { mimeType: string; data: Buffer }): Promise<{ skills: Suggestion[]; transcript: string }> {
   const m = data();
   const names = [...m.skills.values()].map((s) => s.name).join("; ");
-  const res = await chatJson<{ skills?: { name?: string; level?: number; quote?: string }[] }>("fast", DOC_SYSTEM,
-    `Skills list: ${names}\n\nDocument:\n${text.slice(0, 6000)}`, { maxTokens: 700, kind: "profile-document" });
-  const flat = text.replace(/\s+/g, " ").toLowerCase();
+  const res = file
+    ? await chatJson<AiDoc>("fast", FILE_SYSTEM, `Skills list: ${names}`, { maxTokens: 2000, kind: "profile-document-file", files: [file] })
+    : await chatJson<AiDoc>("fast", DOC_SYSTEM, `Skills list: ${names}\n\nDocument:\n${text.slice(0, 6000)}`, { maxTokens: 700, kind: "profile-document" });
+  const transcript = (res.data.transcript ?? "").slice(0, 4000);
+  const flat = (text.trim() ? text : transcript).replace(/\s+/g, " ").toLowerCase();
   const out: Suggestion[] = [];
   for (const s of res.data.skills ?? []) {
     const sk = s.name ? m.skillByName.get(s.name.toLowerCase()) : undefined;
@@ -104,13 +123,13 @@ async function aiSuggestions(text: string): Promise<Suggestion[]> {
     const level = Math.min(5, Math.max(1, Math.round(Number(s.level) || 3)));
     out.push({ skillId: sk.id, level, quote: quote.slice(0, 220) });
   }
-  return out;
+  return { skills: out, transcript };
 }
 
 export async function uploadDocument(me: string, file: File, kind: string): Promise<{ message: string }> {
   ensureProfileTables();
   const ext = path.extname(file.name).toLowerCase();
-  if (!TYPES[ext]) throw new BadInput("Upload a PDF, DOCX or TXT file.");
+  if (!TYPES[ext]) throw new BadInput("Upload a PDF, DOCX, TXT or an image (PNG, JPG, WebP).");
   if (file.size > MAX_BYTES) throw new BadInput("That file is over 5 MB. Upload a smaller copy.");
   if (file.size === 0) throw new BadInput("That file is empty.");
   if (!(DOC_KINDS as readonly string[]).includes(kind)) throw new BadInput("Choose what kind of document this is.");
@@ -120,7 +139,8 @@ export async function uploadDocument(me: string, file: File, kind: string): Prom
     text = await readText(ext, buf);
   } catch (e) {
     if (e instanceof BadInput) throw e;
-    throw new BadInput("The text in this file could not be read. If it is a scanned image, upload a text PDF or DOCX.");
+    if (!VISUAL.has(ext)) throw new BadInput("The text in this file could not be read. Upload a PDF, an image or a DOCX.");
+    text = ""; // unreadable PDF text layer: Gemini reads the file itself
   }
   const id = `DOC-${crypto.randomUUID().slice(0, 8)}`;
   const dir = path.join(path.dirname(dbPath()), "uploads", me);
@@ -131,13 +151,23 @@ export async function uploadDocument(me: string, file: File, kind: string): Prom
   const found = new Map<string, Suggestion>();
   for (const s of ruleSuggestions(text)) found.set(s.skillId, s);
   let ai = "rules";
-  if (text.trim().length > 40) {
+  const visual = VISUAL.has(ext);
+  if (visual || text.trim().length > 40) {
     try {
-      for (const s of await aiSuggestions(text)) found.set(s.skillId, { ...s, quote: s.quote || found.get(s.skillId)?.quote || "" });
-      ai = "gemini";
+      const r = await aiSuggestions(text, visual ? { mimeType: TYPES[ext], data: buf } : undefined);
+      for (const s of r.skills) found.set(s.skillId, { ...s, quote: s.quote || found.get(s.skillId)?.quote || "" });
+      if (!text.trim() && r.transcript) {
+        text = r.transcript;
+        for (const s of ruleSuggestions(text)) if (!found.has(s.skillId)) found.set(s.skillId, s);
+      }
+      ai = visual ? "gemini-file" : "gemini";
     } catch {
       ai = "rules (AI limited)";
     }
+  }
+  if (!text.trim() && ai.startsWith("rules")) {
+    fs.rmSync(file_path, { force: true });
+    throw new BadInput("Gemini could not read this file just now. Try again in a minute, or upload a text PDF or DOCX.");
   }
   run(`INSERT INTO profile_documents (id, person_id, filename, kind, mime, size, path, excerpt, ai, shared, uploaded_at)
        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 0, ?)`, id, me, file.name.slice(0, 160), kind, TYPES[ext], file.size, file_path,

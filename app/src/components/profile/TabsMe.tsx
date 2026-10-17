@@ -418,10 +418,10 @@ export function DocumentsTab() {
             <>
               <Icon name="upload" className="icon pf-drop-i" />
               <p><b>Drop a file here</b> or <button type="button" className="link-btn" onClick={() => input.current?.click()}>choose a file</button></p>
-              <p className="small muted">PDF, DOCX or TXT, up to 5 MB. Files stay private unless you share them. Gemini on Vertex AI reads them; nothing is used for model training.</p>
+              <p className="small muted">PDF, DOCX, TXT or a photo or scan (PNG, JPG, WebP), up to 5 MB. Private unless you share it. Gemini on Vertex AI reads it; nothing is used for model training.</p>
             </>
           )}
-          <input ref={input} id={`${id}-f`} type="file" accept=".pdf,.docx,.txt" className="sr-only" aria-label="Choose a document to upload" onChange={(e) => void send(e.target.files?.[0])} />
+          <input ref={input} id={`${id}-f`} type="file" accept=".pdf,.docx,.txt,.png,.jpg,.jpeg,.webp" className="sr-only" aria-label="Choose a document to upload" onChange={(e) => void send(e.target.files?.[0])} />
         </div>
         <fieldset className="pf-fieldset"><legend>This document is a</legend>
           <div className="pf-seg small">{DOC_KINDS.map((k) => <button key={k} type="button" aria-pressed={kind === k} onClick={() => setKind(k)}>{k}</button>)}</div></fieldset>
@@ -434,7 +434,7 @@ export function DocumentsTab() {
               <a className="btn btn-ghost small" href={`/api/me/documents?id=${encodeURIComponent(d.id)}&as=${userId}`} target="_blank" rel="noreferrer"><Icon name="eye" />Open</a>
               <RemoveButton label={d.filename} onConfirm={() => removeLater(`doc:${d.id}`, `Deleted ${d.filename}`, () => act("documents", "remove", { docId: d.id }))} />
             </div>}>
-            <p className="small muted">{d.kind} · {(d.size / 1024).toFixed(0)} KB · uploaded {d.uploadedAt.slice(0, 10)} · skills found by {d.ai === "gemini" ? "Gemini" : "matching the skills list"}</p>
+            <p className="small muted">{d.kind} · {(d.size / 1024).toFixed(0)} KB · uploaded {d.uploadedAt.slice(0, 10)} · skills found by {d.ai === "gemini-file" ? "Gemini, reading the file itself" : d.ai === "gemini" ? "Gemini" : "matching the skills list"}</p>
             <Toggle label="Share with my manager" checked={d.shared} onChange={(v) => act("documents", "share", { docId: d.id, shared: v })} hint="Private to you by default." />
             {d.suggestions.length === 0 ? <p className="small muted">No skills from the list were found in this document.</p> : (
               <>

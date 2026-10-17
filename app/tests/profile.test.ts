@@ -150,5 +150,7 @@ test("documents: DOCX text is read and skills are suggested with a quote", async
   assert.match(k8s.quote, /Kubernetes/);
   applyAction(ME, "documents", "suggestion", { docId: doc.id, skillId: "SK-kubernetes", decision: "accept", level: 4 });
   assert.equal(get<{ source: string }>("SELECT source FROM person_skills WHERE person_id = ? AND skill_id = 'SK-kubernetes'", ME)!.source, "cv");
-  await assert.rejects(uploadDocument(ME, new File(["x"], "cv.exe"), "CV"), /PDF, DOCX or TXT/);
+  await assert.rejects(uploadDocument(ME, new File(["x"], "cv.exe"), "CV"), /PDF, DOCX, TXT or an image/);
+  // images are read by Gemini itself; with Gemini down the upload fails cleanly instead of storing an unread file
+  await assert.rejects(uploadDocument(ME, new File([Buffer.from("not really a png")], "cert.png"), "Certificate"), /Gemini could not read/);
 });

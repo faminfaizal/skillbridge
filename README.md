@@ -23,7 +23,7 @@ Organisations hire, buy consultancy and form teams without knowing what their ow
 | Executive intelligence | Seven executive questions answered as decisions, with a Gemini brief over engine facts |
 | Five AI agents | Connectivity, People Growth, Opportunity Scout, Risk Sentinel and Concierge watch the data, propose actions and wait for human approval |
 | Concierge | A Gemini function-calling agent over ten SkillBridge tools; answers that contain a figure the tools did not return are rejected |
-| My Profile | Self-service profile with evidence, documents (Gemini reads uploaded CVs and certificates), privacy controls and a personal graph |
+| My Profile | Self-service profile with evidence, documents (Gemini reads uploaded CVs, certificates and even photos of them), privacy controls and a personal graph |
 
 ## How Gemini is used
 
@@ -33,7 +33,7 @@ Organisations hire, buy consultancy and form teams without knowing what their ow
 | Request parsing into roles and skills | Chat | Engine scores every candidate; the model never ranks people |
 | Concierge agent (function calling) | Chat | Grounding check: no figure the tools did not return |
 | Executive briefs and "why this person" explanations | Chat / fast | Written over engine facts only |
-| Document reading (CV, certificate, portfolio) | Fast | Each suggested skill must quote the document; the person confirms |
+| Document reading: CVs, certificates and portfolios as PDF, or a photo or scan read directly (multimodal) | Fast | Each suggested skill must quote the document (its text layer, or what Gemini transcribed); the person confirms |
 | Semantic matching | `gemini-embedding-001` | Same model and dimension for stored and query vectors |
 
 Design principles: the deterministic engine decides and every number on screen comes from it; answers never go blank (live Gemini, then a golden cache, then templates); private profiles never appear in lenses or AI answers; agents propose and people decide.
@@ -42,12 +42,10 @@ Design principles: the deterministic engine decides and every number on screen c
 
 | Service | Use |
 |---|---|
-| Gemini on Vertex AI | All reasoning, extraction, explanations, function calling and embeddings (`@google/genai`, Application Default Credentials) |
-| Cloud Run | Hosts the Next.js application, the engine and the agent runner |
-| Firebase Hosting | Public entry point and CDN in front of Cloud Run |
-| Cloud Storage | Database snapshots and uploaded documents |
-| Cloud Build, Artifact Registry | Source-based container builds |
-| Secret Manager | Service secrets |
+| Gemini on Vertex AI | All reasoning, extraction, document reading, explanations, function calling and embeddings (`gemini-3.5-flash`, `gemini-embedding-001`, via `@google/genai` with Application Default Credentials; no API keys) |
+| Cloud Run | Hosts the Next.js application, the deterministic engine and the always-on agent runner (one instance, CPU always allocated) |
+| Cloud Build, Artifact Registry | Source-based container builds (`gcloud run deploy --source .`) |
+| IAM | A least-privilege runtime service account (Vertex AI user, log writer) |
 
 ## Run locally
 

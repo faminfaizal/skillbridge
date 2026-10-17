@@ -1,0 +1,16 @@
+# Required: without this file gcloud applies .gitignore, which drops the built DB and graph.
+.gcloudignore
+.git/
+.gitignore
+.env
+agent/
+app/node_modules/
+app/.next/
+app/next-env.d.ts
+app/tsconfig.tsbuildinfo
+docs/
+tools/
+data/generator/
+data/uploads/
+data/skillbridge.db-*
+**/__pycache__/
