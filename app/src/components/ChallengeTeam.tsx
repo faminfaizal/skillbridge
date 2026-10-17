@@ -231,8 +231,11 @@ export default function ChallengeTeam({ r, draft, onDraft, onClose, onActivate, 
     onDraft({ ...draft, ids, sources, passed: p });
   }
 
+  /** Add a person to a role: an empty role takes them in its own slot, a filled role gets them as an extra. */
   function addExtra(slot: number, id: string, source: SlotSource) {
-    if (draft.extras.length >= MAX_EXTRAS || draft.ids.includes(id) || draft.extras.some((x) => x.id === id)) return;
+    if (draft.ids.includes(id) || draft.extras.some((x) => x.id === id)) return;
+    if (!draft.ids[slot]) { setSlot(slot, id, source); return; }
+    if (draft.extras.length >= MAX_EXTRAS) return;
     onDraft({ ...draft, extras: [...draft.extras, { slot, id, source }] });
   }
 
@@ -262,11 +265,15 @@ export default function ChallengeTeam({ r, draft, onDraft, onClose, onActivate, 
   const filledRoles = evaln ? r.requirements.filter((_, i) => evaln.slots[i] || evaln.extras?.some((x) => x.slot === i)).length : 0;
   const extraCount = evaln?.extras?.length ?? 0;
   const teamCount = evaln ? `${filledRoles} of ${r.requirements.length} roles${extraCount ? ` · ${extraCount} extra` : ""}` : "";
-  // the add box starts on the first role nobody holds, else the role with the weakest fit
+  // the add box starts on the filled role with the weakest fit (unfilled roles have their own buttons)
   const weakest = (() => {
     if (!evaln) return 0;
-    const lead = r.requirements.map((_, i) => Math.max(evaln.slots[i]?.score ?? 0, ...(evaln.extras ?? []).filter((x) => x.slot === i).map((x) => x.score)));
-    return lead.indexOf(Math.min(...lead));
+    let best = -1, low = Infinity;
+    r.requirements.forEach((_, i) => {
+      const s = evaln.slots[i]?.score;
+      if (s !== undefined && s < low) { low = s; best = i; }
+    });
+    return best < 0 ? 0 : best;
   })();
   const delta = fit && aiScore !== null ? Math.round(fit.score * 100) - Math.round(aiScore * 100) : null;
 
