@@ -1,0 +1,258 @@
+person_id,training_id,year,status
+P-001,TRN-LLM1,2025,in progress
+P-002,TRN-SEC1,2026,completed
+P-003,TRN-CX1,2026,completed
+P-003,TRN-DE1,2025,completed
+P-011,TRN-LLM1,2024,completed
+P-011,TRN-CX1,2026,in progress
+P-013,TRN-SQL1,2026,in progress
+P-013,TRN-LLM1,2025,in progress
+P-014,TRN-VA1,2025,in progress
+P-015,TRN-VA1,2024,in progress
+P-015,TRN-EDGE1,2024,completed
+P-016,TRN-LLM1,2024,completed
+P-016,TRN-DE1,2025,completed
+P-017,TRN-LEAD1,2026,completed
+P-017,TRN-PY1,2026,completed
+P-018,TRN-SEC1,2026,completed
+P-019,TRN-LLM1,2024,completed
+P-019,TRN-SEC1,2025,in progress
+P-020,TRN-EDGE1,2026,in progress
+P-021,TRN-LEAD1,2024,completed
+P-021,TRN-VA1,2024,completed
+P-022,TRN-CX1,2026,in progress
+P-022,TRN-K8S1,2026,completed
+P-024,TRN-VA1,2025,in progress
+P-025,TRN-K8S1,2026,in progress
+P-028,TRN-PY1,2024,completed
+P-033,TRN-SEC1,2025,completed
+P-035,TRN-CX1,2024,in progress
+P-035,TRN-K8S1,2025,completed
+P-036,TRN-SQL1,2024,in progress
+P-037,TRN-EDGE1,2025,completed
+P-038,TRN-PM1,2025,completed
+P-039,TRN-PY1,2025,completed
+P-042,TRN-DE1,2025,in progress
+P-043,TRN-LEAD1,2024,completed
+P-043,TRN-CX1,2025,completed
+P-044,TRN-VA1,2024,completed
+P-045,TRN-DE1,2025,completed
+P-046,TRN-PY1,2024,in progress
+P-049,TRN-PM1,2025,completed
+P-050,TRN-PY1,2026,in progress
+P-051,TRN-SQL1,2026,in progress
+P-053,TRN-SEC1,2024,completed
+P-054,TRN-SQL1,2025,in progress
+P-054,TRN-VA1,2024,completed
+P-055,TRN-LLM1,2025,in progress
+P-055,TRN-PY1,2025,completed
+P-059,TRN-LEAD1,2024,completed
+P-060,TRN-PY1,2024,in progress
+P-060,TRN-LLM1,2025,completed
+P-061,TRN-PM1,2024,completed
+P-062,TRN-PM1,2026,in progress
+P-064,TRN-PY1,2025,completed
+P-065,TRN-CX1,2024,in progress
+P-068,TRN-SEC1,2026,completed
+P-069,TRN-PY1,2026,completed
+P-069,TRN-CX1,2025,in progress
+P-071,TRN-LLM1,2025,completed
+P-071,TRN-LEAD1,2024,completed
+P-073,TRN-VA1,2024,completed
+P-073,TRN-PY1,2025,in progress
+P-074,TRN-PY1,2025,completed
+P-076,TRN-LLM1,2025,completed
+P-077,TRN-SQL1,2025,completed
+P-079,TRN-SQL1,2025,completed
+P-079,TRN-DE1,2026,completed
+P-082,TRN-EDGE1,2025,completed
+P-082,TRN-CX1,2024,in progress
+P-083,TRN-PY1,2024,completed
+P-084,TRN-EDGE1,2024,completed
+P-085,TRN-PY1,2025,completed
+P-086,TRN-LEAD1,2026,in progress
+P-087,TRN-SQL1,2025,in progress
+P-089,TRN-SEC1,2026,completed
+P-091,TRN-LEAD1,2025,in progress
+P-092,TRN-PM1,2025,completed
+P-092,TRN-PY1,2026,completed
+P-093,TRN-LLM1,2026,completed
+P-098,TRN-PY1,2024,completed
+P-098,TRN-SEC1,2024,completed
+P-099,TRN-EDGE1,2026,in progress
+P-100,TRN-CX1,2024,in progress
+P-101,TRN-PY1,2024,completed
+P-102,TRN-PY1,2026,in progress
+P-103,TRN-SEC1,2025,in progress
+P-104,TRN-SQL1,2026,in progress
+P-105,TRN-CX1,2025,completed
+P-105,TRN-VA1,2024,completed
+P-107,TRN-SQL1,2024,completed
+P-107,TRN-LLM1,2026,completed
+P-108,TRN-SEC1,2025,in progress
+P-109,TRN-EDGE1,2026,completed
+P-109,TRN-PM1,2024,completed
+P-110,TRN-K8S1,2026,completed
+P-111,TRN-LLM1,2024,completed
+P-112,TRN-CX1,2026,completed
+P-113,TRN-PY1,2025,completed
+P-113,TRN-K8S1,2025,completed
+P-114,TRN-VA1,2025,completed
+P-114,TRN-SEC1,2026,completed
+P-115,TRN-K8S1,2026,completed
+P-116,TRN-LLM1,2024,completed
+P-117,TRN-SEC1,2024,in progress
+P-117,TRN-K8S1,2024,in progress
+P-118,TRN-DE1,2025,completed
+P-119,TRN-CX1,2025,in progress
+P-119,TRN-DE1,2026,completed
+P-120,TRN-EDGE1,2025,in progress
+P-122,TRN-DE1,2026,completed
+P-122,TRN-SEC1,2026,in progress
+P-123,TRN-DE1,2026,in progress
+P-124,TRN-EDGE1,2025,completed
+P-125,TRN-LEAD1,2024,completed
+P-126,TRN-LEAD1,2026,completed
+P-129,TRN-PY1,2026,completed
+P-130,TRN-LLM1,2026,completed
+P-131,TRN-DE1,2026,completed
+P-131,TRN-PY1,2026,completed
+P-133,TRN-SQL1,2026,completed
+P-136,TRN-VA1,2026,completed
+P-138,TRN-VA1,2026,completed
+P-139,TRN-DE1,2025,in progress
+P-141,TRN-LLM1,2024,in progress
+P-142,TRN-CX1,2024,completed
+P-143,TRN-DE1,2024,in progress
+P-145,TRN-LEAD1,2025,completed
+P-146,TRN-SQL1,2024,in progress
+P-146,TRN-LEAD1,2026,in progress
+P-147,TRN-SQL1,2024,in progress
+P-148,TRN-EDGE1,2025,completed
+P-148,TRN-LEAD1,2026,completed
+P-151,TRN-LEAD1,2026,completed
+P-155,TRN-LEAD1,2024,in progress
+P-155,TRN-SQL1,2026,completed
+P-156,TRN-K8S1,2026,completed
+P-159,TRN-K8S1,2026,in progress
+P-160,TRN-DE1,2025,completed
+P-161,TRN-CX1,2024,in progress
+P-162,TRN-CX1,2024,completed
+P-163,TRN-VA1,2026,completed
+P-165,TRN-EDGE1,2024,in progress
+P-168,TRN-EDGE1,2026,completed
+P-169,TRN-PM1,2024,completed
+P-172,TRN-PY1,2025,completed
+P-172,TRN-LEAD1,2024,completed
+P-174,TRN-K8S1,2025,completed
+P-174,TRN-DE1,2026,in progress
+P-175,TRN-EDGE1,2024,completed
+P-176,TRN-SEC1,2026,completed
+P-177,TRN-CX1,2026,completed
+P-177,TRN-K8S1,2025,completed
+P-178,TRN-EDGE1,2025,completed
+P-179,TRN-SEC1,2024,in progress
+P-181,TRN-CX1,2024,completed
+P-182,TRN-LEAD1,2025,completed
+P-182,TRN-CX1,2025,completed
+P-183,TRN-DE1,2024,completed
+P-183,TRN-K8S1,2026,in progress
+P-184,TRN-CX1,2024,completed
+P-184,TRN-K8S1,2026,completed
+P-185,TRN-SEC1,2026,completed
+P-187,TRN-PY1,2025,completed
+P-188,TRN-SEC1,2025,completed
+P-189,TRN-K8S1,2026,completed
+P-189,TRN-VA1,2024,completed
+P-190,TRN-PY1,2024,in progress
+P-191,TRN-K8S1,2025,completed
+P-192,TRN-SQL1,2025,in progress
+P-193,TRN-DE1,2024,in progress
+P-194,TRN-DE1,2025,in progress
+P-195,TRN-CX1,2026,completed
+P-196,TRN-PY1,2024,completed
+P-197,TRN-PY1,2025,completed
+P-198,TRN-EDGE1,2024,completed
+P-199,TRN-K8S1,2026,completed
+P-199,TRN-CX1,2026,in progress
+P-201,TRN-SEC1,2025,completed
+P-201,TRN-VA1,2024,completed
+P-202,TRN-CX1,2026,completed
+P-204,TRN-LEAD1,2024,completed
+P-205,TRN-LEAD1,2025,in progress
+P-212,TRN-CX1,2025,completed
+P-214,TRN-PY1,2026,completed
+P-214,TRN-SEC1,2026,completed
+P-216,TRN-LLM1,2026,in progress
+P-216,TRN-PM1,2024,in progress
+P-218,TRN-PY1,2026,in progress
+P-222,TRN-EDGE1,2026,in progress
+P-224,TRN-CX1,2026,completed
+P-224,TRN-LEAD1,2024,completed
+P-225,TRN-LLM1,2024,in progress
+P-229,TRN-VA1,2026,completed
+P-230,TRN-EDGE1,2026,completed
+P-231,TRN-SQL1,2026,completed
+P-232,TRN-SEC1,2024,in progress
+P-234,TRN-SQL1,2025,in progress
+P-234,TRN-K8S1,2026,completed
+P-235,TRN-EDGE1,2024,completed
+P-235,TRN-PY1,2026,in progress
+P-237,TRN-PY1,2024,in progress
+P-238,TRN-LEAD1,2025,completed
+P-238,TRN-CX1,2024,completed
+P-239,TRN-PM1,2024,in progress
+P-239,TRN-DE1,2025,in progress
+P-240,TRN-SEC1,2024,completed
+P-242,TRN-SEC1,2025,completed
+P-243,TRN-PY1,2026,completed
+P-244,TRN-LLM1,2025,in progress
+P-246,TRN-SEC1,2025,completed
+P-246,TRN-CX1,2025,in progress
+P-247,TRN-SEC1,2025,completed
+P-249,TRN-PY1,2024,completed
+P-249,TRN-PM1,2026,in progress
+P-250,TRN-VA1,2026,in progress
+P-251,TRN-EDGE1,2024,completed
+P-252,TRN-PY1,2026,completed
+P-254,TRN-VA1,2024,in progress
+P-255,TRN-LLM1,2025,in progress
+P-256,TRN-LEAD1,2024,in progress
+P-259,TRN-LLM1,2026,completed
+P-260,TRN-PY1,2026,completed
+P-261,TRN-SQL1,2024,in progress
+P-261,TRN-VA1,2024,completed
+P-262,TRN-SQL1,2025,completed
+P-263,TRN-CX1,2025,in progress
+P-263,TRN-LEAD1,2025,in progress
+P-264,TRN-EDGE1,2025,completed
+P-268,TRN-K8S1,2024,in progress
+P-271,TRN-CX1,2025,completed
+P-271,TRN-PM1,2025,in progress
+P-272,TRN-VA1,2026,completed
+P-273,TRN-LLM1,2024,completed
+P-274,TRN-PM1,2025,completed
+P-275,TRN-DE1,2026,completed
+P-275,TRN-PY1,2024,completed
+P-277,TRN-CX1,2026,completed
+P-278,TRN-LEAD1,2026,in progress
+P-279,TRN-LEAD1,2026,in progress
+P-281,TRN-PM1,2025,in progress
+P-282,TRN-LEAD1,2024,completed
+P-282,TRN-SEC1,2024,completed
+P-283,TRN-CX1,2026,in progress
+P-284,TRN-SQL1,2026,completed
+P-284,TRN-LLM1,2025,in progress
+P-285,TRN-DE1,2024,completed
+P-286,TRN-SQL1,2025,completed
+P-287,TRN-LEAD1,2026,in progress
+P-288,TRN-SQL1,2024,completed
+P-288,TRN-DE1,2025,in progress
+P-290,TRN-EDGE1,2025,completed
+P-291,TRN-LLM1,2026,completed
+P-292,TRN-PY1,2026,completed
+P-293,TRN-LEAD1,2026,in progress
+P-294,TRN-LLM1,2024,in progress
+P-294,TRN-EDGE1,2026,completed
+P-296,TRN-SQL1,2025,in progress
+P-297,TRN-PM1,2024,completed

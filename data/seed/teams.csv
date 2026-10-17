@@ -1,0 +1,48 @@
+id,department_id,name,location_id
+TEAM-ACC-1,DEP-ACC,Access Network Singapore HQ,LOC-SIN
+TEAM-ACC-2,DEP-ACC,Access Network Lisbon,LOC-LIS
+TEAM-ACC-3,DEP-ACC,Access Network Sydney,LOC-SYD
+TEAM-CORE-1,DEP-CORE,Core & Transport Bengaluru,LOC-BLR
+TEAM-CORE-2,DEP-CORE,Core & Transport Singapore HQ,LOC-SIN
+TEAM-LAB-1,DEP-LAB,Network Testing Lab Bengaluru,LOC-BLR
+TEAM-FOC-1,DEP-FOC,Field Ops Central Singapore HQ,LOC-SIN
+TEAM-FOC-2,DEP-FOC,Field Ops Central Sydney,LOC-SYD
+TEAM-FOC-3,DEP-FOC,Field Ops Central Manila,LOC-MNL
+TEAM-FOR-1,DEP-FOR,Field Ops Regional Darwin,LOC-DRW
+TEAM-FOR-2,DEP-FOR,Field Ops Regional Cairns,LOC-CNS
+TEAM-FOR-3,DEP-FOR,Field Ops Regional Manila,LOC-MNL
+TEAM-ENT-1,DEP-ENT,Enterprise Solutions Singapore HQ,LOC-SIN
+TEAM-ENT-2,DEP-ENT,Enterprise Solutions Lisbon,LOC-LIS
+TEAM-GOV-1,DEP-GOV,Government Accounts Singapore HQ,LOC-SIN
+TEAM-GOV-2,DEP-GOV,Government Accounts Darwin,LOC-DRW
+TEAM-SME-1,DEP-SME,SME Business Singapore HQ,LOC-SIN
+TEAM-SME-2,DEP-SME,SME Business Sydney,LOC-SYD
+TEAM-SME-3,DEP-SME,SME Business Cairns,LOC-CNS
+TEAM-PRE-1,DEP-PRE,Pre-sales Singapore HQ,LOC-SIN
+TEAM-BB-1,DEP-BB,Broadband Singapore HQ,LOC-SIN
+TEAM-MOB-1,DEP-MOB,Mobile Singapore HQ,LOC-SIN
+TEAM-RET-1,DEP-RET,Retail Channels Singapore HQ,LOC-SIN
+TEAM-RET-2,DEP-RET,Retail Channels Sydney,LOC-SYD
+TEAM-RET-3,DEP-RET,Retail Channels Lisbon,LOC-LIS
+TEAM-MKT-1,DEP-MKT,Marketing Singapore HQ,LOC-SIN
+TEAM-CC-1,DEP-CC,Contact Centre Manila,LOC-MNL
+TEAM-CC-2,DEP-CC,Contact Centre Sydney,LOC-SYD
+TEAM-CC-3,DEP-CC,Contact Centre Singapore HQ,LOC-SIN
+TEAM-ESC-1,DEP-ESC,Escalations Singapore HQ,LOC-SIN
+TEAM-FSD-1,DEP-FSD,Field Service Desk Manila,LOC-MNL
+TEAM-FSD-2,DEP-FSD,Field Service Desk Darwin,LOC-DRW
+TEAM-BSS-1,DEP-BSS,BSS/Billing Singapore HQ,LOC-SIN
+TEAM-OSS-1,DEP-OSS,OSS Bengaluru,LOC-BLR
+TEAM-CLD-1,DEP-CLD,Cloud Platform Bengaluru,LOC-BLR
+TEAM-CLD-2,DEP-CLD,Cloud Platform Lisbon,LOC-LIS
+TEAM-SEC-1,DEP-SEC,Cybersecurity Bengaluru,LOC-BLR
+TEAM-APP-1,DEP-APP,App Dev Singapore HQ,LOC-SIN
+TEAM-APP-2,DEP-APP,App Dev Lisbon,LOC-LIS
+TEAM-DE-1,DEP-DE,Data Engineering Lisbon,LOC-LIS
+TEAM-DS-1,DEP-DS,Data Science Singapore HQ,LOC-SIN
+TEAM-AIP-1,DEP-AIP,AI Products Singapore HQ,LOC-SIN
+TEAM-FIN-1,DEP-FIN,Finance Singapore HQ,LOC-SIN
+TEAM-HR-1,DEP-HR,HR Singapore HQ,LOC-SIN
+TEAM-STR-1,DEP-STR,Strategy Singapore HQ,LOC-SIN
+TEAM-PRC-1,DEP-PRC,Procurement Singapore HQ,LOC-SIN
+TEAM-RSK-1,DEP-RSK,Risk Singapore HQ,LOC-SIN

@@ -1,0 +1,38 @@
+{
+  "name": "skillbridge",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3012",
+    "build": "next build",
+    "start": "next start -p 3012",
+    "typecheck": "tsc --noEmit",
+    "precompute": "node --experimental-strip-types --no-warnings scripts/precompute.ts",
+    "test": "node --experimental-strip-types --no-warnings --test --test-concurrency=1 tests/*.test.ts",
+    "smoke": "node --experimental-strip-types --no-warnings scripts/vertex-smoke.ts"
+  },
+  "dependencies": {
+    "@google/genai": "^2.30.0",
+    "@sigma/node-image": "^3.0.0",
+    "@sigma/node-square": "^3.0.0",
+    "3d-force-graph": "^1.80.1",
+    "graphology": "^0.26.0",
+    "graphology-communities-louvain": "^2.0.2",
+    "graphology-layout-forceatlas2": "^0.10.1",
+    "graphology-metrics": "^2.4.2",
+    "graphology-shortest-path": "^2.1.0",
+    "next": "^14.2.29",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sigma": "^3.0.3",
+    "three-spritetext": "^1.10.0",
+    "unpdf": "1.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@types/three": "^0.180.0",
+    "typescript": "^5.9.3"
+  }
+}

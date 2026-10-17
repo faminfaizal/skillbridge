@@ -1,0 +1,24 @@
+id,vendor_org_id,project_id,skill_id,days,cost_amt,start_date,description
+EXT-001,ORG-ONS,PRJ-003,SK-network-troubleshooting,52,208000,2023-12-06,External specialists for Fault restoration programme 2024.1
+EXT-002,ORG-SLA,PRJ-004,SK-security-compliance,27,175500,2026-04-13,External specialists for Security uplift 2025.2
+EXT-003,ORG-NBC,PRJ-006,SK-test-automation,30,120000,2023-10-14,External specialists for BSS release 2024.1
+EXT-004,ORG-ONS,PRJ-007,SK-optical-transport-dwdm,30,120000,2023-11-25,External specialists for Core capacity upgrade 2024.1
+EXT-005,ORG-NBC,PRJ-008,SK-order-management,10,45000,2023-05-23,External specialists for BSS release 2025.2
+EXT-006,ORG-ACP,PRJ-012,SK-ci-cd,24,120000,2024-02-15,External specialists for Cloud migration wave 2025.2
+EXT-007,ORG-NBC,PRJ-016,SK-agile-delivery,10,35000,2025-01-16,External specialists for Digital channel release 2024.1
+EXT-008,ORG-ONS,PRJ-017,SK-optical-transport-dwdm,131,524000,2023-08-05,External specialists for Core capacity upgrade 2025.2
+EXT-009,ORG-SLA,PRJ-022,SK-identity-access-management,10,65000,2023-10-26,External specialists for Security uplift 2024.5
+EXT-010,ORG-NBC,PRJ-024,SK-sql,78,312000,2026-02-10,External specialists for BSS release 2026.3
+EXT-011,ORG-NBC,PRJ-026,SK-react,75,300000,2024-06-29,External specialists for Digital channel release 2025.2
+EXT-012,ORG-ACP,PRJ-029,SK-docker,36,180000,2025-07-21,External specialists for Cloud migration wave 2023.4
+EXT-013,ORG-NBC,PRJ-030,SK-internal-audit,35,140000,2024-04-19,External specialists for Finance and compliance 2025.2
+EXT-014,ORG-SLA,PRJ-032,SK-security-operations,27,175500,2023-07-06,External specialists for Security uplift 2026.7
+EXT-015,ORG-NBC,PRJ-033,SK-complaint-resolution,35,140000,2024-06-22,External specialists for Contact centre improvement 2024.1
+EXT-016,ORG-NBC,PRJ-034,SK-project-management,150,525000,2026-01-08,External specialists for Fibre rollout Sydney
+EXT-017,ORG-NBC,PRJ-040,SK-agile-delivery,25,87500,2023-10-27,External specialists for Digital channel release 2026.3
+EXT-018,ORG-NBC,PRJ-048,SK-internal-audit,13,52000,2023-11-19,External specialists for Finance and compliance 2026.7
+EXT-019,ORG-SLA,PRJ-049,SK-security-compliance,10,65000,2025-07-03,External specialists for Security uplift 2023.8
+EXT-020,ORG-DFA,PRJ-050,SK-machine-learning,27,148500,2025-02-08,External specialists for Analytics product: network demand forecast
+EXT-021,ORG-NBC,PRJ-054,SK-python,20,80000,2023-07-29,External specialists for Analytics product: store footfall insight
+EXT-A01,ORG-ACP,PRJ-068,SK-kubernetes,90,450000,2025-03-03,Kubernetes migration specialists for Cloud migration wave 2025.K
+EXT-A02,ORG-DFA,PRJ-067,SK-machine-learning,60,330000,2025-04-14,Churn modelling consultants for the churn prediction product

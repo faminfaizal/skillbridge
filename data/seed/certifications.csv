@@ -1,0 +1,17 @@
+id,name,skill_id,cost_amt,months
+CERT-CKA,Certified Kubernetes Administrator,SK-kubernetes,2500,3
+CERT-AWS,AWS Solutions Architect,SK-aws,1800,3
+CERT-CCNP,CCNP Enterprise,SK-ip-mpls-routing,3000,6
+CERT-CISSP,CISSP,SK-security-operations,4000,6
+CERT-PMP,PMP,SK-project-management,2500,4
+CERT-ITIL,ITIL 4 Foundation,SK-it-service-management,1200,1
+CERT-AZ,Azure Administrator,SK-azure,1500,2
+CERT-TF,Terraform Associate,SK-terraform,900,1
+CERT-DE,Professional Data Engineer,SK-data-engineering,2000,3
+CERT-ML,Machine Learning Specialty,SK-machine-learning,2200,4
+CERT-CSM,Certified Scrum Master,SK-agile-delivery,1500,1
+CERT-FTTH,FTTH Installation Professional,SK-fibre-splicing,800,1
+CERT-5G,5G Network Professional,SK-5g-ran,2600,3
+CERT-PDPA,Data Protection Officer Certificate,SK-data-privacy-pdpa,1600,2
+CERT-CXP,Customer Experience Professional,SK-cx-design,1400,2
+CERT-ISTQB,ISTQB Test Automation Engineer,SK-test-automation,1300,2

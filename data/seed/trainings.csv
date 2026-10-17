@@ -1,0 +1,17 @@
+id,name,skill_id,kind,cost_amt,weeks
+TRN-MLOPS1,MLOps Foundations (2-week intensive),SK-mlops,short,2800,2
+TRN-MON1,Model Monitoring and Drift in Production,SK-model-monitoring,short,1900,1
+TRN-MLOPSA,Stretch assignment: productionise churn model on KubeOne,SK-mlops,assignment,0,6
+TRN-MLCERT,Generic ML Engineering Certification (6 months),SK-mlops,certification,14000,26
+TRN-CAI1,Conversational AI Operations Bootcamp,SK-conversational-ai-ops,short,2600,2
+TRN-LLM1,Building LLM Applications,SK-llm-applications,short,2400,2
+TRN-PY1,Python for Network Engineers,SK-python,short,1200,2
+TRN-K8S1,Kubernetes Essentials,SK-kubernetes,short,1500,2
+TRN-SQL1,SQL for Analysts,SK-sql,short,800,1
+TRN-CX1,Customer Journey Analytics,SK-customer-journey-analytics,short,1100,1
+TRN-SEC1,Cloud Security Fundamentals,SK-cloud-security,short,1700,2
+TRN-PM1,Project Management Essentials,SK-project-management,short,900,1
+TRN-VA1,Video Analytics with Computer Vision,SK-video-analytics,short,2300,2
+TRN-EDGE1,Edge Computing Patterns,SK-edge-computing,short,1600,1
+TRN-DE1,Data Engineering on the Lake,SK-data-engineering,short,1400,2
+TRN-LEAD1,First-time Manager Programme,SK-people-leadership,short,2000,4

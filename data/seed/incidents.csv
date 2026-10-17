@@ -1,0 +1,100 @@
+id,code,system_id,severity,opened,duration_hours,summary
+INC-001,INC-001,SYS-FSA,P2,2025-10-30,12.1,Field Service App degradation
+INC-002,INC-002,SYS-DWDM,P3,2025-09-25,13.0,DWDM Transport degradation
+INC-003,INC-003,SYS-CCP,P2,2025-05-10,13.5,Contact Centre Platform degradation
+INC-004,INC-004,SYS-TELE,P2,2025-01-02,8.5,Network Telemetry Pipeline degradation
+INC-005,INC-005,SYS-SDW,P3,2025-07-11,13.2,SD-WAN Controller degradation
+INC-006,INC-006,SYS-K8S,P2,2025-05-07,5.5,KubeOne Platform degradation
+INC-007,INC-007,SYS-HRS,P2,2025-01-17,14.4,HR System degradation
+INC-008,INC-008,SYS-CRM,P2,2026-03-14,13.4,Customer CRM degradation
+INC-009,INC-009,SYS-C360,P1,2025-01-01,2.1,Customer 360 degradation
+INC-010,INC-010,SYS-DLK,P2,2025-09-20,3.0,Enterprise Data Lake degradation
+INC-011,INC-011,SYS-CCP,P3,2025-07-04,18.1,Contact Centre Platform degradation
+INC-012,INC-012,SYS-INV,P3,2026-05-14,26.8,OSS Inventory degradation
+INC-013,INC-013,SYS-APP,P2,2026-08-11,26.0,Veridane Mobile App degradation
+INC-014,INC-014,SYS-INV,P3,2025-12-23,16.5,OSS Inventory degradation
+INC-015,INC-015,SYS-K8S,P3,2026-07-15,25.1,KubeOne Platform degradation
+INC-016,INC-016,SYS-EPT,P3,2025-03-10,9.6,Enterprise Portal degradation
+INC-017,INC-017,SYS-EDGE,P2,2025-12-02,16.4,Edge Compute Nodes degradation
+INC-018,INC-018,SYS-ALAB,P3,2025-03-13,3.4,Network Test Lab degradation
+INC-019,INC-019,SYS-POS,P3,2026-06-22,16.5,Retail POS degradation
+INC-020,INC-020,SYS-DLK,P3,2025-10-28,28.0,Enterprise Data Lake degradation
+INC-021,INC-021,SYS-SIEM,P3,2026-05-13,25.5,SIEM degradation
+INC-022,INC-022,SYS-POS,P3,2025-09-08,27.8,Retail POS degradation
+INC-023,INC-023,SYS-DLK,P3,2026-09-04,21.8,Enterprise Data Lake degradation
+INC-024,INC-024,SYS-INV,P3,2026-01-08,14.8,OSS Inventory degradation
+INC-025,INC-025,SYS-TELE,P2,2026-01-16,18.5,Network Telemetry Pipeline degradation
+INC-026,INC-026,SYS-FSA,P2,2025-03-21,10.9,Field Service App degradation
+INC-027,INC-027,SYS-MPLS,P2,2025-05-26,14.9,MPLS Core degradation
+INC-028,INC-028,SYS-CICD,P3,2026-08-14,27.2,CI/CD Pipeline degradation
+INC-029,INC-029,SYS-CICD,P2,2025-09-21,25.1,CI/CD Pipeline degradation
+INC-030,INC-030,SYS-MPLS,P3,2025-07-01,13.4,MPLS Core degradation
+INC-031,INC-031,SYS-PAY,P2,2025-11-05,9.6,Payment Gateway degradation
+INC-032,INC-032,SYS-MED,P1,2025-03-16,5.1,Usage Mediation degradation
+INC-033,INC-033,SYS-PAY,P3,2025-08-02,28.8,Payment Gateway degradation
+INC-034,INC-034,SYS-FSA,P3,2026-04-11,25.1,Field Service App degradation
+INC-035,INC-035,SYS-INV,P3,2025-06-28,23.6,OSS Inventory degradation
+INC-036,INC-036,SYS-MED,P2,2026-08-02,9.7,Usage Mediation degradation
+INC-037,INC-037,SYS-POS,P3,2025-10-14,11.5,Retail POS degradation
+INC-038,INC-038,SYS-OLTM,P3,2025-08-09,7.0,OLT Fleet Manager degradation
+INC-039,INC-039,SYS-OBS,P3,2026-08-02,15.5,Observability Stack degradation
+INC-040,INC-040,SYS-SDW,P3,2026-05-25,16.6,SD-WAN Controller degradation
+INC-041,INC-041,SYS-BILL,P2,2025-03-26,27.9,Veridane Billing (BSS) degradation
+INC-043,INC-043,SYS-C360,P2,2025-06-23,1.1,Customer 360 degradation
+INC-044,INC-044,SYS-BOT,P2,2025-12-24,12.5,Chatbot Platform degradation
+INC-045,INC-045,SYS-IOT,P1,2025-05-31,8.3,Smart Campus IoT Platform degradation
+INC-046,INC-046,SYS-EPT,P3,2025-12-31,23.9,Enterprise Portal degradation
+INC-047,INC-047,SYS-IAM,P2,2025-02-12,3.2,Identity Platform degradation
+INC-048,INC-048,SYS-ERP,P3,2025-04-25,14.6,Finance ERP degradation
+INC-049,INC-049,SYS-OLTM,P2,2025-10-01,14.1,OLT Fleet Manager degradation
+INC-050,INC-050,SYS-PAY,P2,2025-09-28,22.5,Payment Gateway degradation
+INC-051,INC-051,SYS-BOT,P2,2026-05-04,11.0,Chatbot Platform degradation
+INC-052,INC-052,SYS-DWDM,P2,2025-07-17,11.4,DWDM Transport degradation
+INC-053,INC-053,SYS-OBS,P3,2026-08-11,17.3,Observability Stack degradation
+INC-054,INC-054,SYS-NOVA,P1,2025-05-11,15.7,NOVA NMS degradation
+INC-055,INC-055,SYS-RAN,P3,2026-02-02,13.1,5G RAN degradation
+INC-056,INC-056,SYS-OBS,P3,2026-01-11,25.3,Observability Stack degradation
+INC-057,INC-057,SYS-MED,P3,2026-09-13,5.8,Usage Mediation degradation
+INC-058,INC-058,SYS-C360,P1,2025-04-04,24.3,Customer 360 degradation
+INC-059,INC-059,SYS-C360,P3,2025-01-26,14.4,Customer 360 degradation
+INC-R01,INC-R01,SYS-RATE,P1,2026-04-28,4.0,RatePro rating run failure
+INC-R02,INC-R02,SYS-RATE,P2,2025-01-02,5.7,RatePro rating run failure
+INC-R03,INC-R03,SYS-RATE,P2,2025-08-01,7.4,RatePro rating run failure
+INC-R04,INC-R04,SYS-RATE,P3,2025-11-23,9.1,RatePro rating run failure
+INC-R05,INC-R05,SYS-RATE,P1,2025-03-27,10.8,RatePro rating run failure
+INC-R06,INC-R06,SYS-RATE,P2,2026-08-03,12.5,RatePro rating run failure
+INC-R07,INC-R07,SYS-RATE,P2,2025-03-09,14.2,RatePro rating run failure
+INC-R08,INC-R08,SYS-RATE,P3,2026-07-25,15.9,RatePro rating run failure
+INC-R09,INC-R09,SYS-RATE,P1,2025-06-05,17.6,RatePro rating run failure
+INC-R10,INC-R10,SYS-RATE,P2,2026-08-31,5.3,RatePro rating run failure
+INC-R11,INC-R11,SYS-RATE,P2,2025-02-20,7.0,RatePro rating run failure
+INC-R12,INC-R12,SYS-RATE,P3,2026-01-11,8.7,RatePro rating run failure
+INC-R13,INC-R13,SYS-RATE,P1,2026-04-08,10.4,RatePro rating run failure
+INC-R14,INC-R14,SYS-RATE,P2,2025-09-05,12.1,RatePro rating run failure
+INC-R15,INC-R15,SYS-RATE,P2,2025-01-03,13.8,RatePro rating run failure
+INC-R16,INC-R16,SYS-RATE,P3,2026-09-01,15.5,RatePro rating run failure
+INC-042,INC-042,SYS-NOVA,P2,2025-07-14,6.5,Alarm flood on NOVA NMS; resolved by a Python script that deduplicated SNMP traps
+INC-090,INC-090,SYS-OLTM,P3,2026-03-09,3.0,OLT firmware regression caught by the automated acceptance test script in Network Test Lab
+INC-B01,INC-B01,SYS-BILL,P2,2025-03-11,2,Billing chain issue escalated from another team
+INC-B02,INC-B02,SYS-MED,P3,2025-08-19,3,Billing chain issue escalated from another team
+INC-B03,INC-B03,SYS-RAT,P3,2025-11-04,4,Billing chain issue escalated from another team
+INC-B04,INC-B04,SYS-BILL,P2,2026-01-20,5,Billing chain issue escalated from another team
+INC-B05,INC-B05,SYS-PAY,P3,2026-02-17,6,Billing chain issue escalated from another team
+INC-B06,INC-B06,SYS-BILL,P3,2026-03-24,2,Billing chain issue escalated from another team
+INC-B07,INC-B07,SYS-MED,P2,2026-04-28,3,Billing chain issue escalated from another team
+INC-B08,INC-B08,SYS-ORD,P3,2026-05-26,4,Billing chain issue escalated from another team
+INC-B09,INC-B09,SYS-BILL,P3,2026-06-23,5,Billing chain issue escalated from another team
+INC-B10,INC-B10,SYS-RAT,P2,2026-07-21,6,Billing chain issue escalated from another team
+INC-B11,INC-B11,SYS-BILL,P3,2026-08-18,2,Billing chain issue escalated from another team
+INC-B12,INC-B12,SYS-MED,P3,2026-09-15,3,Billing chain issue escalated from another team
+INC-F01,INC-F01,SYS-MPLS,P1,2025-02-11,4.0,MPLS core outage; root cause found by the network architect
+INC-F02,INC-F02,SYS-DWDM,P2,2025-04-03,5.0,DWDM transport outage; root cause found by the network architect
+INC-F03,INC-F03,SYS-MPLS,P2,2025-06-17,6.0,MPLS core outage; root cause found by the network architect
+INC-F04,INC-F04,SYS-MPLS,P2,2025-09-09,7.0,MPLS core outage; root cause found by the network architect
+INC-F05,INC-F05,SYS-DWDM,P2,2025-11-20,8.0,DWDM transport outage; root cause found by the network architect
+INC-G01,INC-G01,SYS-NOVA,P2,2025-05-14,3.0,Field alarm escalated by the field service desk; fixed by remote NMS and OLT triage
+INC-G02,INC-G02,SYS-OLTM,P3,2025-08-21,4.0,Field alarm escalated by the field service desk; fixed by remote NMS and OLT triage
+INC-G03,INC-G03,SYS-TELE,P2,2025-12-03,2.0,Field alarm escalated by the field service desk; fixed by remote NMS and OLT triage
+INC-G04,INC-G04,SYS-NOVA,P3,2026-02-10,3.0,Field alarm escalated by the field service desk; fixed by remote NMS and OLT triage
+INC-G05,INC-G05,SYS-OLTM,P2,2026-05-19,4.0,Field alarm escalated by the field service desk; fixed by remote NMS and OLT triage
+INC-G06,INC-G06,SYS-NOVA,P3,2026-08-04,2.0,Field alarm escalated by the field service desk; fixed by remote NMS and OLT triage

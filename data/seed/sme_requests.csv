@@ -1,0 +1,6 @@
+id,org_id,skill_id,description,date
+SME-01,ORG-SM1,SK-retail-analytics,Help reading sales data from three shops,2026-05-11
+SME-02,ORG-SM2,SK-lorawan,Soil sensor network for a smallholder estate,2026-06-08
+SME-03,ORG-SM3,SK-digital-marketing,Launch an online store campaign,2026-07-02
+SME-04,ORG-SM4,SK-data-visualization,Delivery performance dashboard,2026-08-17
+SME-05,ORG-SM5,SK-data-privacy-pdpa,Patient data privacy check,2026-09-07

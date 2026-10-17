@@ -1,0 +1,16 @@
+id,code,title,kind,org_id,description,deadline,external_quote_amt,internal_cost_amt,revenue_potential_amt,hours_saved,win_probability,status,demo_query,problem_class_id
+OPP-001,OPP-001,AI-powered customer analytics,customer project,ORG-SRG,AI-powered customer analytics.,2027-01-29,220000,100000,300000,450,0.5,open,We need to deliver an AI-powered customer analytics project.,PC-14
+OPP-002,OPP-002,Deploy AI customer-service solution,internal project,,Deploy AI customer-service solution.,2027-03-31,380000,160000,0,380,0.7,open,Build a team to deploy an AI customer-service solution.,PC-17
+OPP-003,OPP-003,Automate OLT acceptance testing across regions,internal project,,Automate OLT acceptance testing across regions.,2026-12-18,160000,60000,0,220,0.8,open,Find someone who can help me automate this network testing process.,PC-02
+OPP-004,OPP-004,Smart campus video analytics offer,customer project,ORG-UTK,Smart campus video analytics offer.,2027-02-26,300000,140000,900000,300,0.4,open,Can we offer smart campus video analytics without hiring?,PC-30
+OPP-005,OPP-005,AI-driven network optimisation solution,customer project,ORG-PLM,AI-driven network optimisation solution.,2027-04-30,450000,210000,750000,400,0.35,open,We need an AI-driven network optimisation solution.,PC-40
+OPP-006,OPP-006,Network telemetry data platform,internal project,,Network telemetry data platform.,2027-01-15,250000,110000,0,260,0.75,open,Who has spare capacity to build a network telemetry data platform?,PC-33
+OPP-007,OPP-007,Resolve enterprise VPN latency for Harbourline Bank,customer issue,ORG-BDN,Resolve enterprise VPN latency for Harbourline Bank.,2026-10-17,0,0,0,40,0.9,open,Who has experience with this type of customer problem: enterprise VPN latency?,PC-04
+OPP-008,OPP-008,SME digital onboarding programme,customer project,ORG-SM1,SME digital onboarding programme.,2027-02-12,90000,40000,120000,120,0.5,open,Find experts outside my department to support SME digital onboarding in Northern Territory.,PC-31
+OPP-009,OPP-009,Billing platform modernisation,strategic initiative,,Billing platform modernisation.,2027-06-30,1200000,600000,0,500,0.6,open,,PC-09
+OPP-010,OPP-010,Cyber SOC uplift,internal project,,Cyber SOC uplift.,2027-03-31,520000,260000,0,300,0.6,open,,
+OPP-011,OPP-011,GenAI knowledge assistant,internal project,,GenAI knowledge assistant.,2027-02-26,260000,120000,0,600,0.65,open,,
+OPP-012,OPP-012,Campus CCTV analytics tender,customer project,ORG-CAM,Campus CCTV analytics tender.,2026-12-11,180000,90000,420000,160,0.3,open,,PC-30
+OPP-013,OPP-013,Fibre fault prediction,internal project,,Fibre fault prediction.,2027-03-31,200000,90000,0,350,0.55,open,,PC-01
+OPP-014,OPP-014,ESG reporting automation,internal project,,ESG reporting automation.,2027-05-28,140000,70000,0,200,0.5,open,,
+OPP-015,OPP-015,5G fixed wireless launch,customer project,,5G fixed wireless launch.,2027-04-16,350000,180000,600000,250,0.45,open,,

@@ -1,0 +1,41 @@
+id,opportunity_id,role,headcount
+OPP-001-R1,OPP-001,Data Scientist,1
+OPP-001-R2,OPP-001,AI Engineer,1
+OPP-001-R3,OPP-001,Data Engineer,1
+OPP-001-R4,OPP-001,CX Analytics Specialist,1
+OPP-001-R5,OPP-001,Retail Domain Lead,1
+OPP-001-R6,OPP-001,Network Data Automation,1
+OPP-001-R7,OPP-001,MLOps Engineer,1
+OPP-002-R1,OPP-002,AI Specialist,1
+OPP-002-R2,OPP-002,Data Engineer,1
+OPP-002-R3,OPP-002,CX Specialist,1
+OPP-002-R4,OPP-002,Cybersecurity Specialist,1
+OPP-002-R5,OPP-002,Product Manager,1
+OPP-002-R6,OPP-002,Conversational AI Ops,1
+OPP-003-R1,OPP-003,Test Automation Engineer,1
+OPP-004-R1,OPP-004,IoT Architect,1
+OPP-004-R2,OPP-004,Video Analytics Engineer,1
+OPP-004-R3,OPP-004,Edge Platform Engineer,1
+OPP-005-R1,OPP-005,Network Engineer,1
+OPP-005-R2,OPP-005,Data Scientist,1
+OPP-005-R3,OPP-005,AI Engineer,1
+OPP-005-R4,OPP-005,Cybersecurity Specialist,1
+OPP-006-R1,OPP-006,Data Engineer,1
+OPP-006-R2,OPP-006,Platform Engineer,1
+OPP-007-R1,OPP-007,Core Network Specialist,1
+OPP-008-R1,OPP-008,SME Advisor,1
+OPP-008-R2,OPP-008,IoT Field Specialist,1
+OPP-009-R1,OPP-009,Rating Specialist,1
+OPP-009-R2,OPP-009,Billing Architect,1
+OPP-010-R1,OPP-010,Security Analyst,1
+OPP-010-R2,OPP-010,Cloud Security Engineer,1
+OPP-011-R1,OPP-011,AI Engineer,1
+OPP-011-R2,OPP-011,Data Engineer,1
+OPP-012-R1,OPP-012,Video Analytics Engineer,1
+OPP-012-R2,OPP-012,Pre-sales Architect,1
+OPP-013-R1,OPP-013,Field Expert,1
+OPP-013-R2,OPP-013,Data Scientist,1
+OPP-014-R1,OPP-014,ESG Analyst,1
+OPP-014-R2,OPP-014,Data Engineer,1
+OPP-015-R1,OPP-015,RAN Engineer,1
+OPP-015-R2,OPP-015,Product Specialist,1

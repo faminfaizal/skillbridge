@@ -1,0 +1,490 @@
+id,project_id,person_id,role,allocation_pct,man_days,contribution_note,start_date,end_date
+ASG-0001,PRJ-001,P-027,Project Management,60,68,Documented 5g ran work for 5G densification Manila,2026-08-07,2027-01-17
+ASG-0002,PRJ-001,P-010,Project Management,30,34,Built project management work for 5G densification Manila,2026-08-07,2027-01-17
+ASG-0003,PRJ-001,P-029,5G RAN,25,28,Led network design work for 5G densification Manila,2026-08-07,2027-01-17
+ASG-0004,PRJ-001,P-071,Network Design,50,57,Coordinated project management work for 5G densification Manila,2026-08-07,2027-01-17
+ASG-0005,PRJ-001,P-277,5G RAN,40,45,Led project management work for 5G densification Manila,2026-08-07,2027-01-17
+ASG-0006,PRJ-002,P-252,Identity & Access Management,20,39,Configured security operations work for Security uplift 2024.1,2023-10-06,2024-07-13
+ASG-0007,PRJ-002,P-251,Security Compliance,40,78,Led identity & access management work for Security uplift 2024.1,2023-10-06,2024-07-13
+ASG-0008,PRJ-002,P-246,Security Operations,60,118,Led security compliance work for Security uplift 2024.1,2023-10-06,2024-07-13
+ASG-0009,PRJ-002,P-239,Project Manager,25,49,Designed security operations work for Security uplift 2024.1,2023-10-06,2024-07-13
+ASG-0010,PRJ-002,P-249,Identity & Access Management,25,49,Documented security operations work for Security uplift 2024.1,2023-10-06,2024-07-13
+ASG-0011,PRJ-002,P-247,Security Operations,40,78,Coordinated security operations work for Security uplift 2024.1,2023-10-06,2024-07-13
+ASG-0012,PRJ-003,P-057,Field Service Coordination,40,67,Led field service coordination work for Fault restoration programme 2024.1,2023-12-06,2024-08-03
+ASG-0013,PRJ-003,P-047,Network Troubleshooting,40,67,Designed fibre testing (otdr) work for Fault restoration programme 2024.1,2023-12-06,2024-08-03
+ASG-0014,PRJ-003,P-061,Network Troubleshooting,50,84,Designed network troubleshooting work for Fault restoration programme 2024.1,2023-12-06,2024-08-03
+ASG-0015,PRJ-003,P-058,Network Troubleshooting,60,101,Led fibre testing (otdr) work for Fault restoration programme 2024.1,2023-12-06,2024-08-03
+ASG-0016,PRJ-003,P-042,Network Troubleshooting,25,42,Built field service coordination work for Fault restoration programme 2024.1,2023-12-06,2024-08-03
+ASG-0017,PRJ-003,P-012,Fibre Testing (OTDR),30,50,Coordinated fibre testing (otdr) work for Fault restoration programme 2024.1,2023-12-06,2024-08-03
+ASG-0018,PRJ-003,P-013,Network Troubleshooting,60,101,Documented fibre testing (otdr) work for Fault restoration programme 2024.1,2023-12-06,2024-08-03
+ASG-0019,PRJ-003,P-060,Network Troubleshooting,50,84,Automated network troubleshooting work for Fault restoration programme 2024.1,2023-12-06,2024-08-03
+ASG-0020,PRJ-003,P-043,Fibre Testing (OTDR),20,33,Tested field service coordination work for Fault restoration programme 2024.1,2023-12-06,2024-08-03
+ASG-0021,PRJ-003,P-041,Project Manager,20,33,Coordinated network troubleshooting work for Fault restoration programme 2024.1,2023-12-06,2024-08-03
+ASG-0022,PRJ-004,P-253,Security Operations,25,49,Tested identity & access management work for Security uplift 2025.2,2026-04-13,2027-01-23
+ASG-0023,PRJ-004,P-246,Identity & Access Management,25,49,Delivered security compliance work for Security uplift 2025.2,2026-04-13,2027-01-23
+ASG-0024,PRJ-004,P-250,Security Operations,25,49,Analysed security operations work for Security uplift 2025.2,2026-04-13,2027-01-23
+ASG-0025,PRJ-004,P-254,Identity & Access Management,40,79,Automated security operations work for Security uplift 2025.2,2026-04-13,2027-01-23
+ASG-0026,PRJ-005,P-235,Kubernetes,30,19,Led ci/cd work for Cloud migration wave 2024.1,2025-01-21,2025-04-26
+ASG-0027,PRJ-005,P-229,Kubernetes,50,33,Coordinated ci/cd work for Cloud migration wave 2024.1,2025-01-21,2025-04-26
+ASG-0028,PRJ-005,P-225,Docker,25,16,Documented terraform work for Cloud migration wave 2024.1,2025-01-21,2025-04-26
+ASG-0029,PRJ-005,P-223,CI/CD,30,19,Tested kubernetes work for Cloud migration wave 2024.1,2025-01-21,2025-04-26
+ASG-0030,PRJ-005,P-220,Kubernetes,25,16,Tested terraform work for Cloud migration wave 2024.1,2025-01-21,2025-04-26
+ASG-0031,PRJ-005,P-213,CI/CD,40,26,Automated kubernetes work for Cloud migration wave 2024.1,2025-01-21,2025-04-26
+ASG-0032,PRJ-006,P-215,Order Management,30,22,Tested billing systems work for BSS release 2024.1,2023-10-14,2024-01-27
+ASG-0033,PRJ-006,P-216,Test Automation,60,44,Automated billing systems work for BSS release 2024.1,2023-10-14,2024-01-27
+ASG-0034,PRJ-006,P-208,Billing Systems,25,18,Coordinated order management work for BSS release 2024.1,2023-10-14,2024-01-27
+ASG-0035,PRJ-006,P-232,Order Management,40,29,Tested sql work for BSS release 2024.1,2023-10-14,2024-01-27
+ASG-0036,PRJ-006,P-229,Test Automation,50,36,Built test automation work for BSS release 2024.1; also picked up MLOps to unblock the team,2023-10-14,2024-01-27
+ASG-0037,PRJ-007,P-034,IP/MPLS Routing,25,48,Configured ip/mpls routing work for Core capacity upgrade 2024.1,2023-11-25,2024-08-26
+ASG-0038,PRJ-007,P-014,Project Manager,60,115,Coordinated ip/mpls routing work for Core capacity upgrade 2024.1,2023-11-25,2024-08-26
+ASG-0039,PRJ-007,P-037,IP/MPLS Routing,20,38,Coordinated optical transport (dwdm) work for Core capacity upgrade 2024.1,2023-11-25,2024-08-26
+ASG-0040,PRJ-007,P-033,BGP,60,115,Led bgp work for Core capacity upgrade 2024.1,2023-11-25,2024-08-26
+ASG-0041,PRJ-007,P-027,BGP,25,48,Tested ip/mpls routing work for Core capacity upgrade 2024.1,2023-11-25,2024-08-26
+ASG-0042,PRJ-007,P-036,BGP,40,77,Coordinated ip/mpls routing work for Core capacity upgrade 2024.1,2023-11-25,2024-08-26
+ASG-0043,PRJ-007,P-028,Optical Transport (DWDM),30,57,Configured bgp work for Core capacity upgrade 2024.1,2023-11-25,2024-08-26
+ASG-0044,PRJ-008,P-242,SQL,60,26,Tested sql work for BSS release 2025.2,2023-05-23,2023-07-24
+ASG-0045,PRJ-008,P-232,Test Automation,20,8,Configured sql work for BSS release 2025.2,2023-05-23,2023-07-24
+ASG-0046,PRJ-008,P-213,Billing Systems,60,26,Led sql work for BSS release 2025.2; also picked up Rating Engine to unblock the team,2023-05-23,2023-07-24
+ASG-0047,PRJ-008,P-209,Order Management,40,17,Tested order management work for BSS release 2025.2,2023-05-23,2023-07-24
+ASG-0048,PRJ-008,P-229,SQL,20,8,Built test automation work for BSS release 2025.2,2023-05-23,2023-07-24
+ASG-0049,PRJ-008,P-212,Billing Systems,40,17,Led sql work for BSS release 2025.2; also picked up Data Warehousing to unblock the team,2023-05-23,2023-07-24
+ASG-0050,PRJ-009,P-047,Field Service Coordination,20,27,Built network troubleshooting work for Fault restoration programme 2025.2,2024-12-29,2025-07-10
+ASG-0051,PRJ-009,P-057,Network Troubleshooting,25,33,Led network troubleshooting work for Fault restoration programme 2025.2,2024-12-29,2025-07-10
+ASG-0052,PRJ-009,P-041,Field Service Coordination,50,67,Tested fibre testing (otdr) work for Fault restoration programme 2025.2,2024-12-29,2025-07-10
+ASG-0053,PRJ-009,P-060,Field Service Coordination,20,27,Automated field service coordination work for Fault restoration programme 2025.2,2024-12-29,2025-07-10
+ASG-0054,PRJ-009,P-059,Network Troubleshooting,50,67,Coordinated network troubleshooting work for Fault restoration programme 2025.2,2024-12-29,2025-07-10
+ASG-0055,PRJ-010,P-130,Data Visualization,25,23,Tested data visualization work for Retail campaign 2024.1,2023-11-22,2024-04-03
+ASG-0056,PRJ-010,P-154,Data Visualization,25,23,Documented customer retention work for Retail campaign 2024.1,2023-11-22,2024-04-03
+ASG-0057,PRJ-010,P-153,Digital Marketing,40,37,Analysed digital marketing work for Retail campaign 2024.1,2023-11-22,2024-04-03
+ASG-0058,PRJ-011,P-249,Security Compliance,40,40,Built security compliance work for Security uplift 2026.3,2023-02-16,2023-07-11
+ASG-0059,PRJ-011,P-223,Security Compliance,40,40,Coordinated security operations work for Security uplift 2026.3,2023-02-16,2023-07-11
+ASG-0060,PRJ-011,P-239,Security Operations,20,20,Built security operations work for Security uplift 2026.3,2023-02-16,2023-07-11
+ASG-0061,PRJ-011,P-254,Security Operations,25,25,Configured identity & access management work for Security uplift 2026.3,2023-02-16,2023-07-11
+ASG-0062,PRJ-011,P-296,Identity & Access Management,25,25,Analysed security compliance work for Security uplift 2026.3,2023-02-16,2023-07-11
+ASG-0063,PRJ-012,P-229,Kubernetes,60,52,Built ci/cd work for Cloud migration wave 2025.2,2024-02-15,2024-06-18
+ASG-0064,PRJ-012,P-218,Kubernetes,20,17,Documented docker work for Cloud migration wave 2025.2,2024-02-15,2024-06-18
+ASG-0065,PRJ-012,P-226,Kubernetes,40,34,Delivered ci/cd work for Cloud migration wave 2025.2,2024-02-15,2024-06-18
+ASG-0066,PRJ-012,P-234,Docker,30,26,Configured kubernetes work for Cloud migration wave 2025.2,2024-02-15,2024-06-18
+ASG-0067,PRJ-012,P-236,Terraform,25,21,Documented ci/cd work for Cloud migration wave 2025.2,2024-02-15,2024-06-18
+ASG-0068,PRJ-012,P-224,CI/CD,20,17,Built terraform work for Cloud migration wave 2025.2,2024-02-15,2024-06-18
+ASG-0069,PRJ-013,P-279,Risk Management,60,71,Delivered financial analysis work for Finance and compliance 2024.1,2024-06-18,2024-12-05
+ASG-0070,PRJ-013,P-277,Risk Management,40,47,Documented financial analysis work for Finance and compliance 2024.1,2024-06-18,2024-12-05
+ASG-0071,PRJ-013,P-297,Risk Management,20,23,Analysed internal audit work for Finance and compliance 2024.1,2024-06-18,2024-12-05
+ASG-0072,PRJ-013,P-081,Internal Audit,20,23,Automated risk management work for Finance and compliance 2024.1; also picked up Edge Computing to unblock the team,2024-06-18,2024-12-05
+ASG-0073,PRJ-014,P-235,Terraform,30,19,Led ci/cd work for Cloud migration wave 2026.3,2023-09-09,2023-12-11
+ASG-0074,PRJ-014,P-220,Project Manager,50,32,Designed docker work for Cloud migration wave 2026.3,2023-09-09,2023-12-11
+ASG-0075,PRJ-014,P-229,Kubernetes,60,39,Documented ci/cd work for Cloud migration wave 2026.3,2023-09-09,2023-12-11
+ASG-0076,PRJ-014,P-226,Docker,30,19,Analysed docker work for Cloud migration wave 2026.3; also picked up Test Automation to unblock the team,2023-09-09,2023-12-11
+ASG-0077,PRJ-014,P-272,Kubernetes,20,13,Documented docker work for Cloud migration wave 2026.3,2023-09-09,2023-12-11
+ASG-0078,PRJ-015,P-249,Security Operations,60,89,Designed security compliance work for Security uplift 2023.4,2026-04-01,2026-10-30
+ASG-0079,PRJ-015,P-250,Security Compliance,25,37,Documented security operations work for Security uplift 2023.4,2026-04-01,2026-10-30
+ASG-0080,PRJ-015,P-254,Security Operations,25,37,Configured security operations work for Security uplift 2023.4,2026-04-01,2026-10-30
+ASG-0081,PRJ-015,P-246,Identity & Access Management,30,44,Led security operations work for Security uplift 2023.4,2026-04-01,2026-10-30
+ASG-0082,PRJ-016,P-230,REST API Design,30,32,Automated agile delivery work for Digital channel release 2024.1,2025-01-16,2025-06-18
+ASG-0083,PRJ-016,P-231,Agile Delivery,60,64,Built react work for Digital channel release 2024.1,2025-01-16,2025-06-18
+ASG-0084,PRJ-016,P-232,React,50,53,Led react work for Digital channel release 2024.1,2025-01-16,2025-06-18
+ASG-0085,PRJ-016,P-234,TypeScript,30,32,Designed typescript work for Digital channel release 2024.1,2025-01-16,2025-06-18
+ASG-0086,PRJ-016,P-252,REST API Design,25,26,Delivered typescript work for Digital channel release 2024.1,2025-01-16,2025-06-18
+ASG-0087,PRJ-016,P-235,TypeScript,25,26,Coordinated react work for Digital channel release 2024.1,2025-01-16,2025-06-18
+ASG-0088,PRJ-017,P-027,BGP,40,45,Delivered optical transport (dwdm) work for Core capacity upgrade 2025.2,2023-08-05,2024-01-14
+ASG-0089,PRJ-017,P-029,Optical Transport (DWDM),50,56,Documented bgp work for Core capacity upgrade 2025.2,2023-08-05,2024-01-14
+ASG-0090,PRJ-017,P-025,Optical Transport (DWDM),20,22,Analysed ip/mpls routing work for Core capacity upgrade 2025.2,2023-08-05,2024-01-14
+ASG-0091,PRJ-017,P-028,BGP,50,56,Analysed bgp work for Core capacity upgrade 2025.2,2023-08-05,2024-01-14
+ASG-0092,PRJ-018,P-073,Network Design,30,36,Automated project management work for 5G densification Sydney,2024-09-11,2025-03-04
+ASG-0093,PRJ-018,P-041,5G RAN,40,48,Documented project management work for 5G densification Sydney,2024-09-11,2025-03-04
+ASG-0094,PRJ-018,P-058,Project Management,30,36,Built project management work for 5G densification Sydney,2024-09-11,2025-03-04
+ASG-0095,PRJ-018,P-029,Network Design,20,24,Analysed network design work for 5G densification Sydney,2024-09-11,2025-03-04
+ASG-0096,PRJ-018,P-297,Project Management,40,48,Automated project management work for 5G densification Sydney,2024-09-11,2025-03-04
+ASG-0097,PRJ-019,P-107,Solution Selling,20,18,Analysed solution selling work for Enterprise RFP delivery: Shieldwell Insurance,2024-12-18,2025-04-28
+ASG-0098,PRJ-019,P-119,Network Design,20,18,Documented network design work for Enterprise RFP delivery: Shieldwell Insurance,2024-12-18,2025-04-28
+ASG-0099,PRJ-019,P-118,Solution Selling,30,27,Configured network design work for Enterprise RFP delivery: Shieldwell Insurance,2024-12-18,2025-04-28
+ASG-0100,PRJ-019,P-082,Solution Selling,50,45,Documented solution selling work for Enterprise RFP delivery: Shieldwell Insurance,2024-12-18,2025-04-28
+ASG-0101,PRJ-020,P-059,Fibre Testing (OTDR),30,23,Configured field service coordination work for Fault restoration programme 2026.3,2024-10-15,2025-02-02
+ASG-0102,PRJ-020,P-056,Network Troubleshooting,40,30,Configured field service coordination work for Fault restoration programme 2026.3,2024-10-15,2025-02-02
+ASG-0103,PRJ-020,P-042,Network Troubleshooting,50,38,Led network troubleshooting work for Fault restoration programme 2026.3; also picked up Network Telemetry to unblock the team,2024-10-15,2025-02-02
+ASG-0104,PRJ-020,P-041,Field Service Coordination,60,46,Tested network troubleshooting work for Fault restoration programme 2026.3,2024-10-15,2025-02-02
+ASG-0105,PRJ-020,P-057,Field Service Coordination,50,38,Built network troubleshooting work for Fault restoration programme 2026.3,2024-10-15,2025-02-02
+ASG-0106,PRJ-021,P-046,Field Service Coordination,25,49,Designed fibre testing (otdr) work for Fault restoration programme 2023.4,2023-01-16,2023-10-26
+ASG-0107,PRJ-021,P-056,Field Service Coordination,25,49,Built field service coordination work for Fault restoration programme 2023.4,2023-01-16,2023-10-26
+ASG-0108,PRJ-021,P-058,Network Troubleshooting,20,39,Automated network troubleshooting work for Fault restoration programme 2023.4,2023-01-16,2023-10-26
+ASG-0109,PRJ-021,P-013,Fibre Testing (OTDR),25,49,Configured network troubleshooting work for Fault restoration programme 2023.4; also picked up Network Test Engineering to unblock the team,2023-01-16,2023-10-26
+ASG-0110,PRJ-021,P-043,Fibre Testing (OTDR),40,79,Coordinated field service coordination work for Fault restoration programme 2023.4,2023-01-16,2023-10-26
+ASG-0111,PRJ-021,P-042,Network Troubleshooting,20,39,Documented network troubleshooting work for Fault restoration programme 2023.4,2023-01-16,2023-10-26
+ASG-0112,PRJ-021,P-047,Field Service Coordination,25,49,Built fibre testing (otdr) work for Fault restoration programme 2023.4,2023-01-16,2023-10-26
+ASG-0113,PRJ-021,P-040,Field Service Coordination,40,79,Delivered network troubleshooting work for Fault restoration programme 2023.4,2023-01-16,2023-10-26
+ASG-0114,PRJ-022,P-246,Security Operations,60,111,Coordinated security operations work for Security uplift 2024.5,2023-10-26,2024-07-17
+ASG-0115,PRJ-022,P-253,Security Compliance,50,92,Delivered security operations work for Security uplift 2024.5,2023-10-26,2024-07-17
+ASG-0116,PRJ-022,P-249,Identity & Access Management,50,92,Configured security compliance work for Security uplift 2024.5,2023-10-26,2024-07-17
+ASG-0117,PRJ-023,P-035,BGP,40,28,Built optical transport (dwdm) work for Core capacity upgrade 2026.3,2024-07-27,2024-11-06
+ASG-0118,PRJ-023,P-034,Optical Transport (DWDM),25,17,Automated ip/mpls routing work for Core capacity upgrade 2026.3,2024-07-27,2024-11-06
+ASG-0119,PRJ-023,P-026,IP/MPLS Routing,25,17,Built bgp work for Core capacity upgrade 2026.3,2024-07-27,2024-11-06
+ASG-0120,PRJ-023,P-031,IP/MPLS Routing,20,14,Built ip/mpls routing work for Core capacity upgrade 2026.3,2024-07-27,2024-11-06
+ASG-0121,PRJ-023,P-033,Optical Transport (DWDM),30,21,Coordinated optical transport (dwdm) work for Core capacity upgrade 2026.3,2024-07-27,2024-11-06
+ASG-0122,PRJ-023,P-027,BGP,30,21,Led bgp work for Core capacity upgrade 2026.3,2024-07-27,2024-11-06
+ASG-0123,PRJ-024,P-245,Order Management,40,57,Automated sql work for BSS release 2026.3,2026-02-10,2026-09-03
+ASG-0124,PRJ-024,P-213,Test Automation,40,57,Analysed sql work for BSS release 2026.3,2026-02-10,2026-09-03
+ASG-0125,PRJ-024,P-239,Test Automation,50,71,Configured sql work for BSS release 2026.3; also picked up PL/SQL to unblock the team,2026-02-10,2026-09-03
+ASG-0126,PRJ-024,P-230,Billing Systems,25,35,Coordinated sql work for BSS release 2026.3,2026-02-10,2026-09-03
+ASG-0127,PRJ-024,P-238,SQL,30,43,Automated sql work for BSS release 2026.3; also picked up Data Warehousing to unblock the team,2026-02-10,2026-09-03
+ASG-0128,PRJ-024,P-241,Order Management,50,71,Coordinated sql work for BSS release 2026.3,2026-02-10,2026-09-03
+ASG-0129,PRJ-024,P-212,Billing Systems,25,35,Automated order management work for BSS release 2026.3,2026-02-10,2026-09-03
+ASG-0130,PRJ-024,P-229,Test Automation,60,86,Coordinated test automation work for BSS release 2026.3; also picked up Python to unblock the team,2026-02-10,2026-09-03
+ASG-0131,PRJ-024,P-215,Billing Systems,50,71,Analysed billing systems work for BSS release 2026.3,2026-02-10,2026-09-03
+ASG-0132,PRJ-025,P-212,Order Management,20,23,Automated billing systems work for BSS release 2023.4,2025-10-01,2026-03-17
+ASG-0133,PRJ-025,P-232,Billing Systems,40,46,Built sql work for BSS release 2023.4,2025-10-01,2026-03-17
+ASG-0134,PRJ-025,P-213,SQL,40,46,Documented billing systems work for BSS release 2023.4,2025-10-01,2026-03-17
+ASG-0135,PRJ-025,P-216,Billing Systems,25,29,Built sql work for BSS release 2023.4,2025-10-01,2026-03-17
+ASG-0136,PRJ-025,P-263,Billing Systems,50,58,Delivered sql work for BSS release 2023.4,2025-10-01,2026-03-17
+ASG-0137,PRJ-026,P-246,TypeScript,20,27,Built agile delivery work for Digital channel release 2025.2,2024-06-29,2025-01-09
+ASG-0138,PRJ-026,P-234,Agile Delivery,50,67,Tested agile delivery work for Digital channel release 2025.2,2024-06-29,2025-01-09
+ASG-0139,PRJ-026,P-208,Agile Delivery,50,67,Automated agile delivery work for Digital channel release 2025.2,2024-06-29,2025-01-09
+ASG-0140,PRJ-026,P-239,TypeScript,25,33,Tested rest api design work for Digital channel release 2025.2,2024-06-29,2025-01-09
+ASG-0141,PRJ-026,P-247,React,30,40,Delivered typescript work for Digital channel release 2025.2,2024-06-29,2025-01-09
+ASG-0142,PRJ-026,P-236,TypeScript,60,81,Analysed agile delivery work for Digital channel release 2025.2,2024-06-29,2025-01-09
+ASG-0143,PRJ-027,P-234,Security Compliance,40,27,Coordinated security operations work for Security uplift 2025.6,2023-01-26,2023-05-04
+ASG-0144,PRJ-027,P-254,Security Operations,40,27,Automated security operations work for Security uplift 2025.6,2023-01-26,2023-05-04
+ASG-0145,PRJ-027,P-253,Security Operations,25,17,Tested security compliance work for Security uplift 2025.6,2023-01-26,2023-05-04
+ASG-0146,PRJ-027,P-240,Security Operations,30,20,Coordinated security operations work for Security uplift 2025.6,2023-01-26,2023-05-04
+ASG-0147,PRJ-027,P-249,Security Compliance,40,27,Led security compliance work for Security uplift 2025.6,2023-01-26,2023-05-04
+ASG-0148,PRJ-027,P-296,Security Operations,40,27,Tested security compliance work for Security uplift 2025.6,2023-01-26,2023-05-04
+ASG-0149,PRJ-028,P-084,Network Design,50,47,Configured pre-sales architecture work for Enterprise RFP delivery: CareFirst Clinics,2025-02-16,2025-07-03
+ASG-0150,PRJ-028,P-118,Project Management,60,57,Analysed pre-sales architecture work for Enterprise RFP delivery: CareFirst Clinics,2025-02-16,2025-07-03
+ASG-0151,PRJ-028,P-081,Pre-sales Architecture,40,38,Automated solution selling work for Enterprise RFP delivery: CareFirst Clinics,2025-02-16,2025-07-03
+ASG-0152,PRJ-028,P-107,Network Design,20,19,Led solution selling work for Enterprise RFP delivery: CareFirst Clinics,2025-02-16,2025-07-03
+ASG-0153,PRJ-028,P-209,Project Management,30,28,Delivered project management work for Enterprise RFP delivery: CareFirst Clinics,2025-02-16,2025-07-03
+ASG-0154,PRJ-029,P-222,Kubernetes,30,30,Delivered kubernetes work for Cloud migration wave 2023.4; also picked up MLOps to unblock the team,2025-07-21,2025-12-13
+ASG-0155,PRJ-029,P-218,Project Manager,40,40,Automated ci/cd work for Cloud migration wave 2023.4,2025-07-21,2025-12-13
+ASG-0156,PRJ-029,P-232,Terraform,20,20,Analysed ci/cd work for Cloud migration wave 2023.4,2025-07-21,2025-12-13
+ASG-0157,PRJ-029,P-225,Terraform,40,40,Built terraform work for Cloud migration wave 2023.4,2025-07-21,2025-12-13
+ASG-0158,PRJ-030,P-296,Financial Analysis,60,67,Coordinated internal audit work for Finance and compliance 2025.2,2024-04-19,2024-09-27
+ASG-0159,PRJ-030,P-276,Financial Analysis,40,45,Designed risk management work for Finance and compliance 2025.2,2024-04-19,2024-09-27
+ASG-0160,PRJ-030,P-298,Risk Management,40,45,Built risk management work for Finance and compliance 2025.2,2024-04-19,2024-09-27
+ASG-0161,PRJ-030,P-300,Financial Analysis,30,33,Automated internal audit work for Finance and compliance 2025.2,2024-04-19,2024-09-27
+ASG-0162,PRJ-030,P-119,Financial Analysis,20,22,Designed risk management work for Finance and compliance 2025.2,2024-04-19,2024-09-27
+ASG-0163,PRJ-031,P-043,OLT Configuration,60,30,Tested gpon work for Fibre rollout Singapore,2023-06-23,2023-09-04
+ASG-0164,PRJ-031,P-071,Project Management,60,30,Configured olt configuration work for Fibre rollout Singapore,2023-06-23,2023-09-04
+ASG-0165,PRJ-031,P-010,Project Management,30,15,Built olt configuration work for Fibre rollout Singapore,2023-06-23,2023-09-04
+ASG-0166,PRJ-031,P-076,OLT Configuration,60,30,Analysed gpon work for Fibre rollout Singapore,2023-06-23,2023-09-04
+ASG-0167,PRJ-031,P-093,OLT Configuration,30,15,Led project management work for Fibre rollout Singapore,2023-06-23,2023-09-04
+ASG-0168,PRJ-032,P-212,Security Compliance,50,65,Led security operations work for Security uplift 2026.7,2023-07-06,2024-01-08
+ASG-0169,PRJ-032,P-231,Security Compliance,60,78,Led security operations work for Security uplift 2026.7; also picked up Python to unblock the team,2023-07-06,2024-01-08
+ASG-0170,PRJ-032,P-253,Identity & Access Management,60,78,Configured identity & access management work for Security uplift 2026.7,2023-07-06,2024-01-08
+ASG-0171,PRJ-032,P-241,Security Compliance,20,26,Coordinated security operations work for Security uplift 2026.7,2023-07-06,2024-01-08
+ASG-0172,PRJ-032,P-254,Security Compliance,25,32,Designed security operations work for Security uplift 2026.7,2023-07-06,2024-01-08
+ASG-0173,PRJ-032,P-246,Security Compliance,60,78,Led security operations work for Security uplift 2026.7,2023-07-06,2024-01-08
+ASG-0174,PRJ-032,P-214,Identity & Access Management,50,65,Documented security operations work for Security uplift 2026.7; also picked up Data Warehousing to unblock the team,2023-07-06,2024-01-08
+ASG-0175,PRJ-033,P-185,Complaint Resolution,20,15,Tested contact centre operations work for Contact centre improvement 2024.1,2024-06-22,2024-10-12
+ASG-0176,PRJ-033,P-195,Contact Centre Operations,60,47,Led complaint resolution work for Contact centre improvement 2024.1,2024-06-22,2024-10-12
+ASG-0177,PRJ-033,P-173,Project Manager,25,19,Analysed complaint resolution work for Contact centre improvement 2024.1,2024-06-22,2024-10-12
+ASG-0178,PRJ-033,P-174,CX Design,20,15,Designed contact centre operations work for Contact centre improvement 2024.1,2024-06-22,2024-10-12
+ASG-0179,PRJ-034,P-043,OLT Configuration,40,67,Delivered fibre splicing work for Fibre rollout Sydney,2026-01-08,2026-09-07
+ASG-0180,PRJ-034,P-041,OLT Configuration,25,42,Tested fibre splicing work for Fibre rollout Sydney,2026-01-08,2026-09-07
+ASG-0181,PRJ-034,P-044,Project Management,30,50,Analysed gpon work for Fibre rollout Sydney,2026-01-08,2026-09-07
+ASG-0182,PRJ-034,P-014,Fibre Splicing,30,50,Documented olt configuration work for Fibre rollout Sydney,2026-01-08,2026-09-07
+ASG-0183,PRJ-034,P-076,OLT Configuration,50,84,Analysed olt configuration work for Fibre rollout Sydney,2026-01-08,2026-09-07
+ASG-0184,PRJ-034,P-071,Fibre Splicing,50,84,Automated olt configuration work for Fibre rollout Sydney; also picked up Network Management Systems to unblock the team,2026-01-08,2026-09-07
+ASG-0185,PRJ-034,P-107,Fibre Splicing,25,42,Delivered project management work for Fibre rollout Sydney; also picked up Pre-sales Architecture to unblock the team,2026-01-08,2026-09-07
+ASG-0186,PRJ-034,P-209,GPON,30,50,Automated project management work for Fibre rollout Sydney,2026-01-08,2026-09-07
+ASG-0187,PRJ-035,P-262,Machine Learning,30,47,Built sql work for Analytics product: billing anomaly detection; also picked up Test Automation to unblock the team,2025-10-01,2026-05-16
+ASG-0188,PRJ-035,P-264,Machine Learning,30,47,Led machine learning work for Analytics product: billing anomaly detection,2025-10-01,2026-05-16
+ASG-0189,PRJ-035,P-220,Python,30,47,Designed python work for Analytics product: billing anomaly detection,2025-10-01,2026-05-16
+ASG-0190,PRJ-036,P-298,Financial Analysis,60,25,Tested risk management work for Finance and compliance 2026.3,2023-01-02,2023-03-04
+ASG-0191,PRJ-036,P-286,Internal Audit,25,10,Coordinated financial analysis work for Finance and compliance 2026.3,2023-01-02,2023-03-04
+ASG-0192,PRJ-036,P-276,Financial Analysis,20,8,Delivered financial analysis work for Finance and compliance 2026.3,2023-01-02,2023-03-04
+ASG-0193,PRJ-036,P-279,Risk Management,60,25,Configured risk management work for Finance and compliance 2026.3,2023-01-02,2023-03-04
+ASG-0194,PRJ-036,P-290,Risk Management,30,12,Led financial analysis work for Finance and compliance 2026.3,2023-01-02,2023-03-04
+ASG-0195,PRJ-037,P-026,Optical Transport (DWDM),30,50,Automated bgp work for Core capacity upgrade 2023.4,2024-10-12,2025-06-08
+ASG-0196,PRJ-037,P-034,Optical Transport (DWDM),30,50,Tested optical transport (dwdm) work for Core capacity upgrade 2023.4,2024-10-12,2025-06-08
+ASG-0197,PRJ-037,P-031,IP/MPLS Routing,50,83,Built bgp work for Core capacity upgrade 2023.4,2024-10-12,2025-06-08
+ASG-0198,PRJ-037,P-028,BGP,20,33,Automated bgp work for Core capacity upgrade 2023.4,2024-10-12,2025-06-08
+ASG-0199,PRJ-038,P-297,Risk Management,20,31,Delivered internal audit work for Finance and compliance 2023.4,2023-02-02,2023-09-16
+ASG-0200,PRJ-038,P-277,Project Manager,25,39,Configured risk management work for Finance and compliance 2023.4,2023-02-02,2023-09-16
+ASG-0201,PRJ-038,P-081,Risk Management,40,63,Delivered risk management work for Finance and compliance 2023.4,2023-02-02,2023-09-16
+ASG-0202,PRJ-039,P-107,Project Management,20,12,Automated project management work for Enterprise RFP delivery: MicroFinance Partners,2024-11-20,2025-02-18
+ASG-0203,PRJ-039,P-117,Project Management,50,31,Coordinated pre-sales architecture work for Enterprise RFP delivery: MicroFinance Partners,2024-11-20,2025-02-18
+ASG-0204,PRJ-039,P-084,Network Design,50,31,Automated solution selling work for Enterprise RFP delivery: MicroFinance Partners,2024-11-20,2025-02-18
+ASG-0205,PRJ-039,P-083,Solution Selling,50,31,Delivered pre-sales architecture work for Enterprise RFP delivery: MicroFinance Partners,2024-11-20,2025-02-18
+ASG-0206,PRJ-039,P-029,Network Design,20,12,Analysed network design work for Enterprise RFP delivery: MicroFinance Partners,2024-11-20,2025-02-18
+ASG-0207,PRJ-040,P-239,REST API Design,30,40,Led rest api design work for Digital channel release 2026.3,2023-10-27,2024-05-06
+ASG-0208,PRJ-040,P-229,Agile Delivery,20,26,Analysed agile delivery work for Digital channel release 2026.3,2023-10-27,2024-05-06
+ASG-0209,PRJ-040,P-231,TypeScript,25,33,Documented react work for Digital channel release 2026.3,2023-10-27,2024-05-06
+ASG-0210,PRJ-040,P-270,REST API Design,20,26,Coordinated rest api design work for Digital channel release 2026.3,2023-10-27,2024-05-06
+ASG-0211,PRJ-041,P-017,OLT Configuration,30,20,Delivered gpon work for Fibre rollout Manila,2025-11-28,2026-03-05
+ASG-0212,PRJ-041,P-071,Fibre Splicing,40,27,Led olt configuration work for Fibre rollout Manila,2025-11-28,2026-03-05
+ASG-0213,PRJ-041,P-073,GPON,25,16,Built gpon work for Fibre rollout Manila,2025-11-28,2026-03-05
+ASG-0214,PRJ-041,P-018,GPON,60,40,Configured olt configuration work for Fibre rollout Manila,2025-11-28,2026-03-05
+ASG-0215,PRJ-041,P-010,Project Management,20,13,Designed project management work for Fibre rollout Manila,2025-11-28,2026-03-05
+ASG-0216,PRJ-041,P-070,Project Management,25,16,Documented olt configuration work for Fibre rollout Manila,2025-11-28,2026-03-05
+ASG-0217,PRJ-041,P-041,OLT Configuration,50,33,Tested project management work for Fibre rollout Manila,2025-11-28,2026-03-05
+ASG-0218,PRJ-041,P-042,Project Management,40,27,Delivered gpon work for Fibre rollout Manila,2025-11-28,2026-03-05
+ASG-0219,PRJ-041,P-297,OLT Configuration,50,33,Led project management work for Fibre rollout Manila,2025-11-28,2026-03-05
+ASG-0220,PRJ-041,P-172,Project Management,60,40,Automated project management work for Fibre rollout Manila,2025-11-28,2026-03-05
+ASG-0221,PRJ-042,P-031,BGP,60,30,Led bgp work for Core capacity upgrade 2024.5,2023-11-27,2024-02-08
+ASG-0222,PRJ-042,P-027,BGP,25,12,Documented optical transport (dwdm) work for Core capacity upgrade 2024.5,2023-11-27,2024-02-08
+ASG-0223,PRJ-042,P-029,Project Manager,30,15,Analysed bgp work for Core capacity upgrade 2024.5,2023-11-27,2024-02-08
+ASG-0224,PRJ-042,P-032,BGP,40,20,Configured ip/mpls routing work for Core capacity upgrade 2024.5,2023-11-27,2024-02-08
+ASG-0225,PRJ-043,P-297,Project Manager,60,88,Built internal audit work for Finance and compliance 2024.5,2026-05-25,2026-12-21
+ASG-0226,PRJ-043,P-298,Risk Management,20,29,Delivered internal audit work for Finance and compliance 2024.5,2026-05-25,2026-12-21
+ASG-0227,PRJ-043,P-288,Internal Audit,40,58,Analysed financial analysis work for Finance and compliance 2024.5,2026-05-25,2026-12-21
+ASG-0228,PRJ-043,P-300,Financial Analysis,25,36,Led internal audit work for Finance and compliance 2024.5,2026-05-25,2026-12-21
+ASG-0229,PRJ-043,P-044,Internal Audit,50,73,Designed risk management work for Finance and compliance 2024.5,2026-05-25,2026-12-21
+ASG-0230,PRJ-043,P-268,Internal Audit,25,36,Built risk management work for Finance and compliance 2024.5,2026-05-25,2026-12-21
+ASG-0231,PRJ-044,P-232,React,25,51,Configured rest api design work for Digital channel release 2023.4; also picked up ETL Pipelines to unblock the team,2025-07-28,2026-05-16
+ASG-0232,PRJ-044,P-239,REST API Design,40,81,Built rest api design work for Digital channel release 2023.4,2025-07-28,2026-05-16
+ASG-0233,PRJ-044,P-234,TypeScript,20,40,Analysed rest api design work for Digital channel release 2023.4,2025-07-28,2026-05-16
+ASG-0234,PRJ-044,P-231,Agile Delivery,60,122,Designed react work for Digital channel release 2023.4,2025-07-28,2026-05-16
+ASG-0235,PRJ-045,P-297,Risk Management,30,43,Led internal audit work for Finance and compliance 2025.6,2023-01-28,2023-08-24
+ASG-0236,PRJ-045,P-277,Internal Audit,30,43,Tested risk management work for Finance and compliance 2025.6,2023-01-28,2023-08-24
+ASG-0237,PRJ-045,P-081,Risk Management,25,36,Documented risk management work for Finance and compliance 2025.6; also picked up Edge Computing to unblock the team,2023-01-28,2023-08-24
+ASG-0238,PRJ-046,P-234,React,40,41,Delivered react work for Digital channel release 2024.5,2025-08-07,2026-01-01
+ASG-0239,PRJ-046,P-230,React,50,51,Delivered typescript work for Digital channel release 2024.5,2025-08-07,2026-01-01
+ASG-0240,PRJ-046,P-236,REST API Design,50,51,Delivered agile delivery work for Digital channel release 2024.5,2025-08-07,2026-01-01
+ASG-0241,PRJ-046,P-208,Agile Delivery,50,51,Built agile delivery work for Digital channel release 2024.5,2025-08-07,2026-01-01
+ASG-0242,PRJ-046,P-246,Agile Delivery,25,25,Delivered agile delivery work for Digital channel release 2024.5,2025-08-07,2026-01-01
+ASG-0243,PRJ-046,P-232,REST API Design,25,25,Automated typescript work for Digital channel release 2024.5,2025-08-07,2026-01-01
+ASG-0244,PRJ-046,P-239,Project Manager,50,51,Coordinated rest api design work for Digital channel release 2024.5,2025-08-07,2026-01-01
+ASG-0245,PRJ-047,P-073,5G RAN,50,55,Led project management work for 5G densification Northern Territory,2024-02-16,2024-07-23
+ASG-0246,PRJ-047,P-041,Project Management,25,27,Designed project management work for 5G densification Northern Territory,2024-02-16,2024-07-23
+ASG-0247,PRJ-047,P-025,Network Design,25,27,Documented network design work for 5G densification Northern Territory,2024-02-16,2024-07-23
+ASG-0248,PRJ-047,P-010,5G RAN,50,55,Delivered network design work for 5G densification Northern Territory,2024-02-16,2024-07-23
+ASG-0249,PRJ-047,P-028,5G RAN,40,44,Analysed network design work for 5G densification Northern Territory,2024-02-16,2024-07-23
+ASG-0250,PRJ-047,P-035,Project Management,40,44,Built network design work for 5G densification Northern Territory,2024-02-16,2024-07-23
+ASG-0251,PRJ-047,P-297,Network Design,30,33,Built project management work for 5G densification Northern Territory,2024-02-16,2024-07-23
+ASG-0252,PRJ-047,P-118,5G RAN,25,27,Designed network design work for 5G densification Northern Territory,2024-02-16,2024-07-23
+ASG-0253,PRJ-048,P-300,Internal Audit,50,84,Designed risk management work for Finance and compliance 2026.7,2023-11-19,2024-07-18
+ASG-0254,PRJ-048,P-298,Financial Analysis,25,42,Led internal audit work for Finance and compliance 2026.7,2023-11-19,2024-07-18
+ASG-0255,PRJ-048,P-297,Risk Management,40,67,Built risk management work for Finance and compliance 2026.7,2023-11-19,2024-07-18
+ASG-0256,PRJ-048,P-277,Risk Management,20,33,Built financial analysis work for Finance and compliance 2026.7,2023-11-19,2024-07-18
+ASG-0257,PRJ-049,P-251,Security Compliance,25,46,Coordinated security operations work for Security uplift 2023.8,2025-07-03,2026-03-25
+ASG-0258,PRJ-049,P-250,Security Operations,20,37,Documented identity & access management work for Security uplift 2023.8,2025-07-03,2026-03-25
+ASG-0259,PRJ-049,P-253,Security Operations,50,92,Built security operations work for Security uplift 2023.8,2025-07-03,2026-03-25
+ASG-0260,PRJ-049,P-243,Identity & Access Management,40,74,Configured security operations work for Security uplift 2023.8; also picked up SNMP Monitoring to unblock the team,2025-07-03,2026-03-25
+ASG-0261,PRJ-049,P-234,Security Operations,20,37,Documented security operations work for Security uplift 2023.8,2025-07-03,2026-03-25
+ASG-0262,PRJ-049,P-296,Security Operations,50,92,Automated security compliance work for Security uplift 2023.8,2025-07-03,2026-03-25
+ASG-0263,PRJ-050,P-264,Project Manager,40,78,Coordinated python work for Analytics product: network demand forecast,2025-02-08,2025-11-14
+ASG-0264,PRJ-050,P-260,Machine Learning,50,97,Built python work for Analytics product: network demand forecast,2025-02-08,2025-11-14
+ASG-0265,PRJ-050,P-241,SQL,30,58,Automated sql work for Analytics product: network demand forecast,2025-02-08,2025-11-14
+ASG-0266,PRJ-051,P-117,Project Management,50,62,Delivered pre-sales architecture work for Enterprise RFP delivery: Outback Coffee Mart,2025-05-31,2025-11-25
+ASG-0267,PRJ-051,P-084,Solution Selling,50,62,Designed solution selling work for Enterprise RFP delivery: Outback Coffee Mart,2025-05-31,2025-11-25
+ASG-0268,PRJ-051,P-119,Project Management,60,74,Built network design work for Enterprise RFP delivery: Outback Coffee Mart,2025-05-31,2025-11-25
+ASG-0269,PRJ-051,P-041,Project Management,20,24,Designed project management work for Enterprise RFP delivery: Outback Coffee Mart,2025-05-31,2025-11-25
+ASG-0270,PRJ-052,P-208,React,30,49,Led agile delivery work for Digital channel release 2025.6,2026-08-04,2027-03-29
+ASG-0271,PRJ-052,P-234,TypeScript,20,33,Tested react work for Digital channel release 2025.6,2026-08-04,2027-03-29
+ASG-0272,PRJ-052,P-239,REST API Design,60,99,Coordinated agile delivery work for Digital channel release 2025.6,2026-08-04,2027-03-29
+ASG-0273,PRJ-052,P-233,React,25,41,Configured typescript work for Digital channel release 2025.6,2026-08-04,2027-03-29
+ASG-0274,PRJ-052,P-092,Agile Delivery,40,66,Tested agile delivery work for Digital channel release 2025.6,2026-08-04,2027-03-29
+ASG-0275,PRJ-053,P-040,Network Design,60,96,Delivered project management work for 5G densification Far North Queensland,2025-02-16,2025-10-04
+ASG-0276,PRJ-053,P-010,Network Design,40,64,Delivered project management work for 5G densification Far North Queensland,2025-02-16,2025-10-04
+ASG-0277,PRJ-053,P-029,5G RAN,30,48,Analysed network design work for 5G densification Far North Queensland,2025-02-16,2025-10-04
+ASG-0278,PRJ-053,P-041,5G RAN,50,80,Tested project management work for 5G densification Far North Queensland,2025-02-16,2025-10-04
+ASG-0279,PRJ-053,P-033,5G RAN,25,40,Automated network design work for 5G densification Far North Queensland,2025-02-16,2025-10-04
+ASG-0280,PRJ-053,P-014,Project Management,40,64,Led network design work for 5G densification Far North Queensland,2025-02-16,2025-10-04
+ASG-0281,PRJ-053,P-028,Project Management,25,40,Configured network design work for 5G densification Far North Queensland,2025-02-16,2025-10-04
+ASG-0282,PRJ-053,P-025,5G RAN,40,64,Designed network design work for 5G densification Far North Queensland,2025-02-16,2025-10-04
+ASG-0283,PRJ-054,P-268,Project Manager,60,104,Automated python work for Analytics product: store footfall insight,2023-07-29,2024-04-02
+ASG-0284,PRJ-054,P-263,SQL,50,86,Configured machine learning work for Analytics product: store footfall insight,2023-07-29,2024-04-02
+ASG-0285,PRJ-054,P-259,Python,60,104,Configured python work for Analytics product: store footfall insight,2023-07-29,2024-04-02
+ASG-0286,PRJ-054,P-270,Data Engineering,40,69,Led machine learning work for Analytics product: store footfall insight,2023-07-29,2024-04-02
+ASG-0287,PRJ-054,P-264,Data Engineering,25,43,Tested python work for Analytics product: store footfall insight,2023-07-29,2024-04-02
+ASG-0288,PRJ-054,P-232,Data Engineering,40,69,Delivered python work for Analytics product: store footfall insight,2023-07-29,2024-04-02
+ASG-0289,PRJ-054,P-233,SQL,40,69,Coordinated sql work for Analytics product: store footfall insight,2023-07-29,2024-04-02
+ASG-0290,PRJ-055,P-035,Optical Transport (DWDM),20,31,Led ip/mpls routing work for Core capacity upgrade 2025.6,2023-06-23,2024-02-03
+ASG-0291,PRJ-055,P-010,IP/MPLS Routing,25,39,Documented ip/mpls routing work for Core capacity upgrade 2025.6; also picked up Network Telemetry to unblock the team,2023-06-23,2024-02-03
+ASG-0292,PRJ-055,P-025,IP/MPLS Routing,30,47,Built bgp work for Core capacity upgrade 2025.6,2023-06-23,2024-02-03
+ASG-0293,PRJ-055,P-031,BGP,30,47,Delivered ip/mpls routing work for Core capacity upgrade 2025.6,2023-06-23,2024-02-03
+ASG-0294,PRJ-055,P-038,IP/MPLS Routing,60,94,Configured bgp work for Core capacity upgrade 2025.6,2023-06-23,2024-02-03
+ASG-0295,PRJ-055,P-028,BGP,60,94,Led bgp work for Core capacity upgrade 2025.6,2023-06-23,2024-02-03
+ASG-0296,PRJ-055,P-026,IP/MPLS Routing,20,31,Coordinated ip/mpls routing work for Core capacity upgrade 2025.6,2023-06-23,2024-02-03
+ASG-0297,PRJ-055,P-032,Optical Transport (DWDM),25,39,Coordinated optical transport (dwdm) work for Core capacity upgrade 2025.6,2023-06-23,2024-02-03
+ASG-0298,PRJ-056,P-224,Kubernetes,50,102,Built kubernetes work for Cloud migration wave 2024.5,2023-01-16,2023-11-04
+ASG-0299,PRJ-056,P-225,CI/CD,25,51,Tested terraform work for Cloud migration wave 2024.5,2023-01-16,2023-11-04
+ASG-0300,PRJ-056,P-220,Kubernetes,40,81,Delivered kubernetes work for Cloud migration wave 2024.5,2023-01-16,2023-11-04
+ASG-0301,PRJ-057,P-075,Network Test Engineer,60,110,Built Python automation for OLT acceptance testing in Network Test Lab; cut the test cycle from 3 days to 4 hours,2025-02-03,2025-08-29
+ASG-0302,PRJ-057,P-070,Network Test Engineering,30,40,Executed acceptance test runs on Lab Test Automation 2025,2025-02-03,2025-08-29
+ASG-0303,PRJ-057,P-071,Network Test Engineering,30,40,Executed acceptance test runs on Lab Test Automation 2025,2025-02-03,2025-08-29
+ASG-0304,PRJ-057,P-072,Network Test Engineering,30,40,Executed acceptance test runs on Lab Test Automation 2025,2025-02-03,2025-08-29
+ASG-0305,PRJ-058,P-075,SNMP Monitoring,30,45,Wrote Python scripts to deduplicate SNMP traps feeding NOVA NMS and streamed trap telemetry into the data lake,2025-06-02,2026-02-27
+ASG-0306,PRJ-058,P-031,Network Management Systems,50,90,Upgraded NOVA NMS correlation rules,2025-06-02,2026-02-27
+ASG-0307,PRJ-058,P-238,Network Management Systems,30,40,Tuned alarm correlation rules on NOVA NMS alarm correlation upgrade,2025-06-02,2026-02-27
+ASG-0308,PRJ-058,P-239,Network Management Systems,30,40,Tuned alarm correlation rules on NOVA NMS alarm correlation upgrade,2025-06-02,2026-02-27
+ASG-0309,PRJ-059,P-075,Network Test Engineering,40,70,Extended the pytest acceptance framework to new OLT firmware releases,2026-01-05,2026-12-18
+ASG-0310,PRJ-059,P-070,Network Test Engineering,30,40,Ran regression packs on OLT acceptance programme 2026,2026-01-05,2026-12-18
+ASG-0311,PRJ-059,P-071,Network Test Engineering,30,40,Ran regression packs on OLT acceptance programme 2026,2026-01-05,2026-12-18
+ASG-0312,PRJ-059,P-010,OLT Configuration,30,40,Prepared OLT configurations on OLT acceptance programme 2026,2026-01-05,2026-12-18
+ASG-0313,PRJ-059,P-011,OLT Configuration,30,40,Prepared OLT configurations on OLT acceptance programme 2026,2026-01-05,2026-12-18
+ASG-0314,PRJ-060,P-210,Rating Engine,30,35,Diagnosed and fixed recurring rating errors in RatePro,2025-02-03,2025-06-27
+ASG-0315,PRJ-060,P-208,PL/SQL,30,40,Delivered workstream on RatePro stabilisation 2025,2025-02-03,2025-06-27
+ASG-0316,PRJ-060,P-209,PL/SQL,30,40,Delivered workstream on RatePro stabilisation 2025,2025-02-03,2025-06-27
+ASG-0317,PRJ-060,P-212,PL/SQL,30,40,Delivered workstream on RatePro stabilisation 2025,2025-02-03,2025-06-27
+ASG-0318,PRJ-060,P-207,Rating Engine,40,50,Approved RatePro rule changes,2025-02-03,2025-06-27
+ASG-0319,PRJ-060,P-211,PL/SQL,50,60,Rewrote PL/SQL rating procedures,2025-02-03,2025-06-27
+ASG-0320,PRJ-061,P-210,Revenue Assurance,35,43,Wrote leakage check queries that recovered missed charges,2025-07-01,2025-11-28
+ASG-0321,PRJ-061,P-276,SQL,30,40,Delivered workstream on Revenue assurance sweep 2025,2025-07-01,2025-11-28
+ASG-0322,PRJ-061,P-277,SQL,30,40,Delivered workstream on Revenue assurance sweep 2025,2025-07-01,2025-11-28
+ASG-0323,PRJ-061,P-278,SQL,30,40,Delivered workstream on Revenue assurance sweep 2025,2025-07-01,2025-11-28
+ASG-0324,PRJ-062,P-210,Billing Systems,40,51,Mapped enterprise tariffs into the new billing structure,2025-09-01,2026-03-31
+ASG-0325,PRJ-062,P-081,Order Management,30,40,Delivered workstream on Enterprise billing migration,2025-09-01,2026-03-31
+ASG-0326,PRJ-062,P-082,Order Management,30,40,Delivered workstream on Enterprise billing migration,2025-09-01,2026-03-31
+ASG-0327,PRJ-062,P-083,Order Management,30,40,Delivered workstream on Enterprise billing migration,2025-09-01,2026-03-31
+ASG-0328,PRJ-063,P-210,Billing Systems,30,59,Configured bundle rating and validated first bill run,2026-01-12,2026-05-29
+ASG-0329,PRJ-063,P-139,Pricing Strategy,30,40,Delivered workstream on Mobile bundle launch billing,2026-01-12,2026-05-29
+ASG-0330,PRJ-063,P-140,Pricing Strategy,30,40,Delivered workstream on Mobile bundle launch billing,2026-01-12,2026-05-29
+ASG-0331,PRJ-063,P-141,Pricing Strategy,30,40,Delivered workstream on Mobile bundle launch billing,2026-01-12,2026-05-29
+ASG-0332,PRJ-064,P-210,Billing Systems,35,67,Traced dispute root causes to rating rules and fixed them,2026-03-02,2026-09-25
+ASG-0333,PRJ-064,P-169,Complaint Resolution,30,40,Delivered workstream on Billing dispute reduction 2026,2026-03-02,2026-09-25
+ASG-0334,PRJ-064,P-170,Complaint Resolution,30,40,Delivered workstream on Billing dispute reduction 2026,2026-03-02,2026-09-25
+ASG-0335,PRJ-064,P-172,Complaint Resolution,30,40,Delivered workstream on Billing dispute reduction 2026,2026-03-02,2026-09-25
+ASG-0336,PRJ-065,P-210,Mediation,40,75,Documented RatePro rating logic for the re-platform team,2026-04-06,2026-12-18
+ASG-0337,PRJ-065,P-218,Kubernetes,30,40,Delivered workstream on Mediation re-platform 2026,2026-04-06,2026-12-18
+ASG-0338,PRJ-065,P-220,Kubernetes,30,40,Delivered workstream on Mediation re-platform 2026,2026-04-06,2026-12-18
+ASG-0339,PRJ-065,P-222,Kubernetes,30,40,Delivered workstream on Mediation re-platform 2026,2026-04-06,2026-12-18
+ASG-0340,PRJ-066,P-152,Machine Learning,60,95,Built a customer churn propensity model (gradient boosting) for the save campaign,2025-03-03,2025-09-26
+ASG-0341,PRJ-066,P-149,Customer Retention,30,40,Ran retention offers on Retail campaign: churn save programme,2025-03-03,2025-09-26
+ASG-0342,PRJ-066,P-150,Customer Retention,30,40,Ran retention offers on Retail campaign: churn save programme,2025-03-03,2025-09-26
+ASG-0343,PRJ-067,P-266,Machine Learning,70,105,Trained churn prediction model v1 (gradient boosting) on lake data,2025-04-14,2025-10-31
+ASG-0344,PRJ-067,P-265,Statistics,20,18,Reviewed feature set (part-time),2025-04-14,2025-10-31
+ASG-0345,PRJ-067,P-257,Data Engineering,30,40,Built feature pipelines on Analytics product: churn prediction,2025-04-14,2025-10-31
+ASG-0346,PRJ-067,P-259,Data Engineering,30,40,Built feature pipelines on Analytics product: churn prediction,2025-04-14,2025-10-31
+ASG-0347,PRJ-068,P-219,Kubernetes,20,22,Reviewed vendor Kubernetes designs (part-time),2025-03-03,2025-08-29
+ASG-0348,PRJ-068,P-221,CI/CD,20,22,Set up deployment pipelines for migrated services (part-time),2025-03-03,2025-08-29
+ASG-0349,PRJ-069,P-265,Machine Learning,50,80,Built next-best-offer propensity models for retail customers,2024-06-03,2025-02-28
+ASG-0350,PRJ-070,P-269,LLM Applications,50,80,Built the LLM agent-assist API and retrieval layer,2025-09-01,2026-04-30
+ASG-0351,PRJ-071,P-258,Data Engineering,50,80,Designed the customer 360 ETL pipelines on the lake,2025-01-06,2025-12-19
+ASG-0352,PRJ-072,P-171,CX Design,50,80,Mapped repeat-complaint journeys and redesigned the flow,2025-11-03,2026-06-26
+ASG-0353,PRJ-073,P-080,Pre-sales Architecture,50,80,Led retail analytics requirements with the customer,2025-05-05,2025-12-12
+ASG-0354,PRJ-074,P-228,Agile Delivery,50,80,Ran the agile release train and launch plan for the self-care app,2025-03-03,2025-11-28
+ASG-0355,PRJ-075,P-248,Security Operations,50,80,Built the PDPA data-request process and SOC playbooks,2025-03-03,2025-11-28
+ASG-0356,PRJ-076,P-066,Fibre Testing (OTDR),60,120,Localised fibre faults with OTDR traces and a self-built Power BI fault map,2025-04-01,2026-03-27
+ASG-0357,PRJ-076,P-055,Network Troubleshooting,30,40,Restored faults on Fault restoration programme Northern Territory,2025-04-01,2026-03-27
+ASG-0358,PRJ-076,P-056,Network Troubleshooting,30,40,Restored faults on Fault restoration programme Northern Territory,2025-04-01,2026-03-27
+ASG-0359,PRJ-076,P-057,Network Troubleshooting,30,40,Restored faults on Fault restoration programme Northern Territory,2025-04-01,2026-03-27
+ASG-0360,PRJ-077,P-030,Network Design,70,110,Designed the new MPLS core topology and the BGP route-reflector plan,2025-01-06,2025-07-25
+ASG-0361,PRJ-077,P-025,IP/MPLS Routing,30,40,Migrated core links on MPLS core redesign 2025,2025-01-06,2025-07-25
+ASG-0362,PRJ-077,P-026,IP/MPLS Routing,30,40,Migrated core links on MPLS core redesign 2025,2025-01-06,2025-07-25
+ASG-0363,PRJ-078,P-152,Data Visualization,40,50,Built churn and retention dashboards,2026-02-02,2026-07-31
+ASG-0364,PRJ-078,P-171,Customer Journey Analytics,20,15,Advised on journey metrics,2026-02-02,2026-07-31
+ASG-0365,PRJ-076,P-015,Fibre Testing (OTDR),40,100,Documented fibre testing (otdr) tasks for Fault restoration programme Northern Territory,2025-04-01,2026-03-27
+ASG-0366,PRJ-076,P-016,Fibre Testing (OTDR),20,50,Analysed fibre testing (otdr) tasks for Fault restoration programme Northern Territory,2025-04-01,2026-03-27
+ASG-0367,PRJ-003,P-019,Fibre Testing (OTDR),40,67,Analysed fibre testing (otdr) tasks for Fault restoration programme 2024.1,2023-12-06,2024-08-03
+ASG-0368,PRJ-031,P-020,GPON,20,10,Led gpon tasks for Fibre rollout Singapore,2023-06-23,2023-09-04
+ASG-0369,PRJ-041,P-021,GPON,20,13,Tested gpon tasks for Fibre rollout Manila,2025-11-28,2026-03-05
+ASG-0370,PRJ-021,P-022,Fibre Testing (OTDR),30,59,Automated fibre testing (otdr) tasks for Fault restoration programme 2023.4,2023-01-16,2023-10-26
+ASG-0371,PRJ-003,P-023,Fibre Testing (OTDR),15,25,Delivered fibre testing (otdr) tasks for Fault restoration programme 2024.1,2023-12-06,2024-08-03
+ASG-0372,PRJ-003,P-045,Fibre Testing (OTDR),20,33,Designed fibre testing (otdr) tasks for Fault restoration programme 2024.1,2023-12-06,2024-08-03
+ASG-0373,PRJ-003,P-048,Fibre Testing (OTDR),20,33,Coordinated fibre testing (otdr) tasks for Fault restoration programme 2024.1,2023-12-06,2024-08-03
+ASG-0374,PRJ-003,P-049,Fibre Testing (OTDR),15,25,Automated fibre testing (otdr) tasks for Fault restoration programme 2024.1,2023-12-06,2024-08-03
+ASG-0375,PRJ-020,P-050,Fibre Testing (OTDR),40,30,Configured fibre testing (otdr) tasks for Fault restoration programme 2026.3,2024-10-15,2025-02-02
+ASG-0376,PRJ-021,P-051,Fibre Testing (OTDR),15,29,Automated fibre testing (otdr) tasks for Fault restoration programme 2023.4,2023-01-16,2023-10-26
+ASG-0377,PRJ-009,P-052,Fibre Testing (OTDR),20,27,Designed fibre testing (otdr) tasks for Fault restoration programme 2025.2,2024-12-29,2025-07-10
+ASG-0378,PRJ-020,P-053,Fibre Testing (OTDR),30,23,Analysed fibre testing (otdr) tasks for Fault restoration programme 2026.3,2024-10-15,2025-02-02
+ASG-0379,PRJ-020,P-062,Fibre Testing (OTDR),25,19,Built fibre testing (otdr) tasks for Fault restoration programme 2026.3,2024-10-15,2025-02-02
+ASG-0380,PRJ-021,P-063,Fibre Testing (OTDR),20,39,Tested fibre testing (otdr) tasks for Fault restoration programme 2023.4,2023-01-16,2023-10-26
+ASG-0381,PRJ-003,P-064,Fibre Testing (OTDR),15,25,Automated fibre testing (otdr) tasks for Fault restoration programme 2024.1,2023-12-06,2024-08-03
+ASG-0382,PRJ-021,P-065,Fibre Testing (OTDR),25,49,Designed fibre testing (otdr) tasks for Fault restoration programme 2023.4,2023-01-16,2023-10-26
+ASG-0383,PRJ-003,P-067,Fibre Testing (OTDR),40,67,Delivered fibre testing (otdr) tasks for Fault restoration programme 2024.1,2023-12-06,2024-08-03
+ASG-0384,PRJ-020,P-068,Fibre Testing (OTDR),25,19,Coordinated fibre testing (otdr) tasks for Fault restoration programme 2026.3,2024-10-15,2025-02-02
+ASG-0385,PRJ-076,P-074,Fibre Testing (OTDR),20,50,Delivered fibre testing (otdr) tasks for Fault restoration programme Northern Territory,2025-04-01,2026-03-27
+ASG-0386,PRJ-073,P-085,Pre-sales Architecture,30,46,Automated pre-sales architecture tasks for Enterprise RFP delivery: Brightway Retail Group,2025-05-05,2025-12-12
+ASG-0387,PRJ-039,P-086,Pre-sales Architecture,15,9,Delivered pre-sales architecture tasks for Enterprise RFP delivery: MicroFinance Partners,2024-11-20,2025-02-18
+ASG-0388,PRJ-019,P-087,Pre-sales Architecture,40,36,Coordinated pre-sales architecture tasks for Enterprise RFP delivery: Shieldwell Insurance,2024-12-18,2025-04-28
+ASG-0389,PRJ-039,P-088,Pre-sales Architecture,15,9,Automated pre-sales architecture tasks for Enterprise RFP delivery: MicroFinance Partners,2024-11-20,2025-02-18
+ASG-0390,PRJ-051,P-089,Pre-sales Architecture,25,31,Analysed pre-sales architecture tasks for Enterprise RFP delivery: Outback Coffee Mart,2025-05-31,2025-11-25
+ASG-0391,PRJ-073,P-090,Pre-sales Architecture,40,61,Built pre-sales architecture tasks for Enterprise RFP delivery: Brightway Retail Group,2025-05-05,2025-12-12
+ASG-0392,PRJ-073,P-094,Agile Delivery,30,46,Automated agile delivery tasks for Enterprise RFP delivery: Brightway Retail Group,2025-05-05,2025-12-12
+ASG-0393,PRJ-051,P-095,Project Management,30,37,Coordinated project management tasks for Enterprise RFP delivery: Outback Coffee Mart,2025-05-31,2025-11-25
+ASG-0394,PRJ-073,P-096,Bid & Proposal Writing,15,23,Delivered bid & proposal writing tasks for Enterprise RFP delivery: Brightway Retail Group,2025-05-05,2025-12-12
+ASG-0395,PRJ-073,P-097,Enterprise Account Management,30,46,Analysed enterprise account management tasks for Enterprise RFP delivery: Brightway Retail Group,2025-05-05,2025-12-12
+ASG-0396,PRJ-073,P-098,Enterprise Account Management,30,46,Configured enterprise account management tasks for Enterprise RFP delivery: Brightway Retail Group,2025-05-05,2025-12-12
+ASG-0397,PRJ-039,P-099,Solution Selling,40,25,Automated solution selling tasks for Enterprise RFP delivery: MicroFinance Partners,2024-11-20,2025-02-18
+ASG-0398,PRJ-028,P-100,Bid & Proposal Writing,30,28,Coordinated bid & proposal writing tasks for Enterprise RFP delivery: CareFirst Clinics,2025-02-16,2025-07-03
+ASG-0399,PRJ-028,P-101,Enterprise Account Management,30,28,Automated enterprise account management tasks for Enterprise RFP delivery: CareFirst Clinics,2025-02-16,2025-07-03
+ASG-0400,PRJ-019,P-102,Solution Selling,40,36,Documented solution selling tasks for Enterprise RFP delivery: Shieldwell Insurance,2024-12-18,2025-04-28
+ASG-0401,PRJ-051,P-104,Solution Selling,20,24,Analysed solution selling tasks for Enterprise RFP delivery: Outback Coffee Mart,2025-05-31,2025-11-25
+ASG-0402,PRJ-028,P-105,Solution Selling,25,23,Tested solution selling tasks for Enterprise RFP delivery: CareFirst Clinics,2025-02-16,2025-07-03
+ASG-0403,PRJ-073,P-106,Solution Selling,30,46,Analysed solution selling tasks for Enterprise RFP delivery: Brightway Retail Group,2025-05-05,2025-12-12
+ASG-0404,PRJ-028,P-108,Solution Selling,40,38,Led solution selling tasks for Enterprise RFP delivery: CareFirst Clinics,2025-02-16,2025-07-03
+ASG-0405,PRJ-051,P-109,Solution Selling,25,31,Analysed solution selling tasks for Enterprise RFP delivery: Outback Coffee Mart,2025-05-31,2025-11-25
+ASG-0406,PRJ-028,P-110,Solution Selling,30,28,Coordinated solution selling tasks for Enterprise RFP delivery: CareFirst Clinics,2025-02-16,2025-07-03
+ASG-0407,PRJ-028,P-111,Solution Selling,30,28,Built solution selling tasks for Enterprise RFP delivery: CareFirst Clinics,2025-02-16,2025-07-03
+ASG-0408,PRJ-019,P-112,Solution Selling,30,27,Designed solution selling tasks for Enterprise RFP delivery: Shieldwell Insurance,2024-12-18,2025-04-28
+ASG-0409,PRJ-039,P-113,Solution Selling,20,12,Tested solution selling tasks for Enterprise RFP delivery: MicroFinance Partners,2024-11-20,2025-02-18
+ASG-0410,PRJ-073,P-114,Solution Selling,20,30,Automated solution selling tasks for Enterprise RFP delivery: Brightway Retail Group,2025-05-05,2025-12-12
+ASG-0411,PRJ-019,P-116,Network Design,20,18,Coordinated network design tasks for Enterprise RFP delivery: Shieldwell Insurance,2024-12-18,2025-04-28
+ASG-0412,PRJ-039,P-120,Network Design,40,25,Documented network design tasks for Enterprise RFP delivery: MicroFinance Partners,2024-11-20,2025-02-18
+ASG-0413,PRJ-051,P-121,Network Design,15,18,Documented network design tasks for Enterprise RFP delivery: Outback Coffee Mart,2025-05-31,2025-11-25
+ASG-0414,PRJ-019,P-122,Network Design,15,13,Automated network design tasks for Enterprise RFP delivery: Shieldwell Insurance,2024-12-18,2025-04-28
+ASG-0415,PRJ-051,P-123,Network Design,30,37,Documented network design tasks for Enterprise RFP delivery: Outback Coffee Mart,2025-05-31,2025-11-25
+ASG-0416,PRJ-019,P-124,Network Design,20,18,Coordinated network design tasks for Enterprise RFP delivery: Shieldwell Insurance,2024-12-18,2025-04-28
+ASG-0417,PRJ-019,P-125,Network Design,25,22,Coordinated network design tasks for Enterprise RFP delivery: Shieldwell Insurance,2024-12-18,2025-04-28
+ASG-0418,PRJ-051,P-126,Network Design,30,37,Tested network design tasks for Enterprise RFP delivery: Outback Coffee Mart,2025-05-31,2025-11-25
+ASG-0419,PRJ-063,P-129,Pricing Strategy,30,28,Coordinated pricing strategy tasks for Mobile bundle launch billing,2026-01-12,2026-05-29
+ASG-0420,PRJ-063,P-131,Pricing Strategy,20,19,Configured pricing strategy tasks for Mobile bundle launch billing,2026-01-12,2026-05-29
+ASG-0421,PRJ-010,P-132,Customer Retention,30,27,Built customer retention tasks for Retail campaign 2024.1,2023-11-22,2024-04-03
+ASG-0422,PRJ-010,P-133,Data Visualization,15,13,Documented data visualization tasks for Retail campaign 2024.1,2023-11-22,2024-04-03
+ASG-0423,PRJ-063,P-134,Pricing Strategy,25,23,Analysed pricing strategy tasks for Mobile bundle launch billing,2026-01-12,2026-05-29
+ASG-0424,PRJ-010,P-135,Customer Retention,15,13,Analysed customer retention tasks for Retail campaign 2024.1,2023-11-22,2024-04-03
+ASG-0425,PRJ-063,P-136,Pricing Strategy,25,23,Configured pricing strategy tasks for Mobile bundle launch billing,2026-01-12,2026-05-29
+ASG-0426,PRJ-063,P-137,Pricing Strategy,25,23,Built pricing strategy tasks for Mobile bundle launch billing,2026-01-12,2026-05-29
+ASG-0427,PRJ-010,P-142,Customer Retention,15,13,Led customer retention tasks for Retail campaign 2024.1,2023-11-22,2024-04-03
+ASG-0428,PRJ-010,P-143,5G RAN,15,13,Tested 5g ran tasks for Retail campaign 2024.1,2023-11-22,2024-04-03
+ASG-0429,PRJ-063,P-144,Pricing Strategy,40,38,Analysed pricing strategy tasks for Mobile bundle launch billing,2026-01-12,2026-05-29
+ASG-0430,PRJ-010,P-145,Digital Marketing,20,18,Documented digital marketing tasks for Retail campaign 2024.1,2023-11-22,2024-04-03
+ASG-0431,PRJ-066,P-146,5G RAN,40,57,Tested 5g ran tasks for Retail campaign: churn save programme,2025-03-03,2025-09-26
+ASG-0432,PRJ-010,P-147,Digital Marketing,20,18,Built digital marketing tasks for Retail campaign 2024.1,2023-11-22,2024-04-03
+ASG-0433,PRJ-010,P-151,Customer Retention,15,13,Configured customer retention tasks for Retail campaign 2024.1,2023-11-22,2024-04-03
+ASG-0434,PRJ-078,P-155,Customer Journey Analytics,30,37,Built customer journey analytics tasks for Retail campaign 2026.dash,2026-02-02,2026-07-31
+ASG-0435,PRJ-078,P-156,Customer Journey Analytics,30,37,Coordinated customer journey analytics tasks for Retail campaign 2026.dash,2026-02-02,2026-07-31
+ASG-0436,PRJ-010,P-157,Data Visualization,30,27,Led data visualization tasks for Retail campaign 2024.1,2023-11-22,2024-04-03
+ASG-0437,PRJ-066,P-158,Customer Retention,15,21,Delivered customer retention tasks for Retail campaign: churn save programme,2025-03-03,2025-09-26
+ASG-0438,PRJ-010,P-159,Customer Retention,30,27,Designed customer retention tasks for Retail campaign 2024.1,2023-11-22,2024-04-03
+ASG-0439,PRJ-066,P-160,Customer Retention,40,57,Analysed customer retention tasks for Retail campaign: churn save programme,2025-03-03,2025-09-26
+ASG-0440,PRJ-066,P-161,Customer Retention,25,36,Analysed customer retention tasks for Retail campaign: churn save programme,2025-03-03,2025-09-26
+ASG-0441,PRJ-066,P-162,Customer Retention,30,43,Built customer retention tasks for Retail campaign: churn save programme,2025-03-03,2025-09-26
+ASG-0442,PRJ-010,P-163,Customer Retention,30,27,Tested customer retention tasks for Retail campaign 2024.1,2023-11-22,2024-04-03
+ASG-0443,PRJ-066,P-164,Customer Retention,40,57,Configured customer retention tasks for Retail campaign: churn save programme,2025-03-03,2025-09-26
+ASG-0444,PRJ-066,P-165,Customer Retention,40,57,Configured customer retention tasks for Retail campaign: churn save programme,2025-03-03,2025-09-26
+ASG-0445,PRJ-010,P-166,Customer Retention,15,13,Led customer retention tasks for Retail campaign 2024.1,2023-11-22,2024-04-03
+ASG-0446,PRJ-033,P-175,Complaint Resolution,15,11,Designed complaint resolution tasks for Contact centre improvement 2024.1,2024-06-22,2024-10-12
+ASG-0447,PRJ-033,P-176,Complaint Resolution,20,15,Delivered complaint resolution tasks for Contact centre improvement 2024.1,2024-06-22,2024-10-12
+ASG-0448,PRJ-033,P-177,Complaint Resolution,30,23,Configured complaint resolution tasks for Contact centre improvement 2024.1,2024-06-22,2024-10-12
+ASG-0449,PRJ-033,P-178,Complaint Resolution,25,19,Delivered complaint resolution tasks for Contact centre improvement 2024.1,2024-06-22,2024-10-12
+ASG-0450,PRJ-033,P-179,Complaint Resolution,20,15,Delivered complaint resolution tasks for Contact centre improvement 2024.1,2024-06-22,2024-10-12
+ASG-0451,PRJ-033,P-180,Complaint Resolution,30,23,Configured complaint resolution tasks for Contact centre improvement 2024.1,2024-06-22,2024-10-12
+ASG-0452,PRJ-064,P-182,Complaint Resolution,40,57,Tested complaint resolution tasks for Billing dispute reduction 2026,2026-03-02,2026-09-25
+ASG-0453,PRJ-064,P-183,Complaint Resolution,20,28,Delivered complaint resolution tasks for Billing dispute reduction 2026,2026-03-02,2026-09-25
+ASG-0454,PRJ-064,P-184,Complaint Resolution,25,36,Analysed complaint resolution tasks for Billing dispute reduction 2026,2026-03-02,2026-09-25
+ASG-0455,PRJ-033,P-186,Complaint Resolution,30,23,Designed complaint resolution tasks for Contact centre improvement 2024.1,2024-06-22,2024-10-12
+ASG-0456,PRJ-064,P-187,Complaint Resolution,20,28,Coordinated complaint resolution tasks for Billing dispute reduction 2026,2026-03-02,2026-09-25
+ASG-0457,PRJ-033,P-188,Complaint Resolution,40,31,Configured complaint resolution tasks for Contact centre improvement 2024.1,2024-06-22,2024-10-12
+ASG-0458,PRJ-033,P-189,Complaint Resolution,20,15,Coordinated complaint resolution tasks for Contact centre improvement 2024.1,2024-06-22,2024-10-12
+ASG-0459,PRJ-033,P-190,Complaint Resolution,30,23,Delivered complaint resolution tasks for Contact centre improvement 2024.1,2024-06-22,2024-10-12
+ASG-0460,PRJ-064,P-191,Complaint Resolution,30,43,Delivered complaint resolution tasks for Billing dispute reduction 2026,2026-03-02,2026-09-25
+ASG-0461,PRJ-033,P-192,Complaint Resolution,25,19,Delivered complaint resolution tasks for Contact centre improvement 2024.1,2024-06-22,2024-10-12
+ASG-0462,PRJ-033,P-193,Complaint Resolution,20,15,Coordinated complaint resolution tasks for Contact centre improvement 2024.1,2024-06-22,2024-10-12
+ASG-0463,PRJ-064,P-196,Complaint Resolution,40,57,Tested complaint resolution tasks for Billing dispute reduction 2026,2026-03-02,2026-09-25
+ASG-0464,PRJ-033,P-197,Complaint Resolution,20,15,Analysed complaint resolution tasks for Contact centre improvement 2024.1,2024-06-22,2024-10-12
+ASG-0465,PRJ-033,P-198,Complaint Resolution,15,11,Documented complaint resolution tasks for Contact centre improvement 2024.1,2024-06-22,2024-10-12
+ASG-0466,PRJ-064,P-199,Complaint Resolution,15,21,Designed complaint resolution tasks for Billing dispute reduction 2026,2026-03-02,2026-09-25
+ASG-0467,PRJ-033,P-200,Complaint Resolution,30,23,Configured complaint resolution tasks for Contact centre improvement 2024.1,2024-06-22,2024-10-12
+ASG-0468,PRJ-064,P-201,Complaint Resolution,20,28,Built complaint resolution tasks for Billing dispute reduction 2026,2026-03-02,2026-09-25
+ASG-0469,PRJ-033,P-202,Complaint Resolution,40,31,Led complaint resolution tasks for Contact centre improvement 2024.1,2024-06-22,2024-10-12
+ASG-0470,PRJ-033,P-204,Complaint Resolution,30,23,Delivered complaint resolution tasks for Contact centre improvement 2024.1,2024-06-22,2024-10-12
+ASG-0471,PRJ-064,P-205,Complaint Resolution,15,21,Designed complaint resolution tasks for Billing dispute reduction 2026,2026-03-02,2026-09-25
+ASG-0472,PRJ-025,P-244,SQL,20,23,Delivered sql tasks for BSS release 2023.4,2025-10-01,2026-03-17
+ASG-0473,PRJ-054,P-261,Data Engineering,25,43,Coordinated data engineering tasks for Analytics product: store footfall insight,2023-07-29,2024-04-02
+ASG-0474,PRJ-035,P-267,Machine Learning,20,31,Automated machine learning tasks for Analytics product: billing anomaly detection,2025-10-01,2026-05-16
+ASG-0475,PRJ-054,P-271,Machine Learning,25,43,Documented machine learning tasks for Analytics product: store footfall insight,2023-07-29,2024-04-02
+ASG-0476,PRJ-070,P-273,LLM Applications,25,42,Led llm applications tasks for GenAI agent assist pilot,2025-09-01,2026-04-30
+ASG-0477,PRJ-038,P-280,Financial Analysis,40,63,Automated financial analysis tasks for Finance and compliance 2023.4,2023-02-02,2023-09-16
+ASG-0478,PRJ-045,P-282,Agile Delivery,25,36,Configured agile delivery tasks for Finance and compliance 2025.6,2023-01-28,2023-08-24
+ASG-0479,PRJ-045,P-283,Budgeting,25,36,Automated budgeting tasks for Finance and compliance 2025.6,2023-01-28,2023-08-24
+ASG-0480,PRJ-043,P-284,Change Management,20,29,Tested change management tasks for Finance and compliance 2024.5,2026-05-25,2026-12-21
+ASG-0481,PRJ-045,P-285,HR Analytics,40,58,Configured hr analytics tasks for Finance and compliance 2025.6,2023-01-28,2023-08-24
+ASG-0482,PRJ-030,P-287,Financial Analysis,25,28,Led financial analysis tasks for Finance and compliance 2025.2,2024-04-19,2024-09-27
+ASG-0483,PRJ-038,P-289,Financial Analysis,15,23,Coordinated financial analysis tasks for Finance and compliance 2023.4,2023-02-02,2023-09-16
+ASG-0484,PRJ-043,P-291,Budgeting,40,58,Coordinated budgeting tasks for Finance and compliance 2024.5,2026-05-25,2026-12-21
+ASG-0485,PRJ-045,P-292,Budgeting,40,58,Configured budgeting tasks for Finance and compliance 2025.6,2023-01-28,2023-08-24
+ASG-0486,PRJ-038,P-293,Budgeting,25,39,Configured budgeting tasks for Finance and compliance 2023.4,2023-02-02,2023-09-16
+ASG-0487,PRJ-045,P-294,Budgeting,25,36,Delivered budgeting tasks for Finance and compliance 2025.6,2023-01-28,2023-08-24
+ASG-0488,PRJ-038,P-295,Budgeting,25,39,Coordinated budgeting tasks for Finance and compliance 2023.4,2023-02-02,2023-09-16
+ASG-0489,PRJ-036,P-299,Internal Audit,40,17,Documented internal audit tasks for Finance and compliance 2026.3,2023-01-02,2023-03-04

@@ -1,0 +1,14 @@
+id,title,skill_id,division_id,est_cost_amt,status,opened
+REQ-001,Data Scientist,SK-machine-learning,DIV-ADL,45000,open,2026-06-17
+REQ-002,Automation Test Engineer,SK-test-automation,DIV-NI,38000,open,2026-06-02
+REQ-003,Cloud Engineer,SK-kubernetes,DIV-ITD,32000,on hold,2026-05-16
+REQ-004,Security Analyst,SK-security-operations,DIV-ITD,45000,on hold,2026-08-01
+REQ-005,Business Analyst,SK-customer-journey-analytics,DIV-CR,32000,on hold,2026-08-24
+REQ-006,Network Engineer,SK-ip-mpls-routing,DIV-NI,32000,open,2026-09-06
+REQ-007,Pre-sales Architect,SK-pre-sales-architecture,DIV-EG,32000,open,2026-08-16
+REQ-008,Billing Analyst,SK-billing-systems,DIV-ITD,45000,open,2026-09-12
+REQ-009,Data Engineer,SK-data-engineering,DIV-ADL,28000,on hold,2026-04-20
+REQ-010,Field Engineer,SK-fibre-splicing,DIV-NI,32000,open,2026-07-16
+REQ-011,Contact Centre Lead,SK-contact-centre-operations,DIV-CSO,38000,open,2026-09-30
+REQ-012,MLOps Engineer,SK-mlops,DIV-ADL,45000,open,2026-08-03
+REQ-013,Conversational AI Specialist,SK-conversational-ai-ops,DIV-ADL,45000,open,2026-08-03

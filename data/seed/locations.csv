@@ -1,0 +1,8 @@
+id,name,region,remote_region
+LOC-SIN,Singapore HQ,Singapore,0
+LOC-BLR,Bengaluru,Singapore,0
+LOC-LIS,Lisbon,Northern,0
+LOC-SYD,Sydney,Southern,0
+LOC-MNL,Manila,East Coast,0
+LOC-DRW,Darwin,Northern Territory,1
+LOC-CNS,Cairns,Far North Queensland,1

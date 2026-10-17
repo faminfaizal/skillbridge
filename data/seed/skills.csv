@@ -1,0 +1,115 @@
+id,name,family,emerging
+SK-gpon,GPON,Network,0
+SK-olt-configuration,OLT Configuration,Network,0
+SK-ip-mpls-routing,IP/MPLS Routing,Network,0
+SK-optical-transport-dwdm,Optical Transport (DWDM),Network,0
+SK-fibre-testing-otdr,Fibre Testing (OTDR),Network,0
+SK-5g-ran,5G RAN,Network,0
+SK-network-telemetry,Network Telemetry,Network,0
+SK-snmp-monitoring,SNMP Monitoring,Network,0
+SK-network-troubleshooting,Network Troubleshooting,Network,0
+SK-bgp,BGP,Network,0
+SK-wi-fi-engineering,Wi-Fi Engineering,Network,0
+SK-network-design,Network Design,Network,0
+SK-fibre-splicing,Fibre Splicing,Network,0
+SK-network-test-engineering,Network Test Engineering,Network,0
+SK-kubernetes,Kubernetes,Cloud & Platform,1
+SK-docker,Docker,Cloud & Platform,0
+SK-aws,AWS,Cloud & Platform,0
+SK-azure,Azure,Cloud & Platform,0
+SK-linux-administration,Linux Administration,Cloud & Platform,0
+SK-terraform,Terraform,Cloud & Platform,0
+SK-ci-cd,CI/CD,Cloud & Platform,0
+SK-observability,Observability,Cloud & Platform,0
+SK-site-reliability-engineering,Site Reliability Engineering,Cloud & Platform,0
+SK-vmware,VMware,Cloud & Platform,0
+SK-python,Python,Software,0
+SK-java,Java,Software,0
+SK-typescript,TypeScript,Software,0
+SK-react,React,Software,0
+SK-rest-api-design,REST API Design,Software,0
+SK-sql,SQL,Software,0
+SK-pl-sql,PL/SQL,Software,0
+SK-cobol,COBOL,Software,0
+SK-test-automation,Test Automation,Software,0
+SK-microservices,Microservices,Software,0
+SK-data-engineering,Data Engineering,Data & AI,0
+SK-etl-pipelines,ETL Pipelines,Data & AI,0
+SK-data-warehousing,Data Warehousing,Data & AI,0
+SK-spark,Spark,Data & AI,0
+SK-machine-learning,Machine Learning,Data & AI,0
+SK-deep-learning,Deep Learning,Data & AI,0
+SK-nlp,NLP,Data & AI,0
+SK-computer-vision,Computer Vision,Data & AI,0
+SK-video-analytics,Video Analytics,Data & AI,1
+SK-llm-applications,LLM Applications,Data & AI,1
+SK-mlops,MLOps,Data & AI,1
+SK-model-monitoring,Model Monitoring,Data & AI,1
+SK-statistics,Statistics,Data & AI,0
+SK-data-visualization,Data Visualization,Data & AI,0
+SK-security-operations,Security Operations,Security,0
+SK-network-security,Network Security,Security,0
+SK-identity-access-management,Identity & Access Management,Security,0
+SK-threat-intelligence,Threat Intelligence,Security,0
+SK-penetration-testing,Penetration Testing,Security,0
+SK-security-compliance,Security Compliance,Security,0
+SK-data-privacy-pdpa,Data Privacy (PDPA),Security,1
+SK-cloud-security,Cloud Security,Security,1
+SK-customer-journey-analytics,Customer Journey Analytics,CX & Service,0
+SK-cx-design,CX Design,CX & Service,0
+SK-contact-centre-operations,Contact Centre Operations,CX & Service,0
+SK-escalation-management,Escalation Management,CX & Service,0
+SK-it-service-management,IT Service Management,CX & Service,0
+SK-field-service-coordination,Field Service Coordination,CX & Service,0
+SK-customer-retention,Customer Retention,CX & Service,0
+SK-conversational-ai-ops,Conversational AI Ops,CX & Service,1
+SK-complaint-resolution,Complaint Resolution,CX & Service,0
+SK-enterprise-account-management,Enterprise Account Management,Commercial,0
+SK-solution-selling,Solution Selling,Commercial,0
+SK-pre-sales-architecture,Pre-sales Architecture,Commercial,0
+SK-bid-proposal-writing,Bid & Proposal Writing,Commercial,0
+SK-government-procurement,Government Procurement,Commercial,0
+SK-sme-sales,SME Sales,Commercial,0
+SK-pricing-strategy,Pricing Strategy,Commercial,0
+SK-product-marketing,Product Marketing,Commercial,0
+SK-retail-channel-management,Retail Channel Management,Commercial,0
+SK-digital-marketing,Digital Marketing,Commercial,0
+SK-iot-platforms,IoT Platforms,IoT & Edge,0
+SK-edge-computing,Edge Computing,IoT & Edge,1
+SK-smart-campus-solutions,Smart Campus Solutions,IoT & Edge,0
+SK-sensor-networks,Sensor Networks,IoT & Edge,0
+SK-video-surveillance-systems,Video Surveillance Systems,IoT & Edge,0
+SK-lorawan,LoRaWAN,IoT & Edge,0
+SK-billing-systems,Billing Systems,BSS/OSS,0
+SK-rating-engine,Rating Engine,BSS/OSS,0
+SK-crm-platforms,CRM Platforms,BSS/OSS,0
+SK-oss-inventory,OSS Inventory,BSS/OSS,0
+SK-order-management,Order Management,BSS/OSS,0
+SK-revenue-assurance,Revenue Assurance,BSS/OSS,0
+SK-network-management-systems,Network Management Systems,BSS/OSS,0
+SK-mediation,Mediation,BSS/OSS,0
+SK-project-management,Project Management,Management,0
+SK-agile-delivery,Agile Delivery,Management,0
+SK-programme-management,Programme Management,Management,0
+SK-stakeholder-management,Stakeholder Management,Management,0
+SK-people-leadership,People Leadership,Management,0
+SK-change-management,Change Management,Management,0
+SK-vendor-management,Vendor Management,Management,0
+SK-strategic-planning,Strategic Planning,Management,0
+SK-budgeting,Budgeting,Management,0
+SK-risk-management,Risk Management,Management,0
+SK-financial-analysis,Financial Analysis,Corporate,0
+SK-management-accounting,Management Accounting,Corporate,0
+SK-talent-acquisition,Talent Acquisition,Corporate,0
+SK-learning-development,Learning & Development,Corporate,0
+SK-hr-analytics,HR Analytics,Corporate,0
+SK-procurement,Procurement,Corporate,0
+SK-legal-regulatory,Legal & Regulatory,Corporate,0
+SK-internal-audit,Internal Audit,Corporate,0
+SK-esg-reporting,ESG Reporting,Corporate,0
+SK-retail-analytics,Retail Analytics,Domain,0
+SK-banking-domain,Banking Domain,Domain,0
+SK-healthcare-domain,Healthcare Domain,Domain,0
+SK-government-sector,Government Sector,Domain,0
+SK-telco-products,Telco Products,Domain,0
+SK-manufacturing-domain,Manufacturing Domain,Domain,0

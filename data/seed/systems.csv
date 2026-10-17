@@ -1,0 +1,36 @@
+id,name,kind,criticality,location_id,vendor_org_id,description
+SYS-NOVA,NOVA NMS,Network management,critical,LOC-BLR,ORG-TVN,Network management system for access and core alarms
+SYS-ALAB,Network Test Lab,Test lab,high,LOC-BLR,,"Network test lab for OLT, CPE and acceptance testing"
+SYS-OLTM,OLT Fleet Manager,Element manager,high,LOC-BLR,ORG-TVN,Configuration and firmware management for the OLT fleet
+SYS-RATE,RatePro Rating Engine,Rating (legacy),critical,LOC-SIN,,Legacy PL/SQL rating engine for usage charging
+SYS-BILL,Veridane Billing (BSS),Billing,critical,LOC-SIN,,Convergent billing for consumer and enterprise
+SYS-MED,Usage Mediation,Mediation,high,LOC-SIN,,Collects and normalises usage records for rating
+SYS-CRM,Customer CRM,CRM,high,LOC-SIN,,"Customer accounts, cases and sales pipeline"
+SYS-ORD,Order Management,Order management,high,LOC-SIN,,Order capture and fulfilment orchestration
+SYS-INV,OSS Inventory,Inventory,high,LOC-BLR,,Physical and logical network inventory
+SYS-DLK,Enterprise Data Lake,Data platform,high,LOC-LIS,,Central data lake for analytics and AI
+SYS-C360,Customer 360,Analytics,medium,LOC-SIN,,Single customer profile and journey analytics
+SYS-CCP,Contact Centre Platform,Contact centre,high,LOC-MNL,,Omnichannel contact centre and IVR
+SYS-FSA,Field Service App,Field service,medium,LOC-SIN,,Dispatch and job management for field engineers
+SYS-SDW,SD-WAN Controller,Network,high,LOC-BLR,ORG-TVN,Enterprise SD-WAN orchestration
+SYS-MPLS,MPLS Core,Network,critical,LOC-BLR,,National IP/MPLS backbone
+SYS-DWDM,DWDM Transport,Network,critical,LOC-BLR,,Optical transport network
+SYS-RAN,5G RAN,Network,high,LOC-SIN,,5G radio access network
+SYS-K8S,KubeOne Platform,Container platform,high,LOC-BLR,,Internal Kubernetes platform
+SYS-CICD,CI/CD Pipeline,DevOps,medium,LOC-BLR,,Build and deployment pipelines
+SYS-OBS,Observability Stack,Monitoring,medium,LOC-BLR,,"Metrics, logs and traces"
+SYS-SIEM,SIEM,Security,critical,LOC-BLR,ORG-SLA,Security event monitoring
+SYS-IAM,Identity Platform,Security,critical,LOC-BLR,,Workforce identity and access
+SYS-EPT,Enterprise Portal,Digital channel,medium,LOC-SIN,,Self-service portal for enterprise customers
+SYS-APP,Veridane Mobile App,Digital channel,high,LOC-SIN,,Consumer self-care app
+SYS-POS,Retail POS,Retail,medium,LOC-SIN,,Point of sale for retail stores
+SYS-RAT,Revenue Assurance Tool,Finance control,medium,LOC-SIN,,Leakage detection across billing chain
+SYS-PAY,Payment Gateway,Payments,high,LOC-SIN,,Online and recurring payments
+SYS-HRS,HR System,Corporate,medium,LOC-SIN,,Human resources records
+SYS-ERP,Finance ERP,Corporate,high,LOC-SIN,,General ledger and procurement
+SYS-IOT,Smart Campus IoT Platform,IoT,medium,LOC-SIN,,"Sensors, access and building telemetry"
+SYS-VAE,Video Analytics Engine,AI,medium,LOC-SIN,,Computer vision on CCTV streams
+SYS-EDGE,Edge Compute Nodes,Edge,medium,LOC-BLR,,Edge compute at regional exchanges
+SYS-BOT,Chatbot Platform,AI,medium,LOC-SIN,,Customer service virtual agent
+SYS-TELE,Network Telemetry Pipeline,Data platform,medium,LOC-LIS,,Streaming network telemetry into the data lake
+SYS-ML,ML Workbench,AI,medium,LOC-SIN,,Notebook and model training environment

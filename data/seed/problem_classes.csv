@@ -1,0 +1,41 @@
+id,name,domain
+PC-01,Fibre fault localisation,Network
+PC-02,OLT acceptance testing,Network
+PC-03,Network alarm flood,Network
+PC-04,Enterprise VPN latency,Network
+PC-05,Wi-Fi coverage complaint,Network
+PC-06,5G cell congestion,Network
+PC-07,Core routing instability,Network
+PC-08,Billing dispute,BSS/OSS
+PC-09,Rating engine error,BSS/OSS
+PC-10,Order fallout,BSS/OSS
+PC-11,Revenue leakage,BSS/OSS
+PC-12,Inventory mismatch,BSS/OSS
+PC-13,Customer churn,Data & AI
+PC-14,Customer segmentation,Data & AI
+PC-15,Demand forecasting,Data & AI
+PC-16,Anomaly detection,Data & AI
+PC-17,Contact centre deflection,CX & Service
+PC-18,Repeat complaints,CX & Service
+PC-19,Slow fault restoration,CX & Service
+PC-20,Field visit no-access,CX & Service
+PC-21,Phishing incident,Security
+PC-22,Access review backlog,Security
+PC-23,Cloud cost overrun,Cloud & Platform
+PC-24,Deployment failures,Cloud & Platform
+PC-25,Platform outage,Cloud & Platform
+PC-26,Test cycle too slow,Software
+PC-27,Legacy code risk,Software
+PC-28,Tender response delay,Commercial
+PC-29,Smart campus security,IoT & Edge
+PC-30,Video analytics demand,IoT & Edge
+PC-31,SME digital onboarding,Commercial
+PC-32,Retail footfall insight,Data & AI
+PC-33,Network capacity planning,Network
+PC-34,Regulatory reporting,Corporate
+PC-35,ESG data collection,Corporate
+PC-36,Hiring delays,Corporate
+PC-37,Vendor lock-in,Management
+PC-38,Data privacy request,Security
+PC-39,Payment failure,BSS/OSS
+PC-40,Network optimisation,Network

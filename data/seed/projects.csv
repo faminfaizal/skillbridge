@@ -1,0 +1,79 @@
+id,code,name,type,division_id,sponsor_id,pm_id,status,start_date,end_date,budget_amt,external_spend_amt,outcome,value_amt,customer_id,problem_class_id,location_id,description
+PRJ-001,P-001,5G densification Manila,network rollout,DIV-NI,P-007,P-011,active,2026-08-07,2027-01-17,600000,0,In delivery,1200922,,PC-06,,Network rollout project: 5G densification Manila.
+PRJ-002,P-002,Security uplift 2024.1,compliance,DIV-ITD,P-206,P-239,completed,2023-10-06,2024-07-13,1500000,0,Delivered on time,2237891,,PC-22,,Compliance project: Security uplift 2024.1.
+PRJ-003,P-003,Fault restoration programme 2024.1,operations,DIV-NI,P-007,P-041,completed,2023-12-06,2024-08-03,600000,210000,Delivered on time,663339,,PC-19,,Operations project: Fault restoration programme 2024.1.
+PRJ-004,P-004,Security uplift 2025.2,compliance,DIV-ITD,P-207,P-229,active,2026-04-13,2027-01-23,900000,180000,In delivery,1514922,,PC-22,,Compliance project: Security uplift 2025.2.
+PRJ-005,P-005,Cloud migration wave 2024.1,it upgrade,DIV-ITD,P-207,P-209,completed,2025-01-21,2025-04-26,400000,0,Delivered with minor delay,915130,,PC-23,,It upgrade project: Cloud migration wave 2024.1.
+PRJ-006,P-006,BSS release 2024.1,it upgrade,DIV-ITD,P-207,P-218,completed,2023-10-14,2024-01-27,600000,120000,Delivered under budget,1406643,,PC-10,,It upgrade project: BSS release 2024.1.
+PRJ-007,P-007,Core capacity upgrade 2024.1,network upgrade,DIV-NI,P-009,P-014,completed,2023-11-25,2024-08-26,600000,120000,Delivered on time,1217003,,PC-07,,Network upgrade project: Core capacity upgrade 2024.1.
+PRJ-008,P-008,BSS release 2025.2,it upgrade,DIV-ITD,P-207,P-238,completed,2023-05-23,2023-07-24,150000,30000,Delivered on time,343885,,PC-10,,It upgrade project: BSS release 2025.2.
+PRJ-009,P-009,Fault restoration programme 2025.2,operations,DIV-NI,P-024,P-012,completed,2024-12-29,2025-07-10,900000,0,Delivered with minor delay,998147,,PC-19,,Operations project: Fault restoration programme 2025.2.
+PRJ-010,P-010,Retail campaign 2024.1,marketing,DIV-CR,P-148,P-141,completed,2023-11-22,2024-04-03,150000,0,Delivered with minor delay,320987,,PC-13,,Marketing project: Retail campaign 2024.1.
+PRJ-011,P-011,Security uplift 2026.3,compliance,DIV-ITD,P-227,P-229,completed,2023-02-16,2023-07-11,1500000,0,Delivered with minor delay,2253846,,PC-22,,Compliance project: Security uplift 2026.3.
+PRJ-012,P-012,Cloud migration wave 2025.2,it upgrade,DIV-ITD,P-206,P-239,completed,2024-02-15,2024-06-18,600000,120000,Delivered under budget,1361485,,PC-23,,It upgrade project: Cloud migration wave 2025.2.
+PRJ-013,P-013,Finance and compliance 2024.1,corporate,DIV-CF,P-281,P-276,completed,2024-06-18,2024-12-05,150000,0,Delivered under budget,367450,,PC-34,,Corporate project: Finance and compliance 2024.1.
+PRJ-014,P-014,Cloud migration wave 2026.3,it upgrade,DIV-ITD,P-237,P-220,completed,2023-09-09,2023-12-11,900000,0,Delivered under budget,1085816,,PC-23,,It upgrade project: Cloud migration wave 2026.3.
+PRJ-015,P-015,Security uplift 2023.4,compliance,DIV-ITD,P-217,P-240,active,2026-04-01,2026-10-30,400000,0,In delivery,824883,,PC-22,,Compliance project: Security uplift 2023.4.
+PRJ-016,P-016,Digital channel release 2024.1,product,DIV-ITD,P-237,P-238,completed,2025-01-16,2025-06-18,150000,30000,Delivered on time,291498,,PC-18,,Product project: Digital channel release 2024.1.
+PRJ-017,P-017,Core capacity upgrade 2025.2,network upgrade,DIV-NI,P-039,P-056,completed,2023-08-05,2024-01-14,1500000,525000,Delivered on time,1367231,,PC-07,,Network upgrade project: Core capacity upgrade 2025.2.
+PRJ-018,P-018,5G densification Sydney,network rollout,DIV-NI,P-009,P-044,completed,2024-09-11,2025-03-04,600000,0,Delivered with minor delay,1303071,,PC-06,,Network rollout project: 5G densification Sydney.
+PRJ-019,P-019,Enterprise RFP delivery: Shieldwell Insurance,customer delivery,DIV-EG,P-077,P-081,completed,2024-12-18,2025-04-28,400000,0,Delivered under budget,584499,ORG-INS2,PC-04,,Customer delivery project: Enterprise RFP delivery: Shieldwell Insurance.
+PRJ-020,P-020,Fault restoration programme 2026.3,operations,DIV-NI,P-009,P-014,completed,2024-10-15,2025-02-02,900000,0,Delivered under budget,2101354,,PC-19,,Operations project: Fault restoration programme 2026.3.
+PRJ-021,P-021,Fault restoration programme 2023.4,operations,DIV-NI,P-054,P-011,completed,2023-01-16,2023-10-26,900000,0,Delivered with minor delay,2145124,,PC-19,,Operations project: Fault restoration programme 2023.4.
+PRJ-022,P-022,Security uplift 2024.5,compliance,DIV-ITD,P-207,P-240,completed,2023-10-26,2024-07-17,150000,52500,Delivered on time,301959,,PC-22,,Compliance project: Security uplift 2024.5.
+PRJ-023,P-023,Core capacity upgrade 2026.3,network upgrade,DIV-NI,P-009,P-010,completed,2024-07-27,2024-11-06,600000,0,Delivered on time,1012338,,PC-07,,Network upgrade project: Core capacity upgrade 2026.3.
+PRJ-024,P-024,BSS release 2026.3,it upgrade,DIV-ITD,P-206,P-220,completed,2026-02-10,2026-09-03,900000,315000,Delivered on time,886235,,PC-10,,It upgrade project: BSS release 2026.3.
+PRJ-025,P-025,BSS release 2023.4,it upgrade,DIV-ITD,P-227,P-218,completed,2025-10-01,2026-03-17,150000,0,Delivered on time,272626,,PC-10,,It upgrade project: BSS release 2023.4.
+PRJ-026,P-026,Digital channel release 2025.2,product,DIV-ITD,P-227,P-218,completed,2024-06-29,2025-01-09,1500000,300000,Delivered with minor delay,2249731,,PC-18,,Product project: Digital channel release 2025.2.
+PRJ-027,P-027,Security uplift 2025.6,compliance,DIV-ITD,P-207,P-239,completed,2023-01-26,2023-05-04,600000,0,Delivered on time,498790,,PC-22,,Compliance project: Security uplift 2025.6.
+PRJ-028,P-028,Enterprise RFP delivery: CareFirst Clinics,customer delivery,DIV-EG,P-078,P-096,completed,2025-02-16,2025-07-03,600000,0,Delivered on time,791886,ORG-KMH,PC-04,,Customer delivery project: Enterprise RFP delivery: CareFirst Clinics.
+PRJ-029,P-029,Cloud migration wave 2023.4,it upgrade,DIV-ITD,P-206,P-218,completed,2025-07-21,2025-12-13,900000,180000,Delivered on time,1494203,,PC-23,,It upgrade project: Cloud migration wave 2023.4.
+PRJ-030,P-030,Finance and compliance 2025.2,corporate,DIV-CF,P-274,P-287,completed,2024-04-19,2024-09-27,400000,140000,Delivered under budget,772265,,PC-34,,Corporate project: Finance and compliance 2025.2.
+PRJ-031,P-031,Fibre rollout Singapore,network rollout,DIV-NI,P-054,P-044,completed,2023-06-23,2023-09-04,400000,0,Delivered with minor delay,328953,,PC-33,,Network rollout project: Fibre rollout Singapore.
+PRJ-032,P-032,Security uplift 2026.7,compliance,DIV-ITD,P-206,P-247,completed,2023-07-06,2024-01-08,900000,180000,Delivered under budget,917019,,PC-22,,Compliance project: Security uplift 2026.7.
+PRJ-033,P-033,Contact centre improvement 2024.1,operations,DIV-CSO,P-194,P-173,completed,2024-06-22,2024-10-12,400000,140000,Delivered with minor delay,828042,,PC-17,,Operations project: Contact centre improvement 2024.1.
+PRJ-034,P-034,Fibre rollout Sydney,network rollout,DIV-NI,P-039,P-011,completed,2026-01-08,2026-09-07,1500000,525000,Delivered under budget,1985620,,PC-33,,Network rollout project: Fibre rollout Sydney.
+PRJ-035,P-035,Analytics product: billing anomaly detection,data product,DIV-ADL,P-255,P-263,completed,2025-10-01,2026-05-16,600000,0,Delivered with minor delay,1053054,,PC-14,,Data product project: Analytics product: billing anomaly detection.
+PRJ-036,P-036,Finance and compliance 2026.3,corporate,DIV-CF,P-274,P-297,completed,2023-01-02,2023-03-04,150000,0,Delivered under budget,319351,,PC-34,,Corporate project: Finance and compliance 2026.3.
+PRJ-037,P-037,Core capacity upgrade 2023.4,network upgrade,DIV-NI,P-008,P-042,completed,2024-10-12,2025-06-08,250000,0,Delivered on time,375210,,PC-07,,Network upgrade project: Core capacity upgrade 2023.4.
+PRJ-038,P-038,Finance and compliance 2023.4,corporate,DIV-CF,P-275,P-277,completed,2023-02-02,2023-09-16,150000,0,Delivered on time,348109,,PC-34,,Corporate project: Finance and compliance 2023.4.
+PRJ-039,P-039,Enterprise RFP delivery: MicroFinance Partners,customer delivery,DIV-EG,P-077,P-104,completed,2024-11-20,2025-02-18,250000,0,Delivered on time,617266,ORG-FIN,PC-04,,Customer delivery project: Enterprise RFP delivery: MicroFinance Partners.
+PRJ-040,P-040,Digital channel release 2026.3,product,DIV-ITD,P-207,P-238,completed,2023-10-27,2024-05-06,250000,87500,Delivered under budget,535281,,PC-18,,Product project: Digital channel release 2026.3.
+PRJ-041,P-041,Fibre rollout Manila,network rollout,DIV-NI,P-009,P-057,completed,2025-11-28,2026-03-05,600000,0,Delivered under budget,760485,,PC-33,,Network rollout project: Fibre rollout Manila.
+PRJ-042,P-042,Core capacity upgrade 2024.5,network upgrade,DIV-NI,P-039,P-029,completed,2023-11-27,2024-02-08,400000,0,Delivered with minor delay,500980,,PC-07,,Network upgrade project: Core capacity upgrade 2024.5.
+PRJ-043,P-043,Finance and compliance 2024.5,corporate,DIV-CF,P-281,P-297,active,2026-05-25,2026-12-21,900000,0,In delivery,1585696,,PC-34,,Corporate project: Finance and compliance 2024.5.
+PRJ-044,P-044,Digital channel release 2023.4,product,DIV-ITD,P-237,P-208,completed,2025-07-28,2026-05-16,250000,0,Delivered on time,349458,,PC-18,,Product project: Digital channel release 2023.4.
+PRJ-045,P-045,Finance and compliance 2025.6,corporate,DIV-CF,P-275,P-291,completed,2023-01-28,2023-08-24,600000,0,Delivered with minor delay,1285038,,PC-34,,Corporate project: Finance and compliance 2025.6.
+PRJ-046,P-046,Digital channel release 2024.5,product,DIV-ITD,P-237,P-239,completed,2025-08-07,2026-01-01,600000,0,Delivered on time,1314424,,PC-18,,Product project: Digital channel release 2024.5.
+PRJ-047,P-047,5G densification Northern Territory,network rollout,DIV-NI,P-009,P-058,completed,2024-02-16,2024-07-23,250000,0,Delivered on time,428405,,PC-06,,Network rollout project: 5G densification Northern Territory.
+PRJ-048,P-048,Finance and compliance 2026.7,corporate,DIV-CF,P-275,P-287,completed,2023-11-19,2024-07-18,150000,52500,Delivered with minor delay,217914,,PC-34,,Corporate project: Finance and compliance 2026.7.
+PRJ-049,P-049,Security uplift 2023.8,compliance,DIV-ITD,P-207,P-249,completed,2025-07-03,2026-03-25,150000,15000,Delivered with minor delay,325246,,PC-22,,Compliance project: Security uplift 2023.8.
+PRJ-050,P-050,Analytics product: network demand forecast,data product,DIV-ADL,P-255,P-264,completed,2025-02-08,2025-11-14,1500000,150000,Delivered with minor delay,2984350,,PC-14,,Data product project: Analytics product: network demand forecast.
+PRJ-051,P-051,Enterprise RFP delivery: Outback Coffee Mart,customer delivery,DIV-EG,P-077,P-118,completed,2025-05-31,2025-11-25,250000,0,Delivered with minor delay,443006,ORG-BKM,PC-04,,Customer delivery project: Enterprise RFP delivery: Outback Coffee Mart.
+PRJ-052,P-052,Digital channel release 2025.6,product,DIV-ITD,P-217,P-249,active,2026-08-04,2027-03-29,150000,0,In delivery,257711,,PC-18,,Product project: Digital channel release 2025.6.
+PRJ-053,P-053,5G densification Far North Queensland,network rollout,DIV-NI,P-069,P-011,completed,2025-02-16,2025-10-04,600000,0,Delivered with minor delay,823329,,PC-06,,Network rollout project: 5G densification Far North Queensland.
+PRJ-054,P-054,Analytics product: store footfall insight,data product,DIV-ADL,P-255,P-268,completed,2023-07-29,2024-04-02,400000,80000,Delivered with minor delay,825043,,PC-14,,Data product project: Analytics product: store footfall insight.
+PRJ-055,P-055,Core capacity upgrade 2025.6,network upgrade,DIV-NI,P-024,P-042,completed,2023-06-23,2024-02-03,1500000,0,Delivered with minor delay,2292140,,PC-07,,Network upgrade project: Core capacity upgrade 2025.6.
+PRJ-056,P-056,Cloud migration wave 2024.5,it upgrade,DIV-ITD,P-207,P-247,completed,2023-01-16,2023-11-04,1500000,525000,Delivered with minor delay,1969002,,PC-23,,It upgrade project: Cloud migration wave 2024.5.
+PRJ-057,P-057,Lab Test Automation 2025,process automation,DIV-NI,P-007,P-074,completed,2025-02-03,2025-08-29,180000,0,Delivered,420000,,PC-26,,Automate OLT acceptance testing in Network Test Lab.
+PRJ-058,P-058,NOVA NMS alarm correlation upgrade,it upgrade,DIV-NI,P-007,P-029,completed,2025-06-02,2026-02-27,350000,0,Delivered,500000,,PC-03,,Project A: reduce NOVA NMS alarm noise.
+PRJ-059,P-059,OLT acceptance programme 2026,process automation,DIV-NI,P-007,P-014,active,2026-01-05,2026-12-18,260000,0,In delivery,380000,,PC-02,,Project C: national OLT acceptance using Network Test Lab.
+PRJ-060,P-060,RatePro stabilisation 2025,it upgrade,DIV-ITD,P-206,P-230,completed,2025-02-03,2025-06-27,200000,0,Delivered,300000,,PC-09,,RatePro stabilisation 2025.
+PRJ-061,P-061,Revenue assurance sweep 2025,it upgrade,DIV-ITD,P-206,P-239,completed,2025-07-01,2025-11-28,250000,0,Delivered,360000,,PC-11,,Revenue assurance sweep 2025.
+PRJ-062,P-062,Enterprise billing migration,it upgrade,DIV-EG,P-077,P-104,completed,2025-09-01,2026-03-31,300000,0,Delivered,420000,,PC-08,,Enterprise billing migration.
+PRJ-063,P-063,Mobile bundle launch billing,it upgrade,DIV-CR,P-127,P-129,completed,2026-01-12,2026-05-29,350000,0,Delivered,480000,,PC-08,,Mobile bundle launch billing.
+PRJ-064,P-064,Billing dispute reduction 2026,it upgrade,DIV-CSO,P-167,P-171,completed,2026-03-02,2026-09-25,400000,0,Delivered,540000,,PC-18,,Billing dispute reduction 2026.
+PRJ-065,P-065,Mediation re-platform 2026,it upgrade,DIV-ITD,P-206,P-230,active,2026-04-06,2026-12-18,450000,0,In delivery,600000,,PC-09,,Mediation re-platform 2026.
+PRJ-066,P-066,Retail campaign: churn save programme,marketing,DIV-CR,P-127,P-151,completed,2025-03-03,2025-09-26,220000,0,Delivered,310000,,PC-13,,Retail campaign: churn save programme.
+PRJ-067,P-067,Analytics product: churn prediction,data product,DIV-ADL,P-255,P-257,completed,2025-04-14,2025-10-31,380000,330000,Delivered,290000,,PC-13,,Analytics product: churn prediction.
+PRJ-068,P-068,Cloud migration wave 2025.K,it upgrade,DIV-ITD,P-206,P-238,completed,2025-03-03,2025-08-29,600000,450000,Delivered,700000,,PC-23,,Cloud migration wave 2025.K.
+PRJ-069,P-069,Analytics product: next best offer,data product,DIV-ADL,P-255,P-269,completed,2024-06-03,2025-02-28,300000,0,Delivered,450000,,PC-14,,Analytics product: next best offer.
+PRJ-070,P-070,GenAI agent assist pilot,data product,DIV-ADL,P-255,P-263,completed,2025-09-01,2026-04-30,300000,0,Delivered,450000,,PC-17,,GenAI agent assist pilot.
+PRJ-071,P-071,Customer 360 data platform,data product,DIV-ADL,P-255,P-268,completed,2025-01-06,2025-12-19,300000,0,Delivered,450000,,PC-14,,Customer 360 data platform.
+PRJ-072,P-072,Contact centre improvement 2026.CX,customer delivery,DIV-CSO,P-167,P-183,completed,2025-11-03,2026-06-26,300000,0,Delivered,450000,,PC-18,,Contact centre improvement 2026.CX.
+PRJ-073,P-073,Enterprise RFP delivery: Brightway Retail Group,customer delivery,DIV-EG,P-077,P-105,completed,2025-05-05,2025-12-12,300000,0,Delivered,450000,,PC-32,,Enterprise RFP delivery: Brightway Retail Group.
+PRJ-074,P-074,Digital channel release 2025.PM,product,DIV-ITD,P-206,P-247,completed,2025-03-03,2025-11-28,250000,0,Delivered,320000,,PC-18,,Digital channel release 2025.PM.
+PRJ-075,P-075,Security uplift 2025.PDPA,compliance,DIV-ITD,P-206,P-229,completed,2025-03-03,2025-11-28,250000,0,Delivered,320000,,PC-38,,Security uplift 2025.PDPA.
+PRJ-076,P-076,Fault restoration programme Northern Territory,operations,DIV-NI,P-007,P-071,completed,2025-04-01,2026-03-27,160000,0,Delivered,240000,,PC-01,,Fault restoration programme Northern Territory.
+PRJ-077,P-077,MPLS core redesign 2025,network rollout,DIV-NI,P-007,P-073,completed,2025-01-06,2025-07-25,520000,0,Delivered,900000,,PC-07,,Redesign of the MPLS core topology and route reflectors.
+PRJ-078,P-078,Retail campaign 2026.dash,marketing,DIV-CR,P-127,P-159,completed,2026-02-02,2026-07-31,90000,0,Delivered,120000,,PC-13,,Retail campaign 2026.dash.

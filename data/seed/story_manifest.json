@@ -1,0 +1,292 @@
+[
+  {
+    "anchor": "A1",
+    "feature": "Hidden capability (PRD 8.2)",
+    "description": "Hafiz has Python/automation evidence but no declared Python skill",
+    "expected": {
+      "person_id": "P-075",
+      "name": "Hafiz Rahman",
+      "no_declared_skills": [
+        "Python",
+        "Test Automation"
+      ],
+      "evidence_min": 3,
+      "opportunity": "OPP-003",
+      "score_target": 87,
+      "score_tolerance": 2
+    }
+  },
+  {
+    "anchor": "A2",
+    "feature": "Hidden Talent mode (PRD 11.7)",
+    "description": "Priya: 6 projects, high recognition, near-zero visibility, rising trend",
+    "expected": {
+      "person_id": "P-210",
+      "name": "Priya Nair",
+      "projects": 6,
+      "recognition_min": 25,
+      "visibility_max": 0,
+      "critical_knowledge_areas": 4,
+      "consent": 1
+    }
+  },
+  {
+    "anchor": "A3",
+    "feature": "Concentration risk (PRD 8.6)",
+    "description": "Three people hold 78% of RatePro incident work",
+    "expected": {
+      "system_id": "SYS-RATE",
+      "people": [
+        "P-207",
+        "P-211",
+        "P-210"
+      ],
+      "share": 0.78,
+      "tolerance": 0.01,
+      "hired_before_2000": 2,
+      "retirement_risk": 1
+    }
+  },
+  {
+    "anchor": "A4",
+    "feature": "Paying externals for internal skills",
+    "description": "Vendors engaged while internal holders were under 50% allocated",
+    "expected": {
+      "engagements": [
+        "EXT-A01",
+        "EXT-A02"
+      ],
+      "internal_people": [
+        "P-219",
+        "P-221",
+        "P-265"
+      ],
+      "max_allocation": 50
+    }
+  },
+  {
+    "anchor": "A5",
+    "feature": "MVP demo (PRD 15)",
+    "description": "Customer analytics team: 6 internal people incl. Hafiz, 1 gap, 2 reskill candidates",
+    "expected": {
+      "opportunity": "OPP-001",
+      "team": [
+        "P-265",
+        "P-269",
+        "P-258",
+        "P-171",
+        "P-080",
+        "P-075"
+      ],
+      "hidden": [
+        "P-075"
+      ],
+      "gap_skills": [
+        "MLOps",
+        "Model Monitoring"
+      ],
+      "reskill": [
+        "P-152",
+        "P-221"
+      ],
+      "cost_avoided_amt": 120000,
+      "productivity_amt": 45000,
+      "revenue_potential_amt": 300000
+    }
+  },
+  {
+    "anchor": "A6",
+    "feature": "Team formation coverage (PRD 8.4)",
+    "description": "AI customer-service: about 82% internal coverage, 1 gap role",
+    "expected": {
+      "opportunity": "OPP-002",
+      "coverage": 0.82,
+      "tolerance": 0.04,
+      "gap_skill": "Conversational AI Ops"
+    }
+  },
+  {
+    "anchor": "A7",
+    "feature": "Reskilling (PRD 8.5)",
+    "description": "Lim ~75% ready for MLOps; 2 short courses + 1 assignment vs 6-month certificate",
+    "expected": {
+      "person_id": "P-152",
+      "readiness": 0.75,
+      "tolerance": 0.06,
+      "path": [
+        "TRN-MLOPS1",
+        "TRN-MON1",
+        "TRN-MLOPSA"
+      ],
+      "contrast": "TRN-MLCERT"
+    }
+  },
+  {
+    "anchor": "A8",
+    "feature": "Hidden expert alert",
+    "description": "Joseph solved 3 fibre fault cases much faster than peers",
+    "expected": {
+      "person_id": "P-066",
+      "problem": "Fibre fault localisation",
+      "cases": 3,
+      "location": "LOC-DRW"
+    }
+  },
+  {
+    "anchor": "A9",
+    "feature": "Under-utilised capacity",
+    "description": "Lisbon data engineering has ~30% spare capacity for OPP-006",
+    "expected": {
+      "department": "DEP-DE",
+      "location": "LOC-LIS",
+      "availability_min": 30,
+      "opportunity": "OPP-006"
+    }
+  },
+  {
+    "anchor": "A10",
+    "feature": "Collaboration gap",
+    "description": "Enterprise Solutions and AI & Data Lab never share a project",
+    "expected": {
+      "department": "DEP-ENT",
+      "division": "DIV-ADL",
+      "shared_projects": 0
+    }
+  },
+  {
+    "anchor": "A11",
+    "feature": "Revenue signal (PRD 6.2)",
+    "description": "Smart campus video analytics asked 7 times; 3 teams hold the pieces",
+    "expected": {
+      "opportunity": "OPP-004",
+      "demand_signals_min": 7,
+      "holders": [
+        "P-118",
+        "P-270",
+        "P-220"
+      ]
+    }
+  },
+  {
+    "anchor": "A12",
+    "feature": "Duplicated work",
+    "description": "Two churn models built independently in 2025",
+    "expected": {
+      "knowledge": [
+        "KI-C01",
+        "KI-C02"
+      ],
+      "projects": [
+        "PRJ-066",
+        "PRJ-067"
+      ]
+    }
+  },
+  {
+    "anchor": "A13",
+    "feature": "Customer resolution (PRD 6.3)",
+    "description": "VPN latency: experts fix in <10h, others escalate at ~50h",
+    "expected": {
+      "opportunity": "OPP-007",
+      "experts": [
+        "P-027",
+        "P-028"
+      ],
+      "expert_mttr_max": 10,
+      "other_mttr_min": 40
+    }
+  },
+  {
+    "anchor": "A14",
+    "feature": "Dive into a system (PRD 11.6)",
+    "description": "NOVA NMS links Project A, Project C, INC-042, Network Test Lab, vendor, maintainer",
+    "expected": {
+      "system_id": "SYS-NOVA",
+      "projects": [
+        "PRJ-058",
+        "PRJ-059"
+      ],
+      "incident": "INC-042",
+      "linked_system": "SYS-ALAB",
+      "vendor": "ORG-TVN",
+      "maintainer": "P-031"
+    }
+  },
+  {
+    "anchor": "A15",
+    "feature": "Value loop (PRD 7, 10)",
+    "description": "20 impact records sum to $1.50M",
+    "expected": {
+      "records": 20,
+      "cost_avoided_amt": 420000,
+      "productivity_amt": 280000,
+      "recruitment_amt": 150000,
+      "revenue_amt": 650000,
+      "total_amt": 1500000
+    }
+  },
+  {
+    "anchor": "A16",
+    "feature": "Executive questions (PRD 4)",
+    "description": "Emerging skills in demand but thinly held",
+    "expected": {
+      "emerging": [
+        "MLOps",
+        "Model Monitoring",
+        "Conversational AI Ops",
+        "LLM Applications",
+        "Edge Computing"
+      ]
+    }
+  },
+  {
+    "anchor": "A17",
+    "feature": "Privacy (PRD 12)",
+    "description": "About 5% opted out; one strong contributor among them",
+    "expected": {
+      "opted_out_min": 13,
+      "opted_out_max": 17,
+      "opted_out_star": "P-027"
+    }
+  },
+  {
+    "anchor": "A18",
+    "feature": "SME / social (PRD 5)",
+    "description": "5 SME partner requests, incl. a LoRaWAN need matched in Northern Territory",
+    "expected": {
+      "requests": 5,
+      "regional_match": "P-066"
+    }
+  },
+  {
+    "anchor": "A19",
+    "feature": "Forgotten expert (People Signals)",
+    "description": "Network architect with heavily reused designs, active in 2025, nothing in 2026",
+    "expected": {
+      "person_id": "P-030",
+      "name": "Kofi Nkosi",
+      "knowledge": [
+        "KI-F01",
+        "KI-F02"
+      ],
+      "reuse_min": 20,
+      "events_2026": 0
+    }
+  },
+  {
+    "anchor": "A20",
+    "feature": "Off-chart contributor (People Signals)",
+    "description": "Coordinator on no project roster who fixes other teams' systems",
+    "expected": {
+      "person_id": "P-203",
+      "name": "Grace Hughes",
+      "assignments": 0,
+      "incidents_min": 6,
+      "knowledge": [
+        "KI-G01",
+        "KI-G02"
+      ],
+      "recognition_min": 6
+    }
+  }
+]

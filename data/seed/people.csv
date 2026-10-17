@@ -1,0 +1,301 @@
+id,name,email,level,level_rank,title,archetype,division_id,department_id,team_id,manager_id,location_id,hire_year,availability_pct,loaded_rate_amt,consent_visibility,retirement_risk
+P-001,Seoyeon Takahashi,seoyeon.takahashi@veridane.example,C,1,Group Chief Executive Officer,Executive,DIV-CF,,,,LOC-SIN,2002,35,350,1,0
+P-002,Clara Martinez,clara.martinez@veridane.example,C,1,Chief Financial Officer,Executive,DIV-CF,,,P-001,LOC-SIN,2009,20,350,1,0
+P-003,Angela Navarro,angela.navarro@veridane.example,C,1,Chief Human Resources Officer,Executive,DIV-CF,,,P-001,LOC-SIN,2009,10,350,1,0
+P-004,Noah Bennett,noah.bennett@veridane.example,C,1,Chief Technology Officer,Executive,DIV-ITD,,,P-001,LOC-SIN,2007,25,350,1,0
+P-005,Maria Navarro,maria.navarro@veridane.example,C,1,Chief Operating Officer,Executive,DIV-CSO,,,P-001,LOC-SIN,2011,15,350,1,0
+P-006,Ngozi Adeyemi,ngozi.adeyemi@veridane.example,C,1,Chief Data Officer,Executive,DIV-ADL,,,P-001,LOC-SIN,2004,40,350,1,0
+P-007,Joao Pereira,joao.pereira@veridane.example,GM,2,"General Manager, Network & Infrastructure",General Manager,DIV-NI,,,P-004,LOC-SIN,2007,30,230,1,0
+P-008,Koh Wei,koh.wei@veridane.example,GM,2,"General Manager, Network & Infrastructure",General Manager,DIV-NI,,,P-004,LOC-SIN,2011,15,230,1,0
+P-009,Tariq Karimi,tariq.karimi@veridane.example,SM,3,Head of Access Network,Access Network Engineer,DIV-NI,DEP-ACC,,P-007,LOC-SIN,2014,25,170,1,0
+P-010,Seoyeon Park,seoyeon.park@veridane.example,M,4,Access Network Manager,Access Network Engineer,DIV-NI,DEP-ACC,TEAM-ACC-2,P-009,LOC-LIS,2003,20,130,1,0
+P-011,Ganesh Menon,ganesh.menon@veridane.example,M,4,Access Network Manager,Access Network Engineer,DIV-NI,DEP-ACC,TEAM-ACC-3,P-009,LOC-SYD,2016,40,130,1,0
+P-012,Anitha Sharma,anitha.sharma@veridane.example,M,4,Access Network Manager,Access Network Engineer,DIV-NI,DEP-ACC,TEAM-ACC-1,P-009,LOC-SIN,2018,25,130,1,0
+P-013,Sangeetha Krishnan,sangeetha.krishnan@veridane.example,AM,5,Access Network Engineer Lead,Access Network Engineer,DIV-NI,DEP-ACC,TEAM-ACC-2,P-010,LOC-LIS,2020,40,100,1,0
+P-014,Bianca Navarro,bianca.navarro@veridane.example,AM,5,Access Network Engineer Lead,Access Network Engineer,DIV-NI,DEP-ACC,TEAM-ACC-3,P-011,LOC-SYD,2021,25,100,1,0
+P-015,Sangeetha Patel,sangeetha.patel@veridane.example,SE,6,Senior Access Network Engineer,Access Network Engineer,DIV-NI,DEP-ACC,TEAM-ACC-1,P-014,LOC-SIN,2022,40,80,1,0
+P-016,Yusuf Farouk,yusuf.farouk@veridane.example,SE,6,Senior Access Network Engineer,Access Network Engineer,DIV-NI,DEP-ACC,TEAM-ACC-2,P-013,LOC-LIS,2018,40,80,1,0
+P-017,Beatriz Oliveira,beatriz.oliveira@veridane.example,SE,6,Senior Access Network Engineer,Access Network Engineer,DIV-NI,DEP-ACC,TEAM-ACC-3,P-014,LOC-SYD,2015,40,80,1,0
+P-018,Kavitha Kumar,kavitha.kumar@veridane.example,SE,6,Senior Access Network Engineer,Access Network Engineer,DIV-NI,DEP-ACC,TEAM-ACC-1,P-013,LOC-SIN,2017,20,80,1,0
+P-019,Mark Reyes,mark.reyes@veridane.example,SE,6,Senior Access Network Engineer,Access Network Engineer,DIV-NI,DEP-ACC,TEAM-ACC-2,P-013,LOC-LIS,2020,25,80,1,0
+P-020,Pablo Muller,pablo.muller@veridane.example,E,7,Access Network Engineer,Access Network Engineer,DIV-NI,DEP-ACC,TEAM-ACC-3,P-017,LOC-SYD,2018,40,60,1,0
+P-021,Ren Jung,ren.jung@veridane.example,E,7,Access Network Engineer,Access Network Engineer,DIV-NI,DEP-ACC,TEAM-ACC-1,P-018,LOC-SIN,2024,15,60,1,0
+P-022,Zainab Okonkwo,zainab.okonkwo@veridane.example,E,7,Access Network Engineer,Access Network Engineer,DIV-NI,DEP-ACC,TEAM-ACC-2,P-016,LOC-LIS,2016,25,60,1,0
+P-023,Nour Karimi,nour.karimi@veridane.example,A,8,Technician,Access Network Engineer,DIV-NI,DEP-ACC,TEAM-ACC-3,P-020,LOC-SYD,2023,40,45,1,0
+P-024,Liam Wilson,liam.wilson@veridane.example,SM,3,Head of Core & Transport,Core Network Engineer,DIV-NI,DEP-CORE,,P-008,LOC-BLR,2013,20,170,1,0
+P-025,Lucas Smith,lucas.smith@veridane.example,M,4,Core & Transport Manager,Core Network Engineer,DIV-NI,DEP-CORE,TEAM-CORE-2,P-024,LOC-SIN,2016,20,130,1,0
+P-026,Daniel Wilson,daniel.wilson@veridane.example,M,4,Core & Transport Manager,Core Network Engineer,DIV-NI,DEP-CORE,TEAM-CORE-1,P-024,LOC-BLR,2016,35,130,1,0
+P-027,Clara Lopez,clara.lopez@veridane.example,AM,5,Core Network Engineer Lead,Core Network Engineer,DIV-NI,DEP-CORE,TEAM-CORE-2,P-025,LOC-SIN,2008,15,100,0,0
+P-028,Oliver Hughes,oliver.hughes@veridane.example,AM,5,Core Network Engineer Lead,Core Network Engineer,DIV-NI,DEP-CORE,TEAM-CORE-1,P-026,LOC-BLR,2020,10,100,1,0
+P-029,Karim Saleh,karim.saleh@veridane.example,AM,5,Core Network Engineer Lead,Core Network Engineer,DIV-NI,DEP-CORE,TEAM-CORE-2,P-025,LOC-SIN,2013,15,100,1,0
+P-030,Kofi Nkosi,kofi.nkosi@veridane.example,SE,6,Senior Network Architect,Core Network Engineer,DIV-NI,DEP-CORE,TEAM-CORE-1,P-028,LOC-BLR,2001,70,80,1,0
+P-031,Olivia Reid,olivia.reid@veridane.example,SE,6,Senior Core Network Engineer,Core Network Engineer,DIV-NI,DEP-CORE,TEAM-CORE-2,P-029,LOC-SIN,2020,15,80,1,0
+P-032,Tan Wei,tan.wei@veridane.example,SE,6,Senior Core Network Engineer,Core Network Engineer,DIV-NI,DEP-CORE,TEAM-CORE-1,P-028,LOC-BLR,2010,10,80,1,0
+P-033,Elena Lopez,elena.lopez@veridane.example,SE,6,Senior Core Network Engineer,Core Network Engineer,DIV-NI,DEP-CORE,TEAM-CORE-2,P-029,LOC-SIN,2021,10,80,1,0
+P-034,Diogo Rocha,diogo.rocha@veridane.example,E,7,Core Network Engineer,Core Network Engineer,DIV-NI,DEP-CORE,TEAM-CORE-1,P-030,LOC-BLR,2018,20,60,1,0
+P-035,Kofi Boateng,kofi.boateng@veridane.example,E,7,Core Network Engineer,Core Network Engineer,DIV-NI,DEP-CORE,TEAM-CORE-2,P-033,LOC-SIN,2022,25,60,1,0
+P-036,Nour Khalil,nour.khalil@veridane.example,E,7,Core Network Engineer,Core Network Engineer,DIV-NI,DEP-CORE,TEAM-CORE-1,P-030,LOC-BLR,2022,25,60,1,0
+P-037,Chidi Nkosi,chidi.nkosi@veridane.example,E,7,Core Network Engineer,Core Network Engineer,DIV-NI,DEP-CORE,TEAM-CORE-2,P-033,LOC-SIN,2017,25,60,1,0
+P-038,Maria Mendoza,maria.mendoza@veridane.example,A,8,Technician,Core Network Engineer,DIV-NI,DEP-CORE,TEAM-CORE-1,P-034,LOC-BLR,2021,40,45,1,0
+P-039,Vikram Shetty,vikram.shetty@veridane.example,SM,3,Head of Field Ops Central,Field Engineer,DIV-NI,DEP-FOC,,P-007,LOC-SIN,2009,20,170,1,0
+P-040,Pablo Dubois,pablo.dubois@veridane.example,M,4,Field Ops Central Manager,Field Engineer,DIV-NI,DEP-FOC,TEAM-FOC-2,P-039,LOC-SYD,2011,20,130,1,0
+P-041,Sofia Garcia,sofia.garcia@veridane.example,M,4,Field Ops Central Manager,Field Engineer,DIV-NI,DEP-FOC,TEAM-FOC-3,P-039,LOC-MNL,2011,15,130,0,0
+P-042,Jiho Kim,jiho.kim@veridane.example,AM,5,Field Engineer Lead,Field Engineer,DIV-NI,DEP-FOC,TEAM-FOC-1,P-040,LOC-SIN,2019,20,100,1,0
+P-043,Yusuf Khalil,yusuf.khalil@veridane.example,AM,5,Field Engineer Lead,Field Engineer,DIV-NI,DEP-FOC,TEAM-FOC-2,P-040,LOC-SYD,2017,15,100,1,0
+P-044,Hannah Clarke,hannah.clarke@veridane.example,AM,5,Field Engineer Lead,Field Engineer,DIV-NI,DEP-FOC,TEAM-FOC-3,P-041,LOC-MNL,2009,10,100,1,0
+P-045,Hannah Wilson,hannah.wilson@veridane.example,SE,6,Senior Field Engineer,Field Engineer,DIV-NI,DEP-FOC,TEAM-FOC-1,P-042,LOC-SIN,2010,10,80,1,0
+P-046,Yui Takahashi,yui.takahashi@veridane.example,SE,6,Senior Field Engineer,Field Engineer,DIV-NI,DEP-FOC,TEAM-FOC-2,P-043,LOC-SYD,2020,30,80,0,0
+P-047,Wong Hui Min,wong.hui@veridane.example,SE,6,Senior Field Engineer,Field Engineer,DIV-NI,DEP-FOC,TEAM-FOC-3,P-044,LOC-MNL,2010,35,80,1,0
+P-048,Kofi Okonkwo,kofi.okonkwo@veridane.example,SE,6,Senior Field Engineer,Field Engineer,DIV-NI,DEP-FOC,TEAM-FOC-1,P-042,LOC-SIN,2020,15,80,1,0
+P-049,Daniel Clarke,daniel.clarke@veridane.example,E,7,Field Engineer,Field Engineer,DIV-NI,DEP-FOC,TEAM-FOC-2,P-046,LOC-SYD,2016,25,60,1,0
+P-050,Arjun Reddy,arjun.reddy@veridane.example,E,7,Field Engineer,Field Engineer,DIV-NI,DEP-FOC,TEAM-FOC-3,P-047,LOC-MNL,2022,30,60,1,0
+P-051,Jonas Bianchi,jonas.bianchi@veridane.example,E,7,Field Engineer,Field Engineer,DIV-NI,DEP-FOC,TEAM-FOC-1,P-048,LOC-SIN,2024,10,60,1,0
+P-052,Pablo Schmidt,pablo.schmidt@veridane.example,E,7,Field Engineer,Field Engineer,DIV-NI,DEP-FOC,TEAM-FOC-2,P-046,LOC-SYD,2017,10,60,1,0
+P-053,Maria Reyes,maria.reyes@veridane.example,A,8,Technician,Field Engineer,DIV-NI,DEP-FOC,TEAM-FOC-3,P-050,LOC-MNL,2021,35,45,1,0
+P-054,Miguel Villanueva,miguel.villanueva@veridane.example,SM,3,Head of Field Ops Regional,Field Engineer,DIV-NI,DEP-FOR,,P-008,LOC-DRW,2005,35,170,1,0
+P-055,Sophie Murphy,sophie.murphy@veridane.example,M,4,Field Ops Regional Manager,Field Engineer,DIV-NI,DEP-FOR,TEAM-FOR-2,P-054,LOC-CNS,2003,35,130,1,0
+P-056,Ethan Hughes,ethan.hughes@veridane.example,M,4,Field Ops Regional Manager,Field Engineer,DIV-NI,DEP-FOR,TEAM-FOR-3,P-054,LOC-MNL,2003,25,130,1,0
+P-057,Sangeetha Iyer,sangeetha.iyer@veridane.example,AM,5,Field Engineer Lead,Field Engineer,DIV-NI,DEP-FOR,TEAM-FOR-1,P-056,LOC-DRW,2018,15,100,1,0
+P-058,Ngozi Nkosi,ngozi.nkosi@veridane.example,AM,5,Field Engineer Lead,Field Engineer,DIV-NI,DEP-FOR,TEAM-FOR-2,P-055,LOC-CNS,2018,30,100,1,0
+P-059,Sophie Taylor,sophie.taylor@veridane.example,AM,5,Field Engineer Lead,Field Engineer,DIV-NI,DEP-FOR,TEAM-FOR-3,P-056,LOC-MNL,2008,20,100,1,0
+P-060,Elena Muller,elena.muller@veridane.example,SE,6,Senior Field Engineer,Field Engineer,DIV-NI,DEP-FOR,TEAM-FOR-1,P-057,LOC-DRW,2022,20,80,1,0
+P-061,Clara Garcia,clara.garcia@veridane.example,SE,6,Senior Field Engineer,Field Engineer,DIV-NI,DEP-FOR,TEAM-FOR-2,P-058,LOC-CNS,2015,40,80,1,0
+P-062,Ryan Turner,ryan.turner@veridane.example,SE,6,Senior Field Engineer,Field Engineer,DIV-NI,DEP-FOR,TEAM-FOR-3,P-059,LOC-MNL,2014,20,80,1,0
+P-063,Sophie Reid,sophie.reid@veridane.example,SE,6,Senior Field Engineer,Field Engineer,DIV-NI,DEP-FOR,TEAM-FOR-1,P-057,LOC-DRW,2017,10,80,1,0
+P-064,Olivia Bennett,olivia.bennett@veridane.example,E,7,Field Engineer,Field Engineer,DIV-NI,DEP-FOR,TEAM-FOR-2,P-061,LOC-CNS,2018,15,60,1,0
+P-065,Anitha Rao,anitha.rao@veridane.example,E,7,Field Engineer,Field Engineer,DIV-NI,DEP-FOR,TEAM-FOR-3,P-062,LOC-MNL,2017,10,60,1,0
+P-066,Joseph Mendoza,joseph.mendoza@veridane.example,A,8,Technician,Field Engineer,DIV-NI,DEP-FOR,TEAM-FOR-1,P-060,LOC-DRW,2022,20,45,1,0
+P-067,Carlo Ramos,carlo.ramos@veridane.example,A,8,Technician,Field Engineer,DIV-NI,DEP-FOR,TEAM-FOR-2,P-064,LOC-CNS,2026,20,45,1,0
+P-068,Seoyeon Sato,seoyeon.sato@veridane.example,A,8,Technician,Field Engineer,DIV-NI,DEP-FOR,TEAM-FOR-3,P-065,LOC-MNL,2023,25,45,1,0
+P-069,Paolo Reyes,paolo.reyes@veridane.example,SM,3,Head of Network Testing Lab,Network Test Engineer,DIV-NI,DEP-LAB,,P-007,LOC-BLR,2007,25,170,1,0
+P-070,Anna Martinez,anna.martinez@veridane.example,M,4,Network Testing Lab Manager,Network Test Engineer,DIV-NI,DEP-LAB,TEAM-LAB-1,P-069,LOC-BLR,2003,40,130,1,0
+P-071,Pablo Fischer,pablo.fischer@veridane.example,M,4,Network Testing Lab Manager,Network Test Engineer,DIV-NI,DEP-LAB,TEAM-LAB-1,P-069,LOC-BLR,2003,20,130,1,0
+P-072,Yui Suzuki,yui.suzuki@veridane.example,AM,5,Network Test Engineer Lead,Network Test Engineer,DIV-NI,DEP-LAB,TEAM-LAB-1,P-070,LOC-BLR,2016,10,100,1,0
+P-073,Oliver Turner,oliver.turner@veridane.example,AM,5,Network Test Engineer Lead,Network Test Engineer,DIV-NI,DEP-LAB,TEAM-LAB-1,P-071,LOC-BLR,2016,20,100,1,0
+P-074,Shalini Krishnan,shalini.krishnan@veridane.example,AM,5,Network Test Engineer Lead,Network Test Engineer,DIV-NI,DEP-LAB,TEAM-LAB-1,P-070,LOC-BLR,2015,15,100,0,0
+P-075,Hafiz Rahman,hafiz.rahman@veridane.example,SE,6,Senior Network Engineer,Network Test Engineer,DIV-NI,DEP-LAB,TEAM-LAB-1,P-072,LOC-BLR,2016,30,80,1,0
+P-076,Charlotte Wilson,charlotte.wilson@veridane.example,SE,6,Senior Network Test Engineer,Network Test Engineer,DIV-NI,DEP-LAB,TEAM-LAB-1,P-073,LOC-BLR,2018,20,80,1,0
+P-077,Lukas Schmidt,lukas.schmidt@veridane.example,GM,2,"General Manager, Enterprise & Government",General Manager,DIV-EG,,,P-001,LOC-SIN,1998,15,230,1,0
+P-078,Sofia Schmidt,sofia.schmidt@veridane.example,GM,2,"General Manager, Enterprise & Government",General Manager,DIV-EG,,,P-001,LOC-SIN,2003,20,230,1,0
+P-079,Suresh Reddy,suresh.reddy@veridane.example,SM,3,Head of Enterprise Solutions,Enterprise Solutions Consultant,DIV-EG,DEP-ENT,,P-077,LOC-SIN,2013,35,170,1,0
+P-080,Kwame Adeyemi,kwame.adeyemi@veridane.example,M,4,Retail Sector Account Manager,Enterprise Solutions Consultant,DIV-EG,DEP-ENT,TEAM-ENT-2,P-079,LOC-LIS,2012,25,130,1,0
+P-081,Rania Nasser,rania.nasser@veridane.example,M,4,Enterprise Solutions Manager,Enterprise Solutions Consultant,DIV-EG,DEP-ENT,TEAM-ENT-1,P-079,LOC-SIN,2007,40,130,1,0
+P-082,Meena Menon,meena.menon@veridane.example,AM,5,Enterprise Solutions Consultant Lead,Enterprise Solutions Consultant,DIV-EG,DEP-ENT,TEAM-ENT-2,P-080,LOC-LIS,2012,30,100,1,0
+P-083,Yusuf Haddad,yusuf.haddad@veridane.example,AM,5,Enterprise Solutions Consultant Lead,Enterprise Solutions Consultant,DIV-EG,DEP-ENT,TEAM-ENT-1,P-081,LOC-SIN,2010,25,100,1,0
+P-084,Ryan Wilson,ryan.wilson@veridane.example,AM,5,Enterprise Solutions Consultant Lead,Enterprise Solutions Consultant,DIV-EG,DEP-ENT,TEAM-ENT-2,P-080,LOC-LIS,2012,25,100,1,0
+P-085,Oliver Clarke,oliver.clarke@veridane.example,SE,6,Senior Enterprise Solutions Consultant,Enterprise Solutions Consultant,DIV-EG,DEP-ENT,TEAM-ENT-1,P-083,LOC-SIN,2018,30,80,1,0
+P-086,Lukas Moreau,lukas.moreau@veridane.example,SE,6,Senior Enterprise Solutions Consultant,Enterprise Solutions Consultant,DIV-EG,DEP-ENT,TEAM-ENT-2,P-082,LOC-LIS,2018,20,80,1,0
+P-087,Pablo Rossi,pablo.rossi@veridane.example,SE,6,Senior Enterprise Solutions Consultant,Enterprise Solutions Consultant,DIV-EG,DEP-ENT,TEAM-ENT-1,P-083,LOC-SIN,2021,20,80,1,0
+P-088,Mateo Rossi,mateo.rossi@veridane.example,E,7,Enterprise Solutions Consultant,Enterprise Solutions Consultant,DIV-EG,DEP-ENT,TEAM-ENT-2,P-086,LOC-LIS,2021,35,60,1,0
+P-089,Oliver Bennett,oliver.bennett@veridane.example,E,7,Enterprise Solutions Consultant,Enterprise Solutions Consultant,DIV-EG,DEP-ENT,TEAM-ENT-1,P-087,LOC-SIN,2016,10,60,1,0
+P-090,Nour Rahman,nour.rahman@veridane.example,E,7,Enterprise Solutions Consultant,Enterprise Solutions Consultant,DIV-EG,DEP-ENT,TEAM-ENT-2,P-086,LOC-LIS,2020,30,60,1,0
+P-091,Ren Tanaka,ren.tanaka@veridane.example,SM,3,Head of Government Accounts,Government Account Manager,DIV-EG,DEP-GOV,,P-078,LOC-SIN,2002,30,170,0,0
+P-092,Charlotte Brown,charlotte.brown@veridane.example,M,4,Government Accounts Manager,Government Account Manager,DIV-EG,DEP-GOV,TEAM-GOV-2,P-091,LOC-DRW,2008,25,130,1,0
+P-093,Rafael Santos,rafael.santos@veridane.example,M,4,Government Accounts Manager,Government Account Manager,DIV-EG,DEP-GOV,TEAM-GOV-1,P-091,LOC-SIN,2007,15,130,1,0
+P-094,Bianca Villanueva,bianca.villanueva@veridane.example,AM,5,Government Account Manager Lead,Government Account Manager,DIV-EG,DEP-GOV,TEAM-GOV-2,P-092,LOC-DRW,2010,20,100,1,0
+P-095,Kristine Reyes,kristine.reyes@veridane.example,AM,5,Government Account Manager Lead,Government Account Manager,DIV-EG,DEP-GOV,TEAM-GOV-1,P-093,LOC-SIN,2013,30,100,1,0
+P-096,Emma Hughes,emma.hughes@veridane.example,AM,5,Government Account Manager Lead,Government Account Manager,DIV-EG,DEP-GOV,TEAM-GOV-2,P-092,LOC-DRW,2012,40,100,0,0
+P-097,Hina Kim,hina.kim@veridane.example,SE,6,Senior Government Account Manager,Government Account Manager,DIV-EG,DEP-GOV,TEAM-GOV-1,P-095,LOC-SIN,2012,10,80,0,0
+P-098,Amara Okafor,amara.okafor@veridane.example,SE,6,Senior Government Account Manager,Government Account Manager,DIV-EG,DEP-GOV,TEAM-GOV-2,P-094,LOC-DRW,2015,25,80,1,0
+P-099,Carlo Reyes,carlo.reyes@veridane.example,SE,6,Senior Government Account Manager,Government Account Manager,DIV-EG,DEP-GOV,TEAM-GOV-1,P-095,LOC-SIN,2019,10,80,0,0
+P-100,Paolo Cruz,paolo.cruz@veridane.example,E,7,Government Account Manager,Government Account Manager,DIV-EG,DEP-GOV,TEAM-GOV-2,P-098,LOC-DRW,2025,15,60,1,0
+P-101,Patricia Navarro,patricia.navarro@veridane.example,E,7,Government Account Manager,Government Account Manager,DIV-EG,DEP-GOV,TEAM-GOV-1,P-099,LOC-SIN,2023,30,60,1,0
+P-102,Hafiz Khalil,hafiz.khalil@veridane.example,A,8,Associate Government Account Manager,Government Account Manager,DIV-EG,DEP-GOV,TEAM-GOV-2,P-100,LOC-DRW,2022,25,45,1,0
+P-103,Ethan Murphy,ethan.murphy@veridane.example,SM,3,Head of SME Business,SME Business Executive,DIV-EG,DEP-SME,,P-077,LOC-SIN,2010,15,170,1,0
+P-104,Mark Santos,mark.santos@veridane.example,M,4,SME Business Manager,SME Business Executive,DIV-EG,DEP-SME,TEAM-SME-2,P-103,LOC-SYD,2010,20,130,1,0
+P-105,Angela Bautista,angela.bautista@veridane.example,M,4,SME Business Manager,SME Business Executive,DIV-EG,DEP-SME,TEAM-SME-3,P-103,LOC-CNS,2009,25,130,1,0
+P-106,Anitha Pillai,anitha.pillai@veridane.example,AM,5,SME Business Executive Lead,SME Business Executive,DIV-EG,DEP-SME,TEAM-SME-1,P-104,LOC-SIN,2018,30,100,1,0
+P-107,Goh Yong Sheng,goh.yong@veridane.example,AM,5,SME Business Executive Lead,SME Business Executive,DIV-EG,DEP-SME,TEAM-SME-2,P-104,LOC-SYD,2017,20,100,1,0
+P-108,Sota Sato,sota.sato@veridane.example,SE,6,Senior SME Business Executive,SME Business Executive,DIV-EG,DEP-SME,TEAM-SME-3,P-106,LOC-CNS,2022,10,80,1,0
+P-109,Deepa Pillai,deepa.pillai@veridane.example,SE,6,Senior SME Business Executive,SME Business Executive,DIV-EG,DEP-SME,TEAM-SME-1,P-106,LOC-SIN,2014,30,80,1,0
+P-110,Ethan Taylor,ethan.taylor@veridane.example,SE,6,Senior SME Business Executive,SME Business Executive,DIV-EG,DEP-SME,TEAM-SME-2,P-107,LOC-SYD,2020,20,80,1,0
+P-111,Angela Garcia,angela.garcia@veridane.example,SE,6,Senior SME Business Executive,SME Business Executive,DIV-EG,DEP-SME,TEAM-SME-3,P-107,LOC-CNS,2018,30,80,1,0
+P-112,Paolo Garcia,paolo.garcia@veridane.example,E,7,SME Business Executive,SME Business Executive,DIV-EG,DEP-SME,TEAM-SME-1,P-109,LOC-SIN,2021,20,60,1,0
+P-113,Sophie Wilson,sophie.wilson@veridane.example,E,7,SME Business Executive,SME Business Executive,DIV-EG,DEP-SME,TEAM-SME-2,P-110,LOC-SYD,2017,30,60,1,0
+P-114,Hannah Walker,hannah.walker@veridane.example,A,8,Associate SME Business Executive,SME Business Executive,DIV-EG,DEP-SME,TEAM-SME-3,P-112,LOC-CNS,2024,35,45,1,0
+P-115,Meena Iyer,meena.iyer@veridane.example,SM,3,Head of Pre-sales,Pre-sales Architect,DIV-EG,DEP-PRE,,P-078,LOC-SIN,2013,20,170,1,0
+P-116,Diogo Santos,diogo.santos@veridane.example,M,4,Pre-sales Manager,Pre-sales Architect,DIV-EG,DEP-PRE,TEAM-PRE-1,P-115,LOC-SIN,2017,30,130,1,0
+P-117,Grace Clarke,grace.clarke@veridane.example,M,4,Pre-sales Manager,Pre-sales Architect,DIV-EG,DEP-PRE,TEAM-PRE-1,P-115,LOC-SIN,2018,15,130,1,0
+P-118,Thandi Asante,thandi.asante@veridane.example,AM,5,Pre-sales Architect Lead,Pre-sales Architect,DIV-EG,DEP-PRE,TEAM-PRE-1,P-116,LOC-SIN,2020,15,100,0,0
+P-119,Diogo Ferreira,diogo.ferreira@veridane.example,AM,5,Pre-sales Architect Lead,Pre-sales Architect,DIV-EG,DEP-PRE,TEAM-PRE-1,P-117,LOC-SIN,2010,20,100,1,0
+P-120,Arjun Kumar,arjun.kumar@veridane.example,SE,6,Senior Pre-sales Architect,Pre-sales Architect,DIV-EG,DEP-PRE,TEAM-PRE-1,P-118,LOC-SIN,2018,20,80,1,0
+P-121,Ethan Brown,ethan.brown@veridane.example,SE,6,Senior Pre-sales Architect,Pre-sales Architect,DIV-EG,DEP-PRE,TEAM-PRE-1,P-119,LOC-SIN,2021,30,80,0,0
+P-122,Tan Jun Hao,tan.jun@veridane.example,SE,6,Senior Pre-sales Architect,Pre-sales Architect,DIV-EG,DEP-PRE,TEAM-PRE-1,P-118,LOC-SIN,2023,30,80,1,0
+P-123,Shalini Patel,shalini.patel@veridane.example,E,7,Pre-sales Architect,Pre-sales Architect,DIV-EG,DEP-PRE,TEAM-PRE-1,P-120,LOC-SIN,2019,30,60,1,0
+P-124,Daniel Smith,daniel.smith@veridane.example,E,7,Pre-sales Architect,Pre-sales Architect,DIV-EG,DEP-PRE,TEAM-PRE-1,P-121,LOC-SIN,2021,25,60,1,0
+P-125,Anitha Iyer,anitha.iyer@veridane.example,E,7,Pre-sales Architect,Pre-sales Architect,DIV-EG,DEP-PRE,TEAM-PRE-1,P-122,LOC-SIN,2024,15,60,1,0
+P-126,Pablo Garcia,pablo.garcia@veridane.example,A,8,Associate Pre-sales Architect,Pre-sales Architect,DIV-EG,DEP-PRE,TEAM-PRE-1,P-123,LOC-SIN,2021,15,45,1,0
+P-127,Noah Brown,noah.brown@veridane.example,GM,2,"General Manager, Consumer & Retail",General Manager,DIV-CR,,,P-001,LOC-SIN,2010,40,230,1,0
+P-128,Lea Muller,lea.muller@veridane.example,SM,3,Head of Broadband,Broadband Product Specialist,DIV-CR,DEP-BB,,P-127,LOC-SIN,2006,10,170,1,0
+P-129,Chidi Okonkwo,chidi.okonkwo@veridane.example,M,4,Broadband Manager,Broadband Product Specialist,DIV-CR,DEP-BB,TEAM-BB-1,P-128,LOC-SIN,2006,30,130,1,0
+P-130,Ngozi Okonkwo,ngozi.okonkwo@veridane.example,M,4,Broadband Manager,Broadband Product Specialist,DIV-CR,DEP-BB,TEAM-BB-1,P-128,LOC-SIN,2013,40,130,1,0
+P-131,Diogo Oliveira,diogo.oliveira@veridane.example,AM,5,Broadband Product Specialist Lead,Broadband Product Specialist,DIV-CR,DEP-BB,TEAM-BB-1,P-130,LOC-SIN,2014,10,100,1,0
+P-132,Karthik Rao,karthik.rao@veridane.example,AM,5,Broadband Product Specialist Lead,Broadband Product Specialist,DIV-CR,DEP-BB,TEAM-BB-1,P-129,LOC-SIN,2020,15,100,1,0
+P-133,Meena Krishnan,meena.krishnan@veridane.example,SE,6,Senior Broadband Product Specialist,Broadband Product Specialist,DIV-CR,DEP-BB,TEAM-BB-1,P-132,LOC-SIN,2023,30,80,1,0
+P-134,Sophie Fraser,sophie.fraser@veridane.example,SE,6,Senior Broadband Product Specialist,Broadband Product Specialist,DIV-CR,DEP-BB,TEAM-BB-1,P-131,LOC-SIN,2015,20,80,1,0
+P-135,Pablo Martinez,pablo.martinez@veridane.example,E,7,Broadband Product Specialist,Broadband Product Specialist,DIV-CR,DEP-BB,TEAM-BB-1,P-134,LOC-SIN,2025,15,60,1,0
+P-136,Sipho Asante,sipho.asante@veridane.example,E,7,Broadband Product Specialist,Broadband Product Specialist,DIV-CR,DEP-BB,TEAM-BB-1,P-133,LOC-SIN,2019,10,60,1,0
+P-137,Chidi Asante,chidi.asante@veridane.example,A,8,Associate Broadband Product Specialist,Broadband Product Specialist,DIV-CR,DEP-BB,TEAM-BB-1,P-136,LOC-SIN,2021,25,45,1,0
+P-138,Mark Garcia,mark.garcia@veridane.example,SM,3,Head of Mobile,Mobile Product Specialist,DIV-CR,DEP-MOB,,P-127,LOC-SIN,2015,15,170,1,0
+P-139,Miguel Ramos,miguel.ramos@veridane.example,M,4,Mobile Manager,Mobile Product Specialist,DIV-CR,DEP-MOB,TEAM-MOB-1,P-138,LOC-SIN,2017,10,130,1,0
+P-140,Tariq Saleh,tariq.saleh@veridane.example,AM,5,Mobile Product Specialist Lead,Mobile Product Specialist,DIV-CR,DEP-MOB,TEAM-MOB-1,P-139,LOC-SIN,2010,15,100,1,0
+P-141,Koh Zhi Hao,koh.zhi@veridane.example,AM,5,Mobile Product Specialist Lead,Mobile Product Specialist,DIV-CR,DEP-MOB,TEAM-MOB-1,P-139,LOC-SIN,2015,25,100,1,0
+P-142,Kavitha Krishnan,kavitha.krishnan@veridane.example,SE,6,Senior Mobile Product Specialist,Mobile Product Specialist,DIV-CR,DEP-MOB,TEAM-MOB-1,P-140,LOC-SIN,2023,10,80,1,0
+P-143,Carla Almeida,carla.almeida@veridane.example,SE,6,Senior Mobile Product Specialist,Mobile Product Specialist,DIV-CR,DEP-MOB,TEAM-MOB-1,P-141,LOC-SIN,2011,20,80,1,0
+P-144,Oliver Walker,oliver.walker@veridane.example,SE,6,Senior Mobile Product Specialist,Mobile Product Specialist,DIV-CR,DEP-MOB,TEAM-MOB-1,P-140,LOC-SIN,2017,20,80,1,0
+P-145,Kwame Nkosi,kwame.nkosi@veridane.example,E,7,Mobile Product Specialist,Mobile Product Specialist,DIV-CR,DEP-MOB,TEAM-MOB-1,P-143,LOC-SIN,2021,35,60,1,0
+P-146,Nour Nasser,nour.nasser@veridane.example,E,7,Mobile Product Specialist,Mobile Product Specialist,DIV-CR,DEP-MOB,TEAM-MOB-1,P-144,LOC-SIN,2017,10,60,1,0
+P-147,Ethan Turner,ethan.turner@veridane.example,A,8,Associate Mobile Product Specialist,Mobile Product Specialist,DIV-CR,DEP-MOB,TEAM-MOB-1,P-146,LOC-SIN,2022,40,45,1,0
+P-148,Clara Muller,clara.muller@veridane.example,SM,3,Head of Marketing,Marketing Analyst,DIV-CR,DEP-MKT,,P-127,LOC-SIN,2013,15,170,1,0
+P-149,Liam Brown,liam.brown@veridane.example,M,4,Marketing Manager,Marketing Analyst,DIV-CR,DEP-MKT,TEAM-MKT-1,P-148,LOC-SIN,2016,30,130,1,0
+P-150,Kristine Aquino,kristine.aquino@veridane.example,AM,5,Marketing Analyst Lead,Marketing Analyst,DIV-CR,DEP-MKT,TEAM-MKT-1,P-149,LOC-SIN,2012,20,100,1,0
+P-151,Miguel Navarro,miguel.navarro@veridane.example,AM,5,Marketing Analyst Lead,Marketing Analyst,DIV-CR,DEP-MKT,TEAM-MKT-1,P-149,LOC-SIN,2019,20,100,1,0
+P-152,Lim Wei Ling,lim.wei@veridane.example,SE,6,Senior Data Analyst,Marketing Analyst,DIV-CR,DEP-MKT,TEAM-MKT-1,P-150,LOC-SIN,2019,25,80,1,0
+P-153,Patricia Mendoza,patricia.mendoza@veridane.example,SE,6,Senior Marketing Analyst,Marketing Analyst,DIV-CR,DEP-MKT,TEAM-MKT-1,P-151,LOC-SIN,2016,25,80,1,0
+P-154,Faisal Hamdan,faisal.hamdan@veridane.example,SE,6,Senior Marketing Analyst,Marketing Analyst,DIV-CR,DEP-MKT,TEAM-MKT-1,P-150,LOC-SIN,2020,10,80,1,0
+P-155,Grace Walker,grace.walker@veridane.example,E,7,Marketing Analyst,Marketing Analyst,DIV-CR,DEP-MKT,TEAM-MKT-1,P-154,LOC-SIN,2023,15,60,1,0
+P-156,Amelia Hughes,amelia.hughes@veridane.example,E,7,Marketing Analyst,Marketing Analyst,DIV-CR,DEP-MKT,TEAM-MKT-1,P-152,LOC-SIN,2020,25,60,1,0
+P-157,Tiago Almeida,tiago.almeida@veridane.example,A,8,Associate Marketing Analyst,Marketing Analyst,DIV-CR,DEP-MKT,TEAM-MKT-1,P-156,LOC-SIN,2023,20,45,1,0
+P-158,Irfan Aziz,irfan.aziz@veridane.example,M,4,Retail Channels Manager,Retail Channel Executive,DIV-CR,DEP-RET,TEAM-RET-1,P-127,LOC-SIN,2012,35,130,1,0
+P-159,Ren Kim,ren.kim@veridane.example,M,4,Retail Channels Manager,Retail Channel Executive,DIV-CR,DEP-RET,TEAM-RET-2,P-158,LOC-SYD,2006,20,130,1,0
+P-160,Daniel Murphy,daniel.murphy@veridane.example,AM,5,Retail Channel Executive Lead,Retail Channel Executive,DIV-CR,DEP-RET,TEAM-RET-3,P-158,LOC-LIS,2017,25,100,1,0
+P-161,Chloe Reid,chloe.reid@veridane.example,AM,5,Retail Channel Executive Lead,Retail Channel Executive,DIV-CR,DEP-RET,TEAM-RET-1,P-158,LOC-SIN,2013,40,100,1,0
+P-162,Ethan Wilson,ethan.wilson@veridane.example,SE,6,Senior Retail Channel Executive,Retail Channel Executive,DIV-CR,DEP-RET,TEAM-RET-2,P-160,LOC-SYD,2023,20,80,1,0
+P-163,Loh Kah Wai,loh.kah@veridane.example,SE,6,Senior Retail Channel Executive,Retail Channel Executive,DIV-CR,DEP-RET,TEAM-RET-3,P-160,LOC-LIS,2016,40,80,1,0
+P-164,Meena Reddy,meena.reddy@veridane.example,SE,6,Senior Retail Channel Executive,Retail Channel Executive,DIV-CR,DEP-RET,TEAM-RET-1,P-161,LOC-SIN,2015,25,80,1,0
+P-165,Goh Jia Hui,goh.jia@veridane.example,E,7,Retail Channel Executive,Retail Channel Executive,DIV-CR,DEP-RET,TEAM-RET-2,P-162,LOC-SYD,2024,25,60,1,0
+P-166,Carlo Santos,carlo.santos@veridane.example,E,7,Retail Channel Executive,Retail Channel Executive,DIV-CR,DEP-RET,TEAM-RET-3,P-163,LOC-LIS,2022,20,60,1,0
+P-167,Anna Rossi,anna.rossi@veridane.example,GM,2,"General Manager, Customer Service Ops",General Manager,DIV-CSO,,,P-005,LOC-SIN,2007,20,230,1,0
+P-168,Sofia Rossi,sofia.rossi@veridane.example,SM,3,Head of Contact Centre,Customer Service Executive,DIV-CSO,DEP-CC,,P-167,LOC-MNL,2013,20,170,1,0
+P-169,Jiho Takahashi,jiho.takahashi@veridane.example,M,4,Contact Centre Manager,Customer Service Executive,DIV-CSO,DEP-CC,TEAM-CC-2,P-168,LOC-SYD,2005,15,130,1,0
+P-170,Minjun Jung,minjun.jung@veridane.example,M,4,Contact Centre Manager,Customer Service Executive,DIV-CSO,DEP-CC,TEAM-CC-3,P-168,LOC-SIN,2014,15,130,1,0
+P-171,Rafael Almeida,rafael.almeida@veridane.example,AM,5,Senior CX Analyst,Customer Service Executive,DIV-CSO,DEP-CC,TEAM-CC-1,P-170,LOC-MNL,2018,30,100,1,0
+P-172,Joao Rocha,joao.rocha@veridane.example,AM,5,Customer Service Executive Lead,Customer Service Executive,DIV-CSO,DEP-CC,TEAM-CC-2,P-169,LOC-SYD,2018,15,100,1,0
+P-173,Sota Suzuki,sota.suzuki@veridane.example,AM,5,Customer Service Executive Lead,Customer Service Executive,DIV-CSO,DEP-CC,TEAM-CC-3,P-170,LOC-SIN,2013,20,100,1,0
+P-174,Haruto Park,haruto.park@veridane.example,SE,6,Senior Customer Service Executive,Customer Service Executive,DIV-CSO,DEP-CC,TEAM-CC-1,P-171,LOC-MNL,2017,15,80,1,0
+P-175,Liam Clarke,liam.clarke@veridane.example,SE,6,Senior Customer Service Executive,Customer Service Executive,DIV-CSO,DEP-CC,TEAM-CC-2,P-172,LOC-SYD,2011,10,80,1,0
+P-176,Daniel Hughes,daniel.hughes@veridane.example,SE,6,Senior Customer Service Executive,Customer Service Executive,DIV-CSO,DEP-CC,TEAM-CC-3,P-173,LOC-SIN,2017,10,80,1,0
+P-177,Maria Garcia,maria.garcia@veridane.example,SE,6,Senior Customer Service Executive,Customer Service Executive,DIV-CSO,DEP-CC,TEAM-CC-1,P-171,LOC-MNL,2016,20,80,1,0
+P-178,Lim Jun Hao,lim.jun@veridane.example,E,7,Customer Service Executive,Customer Service Executive,DIV-CSO,DEP-CC,TEAM-CC-2,P-175,LOC-SYD,2019,35,60,1,0
+P-179,Charlotte Hughes,charlotte.hughes@veridane.example,E,7,Customer Service Executive,Customer Service Executive,DIV-CSO,DEP-CC,TEAM-CC-3,P-176,LOC-SIN,2025,25,60,1,0
+P-180,Diogo Pereira,diogo.pereira@veridane.example,A,8,Associate Customer Service Executive,Customer Service Executive,DIV-CSO,DEP-CC,TEAM-CC-1,P-178,LOC-MNL,2023,15,45,1,0
+P-181,Ganesh Reddy,ganesh.reddy@veridane.example,SM,3,Head of Escalations,Escalations Specialist,DIV-CSO,DEP-ESC,,P-167,LOC-SIN,2011,25,170,1,0
+P-182,Daniel Brown,daniel.brown@veridane.example,M,4,Escalations Manager,Escalations Specialist,DIV-CSO,DEP-ESC,TEAM-ESC-1,P-181,LOC-SIN,2016,25,130,1,0
+P-183,Maria Santos,maria.santos@veridane.example,M,4,Escalations Manager,Escalations Specialist,DIV-CSO,DEP-ESC,TEAM-ESC-1,P-181,LOC-SIN,2017,20,130,1,0
+P-184,Joao Oliveira,joao.oliveira@veridane.example,AM,5,Escalations Specialist Lead,Escalations Specialist,DIV-CSO,DEP-ESC,TEAM-ESC-1,P-182,LOC-SIN,2009,20,100,1,0
+P-185,Goh Li Ting,goh.li@veridane.example,AM,5,Escalations Specialist Lead,Escalations Specialist,DIV-CSO,DEP-ESC,TEAM-ESC-1,P-183,LOC-SIN,2019,30,100,1,0
+P-186,Chloe Walker,chloe.walker@veridane.example,AM,5,Escalations Specialist Lead,Escalations Specialist,DIV-CSO,DEP-ESC,TEAM-ESC-1,P-182,LOC-SIN,2013,35,100,1,0
+P-187,Karthik Menon,karthik.menon@veridane.example,SE,6,Senior Escalations Specialist,Escalations Specialist,DIV-CSO,DEP-ESC,TEAM-ESC-1,P-185,LOC-SIN,2015,35,80,1,0
+P-188,Nour Mansour,nour.mansour@veridane.example,SE,6,Senior Escalations Specialist,Escalations Specialist,DIV-CSO,DEP-ESC,TEAM-ESC-1,P-186,LOC-SIN,2016,30,80,1,0
+P-189,Ganesh Rao,ganesh.rao@veridane.example,SE,6,Senior Escalations Specialist,Escalations Specialist,DIV-CSO,DEP-ESC,TEAM-ESC-1,P-184,LOC-SIN,2022,40,80,1,0
+P-190,Hina Park,hina.park@veridane.example,E,7,Escalations Specialist,Escalations Specialist,DIV-CSO,DEP-ESC,TEAM-ESC-1,P-188,LOC-SIN,2021,35,60,1,0
+P-191,Mark Mendoza,mark.mendoza@veridane.example,E,7,Escalations Specialist,Escalations Specialist,DIV-CSO,DEP-ESC,TEAM-ESC-1,P-189,LOC-SIN,2019,20,60,1,0
+P-192,Angela Cruz,angela.cruz@veridane.example,E,7,Escalations Specialist,Escalations Specialist,DIV-CSO,DEP-ESC,TEAM-ESC-1,P-187,LOC-SIN,2017,10,60,1,0
+P-193,Elena Schmidt,elena.schmidt@veridane.example,A,8,Associate Escalations Specialist,Escalations Specialist,DIV-CSO,DEP-ESC,TEAM-ESC-1,P-191,LOC-SIN,2021,15,45,1,0
+P-194,Lee Kah Wai,lee.kah@veridane.example,SM,3,Head of Field Service Desk,Field Service Coordinator,DIV-CSO,DEP-FSD,,P-167,LOC-MNL,1999,20,170,1,0
+P-195,Liam Smith,liam.smith@veridane.example,M,4,Field Service Desk Manager,Field Service Coordinator,DIV-CSO,DEP-FSD,TEAM-FSD-2,P-194,LOC-DRW,2012,35,130,1,0
+P-196,Ng Jia Hui,ng.jia@veridane.example,M,4,Field Service Desk Manager,Field Service Coordinator,DIV-CSO,DEP-FSD,TEAM-FSD-1,P-194,LOC-MNL,2008,35,130,1,0
+P-197,Aoi Park,aoi.park@veridane.example,AM,5,Field Service Coordinator Lead,Field Service Coordinator,DIV-CSO,DEP-FSD,TEAM-FSD-2,P-195,LOC-DRW,2021,40,100,1,0
+P-198,Hina Sato,hina.sato@veridane.example,AM,5,Field Service Coordinator Lead,Field Service Coordinator,DIV-CSO,DEP-FSD,TEAM-FSD-1,P-196,LOC-MNL,2020,15,100,1,0
+P-199,Lee Jun Hao,lee.jun@veridane.example,SE,6,Senior Field Service Coordinator,Field Service Coordinator,DIV-CSO,DEP-FSD,TEAM-FSD-2,P-197,LOC-DRW,2018,20,80,1,0
+P-200,Amelia Taylor,amelia.taylor@veridane.example,SE,6,Senior Field Service Coordinator,Field Service Coordinator,DIV-CSO,DEP-FSD,TEAM-FSD-1,P-198,LOC-MNL,2011,20,80,1,0
+P-201,Karthik Pillai,karthik.pillai@veridane.example,SE,6,Senior Field Service Coordinator,Field Service Coordinator,DIV-CSO,DEP-FSD,TEAM-FSD-2,P-197,LOC-DRW,2023,10,80,1,0
+P-202,Joao Ferreira,joao.ferreira@veridane.example,SE,6,Senior Field Service Coordinator,Field Service Coordinator,DIV-CSO,DEP-FSD,TEAM-FSD-1,P-198,LOC-MNL,2013,20,80,1,0
+P-203,Grace Hughes,grace.hughes@veridane.example,E,7,Field Service Coordinator,Field Service Coordinator,DIV-CSO,DEP-FSD,TEAM-FSD-2,P-201,LOC-DRW,2024,15,60,1,0
+P-204,Sota Takahashi,sota.takahashi@veridane.example,E,7,Field Service Coordinator,Field Service Coordinator,DIV-CSO,DEP-FSD,TEAM-FSD-1,P-200,LOC-MNL,2024,30,60,1,0
+P-205,Chan Kah Wai,chan.kah@veridane.example,A,8,Associate Field Service Coordinator,Field Service Coordinator,DIV-CSO,DEP-FSD,TEAM-FSD-2,P-203,LOC-DRW,2022,25,45,1,0
+P-206,Ethan Bennett,ethan.bennett@veridane.example,GM,2,"General Manager, IT & Digital",General Manager,DIV-ITD,,,P-004,LOC-SIN,2007,20,230,1,0
+P-207,Carla Costa,carla.costa@veridane.example,SM,3,Billing Platform Manager,Billing Systems Analyst,DIV-ITD,DEP-BSS,,P-206,LOC-SIN,1994,20,170,1,1
+P-208,Amara Dlamini,amara.dlamini@veridane.example,M,4,BSS/Billing Manager,Billing Systems Analyst,DIV-ITD,DEP-BSS,TEAM-BSS-1,P-207,LOC-SIN,2014,20,130,1,0
+P-209,Hafiz Saleh,hafiz.saleh@veridane.example,M,4,BSS/Billing Manager,Billing Systems Analyst,DIV-ITD,DEP-BSS,TEAM-BSS-1,P-207,LOC-SIN,2007,25,130,1,0
+P-210,Priya Nair,priya.nair@veridane.example,AM,5,"Assistant Manager, Billing Operations",Billing Systems Analyst,DIV-ITD,DEP-BSS,TEAM-BSS-1,P-208,LOC-SIN,2015,10,100,1,0
+P-211,James Reid,james.reid@veridane.example,AM,5,Senior Rating Specialist,Billing Systems Analyst,DIV-ITD,DEP-BSS,TEAM-BSS-1,P-209,LOC-SIN,1998,10,100,1,0
+P-212,Anna Schmidt,anna.schmidt@veridane.example,SE,6,Senior Billing Systems Analyst,Billing Systems Analyst,DIV-ITD,DEP-BSS,TEAM-BSS-1,P-210,LOC-SIN,2020,30,80,1,0
+P-213,Carlo Cruz,carlo.cruz@veridane.example,SE,6,Senior Billing Systems Analyst,Billing Systems Analyst,DIV-ITD,DEP-BSS,TEAM-BSS-1,P-211,LOC-SIN,2023,40,80,1,0
+P-214,Noah Reid,noah.reid@veridane.example,E,7,Billing Systems Analyst,Billing Systems Analyst,DIV-ITD,DEP-BSS,TEAM-BSS-1,P-212,LOC-SIN,2021,30,60,1,0
+P-215,Emma Bennett,emma.bennett@veridane.example,E,7,Billing Systems Analyst,Billing Systems Analyst,DIV-ITD,DEP-BSS,TEAM-BSS-1,P-213,LOC-SIN,2022,40,60,1,0
+P-216,Hayun Jung,hayun.jung@veridane.example,A,8,Associate Billing Systems Analyst,Billing Systems Analyst,DIV-ITD,DEP-BSS,TEAM-BSS-1,P-214,LOC-SIN,2024,20,45,0,0
+P-217,Emma Reid,emma.reid@veridane.example,SM,3,Head of Cloud Platform,Cloud Engineer,DIV-ITD,DEP-CLD,,P-206,LOC-BLR,2001,25,170,1,0
+P-218,Faisal Karimi,faisal.karimi@veridane.example,M,4,Cloud Platform Manager,Cloud Engineer,DIV-ITD,DEP-CLD,TEAM-CLD-2,P-217,LOC-LIS,2011,20,130,1,0
+P-219,Chidi Dlamini,chidi.dlamini@veridane.example,AM,5,Cloud Platform Lead,Cloud Engineer,DIV-ITD,DEP-CLD,TEAM-CLD-1,P-218,LOC-BLR,2014,55,100,1,0
+P-220,Clara Moreau,clara.moreau@veridane.example,AM,5,Cloud Engineer Lead,Cloud Engineer,DIV-ITD,DEP-CLD,TEAM-CLD-2,P-218,LOC-LIS,2021,20,100,1,0
+P-221,Kristine Santos,kristine.santos@veridane.example,SE,6,Senior Cloud Engineer,Cloud Engineer,DIV-ITD,DEP-CLD,TEAM-CLD-1,P-219,LOC-BLR,2018,45,80,1,0
+P-222,Mariana Almeida,mariana.almeida@veridane.example,SE,6,Senior Cloud Engineer,Cloud Engineer,DIV-ITD,DEP-CLD,TEAM-CLD-2,P-220,LOC-LIS,2016,35,80,1,0
+P-223,Chloe Brown,chloe.brown@veridane.example,SE,6,Senior Cloud Engineer,Cloud Engineer,DIV-ITD,DEP-CLD,TEAM-CLD-1,P-219,LOC-BLR,2022,30,80,1,0
+P-224,Yusuf Hamdan,yusuf.hamdan@veridane.example,E,7,Cloud Engineer,Cloud Engineer,DIV-ITD,DEP-CLD,TEAM-CLD-2,P-222,LOC-LIS,2017,20,60,1,0
+P-225,Omar Haddad,omar.haddad@veridane.example,E,7,Cloud Engineer,Cloud Engineer,DIV-ITD,DEP-CLD,TEAM-CLD-1,P-223,LOC-BLR,2019,20,60,1,0
+P-226,Tariq Hamdan,tariq.hamdan@veridane.example,A,8,Technician,Cloud Engineer,DIV-ITD,DEP-CLD,TEAM-CLD-2,P-224,LOC-LIS,2021,25,45,1,0
+P-227,Seoyeon Tanaka,seoyeon.tanaka@veridane.example,SM,3,Head of App Dev,Software Engineer,DIV-ITD,DEP-APP,,P-206,LOC-SIN,1999,25,170,0,0
+P-228,Loh Wei,loh.wei@veridane.example,M,4,Digital Product Manager,Software Engineer,DIV-ITD,DEP-APP,TEAM-APP-2,P-227,LOC-LIS,2013,35,130,1,0
+P-229,Lim Mei Ling,lim.mei@veridane.example,AM,5,Software Engineer Lead,Software Engineer,DIV-ITD,DEP-APP,TEAM-APP-1,P-228,LOC-SIN,2009,10,100,1,0
+P-230,Daniel Walker,daniel.walker@veridane.example,AM,5,Software Engineer Lead,Software Engineer,DIV-ITD,DEP-APP,TEAM-APP-2,P-228,LOC-LIS,2018,25,100,1,0
+P-231,Lim Hui Min,lim.hui@veridane.example,SE,6,Senior Software Engineer,Software Engineer,DIV-ITD,DEP-APP,TEAM-APP-1,P-229,LOC-SIN,2014,40,80,1,0
+P-232,Ryan Hughes,ryan.hughes@veridane.example,SE,6,Senior Software Engineer,Software Engineer,DIV-ITD,DEP-APP,TEAM-APP-2,P-230,LOC-LIS,2022,20,80,1,0
+P-233,Noah Smith,noah.smith@veridane.example,SE,6,Senior Software Engineer,Software Engineer,DIV-ITD,DEP-APP,TEAM-APP-1,P-229,LOC-SIN,2016,15,80,1,0
+P-234,Meena Sharma,meena.sharma@veridane.example,E,7,Software Engineer,Software Engineer,DIV-ITD,DEP-APP,TEAM-APP-2,P-232,LOC-LIS,2024,10,60,1,0
+P-235,Tunde Mensah,tunde.mensah@veridane.example,E,7,Software Engineer,Software Engineer,DIV-ITD,DEP-APP,TEAM-APP-1,P-233,LOC-SIN,2018,10,60,0,0
+P-236,Chan Li Ting,chan.li@veridane.example,A,8,Technician,Software Engineer,DIV-ITD,DEP-APP,TEAM-APP-2,P-234,LOC-LIS,2021,40,45,1,0
+P-237,Chen Jun Hao,chen.jun@veridane.example,SM,3,Head of OSS,OSS Engineer,DIV-ITD,DEP-OSS,,P-206,LOC-BLR,2013,20,170,1,0
+P-238,Jonas Muller,jonas.muller@veridane.example,M,4,OSS Manager,OSS Engineer,DIV-ITD,DEP-OSS,TEAM-OSS-1,P-237,LOC-BLR,2009,10,130,1,0
+P-239,Hafiz Aziz,hafiz.aziz@veridane.example,AM,5,OSS Engineer Lead,OSS Engineer,DIV-ITD,DEP-OSS,TEAM-OSS-1,P-238,LOC-BLR,2019,35,100,1,0
+P-240,Maria Bautista,maria.bautista@veridane.example,AM,5,OSS Engineer Lead,OSS Engineer,DIV-ITD,DEP-OSS,TEAM-OSS-1,P-238,LOC-BLR,2011,30,100,1,0
+P-241,Ethan Smith,ethan.smith@veridane.example,SE,6,Senior OSS Engineer,OSS Engineer,DIV-ITD,DEP-OSS,TEAM-OSS-1,P-240,LOC-BLR,2018,20,80,1,0
+P-242,Yusuf Mansour,yusuf.mansour@veridane.example,SE,6,Senior OSS Engineer,OSS Engineer,DIV-ITD,DEP-OSS,TEAM-OSS-1,P-239,LOC-BLR,2020,20,80,1,0
+P-243,Grace Smith,grace.smith@veridane.example,SE,6,Senior OSS Engineer,OSS Engineer,DIV-ITD,DEP-OSS,TEAM-OSS-1,P-240,LOC-BLR,2013,40,80,1,0
+P-244,Sota Choi,sota.choi@veridane.example,E,7,OSS Engineer,OSS Engineer,DIV-ITD,DEP-OSS,TEAM-OSS-1,P-242,LOC-BLR,2016,15,60,1,0
+P-245,Chloe Wilson,chloe.wilson@veridane.example,E,7,OSS Engineer,OSS Engineer,DIV-ITD,DEP-OSS,TEAM-OSS-1,P-243,LOC-BLR,2023,40,60,1,0
+P-246,Tunde Asante,tunde.asante@veridane.example,M,4,Cybersecurity Manager,Security Analyst,DIV-ITD,DEP-SEC,TEAM-SEC-1,P-206,LOC-BLR,2008,20,130,1,0
+P-247,Hina Suzuki,hina.suzuki@veridane.example,M,4,Cybersecurity Manager,Security Analyst,DIV-ITD,DEP-SEC,TEAM-SEC-1,P-246,LOC-BLR,2009,40,130,1,0
+P-248,Deepa Menon,deepa.menon@veridane.example,AM,5,Senior Security Analyst,Security Analyst,DIV-ITD,DEP-SEC,TEAM-SEC-1,P-246,LOC-BLR,2015,15,100,1,0
+P-249,Jose Cruz,jose.cruz@veridane.example,AM,5,Security Analyst Lead,Security Analyst,DIV-ITD,DEP-SEC,TEAM-SEC-1,P-247,LOC-BLR,2014,40,100,1,0
+P-250,Jonas Garcia,jonas.garcia@veridane.example,SE,6,Senior Security Analyst,Security Analyst,DIV-ITD,DEP-SEC,TEAM-SEC-1,P-248,LOC-BLR,2010,35,80,1,0
+P-251,Paolo Santos,paolo.santos@veridane.example,SE,6,Senior Security Analyst,Security Analyst,DIV-ITD,DEP-SEC,TEAM-SEC-1,P-249,LOC-BLR,2016,40,80,1,0
+P-252,Chidi Boateng,chidi.boateng@veridane.example,SE,6,Senior Security Analyst,Security Analyst,DIV-ITD,DEP-SEC,TEAM-SEC-1,P-248,LOC-BLR,2019,40,80,1,0
+P-253,Ama Asante,ama.asante@veridane.example,E,7,Security Analyst,Security Analyst,DIV-ITD,DEP-SEC,TEAM-SEC-1,P-251,LOC-BLR,2020,15,60,1,0
+P-254,Tariq Aziz,tariq.aziz@veridane.example,E,7,Security Analyst,Security Analyst,DIV-ITD,DEP-SEC,TEAM-SEC-1,P-252,LOC-BLR,2022,20,60,1,0
+P-255,Minjun Sato,minjun.sato@veridane.example,GM,2,"General Manager, AI & Data Lab",General Manager,DIV-ADL,,,P-006,LOC-SIN,2001,10,230,1,0
+P-256,Grace Murphy,grace.murphy@veridane.example,SM,3,Head of Data Engineering,Data Engineer,DIV-ADL,DEP-DE,,P-255,LOC-LIS,2002,35,170,1,0
+P-257,Ng Jun Hao,ng.jun@veridane.example,M,4,Data Engineering Manager,Data Engineer,DIV-ADL,DEP-DE,TEAM-DE-1,P-256,LOC-LIS,2010,40,130,1,0
+P-258,Paolo Mendoza,paolo.mendoza@veridane.example,AM,5,Data Engineering Lead,Data Engineer,DIV-ADL,DEP-DE,TEAM-DE-1,P-257,LOC-LIS,2016,40,100,1,0
+P-259,Jose Santos,jose.santos@veridane.example,SE,6,Senior Data Engineer,Data Engineer,DIV-ADL,DEP-DE,TEAM-DE-1,P-258,LOC-LIS,2018,35,80,1,0
+P-260,Suresh Krishnan,suresh.krishnan@veridane.example,SE,6,Senior Data Engineer,Data Engineer,DIV-ADL,DEP-DE,TEAM-DE-1,P-258,LOC-LIS,2018,40,80,1,0
+P-261,Haruto Kim,haruto.kim@veridane.example,E,7,Data Engineer,Data Engineer,DIV-ADL,DEP-DE,TEAM-DE-1,P-260,LOC-LIS,2021,30,60,1,0
+P-262,Ng Yong Sheng,ng.yong@veridane.example,M,4,Data Science Manager,Data Scientist,DIV-ADL,DEP-DS,TEAM-DS-1,P-255,LOC-SIN,2018,20,130,1,0
+P-263,Mark Cruz,mark.cruz@veridane.example,AM,5,Data Scientist Lead,Data Scientist,DIV-ADL,DEP-DS,TEAM-DS-1,P-262,LOC-SIN,2010,15,100,1,0
+P-264,Shalini Pillai,shalini.pillai@veridane.example,AM,5,Data Scientist Lead,Data Scientist,DIV-ADL,DEP-DS,TEAM-DS-1,P-262,LOC-SIN,2009,20,100,1,0
+P-265,Ganesh Iyer,ganesh.iyer@veridane.example,SE,6,Senior Data Scientist,Data Scientist,DIV-ADL,DEP-DS,TEAM-DS-1,P-264,LOC-SIN,2017,50,80,1,0
+P-266,Clara Bianchi,clara.bianchi@veridane.example,E,7,Data Scientist,Data Scientist,DIV-ADL,DEP-DS,TEAM-DS-1,P-265,LOC-SIN,2020,20,60,1,0
+P-267,Elena Rossi,elena.rossi@veridane.example,E,7,Data Scientist,Data Scientist,DIV-ADL,DEP-DS,TEAM-DS-1,P-265,LOC-SIN,2022,30,60,1,0
+P-268,Carlo Garcia,carlo.garcia@veridane.example,M,4,AI Products Manager,AI Engineer,DIV-ADL,DEP-AIP,TEAM-AIP-1,P-255,LOC-SIN,2009,40,130,1,0
+P-269,Ng Hui Min,ng.hui@veridane.example,AM,5,Senior AI Engineer,AI Engineer,DIV-ADL,DEP-AIP,TEAM-AIP-1,P-268,LOC-SIN,2019,35,100,1,0
+P-270,Chloe Fraser,chloe.fraser@veridane.example,SE,6,Senior AI Engineer,AI Engineer,DIV-ADL,DEP-AIP,TEAM-AIP-1,P-269,LOC-SIN,2018,30,80,1,0
+P-271,Chloe Clarke,chloe.clarke@veridane.example,SE,6,Senior AI Engineer,AI Engineer,DIV-ADL,DEP-AIP,TEAM-AIP-1,P-269,LOC-SIN,2010,15,80,1,0
+P-272,Shalini Shetty,shalini.shetty@veridane.example,E,7,AI Engineer,AI Engineer,DIV-ADL,DEP-AIP,TEAM-AIP-1,P-270,LOC-SIN,2016,20,60,1,0
+P-273,Patricia Bautista,patricia.bautista@veridane.example,A,8,Technician,AI Engineer,DIV-ADL,DEP-AIP,TEAM-AIP-1,P-272,LOC-SIN,2023,10,45,1,0
+P-274,Nour Aziz,nour.aziz@veridane.example,GM,2,"General Manager, Corporate Functions",General Manager,DIV-CF,,,P-002,LOC-SIN,2007,15,230,1,0
+P-275,Emma Brown,emma.brown@veridane.example,SM,3,Head of Finance,Finance Analyst,DIV-CF,DEP-FIN,,P-274,LOC-SIN,2006,15,170,1,0
+P-276,Patricia Garcia,patricia.garcia@veridane.example,M,4,Finance Manager,Finance Analyst,DIV-CF,DEP-FIN,TEAM-FIN-1,P-275,LOC-SIN,2003,20,130,1,0
+P-277,Mark Aquino,mark.aquino@veridane.example,AM,5,Finance Analyst Lead,Finance Analyst,DIV-CF,DEP-FIN,TEAM-FIN-1,P-276,LOC-SIN,2009,20,100,0,0
+P-278,Ethan Reid,ethan.reid@veridane.example,SE,6,Senior Finance Analyst,Finance Analyst,DIV-CF,DEP-FIN,TEAM-FIN-1,P-277,LOC-SIN,2012,20,80,1,0
+P-279,Seoyeon Choi,seoyeon.choi@veridane.example,E,7,Finance Analyst,Finance Analyst,DIV-CF,DEP-FIN,TEAM-FIN-1,P-278,LOC-SIN,2022,10,60,1,0
+P-280,Meena Rao,meena.rao@veridane.example,A,8,Associate Finance Analyst,Finance Analyst,DIV-CF,DEP-FIN,TEAM-FIN-1,P-279,LOC-SIN,2023,35,45,1,0
+P-281,Lucas Taylor,lucas.taylor@veridane.example,SM,3,Head of HR,HR Business Partner,DIV-CF,DEP-HR,,P-274,LOC-SIN,2003,40,170,1,0
+P-282,Seoyeon Suzuki,seoyeon.suzuki@veridane.example,AM,5,HR Business Partner Lead,HR Business Partner,DIV-CF,DEP-HR,TEAM-HR-1,P-281,LOC-SIN,2014,10,100,1,0
+P-283,Kristine Cruz,kristine.cruz@veridane.example,AM,5,HR Business Partner Lead,HR Business Partner,DIV-CF,DEP-HR,TEAM-HR-1,P-281,LOC-SIN,2009,20,100,1,0
+P-284,Sota Park,sota.park@veridane.example,SE,6,Senior HR Business Partner,HR Business Partner,DIV-CF,DEP-HR,TEAM-HR-1,P-282,LOC-SIN,2017,10,80,1,0
+P-285,Suresh Sharma,suresh.sharma@veridane.example,E,7,HR Business Partner,HR Business Partner,DIV-CF,DEP-HR,TEAM-HR-1,P-284,LOC-SIN,2019,20,60,1,0
+P-286,Liam Murphy,liam.murphy@veridane.example,M,4,Strategy Manager,Strategy Analyst,DIV-CF,DEP-STR,TEAM-STR-1,P-274,LOC-SIN,2015,40,130,1,0
+P-287,Emma Walker,emma.walker@veridane.example,AM,5,Strategy Analyst Lead,Strategy Analyst,DIV-CF,DEP-STR,TEAM-STR-1,P-286,LOC-SIN,2012,25,100,1,0
+P-288,Paolo Ramos,paolo.ramos@veridane.example,SE,6,Senior Strategy Analyst,Strategy Analyst,DIV-CF,DEP-STR,TEAM-STR-1,P-287,LOC-SIN,2013,40,80,0,0
+P-289,Ama Boateng,ama.boateng@veridane.example,SE,6,Senior Strategy Analyst,Strategy Analyst,DIV-CF,DEP-STR,TEAM-STR-1,P-287,LOC-SIN,2023,20,80,1,0
+P-290,Liam Taylor,liam.taylor@veridane.example,E,7,Strategy Analyst,Strategy Analyst,DIV-CF,DEP-STR,TEAM-STR-1,P-288,LOC-SIN,2021,35,60,1,0
+P-291,Anna Bianchi,anna.bianchi@veridane.example,M,4,Procurement Manager,Procurement Executive,DIV-CF,DEP-PRC,TEAM-PRC-1,P-274,LOC-SIN,2008,10,130,1,0
+P-292,Goh Jun Hao,goh.jun@veridane.example,AM,5,Procurement Executive Lead,Procurement Executive,DIV-CF,DEP-PRC,TEAM-PRC-1,P-291,LOC-SIN,2020,20,100,1,0
+P-293,Tiago Pereira,tiago.pereira@veridane.example,SE,6,Senior Procurement Executive,Procurement Executive,DIV-CF,DEP-PRC,TEAM-PRC-1,P-292,LOC-SIN,2019,30,80,1,0
+P-294,Ryan Brown,ryan.brown@veridane.example,SE,6,Senior Procurement Executive,Procurement Executive,DIV-CF,DEP-PRC,TEAM-PRC-1,P-292,LOC-SIN,2010,20,80,1,0
+P-295,Ren Suzuki,ren.suzuki@veridane.example,E,7,Procurement Executive,Procurement Executive,DIV-CF,DEP-PRC,TEAM-PRC-1,P-294,LOC-SIN,2023,10,60,1,0
+P-296,Angela Villanueva,angela.villanueva@veridane.example,M,4,Risk Manager,Risk Analyst,DIV-CF,DEP-RSK,TEAM-RSK-1,P-274,LOC-SIN,2007,25,130,1,0
+P-297,Kwame Dlamini,kwame.dlamini@veridane.example,AM,5,Risk Analyst Lead,Risk Analyst,DIV-CF,DEP-RSK,TEAM-RSK-1,P-296,LOC-SIN,2012,35,100,1,0
+P-298,Ryan Clarke,ryan.clarke@veridane.example,SE,6,Senior Risk Analyst,Risk Analyst,DIV-CF,DEP-RSK,TEAM-RSK-1,P-297,LOC-SIN,2020,20,80,1,0
+P-299,Lim Xin Yi,lim.xin@veridane.example,E,7,Risk Analyst,Risk Analyst,DIV-CF,DEP-RSK,TEAM-RSK-1,P-298,LOC-SIN,2019,25,60,1,0
+P-300,Anna Moreau,anna.moreau@veridane.example,A,8,Associate Risk Analyst,Risk Analyst,DIV-CF,DEP-RSK,TEAM-RSK-1,P-299,LOC-SIN,2022,30,45,1,0

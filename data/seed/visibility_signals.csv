@@ -1,0 +1,193 @@
+id,person_id,kind,date
+VIS-0001,P-255,Steering committee member,2025-06-05
+VIS-0002,P-273,Internal newsletter feature,2025-05-22
+VIS-0003,P-116,Board paper contributor,2026-05-24
+VIS-0004,P-103,Steering committee member,2025-12-04
+VIS-0005,P-197,Steering committee member,2026-01-05
+VIS-0006,P-292,Internal newsletter feature,2026-09-04
+VIS-0007,P-084,Management review presenter,2026-02-13
+VIS-0008,P-008,Board paper contributor,2026-09-13
+VIS-0009,P-185,Board paper contributor,2026-04-03
+VIS-0010,P-078,Internal newsletter feature,2026-02-23
+VIS-0011,P-112,Steering committee member,2025-04-29
+VIS-0012,P-017,Board paper contributor,2025-11-14
+VIS-0013,P-084,Annual excellence award,2025-09-09
+VIS-0014,P-295,Management review presenter,2026-06-12
+VIS-0015,P-227,Internal newsletter feature,2025-11-06
+VIS-0016,P-139,Steering committee member,2026-02-01
+VIS-0017,P-268,Steering committee member,2026-09-27
+VIS-0018,P-255,Board paper contributor,2025-08-31
+VIS-0019,P-077,Management review presenter,2026-03-10
+VIS-0020,P-003,Board paper contributor,2026-08-25
+VIS-0021,P-039,Board paper contributor,2025-10-25
+VIS-0022,P-183,Management review presenter,2025-01-29
+VIS-0023,P-021,Steering committee member,2025-05-10
+VIS-0024,P-036,Board paper contributor,2025-11-24
+VIS-0025,P-006,Steering committee member,2025-07-21
+VIS-0026,P-291,Steering committee member,2026-01-23
+VIS-0027,P-191,Management review presenter,2025-11-26
+VIS-0028,P-009,Annual excellence award,2026-02-22
+VIS-0029,P-001,Internal newsletter feature,2026-04-25
+VIS-0030,P-005,Steering committee member,2025-07-08
+VIS-0031,P-079,Board paper contributor,2026-01-15
+VIS-0032,P-158,Annual excellence award,2026-07-17
+VIS-0033,P-159,Leadership town hall presenter,2025-03-09
+VIS-0034,P-164,Annual excellence award,2026-08-04
+VIS-0035,P-272,Leadership town hall presenter,2026-07-27
+VIS-0036,P-230,Steering committee member,2025-03-14
+VIS-0037,P-182,Leadership town hall presenter,2026-09-08
+VIS-0038,P-009,Leadership town hall presenter,2025-10-25
+VIS-0039,P-268,Internal newsletter feature,2026-08-09
+VIS-0040,P-089,Internal newsletter feature,2025-08-01
+VIS-0041,P-282,Steering committee member,2025-01-26
+VIS-0042,P-169,Management review presenter,2026-06-08
+VIS-0043,P-095,Management review presenter,2026-02-21
+VIS-0044,P-116,Internal newsletter feature,2025-06-09
+VIS-0045,P-181,Steering committee member,2025-11-20
+VIS-0046,P-033,Board paper contributor,2026-01-24
+VIS-0047,P-031,Annual excellence award,2025-02-21
+VIS-0048,P-230,Steering committee member,2026-01-01
+VIS-0049,P-275,Board paper contributor,2026-05-10
+VIS-0050,P-012,Internal newsletter feature,2026-01-02
+VIS-0051,P-189,Board paper contributor,2026-07-04
+VIS-0052,P-129,Steering committee member,2025-12-25
+VIS-0053,P-251,Leadership town hall presenter,2025-11-21
+VIS-0054,P-051,Board paper contributor,2025-05-21
+VIS-0055,P-047,Management review presenter,2025-12-16
+VIS-0056,P-186,Board paper contributor,2025-03-31
+VIS-0057,P-091,Internal newsletter feature,2025-02-02
+VIS-0058,P-249,Management review presenter,2025-08-29
+VIS-0059,P-077,Internal newsletter feature,2025-04-18
+VIS-0060,P-003,Annual excellence award,2026-05-15
+VIS-0061,P-131,Internal newsletter feature,2025-03-23
+VIS-0062,P-095,Steering committee member,2025-12-23
+VIS-0063,P-134,Leadership town hall presenter,2026-01-28
+VIS-0064,P-133,Steering committee member,2025-11-23
+VIS-0065,P-108,Internal newsletter feature,2026-01-28
+VIS-0066,P-047,Internal newsletter feature,2025-06-29
+VIS-0067,P-003,Annual excellence award,2025-05-15
+VIS-0068,P-151,Board paper contributor,2025-11-03
+VIS-0069,P-063,Management review presenter,2026-09-07
+VIS-0070,P-237,Steering committee member,2025-08-15
+VIS-0071,P-160,Management review presenter,2026-09-01
+VIS-0072,P-234,Steering committee member,2026-08-12
+VIS-0073,P-004,Internal newsletter feature,2026-06-15
+VIS-0074,P-069,Steering committee member,2025-05-18
+VIS-0075,P-277,Management review presenter,2026-05-28
+VIS-0076,P-099,Leadership town hall presenter,2025-07-24
+VIS-0077,P-115,Steering committee member,2025-06-26
+VIS-0078,P-103,Steering committee member,2026-08-13
+VIS-0079,P-009,Management review presenter,2026-01-13
+VIS-0080,P-092,Annual excellence award,2026-01-17
+VIS-0081,P-201,Steering committee member,2025-09-14
+VIS-0082,P-298,Steering committee member,2026-08-02
+VIS-0083,P-041,Board paper contributor,2026-03-01
+VIS-0084,P-255,Internal newsletter feature,2026-08-25
+VIS-0085,P-001,Leadership town hall presenter,2025-07-05
+VIS-0086,P-195,Board paper contributor,2026-06-17
+VIS-0087,P-081,Internal newsletter feature,2025-10-13
+VIS-0088,P-127,Steering committee member,2025-02-21
+VIS-0089,P-140,Leadership town hall presenter,2026-02-27
+VIS-0090,P-078,Board paper contributor,2025-02-26
+VIS-0091,P-005,Internal newsletter feature,2025-08-05
+VIS-0092,P-151,Annual excellence award,2025-05-20
+VIS-0093,P-015,Management review presenter,2026-03-03
+VIS-0094,P-220,Leadership town hall presenter,2025-10-09
+VIS-0095,P-247,Leadership town hall presenter,2026-07-24
+VIS-0096,P-021,Internal newsletter feature,2025-06-04
+VIS-0097,P-054,Management review presenter,2026-08-19
+VIS-0098,P-223,Management review presenter,2026-04-09
+VIS-0099,P-227,Board paper contributor,2026-04-14
+VIS-0100,P-129,Leadership town hall presenter,2025-10-02
+VIS-0101,P-098,Board paper contributor,2026-02-21
+VIS-0102,P-027,Leadership town hall presenter,2026-09-30
+VIS-0103,P-041,Internal newsletter feature,2026-05-28
+VIS-0104,P-029,Board paper contributor,2026-06-02
+VIS-0105,P-255,Management review presenter,2025-03-29
+VIS-0106,P-008,Leadership town hall presenter,2025-05-06
+VIS-0107,P-187,Annual excellence award,2026-04-15
+VIS-0108,P-007,Leadership town hall presenter,2025-12-22
+VIS-0109,P-194,Leadership town hall presenter,2025-01-21
+VIS-0110,P-081,Leadership town hall presenter,2025-09-27
+VIS-0111,P-149,Steering committee member,2025-02-01
+VIS-0112,P-163,Annual excellence award,2025-07-07
+VIS-0113,P-078,Steering committee member,2025-04-06
+VIS-0114,P-118,Management review presenter,2025-11-01
+VIS-0115,P-020,Annual excellence award,2026-05-19
+VIS-0116,P-153,Internal newsletter feature,2025-01-22
+VIS-0117,P-118,Board paper contributor,2025-01-15
+VIS-0118,P-208,Leadership town hall presenter,2026-07-18
+VIS-0119,P-272,Management review presenter,2025-03-23
+VIS-0120,P-225,Annual excellence award,2026-04-13
+VIS-0121,P-004,Leadership town hall presenter,2026-09-09
+VIS-0122,P-168,Leadership town hall presenter,2026-02-23
+VIS-0123,P-012,Annual excellence award,2025-06-02
+VIS-0124,P-168,Leadership town hall presenter,2025-06-04
+VIS-0125,P-091,Steering committee member,2025-01-05
+VIS-0126,P-087,Management review presenter,2026-04-05
+VIS-0127,P-174,Board paper contributor,2025-06-14
+VIS-0128,P-185,Annual excellence award,2025-09-07
+VIS-0129,P-291,Board paper contributor,2026-07-13
+VIS-0130,P-294,Annual excellence award,2025-04-30
+VIS-0131,P-220,Leadership town hall presenter,2025-01-16
+VIS-0132,P-144,Board paper contributor,2026-03-22
+VIS-0133,P-215,Leadership town hall presenter,2025-09-24
+VIS-0134,P-077,Board paper contributor,2026-02-20
+VIS-0135,P-168,Management review presenter,2026-04-19
+VIS-0136,P-131,Internal newsletter feature,2026-06-29
+VIS-0137,P-121,Annual excellence award,2026-07-08
+VIS-0138,P-288,Steering committee member,2025-11-02
+VIS-0139,P-229,Leadership town hall presenter,2025-03-16
+VIS-0140,P-031,Annual excellence award,2025-01-21
+VIS-0141,P-060,Board paper contributor,2026-03-29
+VIS-0142,P-122,Leadership town hall presenter,2026-01-13
+VIS-0143,P-250,Steering committee member,2025-01-26
+VIS-0144,P-148,Management review presenter,2026-08-06
+VIS-0145,P-256,Board paper contributor,2026-05-26
+VIS-0146,P-006,Leadership town hall presenter,2026-08-05
+VIS-0147,P-138,Internal newsletter feature,2026-02-01
+VIS-0148,P-227,Leadership town hall presenter,2026-05-27
+VIS-0149,P-132,Internal newsletter feature,2025-11-11
+VIS-0150,P-004,Internal newsletter feature,2025-10-23
+VIS-0151,P-296,Management review presenter,2026-04-02
+VIS-0152,P-060,Annual excellence award,2025-01-09
+VIS-0153,P-110,Steering committee member,2026-04-21
+VIS-0154,P-261,Management review presenter,2026-01-26
+VIS-0155,P-208,Board paper contributor,2025-09-12
+VIS-0156,P-168,Steering committee member,2025-03-01
+VIS-0157,P-268,Management review presenter,2026-01-25
+VIS-0158,P-220,Steering committee member,2025-07-01
+VIS-0159,P-089,Management review presenter,2025-09-24
+VIS-0160,P-042,Internal newsletter feature,2026-07-25
+VIS-0161,P-134,Management review presenter,2025-10-03
+VIS-0162,P-055,Leadership town hall presenter,2025-07-19
+VIS-0163,P-138,Board paper contributor,2025-12-20
+VIS-0164,P-039,Annual excellence award,2026-01-23
+VIS-0165,P-298,Leadership town hall presenter,2026-05-10
+VIS-0166,P-177,Management review presenter,2025-04-25
+VIS-0167,P-079,Steering committee member,2026-08-18
+VIS-0168,P-112,Steering committee member,2025-01-31
+VIS-0169,P-157,Internal newsletter feature,2025-12-06
+VIS-0170,P-111,Internal newsletter feature,2026-07-21
+VIS-0171,P-275,Board paper contributor,2026-05-19
+VIS-0172,P-173,Steering committee member,2025-10-31
+VIS-0173,P-223,Steering committee member,2025-01-14
+VIS-0174,P-130,Internal newsletter feature,2025-10-21
+VIS-0175,P-176,Board paper contributor,2026-08-14
+VIS-0176,P-043,Management review presenter,2025-08-26
+VIS-0177,P-275,Leadership town hall presenter,2025-10-22
+VIS-0178,P-229,Board paper contributor,2025-02-25
+VIS-0179,P-250,Management review presenter,2025-06-19
+VIS-0180,P-186,Leadership town hall presenter,2025-07-16
+VIS-0181,P-222,Management review presenter,2025-08-25
+VIS-0182,P-216,Internal newsletter feature,2026-01-22
+VIS-0183,P-010,Steering committee member,2026-04-14
+VIS-0184,P-298,Leadership town hall presenter,2026-01-14
+VIS-0185,P-256,Steering committee member,2026-02-12
+VIS-0186,P-093,Board paper contributor,2025-05-27
+VIS-0187,P-078,Internal newsletter feature,2025-01-22
+VIS-0188,P-176,Management review presenter,2025-07-13
+VIS-0189,P-138,Board paper contributor,2026-09-13
+VIS-0190,P-298,Management review presenter,2026-07-17
+VIS-0191,P-075,Internal newsletter feature,2025-09-10
+VIS-0192,P-207,Management review presenter,2026-02-12

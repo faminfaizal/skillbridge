@@ -1,0 +1,54 @@
+{
+  "currency": "USD",
+  "loaded_rate_by_level": {
+    "C": 350,
+    "GM": 230,
+    "SM": 170,
+    "M": 130,
+    "AM": 100,
+    "SE": 80,
+    "E": 60,
+    "A": 45
+  },
+  "blended_rate_amt": 100,
+  "expert_search_hours_before": 16,
+  "expert_search_hours_after": 0.25,
+  "consultant_day_rate_amt": {
+    "default": 4000,
+    "Data & AI": 5500,
+    "Cloud & Platform": 5000,
+    "Security": 6500,
+    "Network": 4000,
+    "BSS/OSS": 4500,
+    "Management": 3500
+  },
+  "recruitment_cost_pct_of_salary": 0.25,
+  "working_hours_per_day": 8,
+  "win_probability_default": 0.35,
+  "match_weights": {
+    "skill": 0.4,
+    "project": 0.2,
+    "domain": 0.15,
+    "recency": 0.15,
+    "adjacent": 0.1
+  },
+  "role_fill_threshold": 0.7,
+  "reskill_band": [
+    0.6,
+    0.8
+  ],
+  "inference_confidence": {
+    "base": 0.55,
+    "per_evidence": 0.11,
+    "max_evidence": 3
+  },
+  "project_saturation": 2.0,
+  "adjacency_transfer": 0.8,
+  "recency_by_year": {
+    "2026": 1.0,
+    "2025": 0.85,
+    "2024": 0.7,
+    "older": 0.5,
+    "none": 0.3
+  }
+}

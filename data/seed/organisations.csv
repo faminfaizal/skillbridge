@@ -1,0 +1,47 @@
+id,name,kind,sector,location_id
+ORG-SRG,Brightway Retail Group,customer,Retail,LOC-SIN
+ORG-KMH,CareFirst Clinics,customer,Healthcare,LOC-SIN
+ORG-BDN,Harbourline Bank,customer,Banking,LOC-SIN
+ORG-MBS,Strait City Council (fictional),customer,Government,LOC-LIS
+ORG-UTK,Veridane Institute of Technology,customer,Education,LOC-SYD
+ORG-PLM,Rivermouth Port Logistics,customer,Logistics,LOC-SYD
+ORG-KSB,Southfield Manufacturing,customer,Manufacturing,LOC-SYD
+ORG-HTL,Seacrest Hotels Group,customer,Hospitality,LOC-MNL
+ORG-JKS,Northern Health Authority (fictional),customer,Government,LOC-DRW
+ORG-BKM,Outback Coffee Mart,customer,Retail,LOC-CNS
+ORG-MRT,Pearl Retail Holdings,customer,Retail,LOC-LIS
+ORG-AIR,Top End Regional Airport (fictional),customer,Transport,LOC-DRW
+ORG-INS,Keystone Mutual Assurance,customer,Banking,LOC-SIN
+ORG-PHM,PharmaWell Distributors,customer,Healthcare,LOC-LIS
+ORG-ENR,GreenVolt Solar,customer,Energy,LOC-MNL
+ORG-MED,Meridian Media Digital,customer,Media,LOC-SIN
+ORG-CAM,Smart Campus College,customer,Education,LOC-SIN
+ORG-GOV,National Data Agency (fictional),customer,Government,LOC-SIN
+ORG-FBK,Fresh Basket Supermarkets,customer,Retail,LOC-SYD
+ORG-LOG,SwiftCargo Express,customer,Logistics,LOC-LIS
+ORG-FIN,MicroFinance Partners,customer,Banking,LOC-CNS
+ORG-HSP,Lakeside Specialist Hospital,customer,Healthcare,LOC-SIN
+ORG-PRP,Quietbay Properties,customer,Property,LOC-SIN
+ORG-MFG,Precision Moulding Works,customer,Manufacturing,LOC-LIS
+ORG-STA,Grand Arena Stadium,customer,Entertainment,LOC-SIN
+ORG-TRN,City Rail Transit (fictional),customer,Transport,LOC-SIN
+ORG-UNI,East Coast University (fictional),customer,Education,LOC-MNL
+ORG-AGR,Sunridge Plantations,customer,Agriculture,LOC-DRW
+ORG-FAS,Thread & Co Retail,customer,Retail,LOC-SIN
+ORG-CLN,Remote Community Clinics,customer,Healthcare,LOC-CNS
+ORG-MUN,Upland District Council (fictional),customer,Government,LOC-MNL
+ORG-TEL,Southgate Tech Park,customer,Property,LOC-BLR
+ORG-SCH,Gemini Heights International School,customer,Education,LOC-SIN
+ORG-INS2,Shieldwell Insurance,customer,Banking,LOC-LIS
+ORG-ECM,ShopNow Online,customer,Retail,LOC-SIN
+ORG-NBC,Northbridge Consulting,vendor,Consulting,LOC-SIN
+ORG-ACP,Apex Cloud Partners,vendor,Consulting,LOC-SIN
+ORG-DFA,DataForge Analytics,vendor,Consulting,LOC-SIN
+ORG-ONS,Optima Network Services,vendor,Network,LOC-BLR
+ORG-SLA,SecureLayer Advisory,vendor,Security,LOC-SIN
+ORG-TVN,Telvantis Systems,vendor,Network,LOC-BLR
+ORG-SM1,SmartShop Corner,sme_partner,Retail,LOC-DRW
+ORG-SM2,AgriGrow Digital,sme_partner,Agriculture,LOC-CNS
+ORG-SM3,Creative Workshop Studio,sme_partner,Media,LOC-LIS
+ORG-SM4,MicroLogistics Express,sme_partner,Logistics,LOC-SYD
+ORG-SM5,BrightSmile Dental Clinic,sme_partner,Healthcare,LOC-MNL

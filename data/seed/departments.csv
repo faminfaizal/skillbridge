@@ -1,0 +1,30 @@
+id,division_id,name
+DEP-ACC,DIV-NI,Access Network
+DEP-CORE,DIV-NI,Core & Transport
+DEP-LAB,DIV-NI,Network Testing Lab
+DEP-FOC,DIV-NI,Field Ops Central
+DEP-FOR,DIV-NI,Field Ops Regional
+DEP-ENT,DIV-EG,Enterprise Solutions
+DEP-GOV,DIV-EG,Government Accounts
+DEP-SME,DIV-EG,SME Business
+DEP-PRE,DIV-EG,Pre-sales
+DEP-BB,DIV-CR,Broadband
+DEP-MOB,DIV-CR,Mobile
+DEP-RET,DIV-CR,Retail Channels
+DEP-MKT,DIV-CR,Marketing
+DEP-CC,DIV-CSO,Contact Centre
+DEP-ESC,DIV-CSO,Escalations
+DEP-FSD,DIV-CSO,Field Service Desk
+DEP-BSS,DIV-ITD,BSS/Billing
+DEP-OSS,DIV-ITD,OSS
+DEP-CLD,DIV-ITD,Cloud Platform
+DEP-SEC,DIV-ITD,Cybersecurity
+DEP-APP,DIV-ITD,App Dev
+DEP-DE,DIV-ADL,Data Engineering
+DEP-DS,DIV-ADL,Data Science
+DEP-AIP,DIV-ADL,AI Products
+DEP-FIN,DIV-CF,Finance
+DEP-HR,DIV-CF,HR
+DEP-STR,DIV-CF,Strategy
+DEP-PRC,DIV-CF,Procurement
+DEP-RSK,DIV-CF,Risk

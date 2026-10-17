@@ -1,0 +1,283 @@
+id,org_id,problem_class_id,severity,opened,mttr_hours,escalated,fcr,csat,resolver_id,summary
+CS-0001,ORG-MBS,PC-18,P1,2025-01-23,6.4,0,0,4,P-175,Repeat complaints reported by customer
+CS-0002,ORG-SCH,PC-24,P2,2026-04-20,14.2,0,1,5,P-220,Deployment failures reported by customer
+CS-0003,ORG-BKM,PC-17,P4,2026-01-27,74.2,0,0,4,P-197,Contact centre deflection reported by customer
+CS-0004,ORG-BKM,PC-05,P3,2025-04-30,33.6,0,0,4,P-064,Wi-Fi coverage complaint reported by customer
+CS-0005,ORG-ENR,PC-01,P4,2026-08-07,53.0,0,1,5,P-048,Fibre fault localisation reported by customer
+CS-0006,ORG-HSP,PC-02,P3,2026-05-17,42.6,0,0,4,P-060,OLT acceptance testing reported by customer
+CS-0007,ORG-HTL,PC-40,P2,2026-02-28,18.3,0,0,4,P-188,Network optimisation reported by customer
+CS-0008,ORG-ECM,PC-10,P2,2025-09-08,21.7,1,0,3,P-179,Order fallout reported by customer
+CS-0009,ORG-CAM,PC-40,P3,2026-02-16,40.1,0,0,4,P-042,Network optimisation reported by customer
+CS-0010,ORG-FBK,PC-34,P3,2025-06-21,31.3,0,1,5,P-280,Regulatory reporting reported by customer
+CS-0011,ORG-CLN,PC-20,P4,2025-06-20,67.4,0,0,4,P-201,Field visit no-access reported by customer
+CS-0012,ORG-SCH,PC-15,P3,2025-12-20,54.6,1,0,3,P-157,Demand forecasting reported by customer
+CS-0013,ORG-MRT,PC-10,P4,2026-01-06,65.2,0,0,4,P-215,Order fallout reported by customer
+CS-0014,ORG-INS2,PC-06,P3,2026-03-09,25.5,0,1,5,P-018,5G cell congestion reported by customer
+CS-0015,ORG-INS,PC-33,P3,2025-08-29,46.7,0,0,3,P-057,Network capacity planning reported by customer
+CS-0016,ORG-GOV,PC-11,P4,2026-05-11,44.3,0,1,5,P-174,Revenue leakage reported by customer
+CS-0017,ORG-ECM,PC-04,P3,2026-04-11,27.8,0,1,5,P-048,Enterprise VPN latency reported by customer
+CS-0018,ORG-MRT,PC-05,P3,2025-09-23,27.5,0,1,5,P-050,Wi-Fi coverage complaint reported by customer
+CS-0019,ORG-BKM,PC-10,P2,2025-07-03,21.0,0,0,3,P-177,Order fallout reported by customer
+CS-0020,ORG-UNI,PC-39,P4,2026-09-18,72.0,0,0,4,P-215,Payment failure reported by customer
+CS-0021,ORG-PRP,PC-01,P4,2026-02-04,75.8,0,0,4,P-022,Fibre fault localisation reported by customer
+CS-0022,ORG-SCH,PC-17,P2,2025-08-27,12.5,0,1,5,P-185,Contact centre deflection reported by customer
+CS-0023,ORG-FBK,PC-17,P4,2026-01-01,81.6,0,0,3,P-201,Contact centre deflection reported by customer
+CS-0024,ORG-PHM,PC-04,P3,2025-10-14,26.6,0,1,5,P-062,Enterprise VPN latency reported by customer
+CS-0025,ORG-AIR,PC-03,P3,2026-07-17,41.9,0,0,4,P-051,Network alarm flood reported by customer
+CS-0026,ORG-SCH,PC-01,P2,2026-03-09,21.2,0,0,3,P-186,Fibre fault localisation reported by customer
+CS-0027,ORG-MUN,PC-03,P3,2026-02-13,42.2,0,0,4,P-023,Network alarm flood reported by customer
+CS-0028,ORG-BDN,PC-20,P4,2025-02-27,84.0,0,0,3,P-191,Field visit no-access reported by customer
+CS-0029,ORG-PHM,PC-40,P3,2026-02-26,44.1,0,0,3,P-045,Network optimisation reported by customer
+CS-0030,ORG-ENR,PC-02,P4,2026-06-16,45.9,0,1,5,P-190,OLT acceptance testing reported by customer
+CS-0031,ORG-TEL,PC-37,P2,2025-08-03,18.6,0,0,4,P-294,Vendor lock-in reported by customer
+CS-0032,ORG-TEL,PC-02,P3,2026-08-07,54.3,1,0,3,P-062,OLT acceptance testing reported by customer
+CS-0033,ORG-PRP,PC-37,P4,2025-06-15,73.0,0,0,4,P-294,Vendor lock-in reported by customer
+CS-0034,ORG-MRT,PC-04,P3,2025-08-02,50.5,1,0,3,P-191,Enterprise VPN latency reported by customer
+CS-0035,ORG-INS,PC-10,P3,2025-08-15,26.7,0,1,5,P-215,Order fallout reported by customer
+CS-0036,ORG-AGR,PC-16,P4,2025-01-29,95.1,1,0,3,P-157,Anomaly detection reported by customer
+CS-0037,ORG-GOV,PC-05,P3,2025-08-22,28.1,0,1,5,P-048,Wi-Fi coverage complaint reported by customer
+CS-0038,ORG-INS2,PC-07,P3,2025-11-22,37.6,0,0,4,P-067,Core routing instability reported by customer
+CS-0039,ORG-AIR,PC-33,P4,2026-02-23,100.5,1,0,3,P-017,Network capacity planning reported by customer
+CS-0040,ORG-HSP,PC-05,P4,2025-05-20,56.1,0,1,5,P-045,Wi-Fi coverage complaint reported by customer
+CS-0041,ORG-HSP,PC-06,P1,2025-07-12,5.2,0,0,4,P-185,5G cell congestion reported by customer
+CS-0042,ORG-PHM,PC-37,P3,2026-03-10,41.8,0,0,4,P-292,Vendor lock-in reported by customer
+CS-0043,ORG-HSP,PC-01,P3,2026-06-09,35.2,0,0,4,P-014,Fibre fault localisation reported by customer
+CS-0044,ORG-PHM,PC-37,P4,2025-05-26,66.6,0,0,4,P-294,Vendor lock-in reported by customer
+CS-0045,ORG-FIN,PC-35,P4,2025-12-01,73.6,0,0,4,P-298,ESG data collection reported by customer
+CS-0046,ORG-PHM,PC-06,P4,2026-09-19,64.5,0,0,4,P-020,5G cell congestion reported by customer
+CS-0047,ORG-MBS,PC-09,P3,2025-11-27,47.1,0,0,3,P-216,Rating engine error reported by customer
+CS-0048,ORG-PRP,PC-10,P4,2025-04-26,81.8,0,0,3,P-178,Order fallout reported by customer
+CS-0049,ORG-INS2,PC-10,P4,2025-10-05,92.4,1,0,3,P-216,Order fallout reported by customer
+CS-0050,ORG-AIR,PC-07,P4,2026-06-23,59.9,0,0,4,P-065,Core routing instability reported by customer
+CS-0051,ORG-AIR,PC-20,P2,2025-07-20,24.5,1,0,3,P-191,Field visit no-access reported by customer
+CS-0052,ORG-AGR,PC-01,P4,2025-09-10,77.0,0,0,4,P-058,Fibre fault localisation reported by customer
+CS-0053,ORG-PRP,PC-10,P4,2025-11-11,98.1,1,0,3,P-179,Order fallout reported by customer
+CS-0054,ORG-KMH,PC-04,P4,2025-10-13,49.3,0,1,5,P-191,Enterprise VPN latency reported by customer
+CS-0055,ORG-TEL,PC-08,P3,2026-02-03,46.5,0,0,3,P-172,Billing dispute reported by customer
+CS-0056,ORG-MFG,PC-40,P4,2025-08-07,93.3,1,0,3,P-184,Network optimisation reported by customer
+CS-0057,ORG-BDN,PC-18,P4,2025-10-10,45.4,0,1,5,P-185,Repeat complaints reported by customer
+CS-0058,ORG-INS2,PC-07,P2,2025-03-22,19.7,0,0,4,P-049,Core routing instability reported by customer
+CS-0059,ORG-FAS,PC-39,P4,2026-08-15,71.7,0,0,4,P-180,Payment failure reported by customer
+CS-0060,ORG-HSP,PC-40,P3,2025-04-23,35.1,0,0,4,P-043,Network optimisation reported by customer
+CS-0061,ORG-MFG,PC-37,P4,2026-05-06,68.9,0,0,4,P-294,Vendor lock-in reported by customer
+CS-0062,ORG-ENR,PC-39,P4,2025-07-20,74.1,0,0,4,P-216,Payment failure reported by customer
+CS-0063,ORG-JKS,PC-05,P3,2025-04-23,50.9,1,0,3,P-020,Wi-Fi coverage complaint reported by customer
+CS-0064,ORG-KMH,PC-22,P3,2025-09-16,47.7,0,0,3,P-253,Access review backlog reported by customer
+CS-0065,ORG-PRP,PC-35,P3,2026-02-11,48.8,1,0,3,P-299,ESG data collection reported by customer
+CS-0066,ORG-ENR,PC-09,P3,2026-08-28,45.6,0,0,3,P-178,Rating engine error reported by customer
+CS-0067,ORG-FAS,PC-39,P4,2026-08-31,88.4,1,0,3,P-177,Payment failure reported by customer
+CS-0068,ORG-FIN,PC-07,P3,2026-06-22,44.4,0,0,3,P-063,Core routing instability reported by customer
+CS-0069,ORG-KSB,PC-08,P3,2025-11-16,35.0,0,0,4,P-179,Billing dispute reported by customer
+CS-0070,ORG-FBK,PC-07,P3,2026-01-21,28.6,0,1,5,P-016,Core routing instability reported by customer
+CS-0071,ORG-KMH,PC-14,P3,2026-07-10,54.2,1,0,3,P-264,Customer segmentation reported by customer
+CS-0072,ORG-INS2,PC-27,P3,2025-03-25,25.0,0,1,5,P-229,Legacy code risk reported by customer
+CS-0073,ORG-PRP,PC-40,P3,2026-05-28,41.7,0,0,4,P-020,Network optimisation reported by customer
+CS-0074,ORG-MUN,PC-07,P4,2025-04-25,72.6,0,0,4,P-013,Core routing instability reported by customer
+CS-0075,ORG-PLM,PC-16,P4,2025-07-16,77.1,0,0,4,P-153,Anomaly detection reported by customer
+CS-0076,ORG-PRP,PC-33,P3,2025-07-31,39.1,0,0,4,P-064,Network capacity planning reported by customer
+CS-0077,ORG-PRP,PC-10,P3,2025-09-27,32.6,0,0,4,P-216,Order fallout reported by customer
+CS-0078,ORG-FIN,PC-17,P3,2026-08-15,49.3,1,0,3,P-174,Contact centre deflection reported by customer
+CS-0079,ORG-MBS,PC-24,P4,2026-06-18,83.0,0,0,3,P-225,Deployment failures reported by customer
+CS-0080,ORG-ENR,PC-12,P3,2025-11-08,51.6,1,0,3,P-177,Inventory mismatch reported by customer
+CS-0081,ORG-UTK,PC-33,P3,2026-06-21,36.1,0,0,4,P-049,Network capacity planning reported by customer
+CS-0082,ORG-PRP,PC-01,P4,2026-09-07,72.8,0,0,4,P-015,Fibre fault localisation reported by customer
+CS-0083,ORG-BKM,PC-05,P4,2025-05-02,85.1,0,0,3,P-020,Wi-Fi coverage complaint reported by customer
+CS-0084,ORG-HTL,PC-19,P2,2025-04-01,18.6,0,0,4,P-202,Slow fault restoration reported by customer
+CS-0085,ORG-MFG,PC-06,P2,2025-09-07,18.5,0,0,4,P-042,5G cell congestion reported by customer
+CS-0086,ORG-HSP,PC-05,P3,2025-08-06,44.9,0,0,3,P-045,Wi-Fi coverage complaint reported by customer
+CS-0087,ORG-FIN,PC-37,P4,2026-07-19,51.6,0,1,5,P-293,Vendor lock-in reported by customer
+CS-0088,ORG-MED,PC-04,P3,2025-11-19,44.1,0,0,3,P-067,Enterprise VPN latency reported by customer
+CS-0089,ORG-TEL,PC-04,P3,2025-05-12,50.1,1,0,3,P-190,Enterprise VPN latency reported by customer
+CS-0090,ORG-MBS,PC-03,P3,2025-06-25,25.8,0,1,5,P-014,Network alarm flood reported by customer
+CS-0091,ORG-PLM,PC-35,P3,2026-02-10,24.8,0,1,5,P-278,ESG data collection reported by customer
+CS-0092,ORG-HSP,PC-12,P4,2025-09-08,67.9,0,0,4,P-215,Inventory mismatch reported by customer
+CS-0093,ORG-HTL,PC-05,P4,2025-05-14,93.9,1,0,3,P-188,Wi-Fi coverage complaint reported by customer
+CS-0094,ORG-TEL,PC-32,P4,2025-11-27,64.0,0,0,4,P-157,Retail footfall insight reported by customer
+CS-0095,ORG-UTK,PC-03,P4,2025-09-12,92.9,1,0,3,P-184,Network alarm flood reported by customer
+CS-0096,ORG-BDN,PC-10,P3,2025-04-06,25.0,0,1,5,P-175,Order fallout reported by customer
+CS-0097,ORG-MRT,PC-25,P2,2025-06-24,21.5,0,0,3,P-220,Platform outage reported by customer
+CS-0098,ORG-AIR,PC-03,P4,2026-05-20,72.8,0,0,4,P-064,Network alarm flood reported by customer
+CS-0099,ORG-TRN,PC-14,P4,2026-02-21,73.1,0,0,4,P-156,Customer segmentation reported by customer
+CS-0100,ORG-CAM,PC-09,P4,2026-09-28,65.8,0,0,4,P-172,Rating engine error reported by customer
+CS-0101,ORG-UNI,PC-05,P2,2025-06-29,23.0,1,0,3,P-064,Wi-Fi coverage complaint reported by customer
+CS-0102,ORG-MUN,PC-12,P3,2026-07-09,41.0,0,0,4,P-174,Inventory mismatch reported by customer
+CS-0103,ORG-JKS,PC-09,P4,2025-09-18,82.9,0,0,3,P-174,Rating engine error reported by customer
+CS-0104,ORG-MRT,PC-32,P2,2026-02-14,21.7,1,0,3,P-156,Retail footfall insight reported by customer
+CS-0105,ORG-CLN,PC-29,P3,2026-02-09,25.3,0,1,5,P-119,Smart campus security reported by customer
+CS-0106,ORG-STA,PC-37,P3,2025-06-14,38.1,0,0,4,P-292,Vendor lock-in reported by customer
+CS-0107,ORG-INS,PC-34,P4,2026-06-21,55.8,0,1,5,P-297,Regulatory reporting reported by customer
+CS-0108,ORG-SCH,PC-09,P3,2026-02-27,26.1,0,1,5,P-213,Rating engine error reported by customer
+CS-0109,ORG-STA,PC-15,P4,2025-06-02,96.3,1,0,3,P-263,Demand forecasting reported by customer
+CS-0110,ORG-MRT,PC-17,P2,2025-08-21,17.7,0,0,4,P-174,Contact centre deflection reported by customer
+CS-0111,ORG-TEL,PC-02,P4,2025-12-30,59.9,0,0,4,P-059,OLT acceptance testing reported by customer
+CS-0112,ORG-KMH,PC-08,P4,2025-08-17,79.8,0,0,3,P-172,Billing dispute reported by customer
+CS-0113,ORG-JKS,PC-12,P4,2025-11-02,46.2,0,1,5,P-175,Inventory mismatch reported by customer
+CS-0114,ORG-MRT,PC-29,P4,2025-06-16,84.2,0,0,3,P-125,Smart campus security reported by customer
+CS-0115,ORG-GOV,PC-38,P4,2026-09-13,74.6,0,0,4,P-251,Data privacy request reported by customer
+CS-0116,ORG-AGR,PC-33,P3,2025-12-27,32.7,0,0,4,P-049,Network capacity planning reported by customer
+CS-0117,ORG-STA,PC-02,P2,2026-02-21,21.9,1,0,3,P-060,OLT acceptance testing reported by customer
+CS-0118,ORG-KMH,PC-09,P3,2026-02-14,53.0,1,0,3,P-215,Rating engine error reported by customer
+CS-0119,ORG-UTK,PC-10,P3,2025-07-16,40.6,0,0,4,P-212,Order fallout reported by customer
+CS-0120,ORG-KSB,PC-28,P2,2025-09-05,17.9,0,0,4,P-085,Tender response delay reported by customer
+CS-0121,ORG-HTL,PC-06,P4,2025-11-08,56.1,0,1,5,P-062,5G cell congestion reported by customer
+CS-0122,ORG-KSB,PC-39,P4,2025-09-12,51.7,0,1,5,P-179,Payment failure reported by customer
+CS-0123,ORG-STA,PC-06,P4,2026-04-16,60.3,0,0,4,P-065,5G cell congestion reported by customer
+CS-0124,ORG-MED,PC-28,P3,2025-06-12,38.9,0,0,4,P-082,Tender response delay reported by customer
+CS-0125,ORG-HSP,PC-24,P3,2025-12-23,29.5,0,1,5,P-220,Deployment failures reported by customer
+CS-0126,ORG-UNI,PC-11,P4,2026-02-24,45.2,0,1,5,P-174,Revenue leakage reported by customer
+CS-0127,ORG-CLN,PC-11,P3,2026-03-04,42.0,0,0,4,P-215,Revenue leakage reported by customer
+CS-0128,ORG-KSB,PC-29,P4,2026-07-28,100.2,1,0,3,P-120,Smart campus security reported by customer
+CS-0129,ORG-INS,PC-37,P4,2025-07-19,56.3,0,1,5,P-292,Vendor lock-in reported by customer
+CS-0130,ORG-TRN,PC-19,P4,2025-04-24,66.7,0,0,4,P-186,Slow fault restoration reported by customer
+CS-0131,ORG-PRP,PC-25,P2,2026-07-28,17.5,0,0,4,P-220,Platform outage reported by customer
+CS-0132,ORG-HTL,PC-31,P3,2025-11-05,38.6,0,0,4,P-110,SME digital onboarding reported by customer
+CS-0133,ORG-INS,PC-40,P3,2025-01-02,25.7,0,1,5,P-189,Network optimisation reported by customer
+CS-0134,ORG-FAS,PC-07,P4,2025-01-07,84.5,0,0,3,P-059,Core routing instability reported by customer
+CS-0135,ORG-INS2,PC-07,P1,2025-02-11,4.5,0,1,5,P-052,Core routing instability reported by customer
+CS-0136,ORG-CAM,PC-20,P2,2026-04-29,23.8,1,0,3,P-189,Field visit no-access reported by customer
+CS-0137,ORG-UTK,PC-17,P2,2025-09-09,20.7,0,0,3,P-201,Contact centre deflection reported by customer
+CS-0138,ORG-UTK,PC-09,P3,2025-04-24,31.9,0,1,5,P-212,Rating engine error reported by customer
+CS-0139,ORG-PRP,PC-08,P1,2025-11-12,6.1,0,0,4,P-212,Billing dispute reported by customer
+CS-0140,ORG-CLN,PC-39,P3,2025-09-06,24.4,0,1,5,P-178,Payment failure reported by customer
+CS-0141,ORG-ECM,PC-19,P3,2025-04-09,36.2,0,0,4,P-185,Slow fault restoration reported by customer
+CS-0142,ORG-CAM,PC-03,P1,2026-01-28,5.6,0,0,4,P-185,Network alarm flood reported by customer
+CS-0143,ORG-CAM,PC-38,P3,2026-02-02,40.2,0,0,4,P-249,Data privacy request reported by customer
+CS-0144,ORG-FIN,PC-33,P3,2026-01-23,33.4,0,0,4,P-053,Network capacity planning reported by customer
+CS-0145,ORG-KMH,PC-35,P3,2025-12-17,38.4,0,0,4,P-300,ESG data collection reported by customer
+CS-0146,ORG-AIR,PC-03,P3,2025-08-26,50.9,1,0,3,P-061,Network alarm flood reported by customer
+CS-0147,ORG-STA,PC-11,P3,2025-06-26,43.2,0,0,4,P-214,Revenue leakage reported by customer
+CS-0148,ORG-KMH,PC-40,P3,2026-05-29,46.0,0,0,3,P-042,Network optimisation reported by customer
+CS-0149,ORG-BKM,PC-07,P4,2026-08-13,63.5,0,0,4,P-058,Core routing instability reported by customer
+CS-0150,ORG-AIR,PC-01,P2,2026-09-09,18.3,0,0,4,P-044,Fibre fault localisation reported by customer
+CS-0151,ORG-UTK,PC-19,P4,2025-09-29,64.7,0,0,4,P-191,Slow fault restoration reported by customer
+CS-0152,ORG-HTL,PC-04,P4,2026-08-21,55.0,0,1,5,P-058,Enterprise VPN latency reported by customer
+CS-0153,ORG-INS,PC-20,P3,2025-06-11,34.6,0,0,4,P-202,Field visit no-access reported by customer
+CS-0154,ORG-BKM,PC-11,P3,2025-05-29,37.9,0,0,4,P-215,Revenue leakage reported by customer
+CS-0155,ORG-JKS,PC-11,P3,2025-08-12,38.0,0,0,4,P-180,Revenue leakage reported by customer
+CS-0156,ORG-HTL,PC-05,P3,2025-12-28,46.2,0,0,3,P-186,Wi-Fi coverage complaint reported by customer
+CS-0157,ORG-HSP,PC-40,P3,2025-08-07,28.5,0,1,5,P-053,Network optimisation reported by customer
+CS-0158,ORG-KSB,PC-20,P3,2026-06-09,26.4,0,1,5,P-187,Field visit no-access reported by customer
+CS-0159,ORG-ECM,PC-11,P3,2025-03-23,32.0,0,1,5,P-178,Revenue leakage reported by customer
+CS-0160,ORG-PRP,PC-02,P4,2026-08-26,65.7,0,0,4,P-068,OLT acceptance testing reported by customer
+CS-0161,ORG-ECM,PC-40,P3,2026-07-04,44.3,0,0,3,P-064,Network optimisation reported by customer
+CS-0162,ORG-MRT,PC-38,P3,2025-01-01,31.2,0,1,5,P-254,Data privacy request reported by customer
+CS-0163,ORG-TRN,PC-20,P2,2026-03-30,12.4,0,1,5,P-188,Field visit no-access reported by customer
+CS-0164,ORG-PLM,PC-06,P3,2025-09-06,25.7,0,1,5,P-047,5G cell congestion reported by customer
+CS-0165,ORG-INS2,PC-01,P4,2026-07-14,77.1,0,0,4,P-057,Fibre fault localisation reported by customer
+CS-0166,ORG-CAM,PC-04,P3,2025-04-25,42.4,0,0,4,P-060,Enterprise VPN latency reported by customer
+CS-0167,ORG-CLN,PC-05,P1,2026-02-23,6.6,0,0,4,P-063,Wi-Fi coverage complaint reported by customer
+CS-0168,ORG-MRT,PC-02,P4,2026-05-02,70.1,0,0,4,P-022,OLT acceptance testing reported by customer
+CS-0169,ORG-KMH,PC-29,P4,2026-05-04,84.3,0,0,3,P-084,Smart campus security reported by customer
+CS-0170,ORG-ENR,PC-09,P4,2025-07-03,85.6,0,0,3,P-176,Rating engine error reported by customer
+CS-0171,ORG-UTK,PC-05,P3,2026-01-06,38.8,0,0,4,P-062,Wi-Fi coverage complaint reported by customer
+CS-0172,ORG-AGR,PC-20,P4,2025-01-22,86.2,0,0,3,P-199,Field visit no-access reported by customer
+CS-0173,ORG-ENR,PC-06,P4,2025-04-11,90.1,1,0,3,P-045,5G cell congestion reported by customer
+CS-0174,ORG-MBS,PC-08,P3,2025-12-03,45.2,0,0,3,P-177,Billing dispute reported by customer
+CS-0175,ORG-AIR,PC-29,P2,2025-03-26,21.3,0,0,3,P-087,Smart campus security reported by customer
+CS-0176,ORG-KMH,PC-17,P3,2025-03-22,51.6,1,0,3,P-188,Contact centre deflection reported by customer
+CS-0177,ORG-MED,PC-03,P4,2026-06-21,68.2,0,0,4,P-053,Network alarm flood reported by customer
+CS-0178,ORG-ECM,PC-01,P2,2026-01-03,17.0,0,0,4,P-049,Fibre fault localisation reported by customer
+CS-0179,ORG-CAM,PC-34,P4,2025-01-27,96.3,1,0,3,P-280,Regulatory reporting reported by customer
+CS-0180,ORG-PRP,PC-36,P2,2026-06-21,23.5,1,0,3,P-300,Hiring delays reported by customer
+CS-0181,ORG-FIN,PC-07,P3,2025-09-07,49.9,1,0,3,P-042,Core routing instability reported by customer
+CS-0182,ORG-MBS,PC-23,P4,2026-01-17,50.4,0,1,5,P-220,Cloud cost overrun reported by customer
+CS-0183,ORG-AGR,PC-30,P1,2026-01-16,4.6,0,1,5,P-125,Video analytics demand reported by customer
+CS-0184,ORG-KSB,PC-33,P3,2025-04-20,34.6,0,0,4,P-067,Network capacity planning reported by customer
+CS-0185,ORG-AGR,PC-06,P3,2025-12-02,40.5,0,0,4,P-051,5G cell congestion reported by customer
+CS-0186,ORG-JKS,PC-07,P4,2026-09-08,64.0,0,0,4,P-067,Core routing instability reported by customer
+CS-0187,ORG-SRG,PC-17,P4,2025-11-27,58.3,0,0,4,P-187,Contact centre deflection reported by customer
+CS-0188,ORG-INS2,PC-30,P4,2026-02-15,97.7,1,0,3,P-126,Video analytics demand reported by customer
+CS-0189,ORG-BKM,PC-33,P3,2026-09-16,31.7,0,1,5,P-013,Network capacity planning reported by customer
+CS-0190,ORG-SRG,PC-18,P4,2025-04-06,48.2,0,1,5,P-186,Repeat complaints reported by customer
+CS-0191,ORG-SRG,PC-16,P3,2025-03-09,51.1,1,0,3,P-150,Anomaly detection reported by customer
+CS-0192,ORG-GOV,PC-27,P3,2025-03-11,36.7,0,0,4,P-235,Legacy code risk reported by customer
+CS-0193,ORG-MBS,PC-38,P2,2026-09-01,23.5,1,0,3,P-252,Data privacy request reported by customer
+CS-0194,ORG-MBS,PC-03,P3,2025-12-08,53.0,1,0,3,P-068,Network alarm flood reported by customer
+CS-0195,ORG-HSP,PC-11,P3,2026-03-31,35.3,0,0,4,P-216,Revenue leakage reported by customer
+CS-0196,ORG-CAM,PC-19,P2,2026-06-30,19.8,0,0,3,P-190,Slow fault restoration reported by customer
+CS-0197,ORG-MED,PC-02,P4,2026-03-09,65.1,0,0,4,P-050,OLT acceptance testing reported by customer
+CS-0198,ORG-ECM,PC-08,P3,2025-07-15,49.5,1,0,3,P-213,Billing dispute reported by customer
+CS-0199,ORG-UNI,PC-18,P3,2026-02-28,53.4,1,0,3,P-197,Repeat complaints reported by customer
+CS-0200,ORG-SRG,PC-14,P3,2026-09-10,25.2,0,1,5,P-155,Customer segmentation reported by customer
+CS-0201,ORG-TEL,PC-20,P3,2026-02-02,50.5,1,0,3,P-174,Field visit no-access reported by customer
+CS-0202,ORG-BKM,PC-07,P2,2026-03-27,19.5,0,0,4,P-050,Core routing instability reported by customer
+CS-0203,ORG-FAS,PC-38,P4,2025-07-17,80.5,0,0,3,P-254,Data privacy request reported by customer
+CS-0204,ORG-STA,PC-29,P1,2026-06-16,4.7,0,1,5,P-084,Smart campus security reported by customer
+CS-0205,ORG-ECM,PC-34,P3,2025-06-24,31.0,0,1,5,P-277,Regulatory reporting reported by customer
+CS-0206,ORG-TRN,PC-22,P3,2026-02-26,38.3,0,0,4,P-249,Access review backlog reported by customer
+CS-0207,ORG-STA,PC-11,P3,2025-08-16,40.3,0,0,4,P-216,Revenue leakage reported by customer
+CS-0208,ORG-BDN,PC-32,P4,2026-06-10,86.9,1,0,3,P-263,Retail footfall insight reported by customer
+CS-0209,ORG-INS2,PC-25,P1,2025-05-13,5.5,0,0,4,P-222,Platform outage reported by customer
+CS-0210,ORG-BDN,PC-37,P3,2026-07-08,30.5,0,1,5,P-293,Vendor lock-in reported by customer
+CS-0211,ORG-ENR,PC-02,P3,2025-07-18,24.5,0,1,5,P-023,OLT acceptance testing reported by customer
+CS-0212,ORG-TRN,PC-12,P4,2025-09-23,64.3,0,0,4,P-213,Inventory mismatch reported by customer
+CS-0213,ORG-KSB,PC-11,P4,2026-07-20,54.0,0,1,5,P-175,Revenue leakage reported by customer
+CS-0214,ORG-UNI,PC-07,P2,2025-12-25,22.4,1,0,3,P-018,Core routing instability reported by customer
+CS-0215,ORG-SCH,PC-38,P4,2025-12-30,77.2,0,0,4,P-251,Data privacy request reported by customer
+CS-0216,ORG-MFG,PC-37,P4,2025-11-30,45.5,0,1,5,P-294,Vendor lock-in reported by customer
+CS-0217,ORG-KMH,PC-12,P3,2026-05-02,34.7,0,0,4,P-216,Inventory mismatch reported by customer
+CS-0218,ORG-FIN,PC-08,P4,2026-04-02,70.5,0,0,4,P-179,Billing dispute reported by customer
+CS-0219,ORG-BDN,PC-33,P3,2026-06-26,48.3,1,0,3,P-020,Network capacity planning reported by customer
+CS-0220,ORG-ECM,PC-03,P3,2026-01-09,25.5,0,1,5,P-046,Network alarm flood reported by customer
+CS-0221,ORG-UNI,PC-15,P3,2026-09-29,54.7,1,0,3,P-155,Demand forecasting reported by customer
+CS-0222,ORG-MRT,PC-17,P3,2025-11-13,36.8,0,0,4,P-192,Contact centre deflection reported by customer
+CS-0223,ORG-HTL,PC-20,P3,2025-10-16,26.1,0,1,5,P-184,Field visit no-access reported by customer
+CS-0224,ORG-TEL,PC-19,P1,2026-01-30,4.9,0,0,4,P-173,Slow fault restoration reported by customer
+CS-0225,ORG-JKS,PC-07,P4,2026-06-25,94.6,1,0,3,P-043,Core routing instability reported by customer
+CS-0226,ORG-GOV,PC-17,P4,2025-08-21,77.9,0,0,4,P-187,Contact centre deflection reported by customer
+CS-0227,ORG-AGR,PC-35,P4,2026-08-13,94.0,1,0,3,P-277,ESG data collection reported by customer
+CS-0228,ORG-MRT,PC-12,P4,2025-04-20,71.3,0,0,4,P-178,Inventory mismatch reported by customer
+CS-0229,ORG-PHM,PC-08,P1,2026-08-07,7.3,1,0,3,P-215,Billing dispute reported by customer
+CS-0230,ORG-LOG,PC-07,P3,2026-06-16,38.4,0,0,4,P-050,Core routing instability reported by customer
+CS-0231,ORG-AIR,PC-11,P3,2026-02-20,39.7,0,0,4,P-172,Revenue leakage reported by customer
+CS-0232,ORG-TEL,PC-09,P4,2025-03-19,53.5,0,1,5,P-176,Rating engine error reported by customer
+CS-0233,ORG-AGR,PC-18,P3,2025-07-16,54.3,1,0,3,P-193,Repeat complaints reported by customer
+CS-0234,ORG-PHM,PC-06,P1,2026-08-31,4.7,0,1,5,P-021,5G cell congestion reported by customer
+CS-0235,ORG-UNI,PC-05,P3,2026-07-25,46.8,0,0,3,P-064,Wi-Fi coverage complaint reported by customer
+CS-0236,ORG-AGR,PC-29,P4,2025-02-24,73.3,0,0,4,P-126,Smart campus security reported by customer
+CS-0237,ORG-BKM,PC-39,P4,2025-09-11,58.4,0,0,4,P-212,Payment failure reported by customer
+CS-0238,ORG-HTL,PC-02,P3,2026-06-26,47.1,0,0,3,P-015,OLT acceptance testing reported by customer
+CS-0239,ORG-PHM,PC-01,P4,2026-07-02,87.1,1,0,3,P-192,Fibre fault localisation reported by customer
+CS-0240,ORG-MUN,PC-16,P4,2025-12-25,88.5,1,0,3,P-264,Anomaly detection reported by customer
+CS-0241,ORG-MRT,PC-34,P4,2025-08-29,96.2,1,0,3,P-277,Regulatory reporting reported by customer
+CS-0242,ORG-MRT,PC-21,P3,2025-05-24,44.1,0,0,3,P-249,Phishing incident reported by customer
+CS-0243,ORG-AGR,PC-08,P3,2025-03-27,52.2,1,0,3,P-179,Billing dispute reported by customer
+CS-0244,ORG-PHM,PC-03,P2,2025-12-04,16.8,0,0,4,P-187,Network alarm flood reported by customer
+CS-0245,ORG-ECM,PC-04,P1,2025-04-06,7.6,1,0,3,P-046,Enterprise VPN latency reported by customer
+CS-0246,ORG-LOG,PC-20,P3,2025-04-30,28.1,0,1,5,P-202,Field visit no-access reported by customer
+CS-0247,ORG-GOV,PC-20,P2,2026-07-20,19.6,0,0,4,P-185,Field visit no-access reported by customer
+CS-0248,ORG-CLN,PC-33,P3,2026-05-31,51.1,1,0,3,P-047,Network capacity planning reported by customer
+CS-0249,ORG-ENR,PC-12,P3,2025-01-19,46.1,0,0,3,P-213,Inventory mismatch reported by customer
+CS-0250,ORG-FBK,PC-13,P4,2026-07-30,58.6,0,0,4,P-153,Customer churn reported by customer
+CS-0251,ORG-TEL,PC-38,P4,2026-05-15,53.0,0,1,5,P-250,Data privacy request reported by customer
+CS-0252,ORG-HTL,PC-07,P2,2025-06-30,21.9,1,0,3,P-193,Core routing instability reported by customer
+CS-0253,ORG-ECM,PC-13,P4,2025-10-20,56.6,0,1,5,P-150,Customer churn reported by customer
+CS-0254,ORG-BDN,PC-24,P4,2026-07-02,62.6,0,0,4,P-224,Deployment failures reported by customer
+CS-0255,ORG-INS,PC-18,P3,2025-05-09,30.8,0,1,5,P-175,Repeat complaints reported by customer
+CS-0256,ORG-HSP,PC-40,P4,2026-06-03,94.0,1,0,3,P-017,Network optimisation reported by customer
+CS-0257,ORG-KMH,PC-09,P3,2025-09-09,55.9,1,0,3,P-177,Rating engine error reported by customer
+CS-0258,ORG-TEL,PC-34,P3,2025-03-04,56.0,1,0,3,P-277,Regulatory reporting reported by customer
+CS-0259,ORG-CLN,PC-16,P4,2026-05-04,78.1,0,0,4,P-263,Anomaly detection reported by customer
+CS-0260,ORG-INS,PC-04,P3,2025-08-12,50.8,1,0,3,P-190,Enterprise VPN latency reported by customer
+CS-0261,ORG-MED,PC-05,P4,2025-09-17,68.3,0,0,4,P-186,Wi-Fi coverage complaint reported by customer
+CS-0262,ORG-MRT,PC-08,P2,2026-03-13,24.1,1,0,3,P-178,Billing dispute reported by customer
+CS-0263,ORG-SRG,PC-07,P2,2025-03-05,21.7,1,0,3,P-043,Core routing instability reported by customer
+CS-0264,ORG-AGR,PC-02,P3,2026-04-10,34.8,0,0,4,P-052,OLT acceptance testing reported by customer
+CS-0265,ORG-MUN,PC-30,P4,2025-05-02,49.5,0,1,5,P-084,Video analytics demand reported by customer
+CS-0266,ORG-INS2,PC-11,P4,2025-07-24,69.2,0,0,4,P-215,Revenue leakage reported by customer
+CS-0267,ORG-PLM,PC-06,P4,2026-04-18,77.7,0,0,4,P-022,5G cell congestion reported by customer
+CS-0268,ORG-LOG,PC-28,P4,2026-01-01,53.1,0,1,5,P-111,Tender response delay reported by customer
+CS-0269,ORG-PRP,PC-01,P3,2025-12-04,32.7,0,0,4,P-059,Fibre fault localisation reported by customer
+CS-0270,ORG-CAM,PC-27,P2,2025-08-06,22.0,1,0,3,P-231,Legacy code risk reported by customer
+CS-0271,ORG-AGR,PC-01,P2,2025-06-10,9.5,0,1,5,P-066,Fibre fault localisation: cut found with OTDR trace on first visit
+CS-0272,ORG-JKS,PC-01,P2,2025-11-03,8.0,0,1,5,P-066,Fibre fault localisation: cut found with OTDR trace on first visit
+CS-0273,ORG-AIR,PC-01,P2,2026-04-21,7.5,0,1,5,P-066,Fibre fault localisation: cut found with OTDR trace on first visit
+CS-0274,ORG-BDN,PC-04,P2,2025-04-08,7.0,0,1,5,P-027,Enterprise VPN latency: QoS policy fixed on the PE router
+CS-0275,ORG-INS,PC-04,P2,2025-08-26,9.0,0,1,5,P-028,Enterprise VPN latency: QoS policy fixed on the PE router
+CS-0276,ORG-PLM,PC-04,P2,2025-12-02,52.0,1,0,3,P-168,Enterprise VPN latency: escalated twice before core team engaged
+CS-0277,ORG-KMH,PC-04,P2,2026-05-12,47.0,1,0,3,P-169,Enterprise VPN latency: escalated twice before core team engaged
+CS-0278,ORG-UTK,PC-29,P4,2025-05-19,24.0,0,1,4,P-080,Smart campus security: customer asked for CCTV video analytics with on-site edge processing
+CS-0279,ORG-CAM,PC-30,P4,2025-09-08,24.0,0,1,4,P-080,Video analytics demand: customer asked for CCTV video analytics with on-site edge processing
+CS-0280,ORG-STA,PC-30,P4,2026-01-26,24.0,0,1,4,P-080,Video analytics demand: customer asked for CCTV video analytics with on-site edge processing
+CS-0281,ORG-SCH,PC-29,P4,2026-04-13,24.0,0,1,4,P-080,Smart campus security: customer asked for CCTV video analytics with on-site edge processing
+CS-0282,ORG-UNI,PC-29,P4,2026-07-06,24.0,0,1,4,P-080,Smart campus security: customer asked for CCTV video analytics with on-site edge processing
