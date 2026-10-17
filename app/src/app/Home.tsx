@@ -13,7 +13,7 @@ import SignalPanel from "../components/SignalPanel";
 import AgentsPanel, { type AgentsData } from "../components/AgentsPanel";
 import AgentsButton from "../components/AgentsButton";
 import ConciergePanel from "../components/ConciergePanel";
-import ChallengeTeam, { initialDraft, type TeamDraft } from "../components/ChallengeTeam";
+import ChallengeTeam, { draftChanged, initialDraft, type TeamDraft } from "../components/ChallengeTeam";
 import { EMPTY_VIEW, type GraphView } from "../lib/graphView";
 import { EXEC_QUESTIONS } from "../lib/questions";
 import type { AskResult, Candidate, DiscoveryCard, DiscoveryResult, GraphData, HiddenTalentPerson, SignalItem, SignalKind, SignalResult, ValueEstimate, WhatIfResult } from "../lib/types";
@@ -402,7 +402,7 @@ export default function Home() {
               <button className="btn btn-ghost icon-btn" onClick={closeSide} aria-label="Close panel"><Icon name="x" /></button>
             </div>
             {side.kind === "answer" && answer?.kind === "team" && <ResultPanel r={answer} onFocus={focusNode} onChallenge={() => { if (!teamDraft) setTeamDraft(initialDraft(answer)); setChallenge(true); }} activated={activated}
-              adjusted={!!teamDraft && teamDraft.ids.some((id, i) => id !== initialDraft(answer).ids[i])} />}
+              adjusted={!!teamDraft && draftChanged(teamDraft, initialDraft(answer))} />}
             {side.kind === "answer" && answer?.kind === "exec" && <ExecPanel r={answer} onFocus={focusNode} onAsk={submit} />}
             {side.kind === "answer" && answer?.kind === "concierge" && <ConciergePanel r={answer} onFocus={focusNode} onAsk={submit}
               onLens={(l) => setMode(l as Lens)} onAgents={openAgents} />}

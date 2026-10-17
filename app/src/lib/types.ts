@@ -134,8 +134,12 @@ export interface TeamFit {
   threshold: number;
 }
 
+/** A person added to a role beyond its one slot (Challenge Team). `slot` is the requirement index. */
+export type ExtraMember = Candidate & { slot: number };
+
 export interface TeamEvaluation {
   slots: (Candidate | null)[]; // one per requirement, in order
+  extras: ExtraMember[];       // people added beyond one per role
   fit: TeamFit;
   coverage: number;
   value: ValueEstimate | null; // null: value is fixed by the matched opportunity

@@ -1,17 +1,30 @@
 "use client";
-// Challenge Team: review the proposed team, see how it fits together, swap anyone (AI's next best or a named person), then activate.
+// Challenge Team: review the proposed team, see how it fits together, swap anyone (AI's next best or a named person),
+// add extra people to any role, then activate.
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Icon } from "./Icon";
 import { pct, money } from "../lib/format";
 import type { AskResponse, Candidate, TeamEvaluation, ValueEstimate } from "../lib/types";
 
 export type SlotSource = "ai" | "next" | "manager" | "empty";
-export interface TeamDraft { ids: (string | null)[]; sources: SlotSource[]; passed: string[][] }
+/** An extra person on a role beyond its one slot; `slot` is the requirement index. */
+export interface ExtraDraft { slot: number; id: string; source: SlotSource }
+export interface TeamDraft { ids: (string | null)[]; sources: SlotSource[]; passed: string[][]; extras: ExtraDraft[] }
+
+/** At most this many extra people (matches the engine's MAX_EXTRAS). */
+const MAX_EXTRAS = 6;
 
 export function initialDraft(r: AskResponse): TeamDraft {
   const ids = r.requirements.map((req) => r.team.find((c) => c.role === req.role)?.personId ?? null);
-  return { ids, sources: ids.map((id) => (id ? "ai" : "empty")), passed: ids.map(() => []) };
+  return { ids, sources: ids.map((id) => (id ? "ai" : "empty")), passed: ids.map(() => []), extras: [] };
 }
+
+/** True when the draft differs from the AI proposal (a swap, an opened role or an extra person). */
+export function draftChanged(d: TeamDraft, base: TeamDraft): boolean {
+  return d.extras.length > 0 || d.ids.some((id, i) => id !== base.ids[i]);
+}
+
+const extrasBody = (d: TeamDraft) => d.extras.map((x) => ({ slot: x.slot, personId: x.id }));
 
 const SOURCE_LABEL: Record<SlotSource, string> = { ai: "AI proposal", next: "AI next best", manager: "Chosen by you", empty: "" };
 const PARTS: { key: keyof TeamEvaluation["fit"]["parts"]; label: string; help: string }[] = [
@@ -48,8 +61,9 @@ function Gauge({ score, delta }: { score: number; delta: number | null }) {
   );
 }
 
-function PersonPicker({ slot, role, requirements, ids, onPick, onCancel }: {
-  slot: number; role: string; requirements: AskResponse["requirements"]; ids: (string | null)[]; onPick: (c: Candidate) => void; onCancel: () => void;
+function PersonPicker({ slot, role, requirements, ids, extras, onPick, onCancel, idSuffix = "" }: {
+  slot: number; role: string; requirements: AskResponse["requirements"]; ids: (string | null)[]; extras: { slot: number; personId: string }[];
+  onPick: (c: Candidate) => void; onCancel: () => void; idSuffix?: string;
 }) {
   const [q, setQ] = useState("");
   const [res, setRes] = useState<Candidate[] | null>(null);
@@ -59,12 +73,12 @@ function PersonPicker({ slot, role, requirements, ids, onPick, onCancel }: {
   useEffect(() => {
     if (q.trim().length < 2) { setRes(null); setErr(""); return; }
     const t = setTimeout(() => {
-      post<Candidate[]>({ mode: "search", requirements, personIds: ids, slot, q })
+      post<Candidate[]>({ mode: "search", requirements, personIds: ids, extras, slot, q })
         .then((r) => { setRes(r); setErr(""); }).catch((e) => setErr((e as Error).message));
     }, 220);
     return () => clearTimeout(t);
-  }, [q, slot, requirements, ids]);
-  const id = `ct-search-${slot}`;
+  }, [q, slot, requirements, ids, extras]);
+  const id = `ct-search-${slot}${idSuffix}`;
   return (
     <div className="ct-picker" onKeyDown={(e) => { if (e.key === "Escape") { e.stopPropagation(); onCancel(); } }}>
       <label htmlFor={id} className="small muted">Name someone for {role}</label>
@@ -87,18 +101,18 @@ function PersonPicker({ slot, role, requirements, ids, onPick, onCancel }: {
   );
 }
 
-function SlotCard({ slot, role, skills, member, source, fit, names, busy, picking, onNext, onPick, onClear, onRevert, canRevert, children }: {
-  slot: number; role: string; skills: string[]; member: Candidate | null; source: SlotSource; fit: TeamEvaluation["fit"] | null;
+function SlotCard({ role, label, skills, member, source, fit, names, busy, picking, onNext, onPick, onClear, onRevert, canRevert, actions, children }: {
+  role: string; label?: string; skills: string[]; member: Candidate | null; source: SlotSource; fit: TeamEvaluation["fit"] | null;
   names: Map<string, string>; busy: boolean; picking: boolean; onNext: () => void; onPick: () => void; onClear: () => void; onRevert: () => void; canRevert: boolean;
-  children?: React.ReactNode;
+  actions?: React.ReactNode; children?: React.ReactNode;
 }) {
   const brings = member && fit ? fit.brings[member.personId] ?? [] : [];
   const mates = member && fit ? fit.pairs.filter((p) => p.a === member.personId || p.b === member.personId) : [];
   const warn = member && fit ? fit.warnings.filter((w) => w.personId === member.personId) : [];
   return (
-    <li className={`ct-slot${member ? "" : " empty"}${source === "manager" || source === "next" ? " changed" : ""}`} aria-label={`${role}: ${member ? member.name : "unfilled"}`}>
+    <li className={`ct-slot${member ? "" : " empty"}${source === "manager" || source === "next" ? " changed" : ""}`} aria-label={`${label ?? role}: ${member ? member.name : "unfilled"}`}>
       <div className="ct-slot-h">
-        <span className="eyebrow">{role}</span>
+        <span className="eyebrow">{label ?? role}</span>
         {source !== "empty" && <span className={`ct-src ${source}`}>{SOURCE_LABEL[source]}</span>}
       </div>
       {member ? (
@@ -127,12 +141,37 @@ function SlotCard({ slot, role, skills, member, source, fit, names, busy, pickin
           <p className="muted small">The best internal match is below the fill threshold. Pick someone to reskill, or leave it open to source externally.</p>
         </div>
       )}
-      {picking ? children : (
+      {picking ? children : actions ?? (
         <div className="ct-actions">
           <button className="btn small" onClick={onNext} disabled={busy}>{busy ? <span className="spinner" aria-hidden="true" /> : <Icon name="spark" />}{member ? "AI: next best" : "AI: best available"}</button>
           <button className="btn small" onClick={onPick}><Icon name="search" />Choose person</button>
           {member && <button className="btn btn-ghost small" onClick={onClear} aria-label={`Leave ${role} unfilled`}><Icon name="x" />Leave open</button>}
           {canRevert && <button className="btn btn-ghost small" onClick={onRevert}><Icon name="reset" />Undo</button>}
+        </div>
+      )}
+    </li>
+  );
+}
+
+/** Optional box to add one more person to any role: pick the role, then AI's best available or a named person. */
+function AddMember({ roles, defaultSlot, busy, picking, onBest, onPick, picker }: {
+  roles: AskResponse["requirements"]; defaultSlot: number; busy: boolean; picking: boolean;
+  onBest: (slot: number) => void; onPick: (slot: number) => void; picker: (slot: number) => React.ReactNode;
+}) {
+  const [slot, setSlot] = useState(defaultSlot);
+  const [touched, setTouched] = useState(false);
+  const cur = touched ? slot : defaultSlot;
+  return (
+    <li className="ct-slot ct-add" aria-label="Add a team member (optional)">
+      <div className="ct-slot-h"><span className="eyebrow">Add a team member</span><span className="ct-src">Optional</span></div>
+      <label className="small muted" htmlFor="ct-add-role">A role can hold more than one person. Add to</label>
+      <select id="ct-add-role" className="ct-add-role" value={cur} onChange={(e) => { setSlot(Number(e.target.value)); setTouched(true); }} disabled={picking}>
+        {roles.map((req, i) => <option key={req.role} value={i}>{req.role}</option>)}
+      </select>
+      {picking ? picker(cur) : (
+        <div className="ct-actions">
+          <button className="btn small" onClick={() => onBest(cur)} disabled={busy}>{busy ? <span className="spinner" aria-hidden="true" /> : <Icon name="spark" />}AI: best available</button>
+          <button className="btn small" onClick={() => onPick(cur)}><Icon name="search" />Choose person</button>
         </div>
       )}
     </li>
@@ -149,6 +188,8 @@ export default function ChallengeTeam({ r, draft, onDraft, onClose, onActivate, 
   const [err, setErr] = useState("");
   const [busySlot, setBusySlot] = useState<number | null>(null);
   const [picking, setPicking] = useState<number | null>(null);
+  const [addPicking, setAddPicking] = useState(false);
+  const [addBusy, setAddBusy] = useState(false);
   const [activating, setActivating] = useState(false);
   const dialogRef = useRef<HTMLDivElement>(null);
   const returnFocus = useRef<Element | null>(null);
@@ -161,12 +202,12 @@ export default function ChallengeTeam({ r, draft, onDraft, onClose, onActivate, 
 
   useEffect(() => {
     let live = true;
-    post<TeamEvaluation>({ mode: "evaluate", requirements: r.requirements, personIds: draft.ids, hasOpportunity: !!r.opportunityId })
+    post<TeamEvaluation>({ mode: "evaluate", requirements: r.requirements, personIds: draft.ids, extras: extrasBody(draft), hasOpportunity: !!r.opportunityId })
       .then((e) => { if (live) { setEval(e); setErr(""); } }).catch((e) => live && setErr((e as Error).message));
-    onPreview(draft.ids.filter((x): x is string => !!x));
+    onPreview([...draft.ids.filter((x): x is string => !!x), ...draft.extras.map((x) => x.id)]);
     return () => { live = false; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [draft.ids, r]);
+  }, [draft.ids, draft.extras, r]);
 
   // focus in on open, back to the trigger on close; Escape closes; Tab stays inside
   useEffect(() => {
@@ -187,7 +228,20 @@ export default function ChallengeTeam({ r, draft, onDraft, onClose, onActivate, 
     const ids = [...draft.ids]; ids[i] = id;
     const sources = [...draft.sources]; sources[i] = source;
     const p = draft.passed.map((x) => [...x]); if (passed) p[i] = passed;
-    onDraft({ ids, sources, passed: p });
+    onDraft({ ...draft, ids, sources, passed: p });
+  }
+
+  function addExtra(slot: number, id: string, source: SlotSource) {
+    if (draft.extras.length >= MAX_EXTRAS || draft.ids.includes(id) || draft.extras.some((x) => x.id === id)) return;
+    onDraft({ ...draft, extras: [...draft.extras, { slot, id, source }] });
+  }
+
+  async function bestExtra(slot: number) {
+    setAddBusy(true); setErr("");
+    try {
+      const c = await post<Candidate>({ mode: "next", requirements: r.requirements, personIds: draft.ids, extras: extrasBody(draft), slot, exclude: [] });
+      addExtra(slot, c.personId, "next");
+    } catch (e) { setErr((e as Error).message); } finally { setAddBusy(false); }
   }
 
   async function next(i: number) {
@@ -195,16 +249,25 @@ export default function ChallengeTeam({ r, draft, onDraft, onClose, onActivate, 
     const cur = draft.ids[i];
     const passed = cur ? [...draft.passed[i], cur] : draft.passed[i];
     try {
-      const c = await post<Candidate>({ mode: "next", requirements: r.requirements, personIds: draft.ids.map((x, k) => (k === i ? null : x)), slot: i, exclude: passed });
+      const c = await post<Candidate>({ mode: "next", requirements: r.requirements, personIds: draft.ids.map((x, k) => (k === i ? null : x)), extras: extrasBody(draft), slot: i, exclude: passed });
       setSlot(i, c.personId, "next", passed);
     } catch (e) { setErr((e as Error).message); } finally { setBusySlot(null); }
   }
 
   const fit = evaln?.fit ?? null;
-  const members = evaln ? evaln.slots.filter((c): c is Candidate => !!c) : [];
+  const members = evaln ? [...evaln.slots.filter((c): c is Candidate => !!c), ...(evaln.extras ?? [])] : [];
   const names = new Map(members.map((c) => [c.personId, c.name]));
   const value = evaln?.value ?? r.value;
-  const changed = draft.ids.some((id, i) => id !== base.ids[i]);
+  const changed = draftChanged(draft, base);
+  const filledRoles = evaln ? r.requirements.filter((_, i) => evaln.slots[i] || evaln.extras?.some((x) => x.slot === i)).length : 0;
+  const extraCount = evaln?.extras?.length ?? 0;
+  const teamCount = evaln ? `${filledRoles} of ${r.requirements.length} roles${extraCount ? ` · ${extraCount} extra` : ""}` : "";
+  // the add box starts on the first role nobody holds, else the role with the weakest fit
+  const weakest = (() => {
+    if (!evaln) return 0;
+    const lead = r.requirements.map((_, i) => Math.max(evaln.slots[i]?.score ?? 0, ...(evaln.extras ?? []).filter((x) => x.slot === i).map((x) => x.score)));
+    return lead.indexOf(Math.min(...lead));
+  })();
   const delta = fit && aiScore !== null ? Math.round(fit.score * 100) - Math.round(aiScore * 100) : null;
 
   async function activate() {
@@ -240,14 +303,14 @@ export default function ChallengeTeam({ r, draft, onDraft, onClose, onActivate, 
               ))}
             </div>
             <div className="ct-flags" aria-live="polite">
-              <div className="row-between"><span className="eyebrow">Watch-outs</span><span className="muted small num">{evaln ? `${members.length} of ${r.requirements.length} roles filled` : ""}</span></div>
+              <div className="row-between"><span className="eyebrow">Watch-outs</span><span className="muted small num">{teamCount ? `${teamCount} filled` : ""}</span></div>
               {fit && !fit.warnings.filter((w) => !w.personId).length && !fit.notes.length && <p className="small ct-ok"><Icon name="check" />Every role filled and every required skill covered.</p>}
               {fit?.warnings.filter((w) => !w.personId).map((w) => <p key={w.text} className="ct-warn small"><Icon name="alert" />{w.text}</p>)}
               {fit?.notes.map((n) => <p key={n} className="small muted ct-note"><Icon name="user" />{n}</p>)}
             </div>
           </section>
 
-          <h3 className="section-h">The team{evaln ? ` (${members.length} of ${r.requirements.length} roles)` : ""}</h3>
+          <h3 className="section-h">The team{teamCount ? ` (${teamCount})` : ""}</h3>
           <ul className="ct-slots">
             {r.requirements.map((req, i) => !evaln ? (
               <li key={req.role} className="ct-slot" aria-busy="true">
@@ -256,14 +319,32 @@ export default function ChallengeTeam({ r, draft, onDraft, onClose, onActivate, 
                 <span className="sr-only">Scoring this role</span>
               </li>
             ) : (
-              <SlotCard key={req.role} slot={i} role={req.role} skills={req.must.map((s) => fit?.skills.find((x) => x.skillId === s)?.skill ?? s)}
+              <SlotCard key={req.role} role={req.role} skills={req.must.map((s) => fit?.skills.find((x) => x.skillId === s)?.skill ?? s)}
                 member={evaln?.slots[i] ?? null} source={draft.sources[i]} fit={fit} names={names} busy={busySlot === i} picking={picking === i}
                 onNext={() => next(i)} onPick={() => setPicking(i)} onClear={() => setSlot(i, null, "empty")}
                 onRevert={() => setSlot(i, base.ids[i], base.sources[i], [])} canRevert={draft.ids[i] !== base.ids[i]}>
-                <PersonPicker slot={i} role={req.role} requirements={r.requirements} ids={draft.ids}
+                <PersonPicker slot={i} role={req.role} requirements={r.requirements} ids={draft.ids} extras={extrasBody(draft)}
                   onPick={(c) => { setSlot(i, c.personId, "manager"); setPicking(null); }} onCancel={() => setPicking(null)} />
               </SlotCard>
             ))}
+            {evaln?.extras?.map((x) => {
+              const req = r.requirements[x.slot];
+              const src = draft.extras.find((d) => d.id === x.personId)?.source ?? "manager";
+              return (
+                <SlotCard key={`extra-${x.personId}`} role={req.role} label={`Extra · ${req.role}`} skills={req.must} member={x} source={src} fit={fit} names={names}
+                  busy={false} picking={false} onNext={() => {}} onPick={() => {}} onClear={() => {}} onRevert={() => {}} canRevert={false}
+                  actions={<div className="ct-actions"><button className="btn btn-ghost small" onClick={() => onDraft({ ...draft, extras: draft.extras.filter((d) => d.id !== x.personId) })}
+                    aria-label={`Remove ${x.name} from ${req.role}`}><Icon name="x" />Remove</button></div>} />
+              );
+            })}
+            {evaln && draft.extras.length < MAX_EXTRAS && (
+              <AddMember key={`add-${draft.extras.length}-${weakest}`} roles={r.requirements} defaultSlot={weakest} busy={addBusy} picking={addPicking}
+                onBest={(s) => void bestExtra(s)} onPick={() => setAddPicking(true)}
+                picker={(s) => (
+                  <PersonPicker slot={s} role={r.requirements[s].role} requirements={r.requirements} ids={draft.ids} extras={extrasBody(draft)} idSuffix="-add"
+                    onPick={(c) => { addExtra(s, c.personId, "manager"); setAddPicking(false); }} onCancel={() => setAddPicking(false)} />
+                )} />
+            )}
           </ul>
 
           {fit && members.length > 0 && (

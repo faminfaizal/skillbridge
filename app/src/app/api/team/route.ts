@@ -13,6 +13,7 @@ type Body = {
   slot?: number; // next / search: which role
   exclude?: string[]; // next: people already passed over for this slot
   q?: string; // search: name
+  extras?: { slot: number; personId: string }[]; // people added beyond one per role
 };
 
 // POST /api/team: Challenge Team. evaluate = re-score a team; next = AI's next best for one role; search = people by name, scored for a role
@@ -23,9 +24,12 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Ask for a team first." }, { status: 400 });
   }
   const ids = roles.map((_, i) => b.personIds?.[i] ?? null);
-  const onTeam = ids.filter((x): x is string => !!x);
+  const extras = (Array.isArray(b.extras) ? b.extras : [])
+    .filter((x) => x && Number.isInteger(x.slot) && typeof x.personId === "string")
+    .map((x) => ({ slot: x.slot, personId: x.personId }));
+  const onTeam = [...ids.filter((x): x is string => !!x), ...extras.map((x) => x.personId)];
   try {
-    if (b.mode === "evaluate") return NextResponse.json(evaluateTeam(roles, ids, !!b.hasOpportunity));
+    if (b.mode === "evaluate") return NextResponse.json(evaluateTeam(roles, ids, !!b.hasOpportunity, undefined, extras));
     const role = roles[b.slot ?? -1];
     if (!role) return NextResponse.json({ error: "Pick a role on the team." }, { status: 400 });
     if (b.mode === "next") {

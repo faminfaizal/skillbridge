@@ -70,3 +70,37 @@ test("free-text requests re-estimate value for the new team; an empty team score
   assert.equal(empty.score, 0);
   assert.equal(empty.warnings.filter((x) => /No one in this role/.test(x.text)).length, roles.length);
 });
+
+test("extras: adding a person to a filled role never lowers role fit and pools that role's free time", () => {
+  const base = evaluateTeam(roles, ids, true, m);
+  const onTeam = ids.filter((x): x is string => !!x);
+  const helper = nextBest(roles[0], onTeam, m)!;
+  const e = evaluateTeam(roles, ids, true, m, [{ slot: 0, personId: helper.personId }]);
+  assert.equal(e.extras.length, 1);
+  assert.equal(e.extras[0].slot, 0);
+  assert.ok(e.fit.parts.roleFit >= base.fit.parts.roleFit, "the strongest person in each role still counts");
+  assert.ok(e.fit.parts.availability >= base.fit.parts.availability, "two people pool their free time");
+  assert.equal(e.value, null, "value stays the opportunity's");
+  assert.ok(e.slots.every((c, i) => c?.personId === base.slots[i]?.personId), "role slots are untouched");
+});
+
+test("extras: no one twice, unknown people and roles dropped, at most six", () => {
+  const dup = evaluateTeam(roles, ids, true, m, [{ slot: 0, personId: ids[1]! }, { slot: 99, personId: byName("Lim Wei Ling") }, { slot: 0, personId: "P-NOPE" }]);
+  assert.equal(dup.extras.length, 0);
+  const onTeam = ids.filter((x): x is string => !!x);
+  const pool = [...m.people.keys()].filter((p) => !onTeam.includes(p)).slice(0, 8).map((personId) => ({ slot: 1, personId }));
+  assert.equal(evaluateTeam(roles, ids, true, m, pool).extras.length, 6);
+});
+
+test("extras: filling the MLOps gap with an extra counts the role as filled; a passenger is flagged", () => {
+  const lim = byName("Lim Wei Ling");
+  const e = evaluateTeam(roles, ids, true, m, [{ slot: gap, personId: lim }]);
+  assert.equal(e.coverage, 1, "every role now has someone");
+  assert.ok(e.fit.score > evaluateTeam(roles, ids, true, m).fit.score);
+  // someone who brings nothing the team lacks is called out, not hidden
+  const onTeam = ids.filter((x): x is string => !!x);
+  const weak = searchForRole(roles[0], "an", onTeam, m, 50).at(-1)!;
+  const p = evaluateTeam(roles, ids, true, m, [{ slot: 0, personId: weak.personId }]);
+  assert.equal(p.fit.brings[weak.personId].length, 0, `${weak.name} (${weak.title}) brings nothing new`);
+  assert.ok(p.fit.warnings.some((x) => x.personId === weak.personId && /adds no skill/.test(x.text)));
+});
