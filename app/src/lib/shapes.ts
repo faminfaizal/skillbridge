@@ -60,3 +60,5 @@ export const STRATA: Record<EntityType, number> = {
 };
 
 export const LEGEND_TYPES: EntityType[] = ["person", "project", "system", "skill", "org", "opportunity", "incident", "knowledge"];
+/** Types the legend can switch off on the graph (people always stay). */
+export const TOGGLE_TYPES: EntityType[] = ["project", "system", "skill", "org", "opportunity", "incident", "knowledge"];

@@ -75,6 +75,8 @@ export default function Home() {
   const [sigErr, setSigErr] = useState("");
   const [activeSig, setActiveSig] = useState<string | null>(null);
   const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [hiddenTypes, setHiddenTypes] = useState<string[]>([]);   // legend switches, all on by default
+  const toggleType = useCallback((t: string) => setHiddenTypes((h) => (h.includes(t) ? h.filter((x) => x !== t) : [...h, t])), []);
   const [challenge, setChallenge] = useState(false);
   const [teamDraft, setTeamDraft] = useState<TeamDraft | null>(null);
   const [activated, setActivated] = useState<string | null>(null);
@@ -362,11 +364,11 @@ export default function Home() {
       <main id="main" className="stage">
         {graph ? (
           dim === "3d" ? (
-            <Graph3D data={graph} view={{ ...view, panel: side.kind !== "none" }} onNodeClick={focusNode}
+            <Graph3D data={graph} view={{ ...view, panel: side.kind !== "none" }} hiddenTypes={hiddenTypes} onNodeClick={focusNode}
               onStageClick={() => setView((v) => (v.focusId ? { ...v, focusId: null } : v))}
               onError={(msg) => { setDim("2d"); setToast(`3D view unavailable on this device (${msg}). Showing 2D.`); }} />
           ) : (
-            <GraphCanvas data={graph} view={{ ...view, panel: side.kind !== "none" }} onNodeClick={focusNode} onStageClick={() => setView((v) => (v.focusId ? { ...v, focusId: null } : v))} />
+            <GraphCanvas data={graph} view={{ ...view, panel: side.kind !== "none" }} hiddenTypes={hiddenTypes} onNodeClick={focusNode} onStageClick={() => setView((v) => (v.focusId ? { ...v, focusId: null } : v))} />
           )
         ) : (
           <div className="stage-msg" role={graphErr ? "alert" : "status"}>{graphErr || <><span className="spinner" aria-hidden="true" /> Loading the capability graph</>}</div>
@@ -392,7 +394,7 @@ export default function Home() {
               {CONCIERGE_SUGGEST.map((s) => <button key={s} className="chip chip-btn chip-concierge" onClick={() => submit(s)}><Icon name="spark" />{s}</button>)}
             </div>
           )}
-          <Legend dim={dim} />
+          <Legend dim={dim} hidden={hiddenTypes} onToggle={toggleType} />
         </div>
 
         {side.kind !== "none" && (

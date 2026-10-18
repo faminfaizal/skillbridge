@@ -12,6 +12,7 @@ import { SHAPES, STRATA, nodeColor, type EntityType } from "../../lib/shapes";
 interface Props {
   data: GraphData;
   view: GraphView;
+  hiddenTypes?: string[];   // entity types switched off in the legend
   onNodeClick: (id: string, type: string) => void;
   onStageClick: () => void;
   onError: (message: string) => void;
@@ -40,7 +41,10 @@ function geometryFor(solid: string): THREE.BufferGeometry {
 
 const escapeHtml = (s: string) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
 
-export default function Graph3D({ data, view, onNodeClick, onStageClick, onError }: Props) {
+export default function Graph3D({ data, view, hiddenTypes = [], onNodeClick, onStageClick, onError }: Props) {
+  const hiddenRef = useRef(new Set(hiddenTypes));
+  const typeById = useRef(new Map<string, string>());
+  if (typeById.current.size !== data.nodes.length) typeById.current = new Map(data.nodes.map((n) => [n.id, n.type as string]));
   const elRef = useRef<HTMLDivElement>(null);
   const fgRef = useRef<any>(null);
   const viewRef = useRef(view);
@@ -107,7 +111,10 @@ export default function Graph3D({ data, view, onNodeClick, onStageClick, onError
     return group;
   }
 
+  /** A link end is a node id before the engine runs and the node object after. */
+  const endType = (x: unknown) => (typeof x === "object" && x ? (x as N3).type : typeById.current.get(x as string));
   function linkVisible(l: L3): boolean {
+    if (hiddenRef.current.has(endType(l.source) ?? "") || hiddenRef.current.has(endType(l.target) ?? "")) return false;
     const der = derivedRef.current;
     if (viewRef.current.mode === "talent") return false;
     if (der.nodes.size) return der.edges.has(l.id);
@@ -120,6 +127,7 @@ export default function Graph3D({ data, view, onNodeClick, onStageClick, onError
     const der = derivedRef.current;
     const active = der.nodes.size > 0;
     fg.nodeThreeObject((n: N3) => buildNode(n))
+      .nodeVisibility((n: N3) => !hiddenRef.current.has(n.type))
       .linkVisibility((l: L3) => linkVisible(l))
       .linkColor((l: L3) => (active ? (l.evidence === "inferred" ? "#fbbf24" : "#93c5fd") : "#5b7bb5"))
       .linkWidth((l: L3) => (active ? (l.evidence === "inferred" ? 2.6 : 1.4) : 0))
@@ -249,6 +257,13 @@ export default function Graph3D({ data, view, onNodeClick, onStageClick, onError
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
+
+  // legend switches: restyle only, the camera stays where it is
+  useEffect(() => {
+    hiddenRef.current = new Set(hiddenTypes);
+    applyStyles();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hiddenTypes]);
 
   useEffect(() => {
     viewRef.current = view;

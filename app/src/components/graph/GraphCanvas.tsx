@@ -15,6 +15,7 @@ export type { GraphView } from "../../lib/graphView";
 interface Props {
   data: GraphData;
   view: GraphView;
+  hiddenTypes?: string[];   // entity types switched off in the legend
   onNodeClick: (id: string, type: string) => void;
   onStageClick: () => void;
 }
@@ -23,7 +24,8 @@ const DIM_NODE = "rgba(71, 85, 105, 0.35)";
 const STRUCTURE = new Set(["division", "department"]);
 const NodeShapeProgram = createNodeImageProgram({ drawingMode: "color", keepWithinCircle: false, padding: 0, size: { mode: "force", value: 128 } });
 
-export default function GraphCanvas({ data, view, onNodeClick, onStageClick }: Props) {
+export default function GraphCanvas({ data, view, hiddenTypes = [], onNodeClick, onStageClick }: Props) {
+  const hiddenRef = useRef(new Set(hiddenTypes));
   const containerRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLCanvasElement>(null);
   const sigmaRef = useRef<Sigma | null>(null);
@@ -76,11 +78,13 @@ export default function GraphCanvas({ data, view, onNodeClick, onStageClick }: P
     });
     sigmaRef.current = renderer;
 
+    const off = (id: string) => hiddenRef.current.has(g.getNodeAttribute(id, "nodeType") as string);
     renderer.setSetting("nodeReducer", (node, d) => {
       const v = viewRef.current;
       const der = derivedRef.current;
       const res = { ...d } as Record<string, unknown>;
       const t = d.nodeType as string;
+      if (hiddenRef.current.has(t)) { res.hidden = true; return res; }
       const active = der.nodes.size > 0;
       if (STRUCTURE.has(t) && !active) res.label = t === "division" ? d.label : "";
       if (v.mode === "talent") {
@@ -109,6 +113,7 @@ export default function GraphCanvas({ data, view, onNodeClick, onStageClick }: P
       const der = derivedRef.current;
       const res = { ...d } as Record<string, unknown>;
       const type = d.edgeType as string;
+      if (off(g.source(edge)) || off(g.target(edge))) { res.hidden = true; return res; }
       if (der.nodes.size > 0) {
         if (der.edges.has(edge)) {
           res.color = d.evidence === "inferred" ? "rgba(0,0,0,0)" : "rgba(147, 197, 253, 0.75)"; // inferred drawn dashed on overlay
@@ -151,7 +156,7 @@ export default function GraphCanvas({ data, view, onNodeClick, onStageClick }: P
       const active = der.nodes.size > 0;
       const list = active ? [...der.edges].map((e, i) => ({ e, off: (i * 0.29) % 1, sp: 0.35 })) : v.mode === "talent" ? [] : ambient;
       for (const p of list) {
-        if (!g.hasEdge(p.e)) continue;
+        if (!g.hasEdge(p.e) || off(g.source(p.e)) || off(g.target(p.e))) continue;
         const a = toView(g.source(p.e)), b = toView(g.target(p.e));
         const inferred = g.getEdgeAttribute(p.e, "evidence") === "inferred";
         if (active && inferred) {
@@ -169,7 +174,7 @@ export default function GraphCanvas({ data, view, onNodeClick, onStageClick }: P
         ctx.beginPath(); ctx.arc(a.x + (b.x - a.x) * f, a.y + (b.y - a.y) * f, active ? 2.4 : 1.4, 0, Math.PI * 2); ctx.fill();
       }
       const ring = (id: string, color: string) => {
-        if (!g.hasNode(id)) return;
+        if (!g.hasNode(id) || off(id)) return;
         const c = toView(id);
         const r = nodeR(id) + 6 + (reduced ? 0 : Math.sin(t * 2.4) * 3);
         ctx.strokeStyle = color; ctx.lineWidth = 2;
@@ -180,7 +185,7 @@ export default function GraphCanvas({ data, view, onNodeClick, onStageClick }: P
       if (v.focusId) ring(v.focusId, "rgba(56, 189, 248, 0.9)");
       // agent changes: expanding green ripples
       for (const id of v.pulse ?? []) {
-        if (!g.hasNode(id)) continue;
+        if (!g.hasNode(id) || off(id)) continue;
         const c = toView(id);
         for (let k = 0; k < 2; k++) {
           const f = reduced ? 0.5 : ((t * 0.8 + k * 0.5) % 1);
@@ -199,6 +204,12 @@ export default function GraphCanvas({ data, view, onNodeClick, onStageClick }: P
       sigmaRef.current = null;
     };
   }, [data]);
+
+  // legend switches: redraw only, the camera stays where it is
+  useEffect(() => {
+    hiddenRef.current = new Set(hiddenTypes);
+    sigmaRef.current?.refresh();
+  }, [hiddenTypes]);
 
   useEffect(() => {
     viewRef.current = view;
