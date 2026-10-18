@@ -12,11 +12,13 @@ import { concentrationRisks, whatIf } from "./whatif.ts";
 import { impactSummary } from "./impact.ts";
 import { EXEC_QUESTIONS } from "../questions.ts";
 import type { ExecAnswer, ExecIntent, Provider, ReskillOption } from "../types.ts";
+import { proposeRedeploy, redeployBuilt } from "./redeploy.ts";
 
 export { EXEC_QUESTIONS };
 
 // order matters: the more specific patterns first
 const RULES: [ExecIntent, RegExp][] = [
+  ["redeploy", /\bredeploy|retrench|redundan|lay-?offs?|(jobs?|roles?) (at risk|exposed)|(AI|automation) takes? over/i],
   ["invest", /\b(re)?invest|where should .*(savings|money|value) go|allocate .*savings|spend the savings/i],
   ["value", /how much value|value .*(created|unlocked|delivered|generated)|internal reuse|value this (quarter|year)/i],
   ["external", /(pay|paying|paid|spend|spending|consultan|vendor|outsourc|external part).*(already|possess|in-?house|internal(ly)?|we have)/i],
@@ -52,7 +54,8 @@ export async function classifyIntent(q: string): Promise<ExecIntent | "explore" 
   }
 }
 
-type Built = Omit<ExecAnswer, "kind" | "query" | "intent" | "question" | "narrative" | "provider" | "elapsedMs">;
+export type ExecBuilt = Omit<ExecAnswer, "kind" | "query" | "intent" | "question" | "narrative" | "provider" | "elapsedMs">;
+type Built = ExecBuilt;
 const worth = (o: OpenOpportunity) => Math.max(0, o.external_quote_amt - o.internal_cost_amt) + o.revenue_potential_amt * o.win_probability;
 const skillId = (m: Model, name: string) => m.skillByName.get(name.toLowerCase())?.id ?? name;
 const sum = (xs: number[]) => xs.reduce((a, b) => a + b, 0);
@@ -372,7 +375,7 @@ function invest(m: Model): Built {
   };
 }
 
-const BUILDERS: Record<ExecIntent, (m: Model) => Built> = { gaps, external, future, dependency, revenue, value, invest };
+const BUILDERS: Record<ExecIntent, (m: Model) => Built> = { gaps, external, future, dependency, revenue, value, invest, redeploy: redeployBuilt };
 
 export const BRIEF_SYSTEM =
   "You brief a general manager in 2 or 3 short sentences, plain words, no hype. Lead with the decision, then the one or two facts " +
@@ -399,6 +402,7 @@ async function brief(question: string, b: Built): Promise<{ text: string; provid
 
 export async function execAnswer(intent: ExecIntent, query: string, t0 = Date.now(), m: Model = data()): Promise<ExecAnswer> {
   const b = BUILDERS[intent](m);
+  if (intent === "redeploy") proposeRedeploy(m);
   const question = EXEC_QUESTIONS[intent];
   const n = await brief(question, b);
   return { kind: "exec", query, intent, question, ...b, narrative: n.text, provider: n.provider, elapsedMs: Date.now() - t0 };

@@ -225,7 +225,7 @@ export interface DiscoveryResult {
 }
 
 // ---------------------------------------------------------------- Executive Intelligence (PRD 8.7)
-export type ExecIntent = "gaps" | "external" | "future" | "dependency" | "revenue" | "value" | "invest";
+export type ExecIntent = "gaps" | "external" | "future" | "dependency" | "revenue" | "value" | "invest" | "redeploy";
 
 export interface ExecAnswer {
   kind: "exec";
@@ -252,6 +252,7 @@ export interface ConciergeRef {
 
 export interface ConciergeAnswer {
   kind: "concierge";
+  memory?: { turns: number; source: "memory" | "firestore" | "none" }; // earlier turns used (follow-up questions)
   query: string;
   answer: string;
   mode: "tool-calling" | "planned";
@@ -273,7 +274,7 @@ export interface GrowthPaths {
 }
 
 // ---------------------------------------------------------------- People Signals
-export type SignalKind = "bridges" | "bottlenecks" | "rising" | "islands" | "forgotten" | "ghosts";
+export type SignalKind = "bridges" | "bottlenecks" | "rising" | "islands" | "forgotten" | "ghosts" | "inclusion";
 
 export interface SignalItem {
   id: string;

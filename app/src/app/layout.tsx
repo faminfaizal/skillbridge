@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./app.css";
+import "./crisis.css";
+import "./social.css";
+import "./cloud.css";
 
 export const metadata: Metadata = {
   title: "AI SkillBridge",

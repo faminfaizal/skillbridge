@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@google/genai": "^2.30.0",
+    "google-auth-library": "^10.9.1",
     "@sigma/node-image": "^3.0.0",
     "@sigma/node-square": "^3.0.0",
     "3d-force-graph": "^1.80.1",

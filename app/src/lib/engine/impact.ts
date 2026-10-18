@@ -1,5 +1,6 @@
 // Impact records (PRD 10.1) and the value dashboard summary (PRD 10.3).
 import { all, get, run } from "../db.ts";
+import { ledgerChanged } from "../cloud/index.ts";
 import type { ImpactRecord, ImpactSummary, ValueEstimate } from "../types.ts";
 
 export function impactSummary(): ImpactSummary {
@@ -33,6 +34,7 @@ export function activate(opportunityId: string | null, title: string, personIds:
        customer_impact, strategic_value, source, person_ids) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     id, date, title, opportunityId, personIds.length, value.costAvoided, value.productivity, value.recruitmentAvoided, value.revenuePotential,
     value.revenuePotential ? "New customer value" : "Faster internal delivery", strategic, source, personIds.join(","));
+  ledgerChanged("activate");
   return get<ImpactRecord>("SELECT * FROM impact_records WHERE id = ?", id)!;
 }
 
@@ -40,5 +42,6 @@ export function activate(opportunityId: string | null, title: string, personIds:
 export function resetActivations(): number {
   const n = get<{ n: number }>("SELECT COUNT(*) n FROM impact_records WHERE source IN ('activated', 'agent')")?.n ?? 0;
   run("DELETE FROM impact_records WHERE source IN ('activated', 'agent')");
+  ledgerChanged("reset");
   return n;
 }

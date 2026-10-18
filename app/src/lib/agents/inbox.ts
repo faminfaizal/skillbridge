@@ -8,6 +8,8 @@ import { activate } from "../engine/impact.ts";
 import { valueForOpportunity, type OpportunityRow } from "../engine/value.ts";
 import { tick } from "./runner.ts";
 import { ensureAgentTables, today } from "./store.ts";
+import { ACTION_HANDLERS } from "./actions.ts";
+import { agentsChanged, ledgerChanged } from "../cloud/index.ts";
 
 export function decide(id: number, decision: "approve" | "dismiss"): { status: string; outcome: string } {
   ensureAgentTables();
@@ -16,6 +18,7 @@ export function decide(id: number, decision: "approve" | "dismiss"): { status: s
   if (row.status !== "pending") throw new Error(`Already ${row.status}.`);
   if (decision === "dismiss") {
     run("UPDATE agent_inbox SET status = 'dismissed', decided_at = ?, outcome = 'Dismissed' WHERE id = ?", new Date().toISOString(), id);
+    agentsChanged("dismiss");
     return { status: "dismissed", outcome: "Dismissed" };
   }
   const a = JSON.parse(row.action) as Record<string, any>;
@@ -45,9 +48,13 @@ export function decide(id: number, decision: "approve" | "dismiss"): { status: s
     run("INSERT OR IGNORE INTO person_skills (person_id, skill_id, level, source, last_used_year) VALUES (?, ?, 3, 'confirmed', ?)", a.personId, a.skillId, Number(today().slice(0, 4)));
     outcome = "Skill confirmed on the profile (level 3).";
     changed = true;
+  } else if (ACTION_HANDLERS[a.type]) {
+    ({ outcome, changed } = ACTION_HANDLERS[a.type](a, id));
   }
   run("UPDATE agent_inbox SET status = 'approved', decided_at = ?, outcome = ? WHERE id = ?", new Date().toISOString(), outcome, id);
   bumpDataVersion();
+  agentsChanged("approve");
+  ledgerChanged("approve");
   if (changed) void tick(true);
   return { status: "approved", outcome };
 }

@@ -10,7 +10,7 @@ import { all } from "./db.ts";
 import type { Model } from "./engine/data.ts";
 import type { GraphData, GraphEdge, GraphNode } from "./types.ts";
 
-export const GRAPH_FILE = () => path.resolve(process.cwd(), "../data/graph.json");
+export const GRAPH_FILE = () => process.env.SKILLBRIDGE_GRAPH || path.resolve(process.cwd(), "../data/graph.json");
 
 export function readGraph(): GraphData | null {
   try {

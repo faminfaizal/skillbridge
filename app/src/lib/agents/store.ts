@@ -1,6 +1,7 @@
 // Agent state in SQLite: the change log (filled by database triggers on every data insert), agent runs, the proposal
 // inbox, purchase requests (a new data source the Opportunity Scout watches) and small key/value state.
 import { all, get, getDb, run } from "../db.ts";
+import { agentsChanged } from "../cloud/index.ts";
 
 let ready = false;
 
@@ -66,6 +67,7 @@ export function startRun(agent: string, trigger: string, eventIds: number[] = []
 export function finishRun(id: number, status: "done" | "failed", steps: Step[], summary: string, provider: string, nodeIds: string[] = []): void {
   run("UPDATE agent_runs SET status = ?, finished_at = ?, steps = ?, summary = ?, provider = ?, node_ids = ? WHERE id = ?",
     status, new Date().toISOString(), JSON.stringify(steps), summary, provider, JSON.stringify([...new Set(nodeIds)].slice(0, 200)), id);
+  agentsChanged("run");
 }
 
 export interface Proposal {
@@ -80,6 +82,7 @@ export function propose(p: Proposal): boolean {
        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'pending', ?, ?, ?)`,
     p.agent, p.runId, p.kind, p.title, p.detail, JSON.stringify(p.evidence), Math.round(p.valueAmt), JSON.stringify(p.nodeIds), p.approver,
     JSON.stringify(p.action), p.dedupeKey, p.provider, new Date().toISOString());
+  agentsChanged("propose");
   return true;
 }
 

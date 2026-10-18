@@ -9,4 +9,5 @@ export const EXEC_QUESTIONS: Record<ExecIntent, string> = {
   revenue: "Which under-utilised capabilities could generate revenue?",
   value: "How much value did internal reuse create this quarter?",
   invest: "Where should we invest the savings?",
+  redeploy: "If AI takes over contact-centre work, where can those people go?",
 };

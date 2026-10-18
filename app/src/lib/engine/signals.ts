@@ -7,6 +7,7 @@
 //   forgotten   Experts to re-engage: strong track record, activity has faded
 //   ghosts      Off-chart contributors: significant work outside their formal projects and team
 import Graph from "graphology";
+import { inclusionItems } from "./inclusion.ts";
 import betweenness from "graphology-metrics/centrality/betweenness.js";
 import { all } from "../db.ts";
 import { data, type Model } from "./data.ts";
@@ -367,6 +368,11 @@ const META: Record<SignalKind, Omit<SignalResult, "kind" | "items" | "generatedA
     title: "Experts to re-engage", question: "Which proven experts have dropped out of the work?", run: forgotten,
     description: "People with a significant track record (reused knowledge, incidents fixed, deep skills) whose activity has faded and who are on no active project.",
     method: ["Track record = knowledge reuse + 2 x incidents fixed before 2026 + 3 x skills at 5/5 + 2025 contributions (20+ required).", "Faded = 2026 monthly activity at or below 40% of 2025, no active project."],
+  },
+  inclusion: {
+    title: "Opportunity equity", question: "Does opportunity reach people outside headquarters?", run: (c) => inclusionItems(c.m, ghosts(c)),
+    description: "Each location's share of the workforce against its share of the people proposed for open work, with remote regions and off-chart contributors made visible.",
+    method: ["Headcount share excludes the executive team.", "Opportunity share counts people proposed for open opportunities, including reskilling picks."],
   },
   ghosts: {
     title: "Off-chart contributors", question: "Who does important work outside their formal role?", run: ghosts,

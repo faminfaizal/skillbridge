@@ -2,6 +2,8 @@
 // database triggers log each insert, and the runner picks the changes up exactly as it would from a real HR or ITSM feed.
 // Every simulated row id starts with "SIM-" so the demo can be reset.
 import fs from "node:fs";
+import { resetExtensions } from "./resetHooks.ts";
+import { agentsChanged, ledgerChanged } from "../cloud/index.ts";
 import path from "node:path";
 import { all, get, getDb, run } from "../db.ts";
 import { bumpDataVersion } from "../cacheVersion.ts";
@@ -118,7 +120,9 @@ async function resetLocked(): Promise<{ removed: number }> {
   ensureProfileTables();
   for (const r of all<{ person_id: string }>("SELECT DISTINCT person_id FROM profile_trace")) people.add(r.person_id);
   removed += resetProfiles();
-  // Impact records first: an approved RFP bid references its simulated opportunity
+  // Newer features first (crises, community requests, social records), then impact records:
+  // an approved RFP bid references its simulated opportunity
+  removed += resetExtensions();
   resetActivations();
   del("DELETE FROM person_skills WHERE source = 'confirmed'");
   del("DELETE FROM opportunity_role_skills WHERE role_id LIKE 'SIM-%'");
@@ -138,5 +142,7 @@ async function resetLocked(): Promise<{ removed: number }> {
   writeGraph(buildGraph(data(), { pinned: new Map((prev?.nodes ?? []).map((n) => [n.id, { x: n.x, y: n.y }])) }));
   setState("snapshot", snapshot());
   setState("graph_version", (getState<number>("graph_version") ?? 0) + 1);
+  agentsChanged("reset");
+  ledgerChanged("reset");
   return { removed };
 }

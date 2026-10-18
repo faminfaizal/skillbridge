@@ -9,7 +9,9 @@ import { narrative } from "./explain.ts";
 import { classifyIntent, execAnswer, looksLikeQuestion, ruleIntent } from "./exec.ts";
 import type { AskResult } from "../types.ts";
 
-export async function ask(query: string): Promise<AskResult> {
+export interface AskOptions { sessionId?: string }
+
+export async function ask(query: string, _opts: AskOptions = {}): Promise<AskResult> {
   const t0 = Date.now();
   const m = data();
   // 1. executive questions (rules); 2. exact demo requests; 3. Concierge questions (rules); 4. fuzzy opportunity match;
