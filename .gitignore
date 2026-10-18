@@ -16,3 +16,4 @@ data/graph.json
 app/tsconfig.tsbuildinfo
 .env
 __pycache__/
+docs/pitch/
