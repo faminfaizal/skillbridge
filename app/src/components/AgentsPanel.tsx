@@ -2,6 +2,7 @@
 // AI agents: proposal inbox (human approval), live activity (each run's tool calls), the agent roster, and the demo
 // data feed. Agents propose; people decide.
 import { useState } from "react";
+import CloudStatus from "./CloudStatus";
 import { Icon } from "./Icon";
 import { aiLabel, money } from "../lib/format";
 import type { AgentId, AgentsView, InboxItem } from "../lib/types";
@@ -67,6 +68,7 @@ export default function AgentsPanel({ data, error, onSimulate, onDecide, onReset
         {data.busy ? "Agents are working on new data…" : data.queued ? `${data.queued} change${data.queued === 1 ? "" : "s"} queued` : "Watching for data changes."}
       </p>
 
+      <CloudStatus compact />
       <section className="sim card" aria-labelledby="sim-h">
         <div className="row-between"><h3 id="sim-h" className="section-h" style={{ margin: 0 }}>Simulate new data</h3><span className="chip">Demo feed</span></div>
         <p className="muted small">Writes records into the data tables; database triggers log them and the agents react, as to a real HR or ITSM feed.</p>

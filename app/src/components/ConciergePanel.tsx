@@ -1,5 +1,6 @@
 "use client";
 // Concierge agent answer: the reply, the tools it chose and what each returned, links into the graph and lenses.
+// Follow-up answers show how many earlier questions of the conversation the agent used.
 import { Icon } from "./Icon";
 import { aiLabel } from "../lib/format";
 import type { ConciergeAnswer, ConciergeRef } from "../lib/types";
@@ -43,6 +44,11 @@ export default function ConciergePanel({ r, onFocus, onAsk, onLens, onAgents }: 
         </span>
         <span className="chip">{toolSteps.length} tool call{toolSteps.length === 1 ? "" : "s"}</span>
         <span className={`chip${r.grounded ? " chip-ready" : " chip-gap"}`}><Icon name={r.grounded ? "check" : "alert"} />{r.grounded ? "Every figure from the tools" : "Rebuilt from tool results"}</span>
+        {r.memory && r.memory.turns > 0 && (
+          <span className="chip chip-memory" title={r.memory.source === "firestore" ? "Conversation memory restored from Firestore" : "Conversation memory from this session"}>
+            <Icon name="chat" />Remembers {r.memory.turns} earlier question{r.memory.turns === 1 ? "" : "s"}
+          </span>
+        )}
       </div>
       <Answer text={r.answer} />
 

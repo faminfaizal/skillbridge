@@ -14,6 +14,9 @@ import AgentsPanel, { type AgentsData } from "../components/AgentsPanel";
 import AgentsButton from "../components/AgentsButton";
 import ConciergePanel from "../components/ConciergePanel";
 import ChallengeTeam, { draftChanged, initialDraft, type TeamDraft } from "../components/ChallengeTeam";
+import CrisisPanel from "../components/CrisisPanel";
+import CommunityPanel from "../components/CommunityPanel";
+import type { GraphHighlight } from "../components/actPanels";
 import { EMPTY_VIEW, type GraphView } from "../lib/graphView";
 import { EXEC_QUESTIONS } from "../lib/questions";
 import type { AskResult, Candidate, DiscoveryCard, DiscoveryResult, GraphData, HiddenTalentPerson, SignalItem, SignalKind, SignalResult, ValueEstimate, WhatIfResult } from "../lib/types";
@@ -24,14 +27,27 @@ const Graph3D = dynamic(() => import("../components/graph/Graph3D"), {
   loading: () => <div className="stage-msg" role="status"><span className="spinner" aria-hidden="true" /> Loading 3D view</div>,
 });
 
-type ListKind = "answer" | "talent" | "risk" | "discover" | "agents" | SignalKind;
+type ListKind = "answer" | "talent" | "risk" | "discover" | "agents" | "crisis" | "community" | SignalKind;
 type Side = { kind: "none" } | { kind: ListKind } | { kind: "person"; id: string } | { kind: "node"; id: string };
-const SIGNALS: SignalKind[] = ["bridges", "bottlenecks", "rising", "islands", "forgotten", "ghosts"];
+const SIGNALS: SignalKind[] = ["bridges", "bottlenecks", "rising", "islands", "forgotten", "ghosts", "inclusion"];
 const isSignal = (k: string): k is SignalKind => (SIGNALS as string[]).includes(k);
-const isList = (k: string): k is ListKind => k === "answer" || k === "talent" || k === "risk" || k === "discover" || k === "agents" || isSignal(k);
+const ACT = ["crisis", "community"] as const;
+const isAct = (k: string): k is "crisis" | "community" => (ACT as readonly string[]).includes(k);
+const isList = (k: string): k is ListKind => k === "answer" || k === "talent" || k === "risk" || k === "discover" || k === "agents" || isAct(k) || isSignal(k);
 type Opp = { id: string; title: string; demo_query: string | null };
 const backLabel = (k: ListKind) => (k === "answer" ? "Back to results" : k === "agents" ? "Back to agents" : `Back to ${lensLabel(k).toLowerCase()}`);
-const EXEC_SUGGEST = [EXEC_QUESTIONS.gaps, EXEC_QUESTIONS.external, EXEC_QUESTIONS.invest];
+const EXEC_SUGGEST = [EXEC_QUESTIONS.gaps, EXEC_QUESTIONS.external, EXEC_QUESTIONS.redeploy, EXEC_QUESTIONS.invest];
+
+/** One id per browser for Concierge conversation memory (follow-up questions). */
+function sessionId(): string {
+  try {
+    let id = localStorage.getItem("sb-session");
+    if (!id) { id = crypto.randomUUID(); localStorage.setItem("sb-session", id); }
+    return id;
+  } catch {
+    return "";
+  }
+}
 const CONCIERGE_SUGGEST = ["Who is rising fast, and is anything waiting for my approval?", "What happens if Priya Nair leaves?"];
 
 function cardView(c: DiscoveryCard): GraphView {
@@ -107,7 +123,7 @@ export default function Home() {
     const f = sp.get("focus");
     if (f) focusNode(f);
     else if (q) { setQuery(q); submit(q); }
-    else if (m && (m === "talent" || m === "risk" || m === "discover" || isSignal(m))) setMode(m);
+    else if (m && (m === "talent" || m === "risk" || m === "discover" || isAct(m) || isSignal(m))) setMode(m);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [graph]);
 
@@ -212,7 +228,7 @@ export default function Home() {
     setQuery(q);
     setAsking(true); setAskErr(""); setActivated(null); setTeamDraft(null); setChallenge(false);
     try {
-      const res = await fetch("/api/ask", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ query: q }) });
+      const res = await fetch("/api/ask", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ query: q, sessionId: sessionId() || undefined }) });
       const body = await res.json();
       if (!res.ok) throw new Error(body.error ?? "Something went wrong.");
       setAnswer(body);
@@ -255,6 +271,9 @@ export default function Home() {
         setTalent(list);
         setView({ ...EMPTY_VIEW, mode: "talent", stars: list.slice(0, 3).map((p) => p.personId) });
       });
+    } else if (isAct(mode)) {
+      setSide({ kind: mode });
+      setView(EMPTY_VIEW);
     } else if (mode === "risk") {
       setSide({ kind: "risk" });
       setView({ ...EMPTY_VIEW, mode: "risk" });
@@ -340,9 +359,9 @@ export default function Home() {
     setReturnTo(null);
   }
 
-  const mode: Lens = side.kind === "talent" || side.kind === "risk" || side.kind === "discover" || isSignal(side.kind) ? side.kind
+  const mode: Lens = side.kind === "talent" || side.kind === "risk" || side.kind === "discover" || isAct(side.kind) || isSignal(side.kind) ? side.kind
     : (side.kind === "person" || side.kind === "node") && returnTo && returnTo !== "answer" && returnTo !== "agents" ? returnTo : "explore";
-  const wide = (side.kind === "answer" && answer?.kind !== "team") || side.kind === "discover" || side.kind === "agents";
+  const wide = (side.kind === "answer" && answer?.kind !== "team") || side.kind === "discover" || side.kind === "agents" || isAct(side.kind);
   const sigKind = isSignal(side.kind) ? side.kind : null;
 
   return (
@@ -414,6 +433,13 @@ export default function Home() {
             {side.kind === "risk" && <RiskPanel onWhatIf={runWhatIf} result={whatif} onFocus={focusNode} />}
             {sigKind && <SignalPanel result={sig[sigKind] ?? null} error={sigErr} activeId={activeSig} onFocus={focusNode}
               onShow={(it) => { setActiveSig(it.id); setView(signalView(sigKind, [it])); }} />}
+            {isAct(side.kind) && (() => {
+              const act = {
+                onFocus: focusNode, onAgents: openAgents, onToast: setToast, refreshAgents: loadAgents,
+                onShow: (v: GraphHighlight) => setView({ ...EMPTY_VIEW, mode: "answer", nodeIds: v.nodeIds, stars: v.stars ?? [], danger: v.danger ?? [], pulse: v.pulse }),
+              };
+              return side.kind === "crisis" ? <CrisisPanel {...act} /> : <CommunityPanel {...act} />;
+            })()}
             {side.kind === "discover" && <DiscoverPanel result={disc} error={discErr} activeId={activeCard} onShow={showCard} onFocus={focusNode} onAsk={submit} />}
             {side.kind === "agents" && <AgentsPanel data={agents} error={agentsErr} simulating={simulating} deciding={deciding}
               onSimulate={simulateData} onDecide={decideProposal} onReset={resetAgentDemo}

@@ -21,10 +21,10 @@ import type { ConciergeRef, ExecIntent, SignalKind } from "../types.ts";
 
 export interface ToolOut { facts: unknown; summary: string; refs: ConciergeRef[]; nodeIds: string[]; stars?: string[] }
 
-const LENSES = ["hidden_talent", "rising", "bridges", "bottlenecks", "islands", "forgotten", "ghosts"] as const;
+const LENSES = ["hidden_talent", "rising", "bridges", "bottlenecks", "islands", "forgotten", "ghosts", "inclusion"] as const;
 const LENS_NAME: Record<string, string> = { hidden_talent: "Hidden talent", rising: "Rising stars", bridges: "Collaboration bridges", bottlenecks: "Overloaded connectors",
-  islands: "Knowledge islands", forgotten: "Experts to re-engage", ghosts: "Off-chart contributors" };
-const TOPICS: ExecIntent[] = ["gaps", "external", "future", "dependency", "revenue", "value", "invest"];
+  islands: "Knowledge islands", forgotten: "Experts to re-engage", ghosts: "Off-chart contributors", inclusion: "Opportunity equity" };
+const TOPICS: ExecIntent[] = ["gaps", "external", "future", "dependency", "revenue", "value", "invest", "redeploy"];
 
 const visible = (m: Model, id: string) => m.people.get(id)?.consent_visibility === 1;
 const personRef = (m: Model, id: string): ConciergeRef => ({ id, label: m.people.get(id)!.name, kind: "person" });
@@ -127,7 +127,7 @@ export const TOOLS: Record<string, { spec: ToolSpec; run: (args: Record<string, 
     },
   },
   executive_question: {
-    spec: { type: "function", function: { name: "executive_question", description: "A strategic answer as a decision: capability gaps, paying externals for skills we have, future critical skills, over-dependence on individuals, revenue from under-used capability, value created, where to invest the savings.",
+    spec: { type: "function", function: { name: "executive_question", description: "A strategic answer as a decision: capability gaps, paying externals for skills we have, future critical skills, over-dependence on individuals, revenue from under-used capability, value created, where to invest the savings, where people go when AI takes over their work (redeploy).",
       parameters: { type: "object", properties: { topic: { type: "string", enum: TOPICS } }, required: ["topic"] } } },
     run: ({ topic }) => {
       const t = (TOPICS.includes(topic) ? topic : "gaps") as ExecIntent;
@@ -138,7 +138,7 @@ export const TOOLS: Record<string, { spec: ToolSpec; run: (args: Record<string, 
     },
   },
   people_signal: {
-    spec: { type: "function", function: { name: "people_signal", description: "People or skills listed by a SkillBridge lens: hidden_talent, rising (rising stars), bridges (only link between teams), bottlenecks (overloaded connectors), islands (expertise trapped in one team), forgotten (experts to re-engage), ghosts (off-chart contributors).",
+    spec: { type: "function", function: { name: "people_signal", description: "People or skills listed by a SkillBridge lens: hidden_talent, rising (rising stars), bridges (only link between teams), bottlenecks (overloaded connectors), islands (expertise trapped in one team), forgotten (experts to re-engage), ghosts (off-chart contributors), inclusion (opportunity equity by location).",
       parameters: { type: "object", properties: { lens: { type: "string", enum: LENSES as unknown as string[] } }, required: ["lens"] } } },
     run: ({ lens }) => {
       const m = data();
@@ -155,7 +155,7 @@ export const TOOLS: Record<string, { spec: ToolSpec; run: (args: Record<string, 
       const facts = items.map((it) => ({ name: it.title, who: it.subtitle, [it.metricLabel]: it.metric, evidence: it.facts.slice(0, 2) }));
       return { facts, summary: items.length ? `${r.title}: ${items.slice(0, 3).map((it) => `${it.title} (${it.metric})`).join(", ")}.` : `${r.title}: nothing stands out.`,
         refs: [ref, ...items.flatMap((it) => it.people.slice(0, 1).map((p) => personRef(m, p.id)))],
-        nodeIds: items.map((it) => it.focusId), stars: k === "bottlenecks" || k === "islands" ? [] : items.map((it) => it.id) };
+        nodeIds: items.map((it) => it.focusId), stars: k === "bottlenecks" || k === "islands" || k === "inclusion" ? [] : items.map((it) => it.id) };
     },
   },
   opportunities: {

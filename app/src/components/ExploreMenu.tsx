@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { Icon } from "./Icon";
 import type { SignalKind } from "../lib/types";
 
-export type Lens = "explore" | "discover" | "talent" | "risk" | SignalKind;
+export type Lens = "explore" | "discover" | "talent" | "risk" | "crisis" | "community" | SignalKind;
 
 export const LENSES: { group: string; items: { id: Lens; label: string; hint: string; icon: string }[] }[] = [
   { group: "Graph", items: [{ id: "explore", label: "Whole organisation", hint: "The living capability graph", icon: "network" }] },
@@ -16,6 +16,13 @@ export const LENSES: { group: string; items: { id: Lens; label: string; hint: st
       { id: "bridges", label: "Collaboration bridges", hint: "The only link between teams", icon: "bridge" },
       { id: "forgotten", label: "Experts to re-engage", hint: "Proven experts whose activity faded", icon: "reset" },
       { id: "ghosts", label: "Off-chart contributors", hint: "Big work outside their formal role", icon: "offchart" },
+      { id: "inclusion", label: "Opportunity equity", hint: "Does opportunity reach every location?", icon: "users" },
+    ],
+  },
+  {
+    group: "Act", items: [
+      { id: "crisis", label: "Incident response team", hint: "A situation report becomes a nearby team", icon: "zap" },
+      { id: "community", label: "Community skills exchange", hint: "Volunteers matched to community requests", icon: "hand" },
     ],
   },
   {

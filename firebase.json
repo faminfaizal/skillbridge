@@ -1,0 +1,7 @@
+{
+  "hosting": {
+    "public": "firebase-public",
+    "ignore": ["firebase.json", "**/.*"],
+    "rewrites": [{ "source": "**", "run": { "serviceId": "skillbridge", "region": "us-central1" } }]
+  }
+}

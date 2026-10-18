@@ -6,6 +6,7 @@ import { chatJson, chatTools, toolProviders, type ChatMsg } from "../llm.ts";
 import { TOOLS, TOOL_SPECS, type ToolOut } from "./conciergeTools.ts";
 import { finishRun, startRun, type Step } from "./store.ts";
 import type { ConciergeAnswer, ConciergeRef } from "../types.ts";
+import type { MemorySource, Turn } from "../cloud/memory.ts";
 
 export const CONCIERGE_SYSTEM =
   "You are the SkillBridge Concierge, an AI agent for managers at Veridane Networks (a fictional international telecom and technology services company). " +
@@ -81,10 +82,27 @@ const FOLLOW_UPS: Record<string, string[]> = {
 };
 
 // ---------------------------------------------------------------- run
-export async function concierge(query: string, t0 = Date.now()): Promise<ConciergeAnswer> {
+/** Follow-ups carry the session's earlier turns; standalone questions pass none and run exactly as before. */
+export interface ConciergeOptions { history?: Turn[]; source?: MemorySource }
+
+/** The model conversation: system, then (follow-ups only) the last 3 question/answer pairs as plain text, then the
+ * question. Text only, no tool parts, so no thought signatures are needed; standalone messages are unchanged. */
+export function conciergeMessages(query: string, history: Turn[] = []): ChatMsg[] {
+  const earlier: ChatMsg[] = history.slice(-3).flatMap((t): ChatMsg[] => [{ role: "user", content: t.q }, { role: "assistant", content: t.a }]);
+  return [{ role: "system", content: CONCIERGE_SYSTEM }, ...earlier, { role: "user", content: query }];
+}
+
+export async function concierge(query: string, t0 = Date.now(), opts: ConciergeOptions = {}): Promise<ConciergeAnswer> {
+  return (await runConcierge(query, t0, opts)).result;
+}
+
+/** The Concierge run plus the evidence its answer was grounded on (kept as conversation memory). */
+export async function runConcierge(query: string, t0 = Date.now(), opts: ConciergeOptions = {}): Promise<{ result: ConciergeAnswer; evidence: string }> {
+  const history = (opts.history ?? []).slice(-3);
   const runId = startRun("concierge", `Question: ${query.slice(0, 120)}`);
   const steps: ConciergeAnswer["steps"] = [];
   const outs: { name: string; out: ToolOut }[] = [];
+  if (history.length) steps.push({ tool: "Conversation memory", args: "", result: `follow-up: read ${history.length} earlier question${history.length === 1 ? "" : "s"} from ${opts.source === "firestore" ? "Firestore" : "this session"}`, ms: 0 });
 
   async function call(name: string, args: Record<string, unknown>): Promise<string> {
     const tool = TOOLS[name];
@@ -105,7 +123,7 @@ export async function concierge(query: string, t0 = Date.now()): Promise<Concier
 
   // 1. tool calling: the model plans, calls tools, reads results, answers
   for (const p of toolProviders()) {
-    const messages: ChatMsg[] = [{ role: "system", content: CONCIERGE_SYSTEM }, { role: "user", content: query }];
+    const messages: ChatMsg[] = conciergeMessages(query, history);
     const before = outs.length;
     try {
       for (let round = 0; round < MAX_ROUNDS; round++) {
@@ -135,12 +153,12 @@ export async function concierge(query: string, t0 = Date.now()): Promise<Concier
 
   // 2. no tool-calling model: the planner picks the tools; a model (or template) writes the answer
   if (!answer) {
-    for (const c of plan(query)) await call(c.name, c.args);
+    for (const c of plan(history.length ? `${history[history.length - 1].q} ${query}` : query)) await call(c.name, c.args);
     const facts = outs.map((o) => ({ tool: o.name, facts: o.out.facts }));
     try {
       const t = Date.now();
       const r = await chatJson<{ answer: string }>("chat", `${CONCIERGE_SYSTEM} Answer only from these tool results. Return ONLY JSON: {"answer": string}.`,
-        JSON.stringify({ question: query, tool_results: facts }).slice(0, 7000), { kind: "concierge_summary", maxTokens: 400 });
+        JSON.stringify(history.length ? { question: query, tool_results: facts, earlier: history.map((t) => ({ q: t.q, a: t.a })) } : { question: query, tool_results: facts }).slice(0, 7000), { kind: "concierge_summary", maxTokens: 400 });
       steps.push({ tool: "summary model", args: "", result: "wrote the answer from the tool results", ms: Date.now() - t, ai: true });
       answer = r.data.answer?.trim() ?? "";
       provider = r.provider;
@@ -152,7 +170,8 @@ export async function concierge(query: string, t0 = Date.now()): Promise<Concier
   }
 
   // 3. grounding: any figure the tools did not return means the answer is rebuilt from the tool results
-  const evidence = outs.map((o) => `${JSON.stringify(o.out.facts)} ${o.out.summary}`).join(" ");
+  const own = outs.map((o) => `${JSON.stringify(o.out.facts)} ${o.out.summary}`).join(" ");
+  const evidence = [own, ...history.map((t) => t.evidence)].join(" ");
   answer = answer.replace(/\s*[–—]\s*/g, ", ");
   const missing = ungrounded(answer, evidence);
   const grounded = !missing.length;
@@ -164,12 +183,12 @@ export async function concierge(query: string, t0 = Date.now()): Promise<Concier
   const used = [...new Set(outs.map((o) => o.name))];
   const followUps = [...new Set(used.flatMap((u) => FOLLOW_UPS[u] ?? []))].filter((f) => f.toLowerCase() !== query.toLowerCase()).slice(0, 3);
   const result: ConciergeAnswer = {
-    kind: "concierge", query, answer, mode, provider, model, grounded,
+    kind: "concierge", ...(history.length ? { memory: { turns: history.length, source: opts.source ?? "memory" } } : {}), query, answer, mode, provider, model, grounded,
     steps, refs: [...refs.values()].slice(0, 14), followUps,
     highlight: { nodeIds: [...new Set(outs.flatMap((o) => o.out.nodeIds))].slice(0, 80), stars: [...new Set(outs.flatMap((o) => o.out.stars ?? []))] },
     elapsedMs: Date.now() - t0,
   };
   const logSteps: Step[] = steps.map((s) => ({ tool: s.tool, detail: `${s.args ? `${s.args} → ` : ""}${s.result}`, ms: s.ms, ai: s.ai }));
   finishRun(runId, "done", logSteps, `${mode === "tool-calling" ? "Tool calling" : "Planned"}: ${used.join(", ") || "no tools"}. ${answer.slice(0, 140)}`, provider, result.highlight.nodeIds);
-  return result;
+  return { result, evidence: own };
 }

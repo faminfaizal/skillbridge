@@ -1,1 +1,27 @@
-/* social styles (owned by its track) */
+/* social styles (owned by its track): social and environmental value ledger, value by quarter (value page) */
+.social-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s3); flex-wrap: wrap; }
+.social-head .section-h { margin-top: 0; }
+.social-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--s2); }
+.social-tile { display: flex; flex-direction: column; gap: var(--s1); min-width: 0; background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border);
+  border-radius: var(--r-sm); padding: var(--s3); border-top: 3px solid var(--cost); }
+.social-tile b { font-size: var(--fs-xl); font-variant-numeric: tabular-nums; line-height: 1.1; overflow-wrap: anywhere; }
+.social-tile b small { font-size: var(--fs-sm); font-weight: 400; color: var(--text-2); }
+.social-statement { color: var(--text); font-size: var(--fs-base); line-height: 1.5; max-width: 75ch; padding-left: var(--s3); border-left: 3px solid var(--accent-2); }
+.social-how .assumptions { margin-top: var(--s2); display: flex; flex-direction: column; gap: var(--s1); }
+.social-how .assumptions b { color: var(--text-2); font-weight: 600; }
+.social-how summary { color: var(--text-2); min-height: 24px; display: inline-flex; align-items: center; }
+
+.q-source { font-size: var(--fs-xs); font-weight: 700; border-radius: 4px; padding: 2px var(--s2); border: 1px solid var(--border-strong); color: var(--text-2); }
+.q-source.bigquery { border-color: rgba(56, 189, 248, 0.6); color: var(--info); }
+.q-bars { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
+.q-bars thead th { font-size: var(--fs-xs); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); border-bottom: 1px solid var(--border); }
+.q-bars thead th.n { text-align: right; }
+.q-bars th { text-align: left; font-weight: 400; color: var(--text-2); padding: var(--s1) var(--s2) var(--s1) 0; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.q-bars td { padding: var(--s1) 0; }
+.q-bars td:nth-child(2) { width: 100%; }
+.q-bars td:nth-child(2) > * { vertical-align: middle; }
+.q-bars td.n { text-align: right; padding-left: var(--s2); font-variant-numeric: tabular-nums; }
+.q-bar { display: inline-block; width: calc(100% - 64px); height: 12px; }
+.q-bar i { display: block; height: 100%; background: var(--rev); border-radius: 0 4px 4px 0; }
+.q-val { display: inline-block; width: 60px; margin-left: var(--s1); text-align: right; color: var(--text); font-variant-numeric: tabular-nums; }
+.q-bars tr:hover th, .q-bars tr:hover .q-val { color: var(--text); }

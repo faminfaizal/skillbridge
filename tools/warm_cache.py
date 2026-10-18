@@ -51,3 +51,30 @@ print("activate ->", rec["id"], rec["cost_avoided_amt"], rec["productivity_amt"]
 summary = json.loads(urllib.request.urlopen(B + "/api/impact").read())
 print("dashboard total after activate:", summary["totals"]["total"])
 print("reset ->", post("/api/impact", None, "DELETE"))
+
+
+def get(path):
+    return json.loads(urllib.request.urlopen(B + path, timeout=180).read())
+
+
+def step(label, fn):
+    """Newer features: report and carry on, so one missing route never blocks the warm-up."""
+    try:
+        print(f"{label:12} {fn()}")
+    except Exception as e:  # noqa: BLE001
+        print(f"{label:12} FAILED {e}")
+
+
+# Redeploy question (executive answer plus the People Growth proposal)
+step("redeploy", lambda: post("/api/ask", {"query": "If AI takes over contact-centre work, where can those people go?"})["provider"])
+# Incident response: the bundled sample photo, read by Gemini (multimodal) and cached
+step("crisis", lambda: (lambda r: f"{r.get('provider')} {r.get('place', {}).get('name')} team={len(r.get('teamIds', []))}")(post("/api/crisis", {"sample": True}).get("crisis") or {}))
+# Community exchange board and the social ledger statement
+step("community", lambda: f"{len(get('/api/community').get('requests', get('/api/community') if isinstance(get('/api/community'), list) else []))} requests")
+step("social", lambda: get("/api/social")["statement"]["provider"])
+# Concierge memory: a question and its follow-up in one session
+SID = "warm-cache-session-0001"
+step("concierge", lambda: post("/api/ask", {"query": "What happens if Priya Nair leaves?", "sessionId": SID})["kind"])
+step("follow-up", lambda: (lambda r: f"{r['kind']} memory={r.get('memory')}")(post("/api/ask", {"query": "And who could replace her?", "sessionId": SID})))
+# Leave the demo clean: removes simulated crises, proposals, approvals and social records (the cache is kept)
+step("agents reset", lambda: post("/api/agents/reset", {}))

@@ -371,8 +371,9 @@ const META: Record<SignalKind, Omit<SignalResult, "kind" | "items" | "generatedA
   },
   inclusion: {
     title: "Opportunity equity", question: "Does opportunity reach people outside headquarters?", run: (c) => inclusionItems(c.m, ghosts(c)),
-    description: "Each location's share of the workforce against its share of the people proposed for open work, with remote regions and off-chart contributors made visible.",
-    method: ["Headcount share excludes the executive team.", "Opportunity share counts people proposed for open opportunities, including reskilling picks."],
+    description: "Each location's share of the people proposed for open work against its share of the workforce. Under-represented locations come first, with remote regions, off-chart contributors and the closest near-miss for an open role made visible.",
+    method: ["Headcount share excludes the executive team.", "Opportunity share counts people proposed for open opportunities, including reskilling picks.",
+      "Ratio = opportunity share / headcount share; below 1.0x means the location gets less than its share.", "Near-miss: the consenting person there, not yet proposed, with the highest match below the fill threshold for an open role."],
   },
   ghosts: {
     title: "Off-chart contributors", question: "Who does important work outside their formal role?", run: ghosts,

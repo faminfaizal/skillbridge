@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Field situation report FSR-NT-1018-02</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #e9e6df; }
+  body { font: 15px/1.45 "Segoe UI", Arial, sans-serif; color: #1d232b; padding: 28px; }
+  .sheet { background: #fdfcf8; width: 944px; min-height: 1244px; margin: 0 auto; padding: 34px 44px 30px; box-shadow: 0 2px 10px rgba(0,0,0,.18); position: relative; }
+  .head { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 3px solid #0d4f6c; padding-bottom: 12px; }
+  .brand { display: flex; gap: 12px; align-items: center; }
+  .mark { width: 46px; height: 46px; border-radius: 10px; background: #0d4f6c; color: #fff; display: grid; place-items: center; font: 700 22px "Segoe UI", Arial; }
+  .brand b { display: block; font-size: 22px; letter-spacing: .5px; color: #0d4f6c; }
+  .brand span { font-size: 12.5px; color: #4a5560; letter-spacing: .3px; }
+  .doc { text-align: right; font-size: 12.5px; color: #4a5560; }
+  .doc b { display: block; font-size: 18px; color: #1d232b; letter-spacing: .6px; }
+  .sev { position: absolute; top: 120px; right: 44px; border: 3px solid #b3261e; color: #b3261e; font: 800 30px "Segoe UI", Arial; padding: 2px 16px; transform: rotate(-6deg); border-radius: 6px; }
+  table.meta { width: 100%; border-collapse: collapse; margin: 18px 0 6px; font-size: 14px; }
+  table.meta td { border: 1px solid #c9c4b8; padding: 6px 10px; vertical-align: top; }
+  table.meta td.k { width: 150px; background: #f1eee6; font-weight: 600; color: #3a434c; }
+  h2 { font-size: 13.5px; letter-spacing: 1.2px; text-transform: uppercase; color: #0d4f6c; margin: 18px 0 6px; border-bottom: 1px solid #c9c4b8; padding-bottom: 3px; }
+  p { margin: 4px 0; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+  table.req { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 4px; }
+  table.req th, table.req td { border: 1px solid #c9c4b8; padding: 6px 9px; text-align: left; }
+  table.req th { background: #f1eee6; font-size: 12.5px; letter-spacing: .4px; }
+  table.req td.n { text-align: center; width: 54px; font-weight: 700; }
+  .sketch { float: right; width: 330px; margin: 2px 0 8px 18px; border: 1px solid #c9c4b8; background: #fff; }
+  .sketch figcaption { font-size: 11.5px; color: #4a5560; padding: 3px 8px; border-top: 1px solid #e3dfd5; }
+  .hand { font-family: "Segoe Print", "Ink Free", "Comic Sans MS", cursive; color: #1d3f9a; font-size: 17px; transform: rotate(-2deg); display: inline-block; }
+  .note { margin-top: 14px; padding: 8px 12px; border: 1px dashed #8e9aa6; background: #fbfaf3; }
+  .foot { display: flex; justify-content: space-between; margin-top: 22px; font-size: 12.5px; color: #4a5560; border-top: 1px solid #c9c4b8; padding-top: 10px; }
+  .sig { width: 240px; border-bottom: 1px solid #6b747d; height: 34px; }
+  .mono { font-family: Consolas, "Courier New", monospace; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="head">
+    <div class="brand">
+      <div class="mark">V</div>
+      <div><b>VERIDANE NETWORKS</b><span>Field Operations, Northern Territory &middot; Network Operations Centre North</span></div>
+    </div>
+    <div class="doc"><b>FIELD SITUATION REPORT</b>Ref FSR-NT-1018-02 &middot; Page 1 of 1</div>
+  </div>
+  <div class="sev">P1</div>
+
+  <table class="meta">
+    <tr><td class="k">Issued</td><td>18 Oct 2026, 05:40 ACST</td><td class="k">Severity</td><td><b>P1</b> (health facility affected)</td></tr>
+    <tr><td class="k">Location</td><td colspan="3">Stuart Highway, 22 km south of <b>Katherine NT</b>, between poles KTH-114 and KTH-117</td></tr>
+    <tr><td class="k">Reported by</td><td>Duty engineer, NOC North</td><td class="k">Next update</td><td>07:00 ACST</td></tr>
+  </table>
+
+  <h2>1. Event</h2>
+  <figure class="sketch">
+    <svg viewBox="0 0 330 170" width="330" height="170" role="img" aria-label="Sketch of the damaged fibre span">
+      <rect width="330" height="170" fill="#fff"/>
+      <path d="M20 140 C 90 120, 150 95, 310 30" stroke="#9aa3ab" stroke-width="10" fill="none" stroke-linecap="round"/>
+      <text x="236" y="76" font-size="11" fill="#5d6770" font-family="Segoe UI">Stuart Hwy</text>
+      <g fill="#0d4f6c" font-family="Segoe UI" font-size="10">
+        <circle cx="60" cy="112" r="5"/><text x="40" y="100">KTH-114</text>
+        <circle cx="200" cy="64" r="5"/><text x="182" y="52">KTH-117</text>
+      </g>
+      <path d="M60 112 L 118 92" stroke="#0d4f6c" stroke-width="3"/>
+      <path d="M142 84 L 200 64" stroke="#0d4f6c" stroke-width="3"/>
+      <path d="M118 92 L 126 104 M142 84 L 136 98" stroke="#b3261e" stroke-width="3"/>
+      <g stroke="#b3261e" stroke-width="3"><line x1="122" y1="76" x2="138" y2="92"/><line x1="138" y1="76" x2="122" y2="92"/></g>
+      <text x="96" y="126" font-size="11" fill="#b3261e" font-family="Segoe UI" font-weight="700">span down</text>
+      <text x="16" y="24" font-size="11" fill="#5d6770" font-family="Segoe UI">N &#8593;</text>
+      <text x="16" y="160" font-size="10.5" fill="#5d6770" font-family="Segoe UI">to Katherine 22 km &#8599;</text>
+    </svg>
+    <figcaption>Sketch, not to scale. 48-core aerial trunk.</figcaption>
+  </figure>
+  <p>An overnight storm cell with wind gusts above 100 km/h brought down an <b>aerial fibre span</b> (48-core trunk) between poles KTH-114 and KTH-117. Two poles are leaning; the cable is on the road verge. Alarms raised 02:15 ACST.</p>
+
+  <h2>2. Impact</h2>
+  <ul>
+    <li><b>2 mobile sites offline</b> (KTH-South, KTH-Highway), on battery, about 4 h left.</li>
+    <li><b>LoRaWAN gateway GW-KTH-03 offline</b>: it carries the regional clinic's vaccine cold-chain and patient monitoring sensors.</li>
+    <li>About <b>1,200 customers reported affected</b> (mobile and fixed wireless). Emergency calls rerouting through neighbouring cells with reduced coverage.</li>
+  </ul>
+
+  <h2>3. Resources requested</h2>
+  <table class="req">
+    <tr><th>Crew / task</th><th>Skills</th><th>People</th><th>Work</th></tr>
+    <tr><td>Fibre splicing crew</td><td>Fibre splicing</td><td class="n">2</td><td>Re-hang the span and re-splice the 48-core trunk</td></tr>
+    <tr><td>OTDR testing</td><td>Fibre testing (OTDR)</td><td class="n">1</td><td>Locate any further breaks, certify the repair</td></tr>
+    <tr><td>Field coordination</td><td>Field service coordination</td><td class="n">1</td><td>Crew dispatch, road access, traffic control liaison</td></tr>
+    <tr><td>LoRaWAN restore</td><td>LoRaWAN, sensor networks</td><td class="n">1</td><td>Bring GW-KTH-03 back, check every clinic sensor</td></tr>
+  </table>
+
+  <div class="note"><span class="hand">Clinic sensors first, cold-chain alarm at 06:30! &nbsp;J.</span></div>
+
+  <h2>4. Access and conditions</h2>
+  <p>Highway open to one lane under traffic control; approach from the north. Further storms possible after 15:00 ACST. Elevated work platform needed for the poles; spare 48-core cable held at the regional depot.</p>
+
+  <h2>5. Actions so far</h2>
+  <p class="mono">02:15 alarms (LOS on trunk) &middot; 02:40 traffic rerouted where possible &middot; 03:30 site batteries confirmed &middot; 05:10 police confirm cable on verge, area cordoned</p>
+
+  <div class="foot">
+    <div>Prepared by: Duty engineer, NOC North<div class="sig"></div></div>
+    <div>Approved for dispatch: Head of Field Ops Regional<div class="sig"></div></div>
+    <div style="text-align:right">Veridane Networks<br>Internal &middot; Operational</div>
+  </div>
+</div>
+</body>
+</html>

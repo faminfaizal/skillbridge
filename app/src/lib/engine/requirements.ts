@@ -70,7 +70,7 @@ export async function matchOpportunity(query: string): Promise<MatchedOpportunit
   return best.s >= 0.5 ? best.o : null;
 }
 
-function mapSkill(m: Model, name: string): string | null {
+export function mapSkill(m: Model, name: string): string | null {
   const s = m.skillByName.get(name.toLowerCase());
   if (s) return s.id;
   for (const sk of m.skills.values()) {

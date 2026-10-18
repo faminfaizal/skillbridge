@@ -2,16 +2,103 @@
 import { useEffect, useState } from "react";
 import { Icon } from "../../components/Icon";
 import AiStatus from "../../components/AiStatus";
+import CloudStatus from "../../components/CloudStatus";
 import Sankey from "../../components/Sankey";
-import { money } from "../../lib/format";
+import { aiLabel, money } from "../../lib/format";
 import type { ImpactSummary } from "../../lib/types";
+import type { SocialLedger } from "../../lib/engine/social";
+
+interface SocialResp { ledger: SocialLedger; statement: { text: string; provider: string; grounded: boolean } }
+interface QuarterResp { source: "bigquery" | "sqlite"; rows: { quarter: string; activations: number; value: number }[]; jobMs?: number }
+
+const num = (x: number) => x.toLocaleString("en-US", { maximumFractionDigits: 1 });
+
+function SocialSection({ d, err }: { d: SocialResp | null; err: boolean }) {
+  return (
+    <section className="panel social" aria-labelledby="soc-h">
+      <div className="social-head">
+        <h2 id="soc-h" className="section-h">Social and environmental value</h2>
+        <a className="small" href="/ledger">Live ledger (Firestore)</a>
+      </div>
+      {err && <p className="small muted" role="alert">Could not load the social ledger. Reload to try again.</p>}
+      {!d && !err && <div className="skeleton" style={{ height: 96 }} />}
+      {d && (
+        <>
+          <div className="social-tiles">
+            {d.ledger.lines.map((l) => (
+              <div key={l.key} className="social-tile">
+                <span className="eyebrow">{l.label}</span>
+                <b>{num(l.value)} <small>{l.value === 1 && l.unit === "people" ? "person" : l.unit}</small></b>
+                <span className="small muted">History {num(l.seed)}, in the app {num(l.live)}</span>
+                {l.note && <span className="small muted">{l.note}</span>}
+              </div>
+            ))}
+          </div>
+          <p className="social-statement">
+            {d.statement.text}
+            <span className="small muted"> ({aiLabel(d.statement.provider)}{d.statement.grounded ? ", every figure checked against the ledger" : ""})</span>
+          </p>
+          <details className="social-how">
+            <summary className="small">How we count</summary>
+            <ul className="assumptions">
+              {d.ledger.lines.map((l) => <li key={l.key}><b>{l.label}:</b> {l.basis}</li>)}
+              {d.ledger.assumptions.map((a) => <li key={a}>{a}</li>)}
+            </ul>
+          </details>
+        </>
+      )}
+    </section>
+  );
+}
+
+function QuartersPanel({ q, err }: { q: QuarterResp | null; err: boolean }) {
+  const rows = q?.rows ?? [];
+  const max = Math.max(1, ...rows.map((r) => r.value));
+  return (
+    <section className="panel quarters" aria-labelledby="q-h">
+      <div className="social-head">
+        <h2 id="q-h" className="section-h">Value by quarter, from BigQuery</h2>
+        {q && <span className={`q-source ${q.source}`}>{q.source === "bigquery" ? `BigQuery${q.jobMs != null ? `, ${Math.round(q.jobMs)} ms` : ""}` : "SQLite fallback"}</span>}
+      </div>
+      <CloudStatus compact />
+      {err && <p className="small muted" role="alert">Could not load the quarters. Reload to try again.</p>}
+      {!q && !err && <div className="skeleton" style={{ height: 120 }} />}
+      {q && !rows.length && <p className="small muted">No quarters recorded yet. Activations appear here once they are synced.</p>}
+      {rows.length > 0 && (
+        <table className="q-bars">
+          <caption className="sr-only">Value unlocked per quarter, with the number of activations</caption>
+          <thead><tr><th scope="col">Quarter</th><th scope="col">Value unlocked</th><th scope="col" className="n">Activations</th></tr></thead>
+          <tbody>
+            {rows.map((r) => (
+              <tr key={r.quarter} title={`${r.quarter}: ${money(r.value)} from ${r.activations} activation${r.activations === 1 ? "" : "s"}`}>
+                <th scope="row">{r.quarter}</th>
+                <td><span className="q-bar" aria-hidden="true"><i style={{ width: `${Math.max(2, (r.value / max) * 100)}%` }} /></span><span className="q-val">{money(r.value)}</span></td>
+                <td className="n small muted">{r.activations}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+    </section>
+  );
+}
 
 export default function ValuePage() {
   const [s, setS] = useState<ImpactSummary | null>(null);
   const [err, setErr] = useState("");
   const [confirming, setConfirming] = useState(false);
+  const [social, setSocial] = useState<SocialResp | null>(null);
+  const [socialErr, setSocialErr] = useState(false);
+  const [quarters, setQuarters] = useState<QuarterResp | null>(null);
+  const [quartersErr, setQuartersErr] = useState(false);
 
-  const load = () => fetch("/api/impact").then((r) => r.json()).then(setS).catch(() => setErr("Could not load impact records."));
+  const json = (r: Response) => { if (!r.ok) throw new Error(String(r.status)); return r.json(); };
+  const load = () => {
+    fetch("/api/impact").then(json).then(setS).catch(() => setErr("Could not load impact records."));
+    fetch("/api/social").then(json).then((d: SocialResp) => { if (!d?.ledger?.lines) throw new Error("shape"); setSocial(d); setSocialErr(false); }).catch(() => setSocialErr(true));
+    fetch("/api/value/quarters").then(json).then((d: QuarterResp) => { setQuarters({ source: d?.source === "bigquery" ? "bigquery" : "sqlite", rows: Array.isArray(d?.rows) ? d.rows : [], jobMs: d?.jobMs }); setQuartersErr(false); })
+      .catch(() => setQuartersErr(true));
+  };
   useEffect(() => { load(); }, []);
 
   async function reset() {
@@ -78,9 +165,11 @@ export default function ValuePage() {
                   <div><b>{s.capability.projectsStaffed}</b><span className="small muted">teams staffed internally</span></div>
                   <div><b>{s.capability.gaps}</b><span className="small muted">open capability gaps</span></div>
                 </div>
-                <h2 className="section-h">Sustainability</h2>
-                <p className="small">Every activation reuses capability that already exists before hiring, buying or building new.</p>
               </section>
+            </div>
+            <div className="value-grid">
+              <SocialSection d={social} err={socialErr} />
+              <QuartersPanel q={quarters} err={quartersErr} />
             </div>
             <section className="panel" style={{ padding: "16px 24px" }} aria-labelledby="rec-h">
               <h2 id="rec-h" className="section-h">Impact records</h2>

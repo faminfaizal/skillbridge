@@ -1,1 +1,47 @@
-/* crisis styles (owned by its track) */
+/* crisis styles (owned by its track): shared intake form, incident response team, community skills exchange */
+.intake { display: flex; flex-direction: column; gap: var(--s2); }
+.intake-field { display: flex; flex-direction: column; gap: var(--s1); }
+.intake-input { width: 100%; background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border); border-radius: var(--r-sm); color: var(--text);
+  font: inherit; font-size: var(--fs-sm); padding: var(--s2) var(--s3); }
+.intake-input:focus { outline: none; border-color: var(--accent); box-shadow: var(--focus); }
+.intake-text { resize: vertical; min-height: 84px; line-height: 1.45; }
+.intake-drop { display: flex; align-items: center; gap: var(--s2); border: 1px dashed var(--border-strong); border-radius: var(--r-sm); padding: var(--s2) var(--s3);
+  transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease); }
+.intake-drop.over { border-color: var(--accent); background: rgba(56, 189, 248, 0.08); }
+.intake-drop .icon { stroke: var(--text-3); flex: none; }
+.intake-drop label.link-btn { display: inline; }
+.intake-actions { display: flex; flex-wrap: wrap; gap: var(--s2); }
+.intake-err { color: var(--danger); }
+
+.crisis { display: flex; flex-direction: column; gap: var(--s3); }
+.crisis-totals { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s2); }
+.crisis-totals .tile b { font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.crisis-roles, .crisis-members, .community-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--s2); }
+.crisis-role { display: flex; flex-direction: column; gap: var(--s2); }
+.crisis-role.gap { border-color: rgba(248, 113, 113, 0.5); }
+.crisis-role-h { display: flex; justify-content: space-between; align-items: baseline; gap: var(--s2); }
+.crisis-members li { display: flex; flex-direction: column; gap: var(--s1); padding-top: var(--s2); border-top: 1px solid var(--border); }
+.crisis-members li:first-child { border-top: 0; padding-top: 0; }
+.crisis-gap { color: var(--danger); }
+.crisis-mode.crisis-local { border-color: rgba(52, 211, 153, 0.5); color: var(--success); }
+.crisis-mode.crisis-road { border-color: rgba(56, 189, 248, 0.5); color: var(--accent); }
+.crisis-mode.crisis-flight { border-color: rgba(251, 191, 36, 0.5); color: var(--warn); }
+.crisis-status.crisis-proposed, .community-status.community-offered { border-color: rgba(251, 191, 36, 0.5); color: var(--warn); }
+.crisis-status.crisis-mobilised, .community-status.community-approved { border-color: rgba(52, 211, 153, 0.5); color: var(--success); }
+.crisis-status.crisis-dismissed, .crisis-status.crisis-no-team, .community-status.community-dismissed { color: var(--text-3); }
+.crisis-actions, .community-actions { display: flex; flex-wrap: wrap; gap: var(--s2); align-items: center; }
+.crisis-actions:empty, .community-actions:empty { display: none; }
+.crisis-done { color: var(--success); }
+
+.community-bar { display: flex; justify-content: space-between; align-items: center; gap: var(--s2); flex-wrap: wrap; }
+.community-req { display: flex; flex-direction: column; gap: var(--s2); transition: border-color var(--dur) var(--ease); }
+.community-req.active { border-color: rgba(56, 189, 248, 0.55); }
+.community-req-h { display: flex; justify-content: space-between; align-items: center; gap: var(--s2); background: none; border: 0; padding: 0; color: var(--text);
+  font: inherit; text-align: left; cursor: pointer; }
+.community-req-h:focus-visible { outline: none; box-shadow: var(--focus); border-radius: 4px; }
+.community-match .icon { vertical-align: -2px; }
+.chip-remote { border-color: rgba(167, 139, 250, 0.5); color: var(--accent-2); }
+
+@media (max-width: 520px) {
+  .crisis-totals { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

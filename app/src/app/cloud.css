@@ -1,1 +1,28 @@
-/* cloud styles (owned by its track) */
+/* cloud styles (owned by its track): Google Cloud status chips, the public ledger source badge, Concierge memory chip */
+.cloud-status { display: flex; flex-direction: column; gap: var(--s2); background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); padding: var(--s3) var(--s4); }
+.cloud-status.compact { background: none; border: 0; padding: 0; gap: var(--s1); }
+.cloud-chips { display: flex; flex-wrap: wrap; gap: var(--s1); }
+.cloud-chip { display: inline-flex; align-items: center; gap: 6px; padding: 2px var(--s2); border-radius: 999px; font-size: var(--fs-xs);
+  border: 1px solid var(--border); color: var(--text-2); background: rgba(12, 19, 36, 0.6); cursor: default; }
+.cloud-state { color: var(--text-3); }
+.cloud-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--text-3); flex: none; }
+.cloud-chip.live { border-color: rgba(52, 211, 153, 0.45); }
+.cloud-chip.live .cloud-dot, .ledger-source.live .cloud-dot { background: var(--success); box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.18); }
+.cloud-chip.error { border-color: rgba(248, 113, 113, 0.55); }
+.cloud-chip.error .cloud-dot { background: var(--danger); }
+.cloud-chip.pending .cloud-dot { background: var(--warn); }
+.cloud-details { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.cloud-details b { color: var(--text-2); font-weight: 600; margin-right: 4px; }
+
+.ledger-source { display: inline-flex; align-items: center; gap: var(--s2); padding: var(--s1) var(--s3); border-radius: 999px;
+  border: 1px solid var(--border); font-size: var(--fs-sm); color: var(--text-2); white-space: nowrap; }
+.ledger-source.live { border-color: rgba(52, 211, 153, 0.5); color: var(--success); background: rgba(52, 211, 153, 0.08); }
+.ledger-source .muted { font-size: var(--fs-xs); }
+
+.chip-memory { border-color: rgba(56, 189, 248, 0.5); }
+.chip-memory .icon { stroke: var(--accent); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .ledger-source.live .cloud-dot { animation: cloud-pulse 2.4s ease-in-out infinite; }
+}
+@keyframes cloud-pulse { 50% { box-shadow: 0 0 0 6px rgba(52, 211, 153, 0.05); } }

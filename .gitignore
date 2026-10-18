@@ -17,3 +17,4 @@ app/tsconfig.tsbuildinfo
 .env
 __pycache__/
 docs/pitch/
+.firebase/
