@@ -4,7 +4,7 @@
 
 SkillBridge is a capability intelligence platform for the future of work, built on Gemini and Google Cloud. It reads the work an organisation already records (projects, incidents, knowledge articles, documents and photos of them) to discover the skills people actually have, staffs new work from inside, plans the shortest reskilling path for any gap, redeploys people whose work AI takes over, mobilises the nearest qualified team after an incident, and measures every outcome in money, jobs kept and CO2e avoided.
 
-**Live prototype:** https://veridane-skillbridge-1017.web.app
+**Live prototype:** https://veridane-skillbridge-1017.web.app &middot; **Demo video:** https://youtu.be/U--90lwkl6M &middot; **Pitch deck:** https://veridane-skillbridge-1017.web.app/pitch/
 
 All data is synthetic. The demo organisation, Veridane Networks, is a fictional telecom and technology services company with 300 people.
 
@@ -91,5 +91,4 @@ For live Gemini: `gcloud auth application-default login`, copy `.env.example` to
 | `app/src/lib/me/`, `app/src/app/profile/` | My Profile |
 | `app/scripts/` | Precompute (inference, embeddings, graph) and the Vertex AI smoke test |
 | `data/generator/`, `data/seed/` | Synthetic data generator, story anchors, validation and generated seed |
-| `docs/DEMO_RUNBOOK.md` | Demo script |
 | `tools/` | API smoke test and golden-cache warm-up |

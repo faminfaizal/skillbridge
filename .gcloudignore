@@ -3,6 +3,7 @@
 .git/
 .gitignore
 .env
+/.*/
 agent/
 app/node_modules/
 app/.next/

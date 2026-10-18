@@ -10,7 +10,7 @@ docs/handoff/
 firebase-debug.log
 agent/.venv/
 
-# Not for the public repo: old planning docs, hackathon material
+# Not for the public repo: old planning docs and hackathon material
 docs/_private/
 data/graph.json
 app/tsconfig.tsbuildinfo
@@ -18,3 +18,4 @@ app/tsconfig.tsbuildinfo
 __pycache__/
 docs/pitch/
 .firebase/
+firebase-public/pitch/
