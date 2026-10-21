@@ -2,6 +2,7 @@
 // "Me" tabs: About me, My Projects, Skills, Evidence, Documents, Certifications.
 import { useId, useMemo, useRef, useState } from "react";
 import { Icon } from "../Icon";
+import CurrentPost from "../CurrentPost";
 import { EFFORTS, PROJECT_TYPES, type ProfileBundle } from "../../lib/me/types";
 import {
   Card, Combobox, Empty, FieldError, InlineText, LevelPicker, Locked, RemoveButton, SectionHead, SourceBadge, StatusBadge, TagInput, Toggle,
@@ -55,6 +56,12 @@ export function AboutTab() {
         <dl className="pf-facts">{facts.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v || "Not recorded"}</dd></div>)}</dl>
         <p className="small muted">These come from the HR system and are read-only here.</p>
       </Card>
+      {b.position && (
+        <Card title={<><Icon name="brief" />Current post</>}>
+          <CurrentPost position={b.position} heading={false} />
+          <p className="small muted">Your post as recorded by HR. A gap mark means your profile does not yet show that skill at working level.</p>
+        </Card>
+      )}
       <Card title="In your own words">
         <InlineText label="Headline" value={b.about.headline} maxLength={120} placeholder="For example: Access network engineer who automates OLT testing"
           hint="One line people see next to your name. Saves when you leave the field." onCommit={(v) => act("about", "save", { headline: v })} />

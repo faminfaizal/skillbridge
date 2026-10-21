@@ -15,6 +15,7 @@ import AgentsButton from "../components/AgentsButton";
 import ConciergePanel from "../components/ConciergePanel";
 import ChallengeTeam, { draftChanged, initialDraft, type TeamDraft } from "../components/ChallengeTeam";
 import CrisisPanel from "../components/CrisisPanel";
+import VacancyPanel from "../components/VacancyPanel";
 import CommunityPanel from "../components/CommunityPanel";
 import type { GraphHighlight } from "../components/actPanels";
 import { EMPTY_VIEW, type GraphView } from "../lib/graphView";
@@ -27,12 +28,12 @@ const Graph3D = dynamic(() => import("../components/graph/Graph3D"), {
   loading: () => <div className="stage-msg" role="status"><span className="spinner" aria-hidden="true" /> Loading 3D view</div>,
 });
 
-type ListKind = "answer" | "talent" | "risk" | "discover" | "agents" | "crisis" | "community" | SignalKind;
+type ListKind = "answer" | "talent" | "risk" | "discover" | "agents" | "crisis" | "community" | "vacancy" | SignalKind;
 type Side = { kind: "none" } | { kind: ListKind } | { kind: "person"; id: string } | { kind: "node"; id: string };
 const SIGNALS: SignalKind[] = ["bridges", "bottlenecks", "rising", "islands", "forgotten", "ghosts", "inclusion"];
 const isSignal = (k: string): k is SignalKind => (SIGNALS as string[]).includes(k);
-const ACT = ["crisis", "community"] as const;
-const isAct = (k: string): k is "crisis" | "community" => (ACT as readonly string[]).includes(k);
+const ACT = ["crisis", "community", "vacancy"] as const;
+const isAct = (k: string): k is (typeof ACT)[number] => (ACT as readonly string[]).includes(k);
 const isList = (k: string): k is ListKind => k === "answer" || k === "talent" || k === "risk" || k === "discover" || k === "agents" || isAct(k) || isSignal(k);
 type Opp = { id: string; title: string; demo_query: string | null };
 const backLabel = (k: ListKind) => (k === "answer" ? "Back to results" : k === "agents" ? "Back to agents" : `Back to ${lensLabel(k).toLowerCase()}`);
@@ -438,7 +439,7 @@ export default function Home() {
                 onFocus: focusNode, onAgents: openAgents, onToast: setToast, refreshAgents: loadAgents,
                 onShow: (v: GraphHighlight) => setView({ ...EMPTY_VIEW, mode: "answer", nodeIds: v.nodeIds, stars: v.stars ?? [], danger: v.danger ?? [], pulse: v.pulse }),
               };
-              return side.kind === "crisis" ? <CrisisPanel {...act} /> : <CommunityPanel {...act} />;
+              return side.kind === "crisis" ? <CrisisPanel {...act} /> : side.kind === "vacancy" ? <VacancyPanel {...act} /> : <CommunityPanel {...act} />;
             })()}
             {side.kind === "discover" && <DiscoverPanel result={disc} error={discErr} activeId={activeCard} onShow={showCard} onFocus={focusNode} onAsk={submit} />}
             {side.kind === "agents" && <AgentsPanel data={agents} error={agentsErr} simulating={simulating} deciding={deciding}

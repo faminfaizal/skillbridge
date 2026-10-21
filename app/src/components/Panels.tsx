@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import { Icon } from "./Icon";
 import { aiLabel, pct, money } from "../lib/format";
-import type { AskResponse, Candidate, GrowthPaths, HiddenTalentPerson, ReskillOption, WhatIfResult } from "../lib/types";
+import type { AskResponse, Candidate, GrowthPaths, HiddenTalentPerson, Position, ReskillOption, WhatIfResult } from "../lib/types";
+import CurrentPost from "./CurrentPost";
 
 // ---------------------------------------------------------------- shared
 function ScoreBars({ c }: { c: Candidate }) {
@@ -177,6 +178,7 @@ export function ResultPanel({ r, onFocus, onChallenge, adjusted, activated }: {
 type Profile = {
   id: string; name: string; title: string; department: string; location: string; hireYear: number; availabilityPct: number; consent: boolean;
   manager: { id: string; name: string; title: string } | null;
+  position: Position | null;
   declared: { skillId: string; skill: string; level: number }[];
   inferred: { skillId: string; skill: string; confidence: number; rationale: string; model: string; evidence: { id: string; kind: string; text: string; date: string }[] }[];
   projects: { id: string; name: string; status: string; role: string; note: string; end: string }[];
@@ -228,6 +230,7 @@ export function PersonPanel({ id, onFocus, onAsk }: { id: string; onFocus: (id: 
       {p.manager && <p className="muted small">Reports to <button className="link-btn" onClick={() => onFocus(p.manager!.id)}>{p.manager.name}</button></p>}
       <div className="chips"><span className="chip">{p.availabilityPct}% available</span><span className="chip">{p.incidentsResolved} incidents resolved</span><span className="chip">{p.recognition} peer recognitions</span></div>
       {!p.consent && <p className="note"><Icon name="shield" /> This person opted out of visibility. Shown only in aggregate views.</p>}
+      {p.position && <CurrentPost position={p.position} />}
 
       {p.inferred.length > 0 && (
         <>

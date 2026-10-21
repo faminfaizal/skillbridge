@@ -4,6 +4,7 @@ import { all, get } from "../db.ts";
 import { data } from "../engine/data.ts";
 import { supportingEvidence } from "../engine/infer.ts";
 import { growthPaths } from "../engine/growth.ts";
+import { postWithCapability } from "../engine/positions.ts";
 import { ensureProfileTables } from "./tables.ts";
 import { DEFAULT_AUDIENCE, type Audience, type ProfileBundle, type TabId } from "./types.ts";
 
@@ -217,6 +218,7 @@ export function profileBundle(id: string): ProfileBundle | null {
       location: m.locations.get(p.location_id) ?? "", hireYear: p.hire_year, manager: manager ? { id: manager.id, name: manager.name, title: manager.title } : null,
       reports: reports.length, consent: p.consent_visibility === 1 },
     about,
+    position: postWithCapability(id, m),
     completeness: { pct, next: miss ? { tab: miss[2], text: miss[3] } : null, done: checks.filter((c) => c[0]).map((c) => c[4]) },
     badges,
     projects: { system, own },

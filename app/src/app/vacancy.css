@@ -1,0 +1,33 @@
+/* Job vacancy to fill (Act panel) and the Current post block. */
+.vac-tabs { display: flex; flex-wrap: wrap; gap: var(--s1); border-bottom: 1px solid var(--border); }
+.vac-tab { display: inline-flex; align-items: center; gap: var(--s1); padding: var(--s2) var(--s3); background: none; border: 0;
+  border-bottom: 2px solid transparent; color: var(--text-2); font: inherit; font-size: var(--fs-sm); cursor: pointer; margin-bottom: -1px; }
+.vac-tab:hover { color: var(--text); }
+.vac-tab.on { color: var(--text); border-bottom-color: var(--accent); }
+.vac-tab:focus-visible { outline: none; box-shadow: var(--focus); border-radius: var(--r-sm) var(--r-sm) 0 0; }
+.vac-pane { padding-top: var(--s3); }
+.vac-posts, .vac-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--s2); }
+.vac-posts .card, .vac-card { display: flex; flex-direction: column; gap: var(--s1); }
+.vac-posts .btn { align-self: flex-start; margin-top: var(--s1); }
+.vac-pick { display: flex; gap: var(--s1); flex-wrap: wrap; }
+.vac-pick .intake-input { flex: 1 1 180px; min-width: 0; }
+.vac-skill-group { display: flex; flex-direction: column; gap: var(--s1); margin-top: var(--s1); }
+.vac-skill { padding-right: 2px; }
+.vac-skill .link-btn { color: inherit; font-size: inherit; }
+.vac-skill.must { border-color: var(--accent); color: var(--text); }
+.vac-x { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: none; border: 0;
+  color: var(--text-3); cursor: pointer; border-radius: 999px; }
+.vac-x:hover { color: var(--danger); }
+.vac-x:focus-visible { outline: none; box-shadow: var(--focus); }
+.vac-x .icon { width: 12px; height: 12px; }
+.vac-result { display: flex; flex-direction: column; gap: var(--s3); margin-top: var(--s3); }
+.vac-ready { border-color: var(--success); color: var(--success); }
+.vac-near { border-color: var(--warn); color: var(--warn); }
+.vac-dev { border-color: var(--border-strong); color: var(--text-2); }
+.vac-why summary { cursor: pointer; color: var(--text-2); }
+.vac-why[open] summary { margin-bottom: var(--s1); }
+.post { display: flex; flex-direction: column; gap: var(--s1); }
+.post-h { margin: 0; }
+.post-resp { margin: 0; padding-left: var(--s4); color: var(--text-2); display: flex; flex-direction: column; gap: 2px; }
+.post-skills { display: flex; flex-direction: column; gap: var(--s1); }
+.post-met { border-color: var(--success); color: var(--success); background: rgba(52, 211, 153, 0.08); }

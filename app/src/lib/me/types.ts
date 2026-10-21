@@ -1,5 +1,5 @@
 // Shapes shared by the profile API and the profile page.
-import type { GrowthPaths } from "../types.ts";
+import type { GrowthPaths, Position } from "../types.ts";
 
 export type TabId = "about" | "projects" | "skills" | "evidence" | "documents" | "certs" | "connections" | "feedback"
   | "suggestions" | "growth" | "availability" | "privacy" | "data" | "impact" | "constellation" | "team";
@@ -15,6 +15,7 @@ export interface ProfileBundle {
     hireYear: number; manager: { id: string; name: string; title: string } | null; reports: number; consent: boolean;
   };
   about: { headline: string; bio: string; languages: string[]; locationPref: string };
+  position: Position | null; // current post, generated in the data pipeline
   completeness: { pct: number; next: { tab: TabId; text: string } | null; done: string[] };
   badges: Partial<Record<TabId, { count?: number; attention?: number }>>;
   projects: {

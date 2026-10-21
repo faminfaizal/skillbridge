@@ -2,6 +2,7 @@
 // A post's holder is named only when they share their profile.
 import { all, get } from "../db.ts";
 import { data, type Model } from "./data.ts";
+import { capability } from "./match.ts";
 import type { Position, RoleRequirement } from "../types.ts";
 
 interface PositionRow {
@@ -45,6 +46,12 @@ export function searchPositions(q: string, limit = 8, m: Model = data()): Positi
   };
   const exact = rows.filter((r) => r.id.toLowerCase() === s);
   return (exact.length ? exact : rows.filter(hit)).slice(0, limit).map((r) => toPosition(r, m));
+}
+
+/** A person's post with their own capability on each of its skills (for the Current post block). */
+export function postWithCapability(personId: string, m: Model = data()): Position | null {
+  const post = positionOf(personId, m);
+  return post ? { ...post, skills: post.skills.map((s) => ({ ...s, value: capability(m, personId, s.skillId).value })) } : null;
 }
 
 export function positionRequirement(p: Position): RoleRequirement {
