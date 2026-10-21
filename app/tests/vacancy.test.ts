@@ -83,3 +83,29 @@ test("post search finds by title, post id and name, but never names an opted-out
   const post = positionById(`POS-${hidden.id.slice(2)}`)!;
   assert.equal(post.holder, null);
 });
+
+const fs = await import("node:fs");
+const { readVacancy, rulesVacancy } = await import("../src/lib/engine/jd.ts");
+const SAMPLE = "public/samples/position-profile-network-analytics-lead.docx";
+
+test("the sample position profile is read by keyword rules when Gemini is off", async () => {
+  const r = await readVacancy({ filename: "profile.docx", data: fs.readFileSync(SAMPLE) });
+  assert.equal(r.provider, "rules");
+  assert.equal(r.parsed.title, "Network Analytics Lead");
+  for (const n of ["Network Telemetry", "Python", "Machine Learning"]) assert.ok(r.parsed.must.includes(sid(n)), n);
+  assert.ok((r.parsed.responsibilities ?? []).length >= 3);
+  const shortlist = matchVacancy(r.parsed).shortlist;
+  assert.ok(shortlist.length > 0);
+});
+
+test("text with no skill words yields no skills, and matching it is refused", () => {
+  const v = rulesVacancy("Position: Office helper\n- Keep the kitchen tidy\n- Water the plants");
+  assert.equal(v.must.length, 0);
+  assert.throws(() => normaliseVacancy(v), BadInput);
+});
+
+test("wrong file types, oversize and empty files are refused", async () => {
+  await assert.rejects(readVacancy({ filename: "jd.exe", data: Buffer.from("x") }), BadInput);
+  await assert.rejects(readVacancy({ filename: "jd.txt", data: Buffer.alloc(6 * 1024 * 1024, 65) }), BadInput);
+  await assert.rejects(readVacancy({ filename: "jd.txt", data: Buffer.alloc(0) }), BadInput);
+});

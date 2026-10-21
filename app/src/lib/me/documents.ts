@@ -24,6 +24,9 @@ const TYPES: Record<string, string> = {
 };
 /** Types Gemini reads directly (no text extraction needed). */
 const VISUAL = new Set([".pdf", ".png", ".jpg", ".jpeg", ".webp"]);
+/** Shared with the vacancy reader (job descriptions take the same file types). */
+export const DOC_TYPES: Readonly<Record<string, string>> = TYPES;
+export const isVisual = (ext: string) => VISUAL.has(ext);
 
 /** Minimal zip reader: returns one entry's bytes (stored or deflated). Enough for word/document.xml in a DOCX. */
 export function zipEntry(buf: Buffer, name: string): Buffer | null {

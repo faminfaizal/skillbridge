@@ -44,6 +44,9 @@ for q in QUERIES:
         print(f"{r['provider']:10} {r['elapsedMs']:5}ms concierge:{r['mode']} grounded={r['grounded']} tools={tools}  {q}")
         continue
     print(f"{r['provider']:10} {r['elapsedMs']:5}ms {r['opportunityId'] or '-':8} team={len(r['team'])} gaps={len(r['gaps'])}  {q}")
+# Job vacancy to fill: the sample position profile, read by Gemini once so the demo also works from cache
+jd = post("/api/vacancy", {"sample": True})
+print(f"{jd['provider']:10} vacancy sample: {jd['parsed']['title']} must={len(jd['parsed']['must'])} nice={len(jd['parsed']['nice'])}")
 first = post("/api/ask", {"query": QUERIES[0]})
 rec = post("/api/activate", {"opportunityId": first["opportunityId"], "title": first["opportunityTitle"],
                              "personIds": [c["personId"] for c in first["team"]], "value": first["value"]})
