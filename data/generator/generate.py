@@ -13,6 +13,7 @@ from pathlib import Path
 import anchors
 from config import (C_SUITE, DIVISION_EXEC, DIVISIONS, EMAIL_DOMAIN, FINANCE, GM_SEATS, LEVEL_LABEL, LEVEL_RANK,
                     LEVEL_RATE, LEVELS, LOCATIONS, TODAY)
+from positions import build_positions
 from names import RESERVED_DRAWS, display_name, draw_name, email_for
 from taxonomy import (ADJACENCY, ARCHETYPES, CERTIFICATIONS, GAP_SKILLS, LEADERSHIP_SKILLS, ORGANISATIONS,
                       PROBLEM_CLASSES, PROJECT_TEMPLATES, RECOGNITION_QUESTIONS, REGIONS, ANALYTICS_TOPICS,
@@ -532,7 +533,8 @@ TABLE_ORDER = ["locations", "divisions", "departments", "teams", "people", "prof
                "problem_classes", "systems", "system_deps", "system_roles", "projects", "project_skills", "project_systems",
                "assignments", "customer_cases", "incidents", "incident_resolvers", "knowledge_items", "external_engagements",
                "requisitions", "opportunities", "opportunity_roles", "opportunity_role_skills", "peer_recognition",
-               "visibility_signals", "sme_requests", "events", "impact_records", "reinvestment_initiatives"]
+               "visibility_signals", "sme_requests", "events", "impact_records", "reinvestment_initiatives",
+               "positions", "position_skills"]
 
 
 def export(w):
@@ -585,6 +587,7 @@ def main():
     build_events(w)
     build_profiles(w)
     anchors.finalise(w)
+    build_positions(w)             # templates only, no RNG draws: other tables unchanged
     counts, digest = export(w)
     for t in TABLE_ORDER:
         print(f"{t:26} {counts[t]:6}")

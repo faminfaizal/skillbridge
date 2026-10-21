@@ -212,6 +212,17 @@ check(sum(sev["P1"]) / len(sev["P1"]) < sum(sev["P4"]) / len(sev["P4"]), "realis
 top_skills = sorted(declared, key=lambda x: -len(declared[x]))[:5]
 check(manifest["A1"]["person_id"] not in top_skills and manifest["A2"]["person_id"] not in top_skills, "realism: anchors not top by skill count")
 
+# ---------------------------------------------------------------- positions
+pos = {r["id"]: r for r in T["positions"]}
+check(len(pos) == len(people) and {r["person_id"] for r in pos.values()} == set(people), "positions: one per person")
+check(all(not r["reports_to_id"] or r["reports_to_id"] in pos for r in pos.values()), "positions: reports-to resolves")
+must_n = collections.Counter(r["position_id"] for r in T["position_skills"] if r["must"] == "1")
+check(all(must_n[i] >= 2 for i in pos), "positions: at least 2 required skills")
+check(all(r["skill_id"] in ids["skills"] and r["position_id"] in pos for r in T["position_skills"]), "positions: skills and posts exist")
+check(all(3 <= len(json.loads(r["responsibilities"])) <= 5 for r in pos.values()), "positions: 3 to 5 responsibilities")
+check(all(2 <= len(json.loads(r["competencies"])) <= 3 for r in pos.values()), "positions: 2 to 3 competencies")
+check(all(r["title"] == people[r["person_id"]]["title"] for r in pos.values()), "positions: title matches the holder")
+
 # ---------------------------------------------------------------- PII scan
 NRIC = re.compile(r"\b\d{6}-\d{2}-\d{4}\b")
 PHONE = re.compile(r"(\+?6?01\d[- ]?\d{3,4}[- ]?\d{4})")

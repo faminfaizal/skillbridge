@@ -20,6 +20,14 @@ CREATE TABLE skills (id TEXT PRIMARY KEY, name TEXT NOT NULL, family TEXT NOT NU
 CREATE TABLE skill_adjacency (skill_a TEXT NOT NULL REFERENCES skills(id), skill_b TEXT NOT NULL REFERENCES skills(id), weight REAL NOT NULL, PRIMARY KEY (skill_a, skill_b));
 CREATE TABLE person_skills (person_id TEXT NOT NULL REFERENCES people(id), skill_id TEXT NOT NULL REFERENCES skills(id), level INTEGER NOT NULL, source TEXT NOT NULL, last_used_year INTEGER NOT NULL, PRIMARY KEY (person_id, skill_id));
 
+CREATE TABLE positions (
+  id TEXT PRIMARY KEY, person_id TEXT NOT NULL UNIQUE REFERENCES people(id),
+  title TEXT NOT NULL, level TEXT NOT NULL, level_rank INTEGER NOT NULL, archetype TEXT NOT NULL,
+  division_id TEXT NOT NULL REFERENCES divisions(id), department_id TEXT REFERENCES departments(id), team_id TEXT REFERENCES teams(id),
+  reports_to_id TEXT REFERENCES positions(id), responsibilities TEXT NOT NULL, competencies TEXT NOT NULL
+);
+CREATE TABLE position_skills (position_id TEXT NOT NULL REFERENCES positions(id), skill_id TEXT NOT NULL REFERENCES skills(id), must INTEGER NOT NULL, PRIMARY KEY (position_id, skill_id));
+
 CREATE TABLE certifications (id TEXT PRIMARY KEY, name TEXT NOT NULL, skill_id TEXT NOT NULL REFERENCES skills(id), cost_amt INTEGER NOT NULL, months INTEGER NOT NULL);
 CREATE TABLE person_certs (person_id TEXT NOT NULL REFERENCES people(id), cert_id TEXT NOT NULL REFERENCES certifications(id), year INTEGER NOT NULL, PRIMARY KEY (person_id, cert_id));
 CREATE TABLE trainings (id TEXT PRIMARY KEY, name TEXT NOT NULL, skill_id TEXT NOT NULL REFERENCES skills(id), kind TEXT NOT NULL, cost_amt INTEGER NOT NULL, weeks INTEGER NOT NULL);
