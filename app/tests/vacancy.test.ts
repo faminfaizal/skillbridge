@@ -88,14 +88,21 @@ const fs = await import("node:fs");
 const { readVacancy, rulesVacancy } = await import("../src/lib/engine/jd.ts");
 const SAMPLE = "public/samples/position-profile-network-analytics-lead.docx";
 
-test("the sample position profile is read by keyword rules when Gemini is off", async () => {
+test("the sample position profile is never blank with Gemini off: golden cache, else keyword rules", async () => {
   const r = await readVacancy({ filename: "profile.docx", data: fs.readFileSync(SAMPLE) });
-  assert.equal(r.provider, "rules");
+  assert.ok(r.provider === "cache" || r.provider === "rules", r.provider);
   assert.equal(r.parsed.title, "Network Analytics Lead");
   for (const n of ["Network Telemetry", "Python", "Machine Learning"]) assert.ok(r.parsed.must.includes(sid(n)), n);
   assert.ok((r.parsed.responsibilities ?? []).length >= 3);
-  const shortlist = matchVacancy(r.parsed).shortlist;
-  assert.ok(shortlist.length > 0);
+  assert.ok(matchVacancy(r.parsed).shortlist.length > 0);
+});
+
+test("keyword rules alone read the sample: title, bullet responsibilities and required skills", async () => {
+  const { readText } = await import("../src/lib/me/documents.ts");
+  const v = rulesVacancy(await readText(".docx", fs.readFileSync(SAMPLE)));
+  assert.equal(v.title, "Network Analytics Lead");
+  for (const n of ["Network Telemetry", "Python", "Machine Learning"]) assert.ok(v.must.includes(sid(n)), n);
+  assert.ok((v.responsibilities ?? []).length >= 3);
 });
 
 test("text with no skill words yields no skills, and matching it is refused", () => {
