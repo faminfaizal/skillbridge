@@ -362,3 +362,30 @@ export interface WhatIfResult {
   incidentsShare: number;
   highlight: { nodeIds: string[]; edgeIds: string[] };
 }
+
+/** A post: one per person, generated from templates (responsibilities, competencies, required skills). */
+export interface PositionSkill { skillId: string; skill: string; must: boolean; value?: number } // value: the holder's capability, 0..1
+export interface Position {
+  id: string; personId: string; holder: string | null; // null when the holder keeps their profile private
+  title: string; level: string; levelRank: number; unit: string;
+  reportsTo: { id: string; title: string } | null;
+  responsibilities: string[]; competencies: string[]; skills: PositionSkill[];
+}
+
+/** Job vacancy to fill: what HR describes (skill ids from the taxonomy) and the internal shortlist. */
+export interface VacancyInput {
+  title: string; level?: string | null; responsibilities?: string[]; competencies?: string[];
+  must: string[]; nice: string[]; positionId?: string | null;
+}
+export type GradeMove = "lateral" | "step up" | "stretch" | "step down";
+export interface VacancyMatch {
+  personId: string; name: string; post: string; level: string; unit: string; location: string; move: GradeMove;
+  score: number; readyNow: boolean; availabilityPct: number; hidden: boolean;
+  breakdown: ScoreBreakdown; evidence: EvidenceItem[];
+  skills: { skillId: string; skill: string; must: boolean; value: number; met: boolean }[];
+  gaps: string[]; weeks: number | null;
+}
+export interface VacancyResult {
+  vacancy: VacancyInput & { titleShown: string; levelRank: number | null };
+  shortlist: VacancyMatch[]; privateCount: number; basis: string[];
+}

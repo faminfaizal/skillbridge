@@ -2,6 +2,8 @@
 import { all, get } from "../db.ts";
 import { data } from "./data.ts";
 import { growthPaths } from "./growth.ts";
+import { capability } from "./match.ts";
+import { positionOf } from "./positions.ts";
 
 export function personProfile(id: string) {
   const m = data();
@@ -27,6 +29,8 @@ export function personProfile(id: string) {
   const knowledge = all<{ id: string; title: string; reuse_count: number }>(
     "SELECT id, title, reuse_count FROM knowledge_items WHERE author_id = ? ORDER BY reuse_count DESC", id);
   const manager = p.manager_id ? m.people.get(p.manager_id) : undefined;
+  const post = positionOf(id, m);
+  const position = post ? { ...post, skills: post.skills.map((s) => ({ ...s, value: capability(m, id, s.skillId).value })) } : null;
   return {
     id: p.id, name: p.name, title: p.title, level: p.level,
     department: p.department_id ? m.departments.get(p.department_id) ?? "" : "Leadership",
@@ -36,5 +40,6 @@ export function personProfile(id: string) {
     declared, inferred, projects, systems, incidentsResolved: incidents, knowledge,
     recognition: recognition.reduce((a, r) => a + r.n, 0), recognitionBreakdown: recognition,
     growth: growthPaths(id),
+    position,
   };
 }
