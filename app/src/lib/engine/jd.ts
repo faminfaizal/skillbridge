@@ -68,7 +68,7 @@ export async function readVacancy(file: { filename: string; data: Buffer }, m: M
       const grade = GRADES.some((g) => g.code === d.grade) ? String(d.grade) : null;
       return {
         parsed: { title: String(d.title ?? "").trim().slice(0, 120), level: grade, responsibilities: strs(d.responsibilities, 6),
-          competencies: strs(d.competencies, 4, 60), must: must.ids, nice: nice.ids.filter((s) => !must.ids.includes(s)) },
+          competencies: strs(d.competencies, 4, 120), must: must.ids, nice: nice.ids.filter((s) => !must.ids.includes(s)) },
         unmapped: [...must.unmapped, ...nice.unmapped, ...strs(d.other, 8, 80)], provider: r.provider, read,
       };
     }

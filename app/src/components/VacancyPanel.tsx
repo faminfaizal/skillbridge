@@ -21,7 +21,8 @@ const MODES: { id: Mode; label: string; icon: string }[] = [
 ];
 const BLANK: VacancyInput = { title: "", level: null, responsibilities: [], competencies: [], must: [], nice: [] };
 // Kept across remounts, so "Back to job vacancy to fill" from a person returns to the same shortlist.
-let memo: { mode: Mode; draft: VacancyInput; readInfo: ReadInfo | null; result: VacancyResult | null } = { mode: "post", draft: BLANK, readInfo: null, result: null };
+type Drafts = { type: VacancyInput; upload: VacancyInput }; // each tab keeps its own draft
+let memo: { mode: Mode; drafts: Drafts; readInfo: ReadInfo | null; result: VacancyResult | null } = { mode: "post", drafts: { type: BLANK, upload: BLANK }, readInfo: null, result: null };
 
 function readiness(c: VacancyMatch): { label: string; cls: string } {
   if (c.readyNow) return { label: "Ready now", cls: "vac-ready" };
@@ -40,7 +41,10 @@ export default function VacancyPanel({ onFocus, onShow, onToast }: ActPanelProps
   const id = useId();
   const [mode, setMode] = useState<Mode>(memo.mode);
   const [skills, setSkills] = useState<SkillRef[]>([]);
-  const [draft, setDraft] = useState<VacancyInput>(memo.draft);
+  const [drafts, setDrafts] = useState<Drafts>(memo.drafts);
+  const which: keyof Drafts = mode === "upload" ? "upload" : "type";
+  const draft = drafts[which];
+  const setDraft = (v: VacancyInput) => setDrafts((d) => ({ ...d, [which]: v }));
   const [readInfo, setReadInfo] = useState<ReadInfo | null>(memo.readInfo);
   const [result, setResult] = useState<VacancyResult | null>(memo.result);
   const [busy, setBusy] = useState(false);
@@ -52,7 +56,7 @@ export default function VacancyPanel({ onFocus, onShow, onToast }: ActPanelProps
     if (memo.result) show(memo.result);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  useEffect(() => { memo = { mode, draft, readInfo, result }; }, [mode, draft, readInfo, result]);
+  useEffect(() => { memo = { mode, drafts, readInfo, result }; }, [mode, drafts, readInfo, result]);
   const nameOf = useMemo(() => new Map(skills.map((s) => [s.id, s.name])), [skills]);
 
   function show(r: VacancyResult) {
@@ -72,12 +76,12 @@ export default function VacancyPanel({ onFocus, onShow, onToast }: ActPanelProps
     setBusy(true); setErr(""); setResult(null);
     try {
       const r = await call<{ parsed: VacancyInput } & ReadInfo>({ method: "POST", body });
-      setDraft({ ...BLANK, ...r.parsed });
+      setDrafts((d) => ({ ...d, upload: { ...BLANK, ...r.parsed } }));
       setReadInfo({ provider: r.provider, read: r.read, unmapped: r.unmapped });
     } catch (e) { setErr((e as Error).message); } finally { setBusy(false); }
   }
 
-  function switchMode(m: Mode) { setMode(m); setErr(""); setResult(null); if (m === "type") setReadInfo(null); }
+  function switchMode(m: Mode) { setMode(m); setErr(""); setResult(null); }
 
   return (
     <div className="panel-body">
@@ -97,7 +101,7 @@ export default function VacancyPanel({ onFocus, onShow, onToast }: ActPanelProps
         {mode === "upload" && !readInfo && <Upload busy={busy} onFile={(f) => { const d = new FormData(); d.set("file", f); void read(d); }}
           onSample={() => { const d = new FormData(); d.set("sample", "true"); void read(d); }} />}
         {(mode === "type" || (mode === "upload" && readInfo)) && (
-          <Editor draft={draft} setDraft={setDraft} skills={skills} nameOf={nameOf} readInfo={readInfo} busy={busy}
+          <Editor draft={draft} setDraft={setDraft} skills={skills} nameOf={nameOf} readInfo={mode === "upload" ? readInfo : null} busy={busy}
             onReset={mode === "upload" ? () => { setReadInfo(null); setDraft(BLANK); setResult(null); } : undefined}
             onMatch={() => void run({ title: draft.title, level: draft.level, responsibilities: draft.responsibilities, competencies: draft.competencies, must: draft.must, nice: draft.nice })} />
         )}
